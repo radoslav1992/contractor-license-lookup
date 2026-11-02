@@ -559,6 +559,184 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'pennsylvania',
+    code: 'PA',
+    name: 'Pennsylvania',
+    generalContractors: 'local-only',
+    summary:
+      'Pennsylvania doesn’t license general contractors or most trades at the state level. Instead, home improvement contractors must register with the Office of Attorney General, and some cities, including Philadelphia and Pittsburgh, require their own licenses.',
+    boards: [
+      {
+        name: 'Pennsylvania Office of Attorney General: Home Improvement Contractor registration',
+        licenses: 'Home improvement contractors, under the Home Improvement Consumer Protection Act (a registration, not a license)',
+        lookupUrl: 'https://hicsearch.attorneygeneral.gov/',
+        lookupNote:
+          'The search shows active registrations only. If it isn’t working or the contractor doesn’t appear, call the Attorney General’s home improvement hotline at 1-888-520-6680.',
+        website: 'https://www.attorneygeneral.gov/for-the-public/home-improvement/',
+      },
+      {
+        name: 'City of Philadelphia Department of Licenses and Inspections',
+        licenses: 'Contractor licenses and trade licenses, such as electrical and plumbing, for work in Philadelphia',
+        lookupUrl: 'https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/',
+        lookupNote: 'Lists actively licensed contractors and their licensing violations, with links to permit searches.',
+        website: 'https://www.phila.gov/departments/department-of-licenses-and-inspections/',
+      },
+      {
+        name: 'City of Pittsburgh Department of Permits, Licenses, and Inspections',
+        licenses: 'General contractor licenses for some work, such as new one- and two-family homes and rental properties, and trade licenses such as electrical and HVAC',
+        lookupUrl: 'https://www.pittsburghpa.gov/Business-Development/Permits-Licenses-and-Inspections/OneStopPGH',
+        lookupNote: 'Use the OneStopPGH public license search by name, address or license number.',
+        website: 'https://www.pittsburghpa.gov/Business-Development/Permits-Licenses-and-Inspections',
+      },
+    ],
+    whenRequired: [
+      'Contractors who do $5,000 or more of home improvement work a year must register with the Attorney General. Subcontractors on home improvements must register too.',
+      'Building a new home isn’t a home improvement under the law, so new-home builders don’t need this registration.',
+      'To register, a contractor must show liability insurance of at least $50,000 for personal injury and $50,000 for property damage.',
+      'Some cities and towns license contractors and trades themselves. In Philadelphia, electrical, plumbing and fire suppression work needs city-licensed tradespeople.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Pennsylvania home improvement registration number. It starts with “PA” and should be on their ads, estimates and contracts.',
+      'Look it up in the Attorney General’s home improvement contractor search, or call the hotline if the search doesn’t find it.',
+      'If the job is in Philadelphia or Pittsburgh, also check the city’s contractor license search.',
+      'Ask your township, borough or city code office whether your town licenses contractors and whether your project needs a permit.',
+      'Remember that registration doesn’t vouch for a contractor’s honesty or work. Check reviews and complaint history too.',
+    ],
+    watchFor: [
+      'Your contract must be in writing, show the contractor’s registration number and tell you about your right to cancel. You can cancel within three business days of signing, by phone, in person or in writing, as long as the contractor actually gets your notice.',
+      'Contractors must show their registration number on ads, estimates and contracts. A missing number is a warning sign.',
+    ],
+    faq: [
+      {
+        q: 'Does Pennsylvania require a contractor license?',
+        a: 'Not at the state level for most contractors. Home improvement contractors who do $5,000 or more of work a year must register with the Office of Attorney General instead, and some cities, such as Philadelphia and Pittsburgh, require their own licenses.',
+      },
+      {
+        q: 'How do I look up a PA home improvement contractor number?',
+        a: 'Use the Attorney General’s home improvement contractor search, or call the hotline at 1-888-520-6680. The search shows active registrations only.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in Pennsylvania?',
+        a: 'Yes. You can cancel within three business days after signing. A phone call, a visit or a written notice all count, as long as the contractor actually gets it.',
+      },
+      {
+        q: 'Do electricians and plumbers need a state license in Pennsylvania?',
+        a: 'Pennsylvania has no state license for most construction trades. Some cities, including Philadelphia and Pittsburgh, license electricians and other trades, so check with your local code office.',
+      },
+    ],
+    sources: [
+      {
+        label: 'PA Office of Attorney General: home improvement contractor verification',
+        url: 'https://www.attorneygeneral.gov/for-the-public/home-improvement/',
+      },
+      { label: 'PA Office of Attorney General: home improvement contractor search', url: 'https://hicsearch.attorneygeneral.gov/' },
+      {
+        label: 'PA Office of Attorney General: contractor registration FAQ',
+        url: 'https://www.attorneygeneral.gov/businesses-and-organizations/home-improvement-contractor-registration/frequently-asked-questions/',
+      },
+      {
+        label: 'PA Office of Attorney General: Supreme Court upholds the three-day right to cancel',
+        url: 'https://www.attorneygeneral.gov/taking-action/pa-supreme-court-upholds-consumer-right-to-cancel-home-improvement-contracts-within-three-days-regardless-of-medium/',
+      },
+      {
+        label: 'Home Improvement Consumer Protection Act (Act 132 of 2008)',
+        url: 'https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2008/0/0132..HTM',
+      },
+      {
+        label: 'City of Philadelphia: find a licensed contractor',
+        url: 'https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/',
+      },
+      {
+        label: 'City of Pittsburgh: contractor licenses',
+        url: 'https://www.pittsburghpa.gov/Business-Development/Permits-Licenses-and-Inspections/Licensing/Contractor-Licenses',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'ohio',
+    code: 'OH',
+    name: 'Ohio',
+    generalContractors: 'local-only',
+    summary:
+      'Ohio doesn’t license general, home improvement or other residential contractors at the state level; cities and counties do. The state’s Construction Industry Licensing Board licenses only commercial electrical, HVAC, plumbing, hydronics and refrigeration contractors.',
+    boards: [
+      {
+        name: 'Ohio Construction Industry Licensing Board (Ohio Department of Commerce)',
+        licenses:
+          'Commercial electrical, HVAC, plumbing, hydronics and refrigeration contractors. It doesn’t license general contractors, roofers or residential contractors',
+        lookupUrl: 'https://elicense4.com.ohio.gov/Lookup/LicenseLookup.aspx',
+        lookupNote: 'Ohio’s license lookup covers the state-licensed commercial trades.',
+        website: 'https://com.ohio.gov/divisions-and-programs/industrial-compliance/boards/ohio-construction-industry-licensing-board',
+      },
+      {
+        name: 'City of Columbus Department of Building and Zoning Services',
+        licenses: 'Home improvement contractor licenses for existing one- to three-family homes, and other contractor licenses for work in Columbus',
+        lookupUrl: 'https://www.columbus.gov/Business-Development/Business-Licenses-Resources/Contractor-Licenses',
+        lookupNote: 'Use the “Search for a Contractor” link to the city’s Citizen Access Portal.',
+        website: 'https://www.columbus.gov/Business-Development/Business-Licenses-Resources/Contractor-Licenses/Home-Improvement-Contractors',
+      },
+    ],
+    whenRequired: [
+      'A state license is required for commercial electrical, HVAC, plumbing, hydronics and refrigeration work. The state doesn’t license residential contractors.',
+      'Many cities, counties and townships have their own contractor license or registration rules. Your local building department can tell you what applies and whether your project needs a permit.',
+      'Columbus requires a home improvement contractor license for work on existing homes of up to three families. A limited license covers one specialty, such as roofing, decks or fencing.',
+      'Cleveland requires contractors who build or rehab homes to be bonded, insured and registered with the city. It has no online search; call its Department of Building & Housing to check a contractor.',
+    ],
+    howToCheck: [
+      'Call your city, county or township building department. Ask what license or registration contractors need there and whether your job needs a permit.',
+      'Check the contractor with that local office, such as the Columbus contractor search.',
+      'For electrical, HVAC, plumbing, hydronics or refrigeration work, look up the contractor’s state license in Ohio’s license lookup.',
+      'Check for complaints with the Ohio Attorney General and the Better Business Bureau.',
+      'Get written estimates, and put the work, dates and costs in a written contract before you pay.',
+    ],
+    watchFor: [
+      'If you sign at home, for example with a door-to-door seller, Ohio’s Home Solicitation Sales Act lets you cancel until midnight of the third business day after signing. The seller must give you a written cancellation notice.',
+      'For home construction jobs of $25,000 or more, Ohio law requires a signed written contract listing the work, the start and completion dates and the total estimated cost.',
+    ],
+    faq: [
+      {
+        q: 'Does Ohio require a general contractor license?',
+        a: 'No. Ohio doesn’t license general or residential contractors at the state level. Many cities, including Columbus and Cleveland, have their own license or registration rules.',
+      },
+      {
+        q: 'What does the Ohio Construction Industry Licensing Board license?',
+        a: 'It licenses commercial contractors in five trades: electrical, HVAC, plumbing, hydronics and refrigeration. You can check these licenses in Ohio’s license lookup.',
+      },
+      {
+        q: 'Do roofers need a license in Ohio?',
+        a: 'Not from the state. Some cities regulate roofers; Columbus, for example, has a limited home improvement license for specialties like roofing. Check with your local building department.',
+      },
+      {
+        q: 'Where do I complain about a home improvement contractor in Ohio?',
+        a: 'Contact the Ohio Attorney General’s Consumer Protection Section and your local building department. Complaints about commercial contractors in the five licensed trades go to the Construction Industry Licensing Board.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Ohio Department of Commerce: Construction Industry Licensing Board',
+        url: 'https://com.ohio.gov/divisions-and-programs/industrial-compliance/boards/ohio-construction-industry-licensing-board',
+      },
+      { label: 'Ohio license lookup', url: 'https://elicense4.com.ohio.gov/Lookup/LicenseLookup.aspx' },
+      {
+        label: 'Ohio Department of Commerce: hire licensed contractors (2026)',
+        url: 'https://com.ohio.gov/about-us/media-center/news/dont-risk-your-spring-projects-hire-licensed-contractors',
+      },
+      { label: 'Ohio Revised Code ch. 4740 (construction industry licensing)', url: 'https://codes.ohio.gov/ohio-revised-code/chapter-4740' },
+      { label: 'Ohio Revised Code 4722.02 (written home construction contracts)', url: 'https://codes.ohio.gov/ohio-revised-code/section-4722.02' },
+      {
+        label: 'Ohio Attorney General: door-to-door sales',
+        url: 'https://www.ohioattorneygeneral.gov/Business/Services-for-Business/Business-Guide/Door-To-Door-Sales',
+      },
+      {
+        label: 'City of Columbus: home improvement contractors',
+        url: 'https://www.columbus.gov/Business-Development/Business-Licenses-Resources/Contractor-Licenses/Home-Improvement-Contractors',
+      },
+      { label: 'City of Cleveland: Building & Housing FAQs', url: 'https://www.clevelandohio.gov/city-hall/departments/building-housing/faqs' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 export function stateBySlug(slug: string): StateGuide | undefined {
