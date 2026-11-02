@@ -251,6 +251,141 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'virginia',
+    code: 'VA',
+    name: 'Virginia',
+    generalContractors: 'state',
+    summary:
+      'Virginia licenses contractor businesses through the Board for Contractors at the Department of Professional and Occupational Regulation (DPOR), as Class A, B or C depending on job size. Most jobs over $1,000 need a state license, and the contractor’s class must cover the full price of your job.',
+    boards: [
+      {
+        name: 'Virginia Board for Contractors (DPOR)',
+        licenses:
+          'Contractor businesses in Class A, B and C, with specialties such as residential building, home improvement, electrical, plumbing and HVAC, and individual tradesmen such as electricians, plumbers, HVAC technicians and gas fitters',
+        lookupUrl: 'https://dporweb.dpor.virginia.gov/LicenseLookup/',
+        lookupNote: 'Search by name, license number or trade name. The same site has a separate search for disciplinary actions.',
+        website: 'https://www.dpor.virginia.gov/Boards/Contractors',
+      },
+    ],
+    whenRequired: [
+      'Contracting jobs over $1,000 need a state license. A city or county business license alone is not enough.',
+      'The license class sets how big a job the contractor may take. Since July 1, 2025, Class C covers jobs under $30,000, Class B jobs under $150,000, and Class A larger jobs. Each class also has a yearly limit.',
+      'Electrical, plumbing and HVAC work needs that specialty on the contractor’s license, and the workers need individual tradesman licenses. The home improvement and residential building specialties don’t cover these trades.',
+      'Owners building or repairing a home for their own use are exempt for one primary residence in any 24-month period.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s DPOR license number and exact business name.',
+      'Search the DPOR License Lookup by license number or business name.',
+      'Confirm the license is active, its class (A, B or C) covers your job’s total price, and its specialties match the work.',
+      'Check DPOR’s disciplinary action search. For electrical, plumbing or HVAC work, also look up the tradesman’s individual license.',
+      'Get a written contract that shows the license number and class.',
+    ],
+    watchFor: [
+      'Virginia’s Contractor Transaction Recovery Fund can repay homeowners up to $30,000 per claim when a licensed contractor acted improperly or dishonestly on a home job. You first need a court judgment against the contractor, and the fund doesn’t cover unlicensed contractors.',
+      'Some older DPOR documents still show the class limits from before July 2025 ($10,000 and $120,000). The limits above are current.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small job in Virginia?',
+        a: 'A state license is required for contracting jobs over $1,000. Smaller jobs don’t need one, though DPOR recommends hiring a licensed contractor whatever the cost.',
+      },
+      {
+        q: 'What is the difference between a Class A, B and C contractor license in Virginia?',
+        a: 'The class sets how large a job the contractor may take. Since July 1, 2025, Class C covers jobs under $30,000, Class B jobs under $150,000, and Class A has no upper limit. Each class also has a yearly total limit.',
+      },
+      {
+        q: 'Is a local business license the same as a Virginia contractor license?',
+        a: 'No. Contracting work over $1,000 needs a state license from the Board for Contractors, not just a city or county business license.',
+      },
+      {
+        q: 'Can I get money back if a licensed Virginia contractor cheats me?',
+        a: 'You may be able to claim up to $30,000 from DPOR’s Contractor Transaction Recovery Fund. You first need a court judgment against the licensed contractor and must have tried other ways to collect.',
+      },
+    ],
+    sources: [
+      { label: 'DPOR Board for Contractors', url: 'https://www.dpor.virginia.gov/Boards/Contractors' },
+      { label: 'DPOR License Lookup', url: 'https://dporweb.dpor.virginia.gov/LicenseLookup/' },
+      {
+        label: 'Code of Virginia § 54.1-1100 (license classes and limits)',
+        url: 'https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1100/',
+      },
+      {
+        label: 'Code of Virginia § 54.1-1101 (exemptions)',
+        url: 'https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1101/',
+      },
+      { label: 'DPOR Contractor Transaction Recovery Fund', url: 'https://www.dpor.virginia.gov/Boards/Contractors_Recovery_Fund' },
+      { label: 'DPOR: 2025 legislation', url: 'https://www.dpor.virginia.gov/News/AgencyLegislation2025' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'washington',
+    code: 'WA',
+    name: 'Washington',
+    generalContractors: 'state',
+    summary:
+      'Washington requires construction contractors to register with the Department of Labor & Industries (L&I) as general or specialty contractors, with a bond and liability insurance. Electrical and plumbing work also needs an L&I contractor license and certified workers.',
+    boards: [
+      {
+        name: 'Washington State Department of Labor & Industries (L&I)',
+        licenses:
+          'Contractor registration (general and specialty), electrical and plumbing contractor licenses, and electrician and plumber certificates',
+        lookupUrl: 'https://secure.lni.wa.gov/verify/',
+        lookupNote:
+          'Search by business or owner name, registration number or UBI number. The record shows registration status, bond, insurance, lawsuits against the bond and L&I violations.',
+        website: 'https://lni.wa.gov/licensing-permits/contractors/',
+      },
+    ],
+    whenRequired: [
+      'Anyone who builds, repairs or remodels for others must register with L&I. The only small-job exemption is casual or minor work under $500 in labor and materials that isn’t part of a larger job, and it doesn’t apply to anyone who advertises as a contractor.',
+      'A contractor who uses more than one trade on a job registers as a general contractor; a one-trade business registers as a specialty contractor.',
+      'Since July 1, 2024, the required bond is $30,000 for general contractors and $15,000 for specialty contractors.',
+      'Electrical work needs an L&I electrical contractor license and certified electricians. Plumbing work needs an L&I-licensed plumbing contractor and certified plumbers.',
+    ],
+    howToCheck: [
+      'Get the contractor’s L&I registration number or UBI number. It should be on their ads and written bids.',
+      'Search L&I’s Verify tool by registration number, UBI number, or business or owner name.',
+      'Confirm the registration is active, its type (general or specialty) fits your project, and the bond and insurance are current.',
+      'Review any lawsuits against the bond and any L&I violations. For electrical or plumbing work, also check the contractor license and each worker’s certificate.',
+      'For a home job of $1,000 or more, get the contractor’s signed disclosure statement before work starts.',
+    ],
+    watchFor: [
+      'For home jobs of $1,000 or more, the contractor must give you a signed disclosure statement explaining that unpaid subcontractors or suppliers can put a lien on your property. Ask for lien releases before you make the final payment.',
+      'A contractor’s bond is limited to $30,000 or $15,000, and you must sue within two years after the work was finished or abandoned to claim on it. If that isn’t enough, L&I’s Homeowner Recovery Fund may pay owner-occupants up to $25,000 after a court judgment, depending on available money.',
+    ],
+    faq: [
+      {
+        q: 'Does Washington State license general contractors?',
+        a: 'Washington requires general and specialty contractors to register with the Department of Labor & Industries, with a surety bond, liability insurance and a Washington business license. Electrical and plumbing contractors need an additional L&I license.',
+      },
+      {
+        q: 'How much is a contractor bond in Washington?',
+        a: 'Since July 1, 2024, the bond is $30,000 for general contractors and $15,000 for specialty contractors. Contractors registered before then raise their bond when they renew.',
+      },
+      {
+        q: 'Does a handyman need to be registered in Washington?',
+        a: 'Yes, in most cases. The only exemption is casual or minor work under $500 that isn’t part of a larger job, and it doesn’t apply to anyone who advertises as a contractor.',
+      },
+      {
+        q: 'What can I do if a Washington contractor does bad work?',
+        a: 'You can sue the contractor and their bond, generally within two years after the work was finished or abandoned. If the bond doesn’t cover your loss, you may qualify for L&I’s Homeowner Recovery Fund, which pays up to $25,000 depending on available money.',
+      },
+    ],
+    sources: [
+      { label: 'L&I Verify a Contractor, Tradesperson or Business', url: 'https://secure.lni.wa.gov/verify/' },
+      { label: 'L&I news: higher contractor bonds (July 2024)', url: 'https://www.lni.wa.gov/news-events/article/24-13/' },
+      { label: 'RCW 18.27.090 (exemptions)', url: 'https://app.leg.wa.gov/rcw/default.aspx?cite=18.27.090' },
+      { label: 'RCW 18.27.114 (disclosure statement)', url: 'https://app.leg.wa.gov/rcw/default.aspx?cite=18.27.114' },
+      { label: 'RCW 18.27.040 (bond and bond lawsuits)', url: 'https://app.leg.wa.gov/rcw/default.aspx?cite=18.27.040' },
+      {
+        label: 'L&I Homeowner Recovery Fund',
+        url: 'https://lni.wa.gov/licensing-permits/contractors/problems-with-a-contractor/homeowner-recovery-fund',
+      },
+      { label: 'L&I licensed plumbing contractor', url: 'https://lni.wa.gov/licensing-permits/plumbing/licensed-plumbing-contractor/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 export function stateBySlug(slug: string): StateGuide | undefined {
