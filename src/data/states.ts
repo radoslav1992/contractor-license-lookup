@@ -386,6 +386,179 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'georgia',
+    code: 'GA',
+    name: 'Georgia',
+    generalContractors: 'state',
+    summary:
+      'Georgia licenses residential and commercial general contractors through a state board under the Secretary of State, and licenses electricians, plumbers and HVAC contractors separately. A home project worth more than $2,500 needs a state-licensed contractor.',
+    boards: [
+      {
+        name: 'State Licensing Board for Residential and Commercial General Contractors',
+        licenses:
+          'Residential-Basic, Residential-Light Commercial, Commercial General Contractor and Commercial General Contractor Limited Tier licenses',
+        lookupUrl: 'https://verify.sos.ga.gov/verification/',
+        lookupNote:
+          'Search by person’s name, business name or license number; use the business search for a company. The profession may still be listed as Residential and General Contractors.',
+        website: 'https://sos.ga.gov/state-licensing-board-residential-and-commercial-general-contractors',
+      },
+      {
+        name: 'Georgia Secretary of State: construction trade licenses',
+        licenses: 'Electrical contractors, master and journeyman plumbers, and conditioned air (HVAC) contractors',
+        lookupUrl: 'https://verify.sos.ga.gov/verification/',
+        lookupNote: 'Use the same search and choose the trade, such as Electrical Contractors, Plumbers or Conditioned Air Contractors, as the profession.',
+        website: 'https://verify.sos.ga.gov/verification/',
+      },
+    ],
+    whenRequired: [
+      'A residential contractor license is required when the work on a home, or the contractor’s pay, is worth more than $2,500.',
+      'Electrical, plumbing and HVAC work needs a separate state trade license.',
+      'Roofers, painters, drywall installers and repair handymen are not licensed by the state, as long as they stay within their trade.',
+      'You don’t need a license to build your own home, but you must follow local building codes and get permits.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s license number and the exact business name.',
+      'Search the Secretary of State’s license verification by name, business name or license number.',
+      'Choose the right profession: Residential and General Contractors for builders and remodelers, or the trade for electrical, plumbing or HVAC work.',
+      'Check that the license is active and that the name matches your estimate and contract.',
+      'If a company is doing the job, make sure the company is licensed, not only one person.',
+    ],
+    watchFor: [
+      'Roofers, painters, drywall installers and handymen have no state license, so check references and insurance. The Attorney General warns that a contractor who offers to pay your insurance deductible may be running a scam.',
+      'Under Georgia’s Right to Repair Act, you must send the contractor written notice of a construction defect at least 90 days before you sue, and give them a chance to respond or offer repairs.',
+    ],
+    faq: [
+      {
+        q: 'How do I look up a contractor’s license in Georgia?',
+        a: 'Use the Secretary of State’s license verification search. You can search by name, business name or license number.',
+      },
+      {
+        q: 'Does a contractor need a license for a small job in Georgia?',
+        a: 'A residential contractor license is required when the work, or the contractor’s pay, is worth more than $2,500. Electrical, plumbing and HVAC work needs a separate state trade license whatever the price.',
+      },
+      {
+        q: 'Do roofers need a license in Georgia?',
+        a: 'No. The state doesn’t license roofers, painters, drywall installers or handymen. Any electrical, plumbing or HVAC work on the job still needs a licensed trade contractor.',
+      },
+      {
+        q: 'Do I need a license to build my own house in Georgia?',
+        a: 'No. You can build your own home without a license, but you still have to follow local building codes and get local permits.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Georgia SOS: State Licensing Board for Residential and Commercial General Contractors',
+        url: 'https://sos.ga.gov/state-licensing-board-residential-and-commercial-general-contractors',
+      },
+      {
+        label: 'Georgia SOS: residential and commercial general contractors FAQ',
+        url: 'https://sos.ga.gov/page/residential-and-commercial-general-contractors-frequently-asked-questions',
+      },
+      {
+        label: 'O.C.G.A. Title 43, Chapter 41 (residential and general contractors)',
+        url: 'https://sos.ga.gov/sites/default/files/2022-02/49_residential_and_general_contractors_43-41.pdf',
+      },
+      { label: 'Georgia SOS: license verification', url: 'https://verify.sos.ga.gov/verification/' },
+      {
+        label: 'Georgia Consumer Protection: home repairs and improvements',
+        url: 'https://consumer.georgia.gov/consumer-topics/home-repair-improvements',
+      },
+      { label: 'Georgia Consumer Protection: Right to Repair Act', url: 'https://consumer.georgia.gov/consumer-topics/right-repair-act' },
+      { label: 'Georgia Consumer Protection: storms and fraud', url: 'https://consumer.georgia.gov/consumer-topics/storms-fraud' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'north-carolina',
+    code: 'NC',
+    name: 'North Carolina',
+    generalContractors: 'state',
+    summary:
+      'North Carolina’s Licensing Board for General Contractors licenses contractors for any project that costs $40,000 or more. Electrical, plumbing, heating and air-conditioning, and fire sprinkler contractors need licenses from their own state boards whatever the price.',
+    boards: [
+      {
+        name: 'North Carolina Licensing Board for General Contractors',
+        licenses:
+          'General contractors on projects of $40,000 or more, with Limited (up to $750,000), Intermediate (up to $1.5 million) and Unlimited licenses',
+        lookupUrl: 'https://portal.nclbgc.org/Public/Search',
+        lookupNote: 'Fill in at least one field, such as company name, person’s name or license number.',
+        website: 'https://nclbgc.org/',
+      },
+      {
+        name: 'North Carolina State Board of Examiners of Electrical Contractors',
+        licenses: 'Electrical contractors',
+        lookupUrl: 'https://arls-public.ncbeec.org/Public/Search',
+        lookupNote: 'Fill in at least one field, such as company name or license number.',
+        website: 'https://www.ncbeec.org/',
+      },
+      {
+        name: 'North Carolina State Board of Examiners of Plumbing, Heating and Fire Sprinkler Contractors',
+        licenses: 'Plumbing, heating and air-conditioning, and fire sprinkler contractors',
+        lookupUrl: 'https://public.nclicensing.org/Public/Search',
+        lookupNote: 'Fill in at least one field, such as company name or license number.',
+        website: 'https://nclicensing.org/',
+      },
+    ],
+    whenRequired: [
+      'A general contractor license is required when the total project cost is $40,000 or more. The limit rose from $30,000 on October 1, 2023.',
+      'Electrical work needs a license from the electrical board, and plumbing, heating and fire sprinkler work a license from the plumbing board, whatever the project costs.',
+      'A property owner building on their own land can get a permit without a general contractor license by signing an affidavit that they will personally supervise the work.',
+      'Owners may do electrical work on their own property for their own use if it is not offered for sale, rent or lease.',
+    ],
+    howToCheck: [
+      'For a project of $40,000 or more, search the Licensing Board for General Contractors by company name, person’s name or license number.',
+      'Check that the license is valid and that its limit covers your project: Limited up to $750,000, Intermediate up to $1.5 million, Unlimited with no cap.',
+      'For electrical work, search the electrical board. For plumbing, heating, air-conditioning or fire sprinkler work, search the plumbing board.',
+      'Make sure your contract lists the contractor’s full name and license number, and that they match the record.',
+      'Before work starts, check with your local permit office that the contractor has pulled the permits.',
+    ],
+    watchFor: [
+      'The board’s Homeowners Recovery Fund can repay some losses on a single-family home caused by a licensed general contractor, or by an unlicensed one who claimed to be licensed. You first need a court judgment you can’t collect, and must apply within a year after the case ends.',
+      'The board investigates unlicensed contracting only on projects of $40,000 or more. For smaller jobs, complain to the Attorney General’s Consumer Protection Division.',
+    ],
+    faq: [
+      {
+        q: 'How do I check a contractor’s license in North Carolina?',
+        a: 'For general contractors, use the Licensing Board for General Contractors’ license search. Electricians, plumbers and HVAC contractors have their own boards’ searches.',
+      },
+      {
+        q: 'Does a contractor need a license for jobs under $40,000 in North Carolina?',
+        a: 'No general contractor license is needed for projects under $40,000. Electrical, plumbing, HVAC and fire sprinkler work still needs a license from the right state board.',
+      },
+      {
+        q: 'What is the North Carolina Homeowners Recovery Fund?',
+        a: 'A fund run by the Licensing Board for General Contractors that can repay some losses from a contractor’s dishonest or incompetent work on a single-family home. You first need a court judgment against the contractor that you can’t collect.',
+      },
+      {
+        q: 'Can I do my own electrical work in North Carolina?',
+        a: 'State law lets owners do electrical work on their own property for their own use, as long as the property isn’t offered for sale, rent or lease. Building code, permit and inspection rules still apply.',
+      },
+    ],
+    sources: [
+      { label: 'NC Licensing Board for General Contractors: FAQ for consumers', url: 'https://nclbgc.org/faq-consumers/' },
+      { label: 'NCLBGC: license search', url: 'https://portal.nclbgc.org/Public/Search' },
+      {
+        label: 'NCLBGC: September 2023 board brief (the $40,000 limit)',
+        url: 'https://www.nclbgc.org/2023/09/06/september-2023-board-brief/',
+      },
+      { label: 'NCLBGC: Homeowners Recovery Fund', url: 'https://nclbgc.org/homeowners-recovery-fund/' },
+      {
+        label: 'NC General Statutes ch. 87, art. 1 (general contractors)',
+        url: 'https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/ByArticle/Chapter_87/Article_1.pdf',
+      },
+      {
+        label: 'G.S. 87-43 (electrical contracting)',
+        url: 'https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_87/gs_87-43.html',
+      },
+      {
+        label: 'G.S. 87-21 (plumbing, heating and fire sprinkler contractors)',
+        url: 'https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_87/gs_87-21.html',
+      },
+      { label: 'NC Department of Justice: home improvement', url: 'https://ncdoj.gov/protecting-consumers/home-repair-and-products/home-improvement/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 export function stateBySlug(slug: string): StateGuide | undefined {
