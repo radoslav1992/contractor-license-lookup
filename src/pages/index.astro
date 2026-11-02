@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import StatePicker from '../components/StatePicker.astro';
+import { STATES } from '../data/states';
+
+const states = [...STATES].sort((a, b) => a.name.localeCompare(b.name, 'en'));
+
+const steps = [
+  'Ask for the contractor’s license number and the exact business name on the license. A licensed contractor will give you both without hesitation.',
+  'Find the board that licenses that kind of work in your state. Some states license all contractors in one place; others split trades such as electrical and plumbing between separate boards, and a few leave general contractors to cities and counties.',
+  'Search the board’s official lookup by license number or business name. These searches are free.',
+  'Confirm the license is active, not expired or suspended, and that its classification covers your job.',
+  'Check the bond, insurance and workers’ compensation details if the board lists them, and look for complaints or disciplinary actions.',
+  'Make sure the name and license number on your written contract match the license you looked up.',
+];
+
+const redFlags = [
+  'They won’t give you a license number, or the number belongs to a different business.',
+  'They ask for a large payment up front, or cash only.',
+  'They knock on your door after a storm offering to start right away.',
+  'They don’t want a written contract, or ask you to pull the permits yourself.',
+];
+
+const faq = [
+  {
+    q: 'Is a contractor license lookup free?',
+    a: 'Yes. State licensing boards let anyone search their license records online at no cost.',
+  },
+  {
+    q: 'Does a license mean the contractor does good work?',
+    a: 'No. A license shows the contractor met the state’s requirements, and in many states that they carry a bond or insurance. Still ask for references, read reviews and get a written contract.',
+  },
+  {
+    q: 'What if my state doesn’t license general contractors?',
+    a: 'Some states, such as Texas, leave general contractors to cities and counties while still licensing trades like electrical and plumbing. Check with your local building department and verify each licensed trade separately.',
+  },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Contractor License Lookup',
+    url: 'https://contractorlicenselookup.org/',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base
+  title="Contractor License Lookup — Check a Contractor’s License by State"
+  description="Check a contractor’s license with the official state board before you hire. Find who licenses contractors in your state, where to search and what to look for."
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <h1>Contractor license lookup</h1>
+    <p class="lead">
+      Check a contractor’s license with the official state board before you hire. Pick your state to see who licenses
+      contractors there, where to search, and what to look for.
+    </p>
+    <StatePicker />
+
+    <h2 id="states">States covered</h2>
+    <p>
+      We add states one at a time, checking each against the official licensing board, so every guide is accurate.
+      More are on the way.
+    </p>
+    <ul class="cards">
+      {states.map((s) => (
+        <li class="card">
+          <h3><a href={`/${s.slug}`}>{s.name} contractor license lookup</a></h3>
+          <p>{s.summary.split('. ')[0]}.</p>
+          <a href={`/${s.slug}`}>How to check a {s.name} license →</a>
+        </li>
+      ))}
+    </ul>
+
+    <h2 id="how-to-check">How to check a contractor’s license in any state</h2>
+    <ol class="steps">
+      {steps.map((s) => <li>{s}</li>)}
+    </ol>
+
+    <h2>Red flags before you hire</h2>
+    <ul class="points">
+      {redFlags.map((r) => <li>{r}</li>)}
+    </ul>
+
+    <h2>Questions</h2>
+    <div class="faq">
+      {faq.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</Base>

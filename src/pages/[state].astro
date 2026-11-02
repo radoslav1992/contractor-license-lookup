@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+import { STATES, type StateGuide } from '../data/states';
+
+export function getStaticPaths() {
+  return STATES.map((state) => ({ params: { state: state.slug }, props: { state } }));
+}
+
+interface Props {
+  state: StateGuide;
+}
+
+const { state } = Astro.props;
+const others = STATES.filter((s) => s.slug !== state.slug).sort((a, b) => a.name.localeCompare(b.name, 'en'));
+const checked = new Date(`${state.lastChecked}T00:00:00Z`).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+});
+const url = `https://contractorlicenselookup.org/${state.slug}`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://contractorlicenselookup.org/' },
+      { '@type': 'ListItem', position: 2, name: state.name, item: url },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: state.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base
+  title={`${state.name} Contractor License Lookup — How to Check a License`}
+  description={`How to check a ${state.name} contractor’s license with the official board. ${state.summary.split('. ')[0]}.`}
+  jsonLd={jsonLd}
+>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / {state.name}</nav>
+    <h1>{state.name} contractor license lookup</h1>
+    <p class="lead">{state.summary}</p>
+
+    {state.generalContractors === 'local-only' && (
+      <div class="callout" role="note">
+        <strong>{state.name} has no state general contractor license.</strong>
+        Check trade licenses with the boards below, and ask your city or county whether the contractor is registered
+        and pulls permits there.
+      </div>
+    )}
+
+    <h2>Where to search</h2>
+    {state.boards.map((b) => (
+      <section class="board">
+        <h3>{b.name}</h3>
+        <p>Licenses: {b.licenses}.</p>
+        <div class="board-actions">
+          <a class="button" href={b.lookupUrl} target="_blank" rel="noopener">Search licenses on the official site</a>
+          {b.website !== b.lookupUrl && (
+            <a class="button secondary" href={b.website} target="_blank" rel="noopener">Board website</a>
+          )}
+        </div>
+        {b.lookupNote && <p class="note">{b.lookupNote}</p>}
+      </section>
+    ))}
+
+    <h2>When you need a licensed contractor in {state.name}</h2>
+    <ul class="points">
+      {state.whenRequired.map((w) => <li>{w}</li>)}
+    </ul>
+
+    <h2>How to check a {state.name} contractor</h2>
+    <ol class="steps">
+      {state.howToCheck.map((s) => <li>{s}</li>)}
+    </ol>
+
+    {state.watchFor.length > 0 && (
+      <>
+        <h2>Watch out for</h2>
+        <ul class="points">
+          {state.watchFor.map((w) => <li>{w}</li>)}
+        </ul>
+      </>
+    )}
+
+    <h2>Questions</h2>
+    <div class="faq">
+      {state.faq.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+
+    {others.length > 0 && (
+      <>
+        <h2>Other states</h2>
+        <ul class="points">
+          {others.map((s) => <li><a href={`/${s.slug}`}>{s.name} contractor license lookup</a></li>)}
+        </ul>
+      </>
+    )}
+
+    <div class="sources">
+      <p>Checked on {checked} against these sources:</p>
+      <ul>
+        {state.sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>)}
+      </ul>
+      <p>Rules change. Always confirm a license on the official board’s website before you hire.</p>
+    </div>
+  </div>
+</Base>
