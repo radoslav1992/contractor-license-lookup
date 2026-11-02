@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** JSON-LD objects for this page. */
+  jsonLd?: object[];
+  noindex?: boolean;
+}
+
+const { title, description, jsonLd = [], noindex = false } = Astro.props;
+// Pages are built as files (index.html, california.html), so the build-time
+// path can end in "index" or ".html"; the canonical URL never does.
+const path = Astro.url.pathname
+  .replace(/\.html$/, '')
+  .replace(/(^|\/)index$/, '/')
+  .replace(/(.)\/$/, '$1');
+const canonical = new URL(path || '/', Astro.site);
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.href} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:site_name" content="Contractor License Lookup" />
+    {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="/">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="26" height="26"><circle cx="12" cy="12" r="11" fill="var(--accent)" /><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <span>Contractor License Lookup</span>
+        </a>
+        <nav aria-label="Main">
+          <a href="/#states">States</a>
+          <a href="/#how-to-check">How to check</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          Contractor License Lookup is an independent guide. It is not affiliated with any state licensing board or
+          government agency. Always confirm a license on the official board’s website before you hire.
+        </p>
+        <p class="footer-links">
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+          <span>© {year} contractorlicenselookup.org</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

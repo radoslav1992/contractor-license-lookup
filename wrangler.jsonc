@@ -1,0 +1,9 @@
+{
+  // Static site: Cloudflare serves the files Astro builds into dist/.
+  "name": "contractor-license-lookup",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

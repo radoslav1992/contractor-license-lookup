@@ -1,0 +1,22 @@
+---
+import { STATES } from '../data/states';
+
+const states = [...STATES].sort((a, b) => a.name.localeCompare(b.name, 'en'));
+---
+<form class="picker" data-state-picker action="/">
+  <label for="state-select">Where is the work being done?</label>
+  <select id="state-select" name="state" required>
+    <option value="">Choose a state</option>
+    {states.map((s) => <option value={s.slug}>{s.name}</option>)}
+  </select>
+  <button class="button" type="submit">Show how to check</button>
+</form>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-state-picker]');
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const slug = new FormData(form).get('state');
+    if (typeof slug === 'string' && /^[a-z-]+$/.test(slug)) window.location.href = `/${slug}`;
+  });
+</script>
