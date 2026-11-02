@@ -26,7 +26,9 @@ export interface StateGuide {
   name: string;
   /** Does the state itself license general contractors? */
   generalContractors: 'state' | 'state-and-local' | 'local-only';
-  /** One paragraph shown at the top of the page and in search results. */
+  /** One line for the state list and search-result descriptions. */
+  short: string;
+  /** One paragraph shown at the top of the page. */
   summary: string;
   boards: Board[];
   whenRequired: string[];
@@ -44,6 +46,7 @@ export const STATES: StateGuide[] = [
     code: 'CA',
     name: 'California',
     generalContractors: 'state',
+    short: 'Licensed by the Contractors State License Board (CSLB) for jobs of $1,000 or more.',
     summary:
       'California licenses contractors through the Contractors State License Board (CSLB). A licensed contractor is required for any job of $1,000 or more in labor and materials, and for smaller jobs that need a building permit or are done by someone with employees.',
     boards: [
@@ -110,6 +113,7 @@ export const STATES: StateGuide[] = [
     code: 'FL',
     name: 'Florida',
     generalContractors: 'state-and-local',
+    short: 'Certified contractors work statewide; registered ones only where they hold a local license.',
     summary:
       'Florida licenses contractors through the Department of Business and Professional Regulation (DBPR). Certified contractors may work anywhere in the state; registered contractors may work only in the cities or counties where they hold a local license.',
     boards: [
@@ -181,6 +185,7 @@ export const STATES: StateGuide[] = [
     code: 'TX',
     name: 'Texas',
     generalContractors: 'local-only',
+    short: 'No state general contractor license; trades are licensed by TDLR and the plumbing board.',
     summary:
       'Texas has no state license for general contractors, home builders or roofers. Trades are licensed separately: electricians and air-conditioning contractors by the Texas Department of Licensing and Regulation (TDLR), plumbers by the State Board of Plumbing Examiners. Cities and counties handle builder registration and permits.',
     boards: [
@@ -256,6 +261,7 @@ export const STATES: StateGuide[] = [
     code: 'VA',
     name: 'Virginia',
     generalContractors: 'state',
+    short: 'The Board for Contractors licenses Class A, B and C contractors for jobs over $1,000.',
     summary:
       'Virginia licenses contractor businesses through the Board for Contractors at the Department of Professional and Occupational Regulation (DPOR), as Class A, B or C depending on job size. Most jobs over $1,000 need a state license, and the contractor’s class must cover the full price of your job.',
     boards: [
@@ -324,6 +330,7 @@ export const STATES: StateGuide[] = [
     code: 'WA',
     name: 'Washington',
     generalContractors: 'state',
+    short: 'Every contractor must register with Labor & Industries, with a bond and insurance.',
     summary:
       'Washington requires construction contractors to register with the Department of Labor & Industries (L&I) as general or specialty contractors, with a bond and liability insurance. Electrical and plumbing work also needs an L&I contractor license and certified workers.',
     boards: [
@@ -391,6 +398,7 @@ export const STATES: StateGuide[] = [
     code: 'GA',
     name: 'Georgia',
     generalContractors: 'state',
+    short: 'A state license for home projects over $2,500, and separate licenses for the trades.',
     summary:
       'Georgia licenses residential and commercial general contractors through a state board under the Secretary of State, and licenses electricians, plumbers and HVAC contractors separately. A home project worth more than $2,500 needs a state-licensed contractor.',
     boards: [
@@ -474,6 +482,7 @@ export const STATES: StateGuide[] = [
     code: 'NC',
     name: 'North Carolina',
     generalContractors: 'state',
+    short: 'A general contractor license for projects of $40,000 or more; trades are licensed separately.',
     summary:
       'North Carolina’s Licensing Board for General Contractors licenses contractors for any project that costs $40,000 or more. Electrical, plumbing, heating and air-conditioning, and fire sprinkler contractors need licenses from their own state boards whatever the price.',
     boards: [
@@ -564,6 +573,7 @@ export const STATES: StateGuide[] = [
     code: 'PA',
     name: 'Pennsylvania',
     generalContractors: 'local-only',
+    short: 'No state license; home improvement contractors register with the Attorney General.',
     summary:
       'Pennsylvania doesn’t license general contractors or most trades at the state level. Instead, home improvement contractors must register with the Office of Attorney General, and some cities, including Philadelphia and Pittsburgh, require their own licenses.',
     boards: [
@@ -659,6 +669,7 @@ export const STATES: StateGuide[] = [
     code: 'OH',
     name: 'Ohio',
     generalContractors: 'local-only',
+    short: 'No state license for home contractors; cities such as Columbus license them.',
     summary:
       'Ohio doesn’t license general, home improvement or other residential contractors at the state level; cities and counties do. The state’s Construction Industry Licensing Board licenses only commercial electrical, HVAC, plumbing, hydronics and refrigeration contractors.',
     boards: [
@@ -737,7 +748,374 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'new-york',
+    code: 'NY',
+    name: 'New York',
+    generalContractors: 'local-only',
+    short: 'No state license; New York City, Buffalo and five counties license contractors locally.',
+    summary:
+      'New York State doesn’t license general or home improvement contractors. New York City, Buffalo and Nassau, Suffolk, Westchester, Putnam and Rockland counties license them locally, and state law requires a written contract for any home improvement job over $500.',
+    boards: [
+      {
+        name: 'NYC Department of Consumer and Worker Protection (DCWP)',
+        licenses: 'Home improvement contractors doing residential work over $200 in New York City, including roofing, windows, driveways and patios',
+        lookupUrl: 'https://a866-dcwpbp.nyc.gov/search',
+        lookupNote: 'Search by business name or license number, or call 311.',
+        website: 'https://www.nyc.gov/site/dca/consumers/check-license.page',
+      },
+      {
+        name: 'NYC Department of Buildings (DOB)',
+        licenses: 'Master plumbers, electricians and other construction trades in New York City',
+        lookupUrl: 'https://a810-bisweb.nyc.gov/bisweb/LicenseTypeServlet?vlfirst=N',
+        lookupNote: 'Pick the license type, then search by name, business name or license number. Newer records are moving to the DOB NOW public portal.',
+        website: 'https://www.nyc.gov/site/buildings/property-or-business-owner/know-your-construction-professional.page',
+      },
+      {
+        name: 'Nassau County Department of Consumer Affairs',
+        licenses: 'Home improvement businesses working on homes in Nassau County',
+        lookupUrl: 'https://apex5.nassaucountyny.gov/ords/f?p=288%3A500%3A%3A%3ANO',
+        lookupNote: 'The county’s search of businesses with valid licenses. If the link has moved, start from the county’s licensing page.',
+        website: 'https://www.nassaucountyny.gov/1563/Licensing-Registrations',
+      },
+      {
+        name: 'Suffolk County Department of Consumer Affairs',
+        licenses: 'Home improvement contractors, and master and restricted electricians and plumbers, in Suffolk County',
+        lookupUrl: 'https://ca.suffolkcountyny.gov/dcasearch',
+        lookupNote: 'Search by license number, name, business name, phone or ZIP code.',
+        website: 'https://www.suffolkcountyny.gov/Departments/Consumer-Affairs',
+      },
+      {
+        name: 'Westchester County Department of Consumer Protection',
+        licenses: 'Home improvement contractors, electricians and plumbers in Westchester County (Yonkers licenses its own contractors)',
+        lookupUrl: 'https://consumerlicenseweb.westchestergov.com/',
+        lookupNote: 'Search by company, contractor or trade name. Electricians and plumbers are in the county’s separate trade license search.',
+        website: 'https://consumer.westchestergov.com/',
+      },
+      {
+        name: 'Rockland County Office of Consumer Protection',
+        licenses: 'Home improvement contractors working on homes in Rockland County',
+        lookupUrl: 'https://www.rocklandcountyny.gov/departments/consumer-protection-weights-measures/licensed-businesses',
+        lookupNote: 'Use the licensed businesses list on this page.',
+        website: 'https://www.rocklandcountyny.gov/departments/consumer-protection-weights-measures',
+      },
+    ],
+    whenRequired: [
+      'The state doesn’t license home improvement or general contractors. A local license is needed only in New York City, Buffalo, and Nassau, Suffolk, Westchester, Putnam and Rockland counties.',
+      'In New York City, home improvement work over $200 needs a DCWP license. Plumbers and electricians are licensed by the Department of Buildings instead.',
+      'Electricians and plumbers are licensed by local governments, not the state, for example by Suffolk and Westchester counties.',
+      'Statewide, any home improvement contract over $500 must be in writing, and you can cancel it until midnight of the third business day after you sign.',
+    ],
+    howToCheck: [
+      'Find out whether the home is in an area that licenses contractors: New York City, Buffalo, or Nassau, Suffolk, Westchester, Putnam or Rockland county. Anywhere else, ask your town or city building department.',
+      'In New York City, search the contractor in the DCWP license search or call 311. In a licensing county, use that county’s search or call its consumer office.',
+      'For a plumber or electrician, check the license with the NYC Department of Buildings or your county.',
+      'Make sure the business name, license number and expiration date match your contract, and ask the agency about complaints.',
+      'Get a signed written contract with the license number before any work starts, and keep the deposit small.',
+    ],
+    watchFor: [
+      'Under state law, money you pay before the job is substantially finished must go into an escrow account at a New York bank within five business days, unless the contractor gives you a bond instead. The contractor must tell you where your money is held.',
+      'In New York City, DCWP advises paying no more than 25% up front. The city’s Home Improvement Trust Fund can repay you only if your contractor was licensed.',
+    ],
+    faq: [
+      {
+        q: 'Does New York State license general contractors?',
+        a: 'No. New York State doesn’t license general or home improvement contractors. Some cities and counties do, including New York City, Buffalo, and Nassau, Suffolk, Westchester, Putnam and Rockland counties.',
+      },
+      {
+        q: 'How do I check a contractor’s license in NYC?',
+        a: 'Use DCWP’s license search or call 311. Home improvement contractors need a DCWP license for jobs over $200; plumbers and electricians are licensed by the NYC Department of Buildings.',
+      },
+      {
+        q: 'Do I need a written contract for home improvement work in New York?',
+        a: 'Yes, for any job over $500. You can cancel it in writing until midnight of the third business day after you sign.',
+      },
+      {
+        q: 'What if my town isn’t in an area that licenses contractors?',
+        a: 'There may be no contractor license to check. Ask your town or city building department about local rules and permits; the state contract and deposit rules still apply.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NY Attorney General: contractors and home maintenance',
+        url: 'https://ag.ny.gov/resources/individuals/consumer-issues/contractors-home-maintenance',
+      },
+      { label: 'NY General Business Law § 771 (home improvement contracts)', url: 'https://www.nysenate.gov/legislation/laws/GBS/771' },
+      { label: 'NY Lien Law § 71-A (deposits held in trust)', url: 'https://www.nysenate.gov/legislation/laws/LIE/71-A' },
+      { label: 'NYC DCWP: check license status', url: 'https://www.nyc.gov/site/dca/consumers/check-license.page' },
+      {
+        label: 'NYC DCWP: hiring a home improvement contractor',
+        url: 'https://www.nyc.gov/site/dca/consumers/shopping-services-home-improvement.page',
+      },
+      {
+        label: 'NYC DOB: know your construction professional',
+        url: 'https://www.nyc.gov/site/buildings/property-or-business-owner/know-your-construction-professional.page',
+      },
+      { label: 'Nassau County: licensing and registrations', url: 'https://www.nassaucountyny.gov/1563/Licensing-Registrations' },
+      { label: 'Suffolk County Consumer Affairs: license types', url: 'https://www.suffolkcountyny.gov/Departments/Consumer-Affairs/Type-of-License' },
+      { label: 'Westchester County: license search', url: 'https://consumerlicenseweb.westchestergov.com/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'new-jersey',
+    code: 'NJ',
+    name: 'New Jersey',
+    generalContractors: 'state',
+    short: 'Home improvement contractors register with the state every year; trades are licensed.',
+    summary:
+      'New Jersey requires every home improvement contractor business to register each year with the state Division of Consumer Affairs. Electricians, plumbers and HVACR contractors need separate state licenses.',
+    boards: [
+      {
+        name: 'New Jersey Division of Consumer Affairs: home improvement contractor registration',
+        licenses: 'Home improvement and home elevation contractor businesses working on homes',
+        lookupUrl: 'https://rgbportal.dca.njoag.gov/public-view/',
+        lookupNote:
+          'Search by registration number, business name or city, and check that the status is active. If you can’t find a registration, call the Division at 1-800-242-5846.',
+        website: 'https://www.njconsumeraffairs.gov/hic',
+      },
+      {
+        name: 'Board of Examiners of Electrical Contractors',
+        licenses: 'Electrical contractors',
+        lookupUrl: 'https://www.njconsumeraffairs.gov/elec/Pages/verification.aspx',
+        website: 'https://www.njconsumeraffairs.gov/elec',
+      },
+      {
+        name: 'State Board of Examiners of Master Plumbers',
+        licenses: 'Master plumbers',
+        lookupUrl: 'https://newjersey.mylicense.com/verification/',
+        lookupNote: 'The Division of Consumer Affairs’ license verification. Search by name or license number.',
+        website: 'https://www.njconsumeraffairs.gov/plu',
+      },
+      {
+        name: 'State Board of Examiners of Heating, Ventilating, Air Conditioning and Refrigeration Contractors',
+        licenses: 'Master HVACR contractors',
+        lookupUrl: 'https://www.njconsumeraffairs.gov/hvacr/Pages/verification.aspx',
+        lookupNote: 'Towns can’t issue HVACR contractor licenses, so only the state license counts.',
+        website: 'https://www.njconsumeraffairs.gov/hvacr',
+      },
+    ],
+    whenRequired: [
+      'Anyone who sells or does home improvement work on homes in New Jersey must register with the Division of Consumer Affairs and renew every year, including companies based outside the state.',
+      'You don’t need to register to work on your own or a family member’s home. State-licensed plumbers, electricians and architects don’t need to register for work within their license.',
+      'Electrical, plumbing and HVACR contracting each need a separate state license from that trade’s board.',
+      'Registered contractors must carry at least $500,000 of liability insurance per occurrence and, since a 2024 law, workers’ compensation and a bond.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s registration number. It must appear on contracts, ads and business vehicles.',
+      'Search the number or business name in the Division of Consumer Affairs registration search, or call 1-800-242-5846.',
+      'Check that the business name matches and the status is active, and ask the Division about complaints or legal actions.',
+      'For electrical, plumbing or HVACR work, also check the contractor’s license with that trade’s board.',
+      'For any job over $500, get a written contract that lists the registration number and comes with a copy of the contractor’s liability insurance certificate.',
+    ],
+    watchFor: [
+      'A contract over $500 must be in writing and list the contractor’s legal name, address and registration number, the start and completion dates, the work, the total price and the Division’s toll-free number.',
+      'You can cancel for any reason until midnight of the third business day after you get a copy of the contract, by certified or registered mail with return receipt or in person. The contractor must refund your money within 30 days.',
+    ],
+    faq: [
+      {
+        q: 'Does New Jersey require contractors to be licensed?',
+        a: 'Home improvement contractor businesses must register with the Division of Consumer Affairs every year, and electricians, plumbers and HVACR contractors need state licenses. A 2024 law created a board that will also license individual home improvement contractors once its rules take effect.',
+      },
+      {
+        q: 'How do I look up a contractor’s registration in New Jersey?',
+        a: 'Use the Division of Consumer Affairs registration search by business name or registration number, or call 1-800-242-5846, and confirm the status is active.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in New Jersey?',
+        a: 'Yes. You can cancel for any reason until midnight of the third business day after you receive a copy of the contract. The contractor must refund your money within 30 days.',
+      },
+      {
+        q: 'Does a plumber or electrician also need home improvement registration?',
+        a: 'Not for work within their state license. Check their license with the plumbing or electrical board instead.',
+      },
+    ],
+    sources: [
+      { label: 'NJ Division of Consumer Affairs: home improvement contractors', url: 'https://www.njconsumeraffairs.gov/hic' },
+      { label: 'NJ Division of Consumer Affairs: home improvement contractor FAQ', url: 'https://www.njconsumeraffairs.gov/hic/Pages/FAQ.aspx' },
+      { label: 'NJ Division of Consumer Affairs: registration search', url: 'https://rgbportal.dca.njoag.gov/public-view/' },
+      {
+        label: 'NJ Division of Consumer Affairs: hiring home improvement contractors',
+        url: 'https://www.njconsumeraffairs.gov/news/consumer%20briefs/hiring-home-improvement-contractors.pdf',
+      },
+      {
+        label: 'NJ Division of Consumer Affairs: changes to the law (P.L. 2023, c.237)',
+        url: 'https://www.njconsumeraffairs.gov/Documents/HIC-HEC-Regarding-Changes-To-The-Law-New-Requirements-For-Registration.pdf',
+      },
+      { label: 'NJ Board of Examiners of Electrical Contractors: FAQ', url: 'https://www.njconsumeraffairs.gov/elec/pages/faq.aspx' },
+      { label: 'NJ HVACR Board: FAQ', url: 'https://www.njconsumeraffairs.gov/hvacr/Pages/FAQ.aspx' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'illinois',
+    code: 'IL',
+    name: 'Illinois',
+    generalContractors: 'local-only',
+    short: 'No state general contractor license, but the state licenses roofers and plumbers.',
+    summary:
+      'Illinois doesn’t license general contractors at the state level; cities, villages and counties set their own rules, and Chicago requires its own general contractor license. The state does license roofers and plumbers, so always check those trades with the state.',
+    boards: [
+      {
+        name: 'Illinois Department of Financial and Professional Regulation (IDFPR)',
+        licenses: 'Roofing contractors, with a limited license for buildings of 8 or fewer units and an unlimited license for all roofing work',
+        lookupUrl: 'https://idfpr.illinois.gov/checklicense.html',
+        lookupNote: 'Open the license lookup and choose Roofing Contractor as the license type. Illinois roofing license numbers start with 104-.',
+        website: 'https://idfpr.illinois.gov/profs/roof.html',
+      },
+      {
+        name: 'Illinois Department of Public Health (IDPH) plumbing program',
+        licenses: 'Plumbers, apprentice plumbers, plumbing contractors (registered every year) and lawn irrigation contractors',
+        lookupUrl: 'https://plumblicv5pub.dph.illinois.gov/Clients/ILDOHPlumb/Public/Verification/Plumber_License_Verification.aspx',
+        lookupNote: 'Search by last name, business name, license number, city or county.',
+        website: 'https://dph.illinois.gov/topics-services/environmental-health-protection/plumbing.html',
+      },
+      {
+        name: 'City of Chicago Department of Buildings',
+        licenses: 'General, electrical, plumbing and mason contractors working in Chicago',
+        lookupUrl: 'https://www.chicago.gov/city/en/depts/bldgs/provdrs/licenses/svcs/license-lookup.html',
+        lookupNote: 'Pick the contractor type. The search shows current licenses and recently expired ones.',
+        website: 'https://www.chicago.gov/city/en/depts/bldgs/provdrs/licenses.html',
+      },
+    ],
+    whenRequired: [
+      'Anyone doing roofing work for pay needs a state roofing license. You don’t need one to work on your own property.',
+      'All plumbing must be done by licensed plumbers, and plumbing contractors register with IDPH every year. An owner living in a single-family home may do their own plumbing to code, but may not hire an unlicensed person to do it.',
+      'There is no state license for general contractors, electricians or HVAC. Cities, villages and counties set their own license, registration and permit rules.',
+      'Chicago requires a city general contractor license for most construction, repair and demolition work, and only city-licensed electrical contractors may do electrical work. Owners working on their own primary residence of up to three stories and six units are exempt from the general contractor license, except for excavation or demolition.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s license numbers and exact business name, and ask your local building department what license or registration the job needs.',
+      'For a roofer, use IDFPR’s license lookup and choose Roofing Contractor. Confirm the license is active, the number starts with 104-, and the name matches your contract.',
+      'For a plumber or plumbing contractor, search IDPH’s plumber license search.',
+      'In Chicago, search the Department of Buildings contractor license lookup for general, electrical, plumbing and mason contractors.',
+      'Check for complaints with the Illinois Attorney General, and get a signed written contract before work starts.',
+    ],
+    watchFor: [
+      'After storms, check roofers closely. Licensed roofers must show their Illinois license number on bids, contracts and vehicles, and state law bars roofers from paying or waiving your insurance deductible.',
+      'For home repair jobs over $1,000, the contractor must give you a written contract with the total price before work starts, and the state’s “Home Repair: Know Your Consumer Rights” pamphlet before you sign.',
+    ],
+    faq: [
+      {
+        q: 'Does Illinois require general contractors to be licensed?',
+        a: 'No. Illinois has no statewide general contractor license. Your city, village or county may require its own license, registration or permits, so ask your local building department.',
+      },
+      {
+        q: 'How do I check a roofer’s license in Illinois?',
+        a: 'Use IDFPR’s license lookup and choose Roofing Contractor as the license type. Make sure the license is active, the number starts with 104-, and the name matches your contract.',
+      },
+      {
+        q: 'Who licenses plumbers in Illinois?',
+        a: 'The Illinois Department of Public Health. You can check a plumber or plumbing contractor in IDPH’s plumber license search.',
+      },
+      {
+        q: 'Do I need a licensed general contractor in Chicago?',
+        a: 'Usually, yes. Chicago requires a city general contractor license for most construction, repair and demolition work. Owners working on their own primary residence of up to three stories and six units are exempt, except for excavation or demolition.',
+      },
+    ],
+    sources: [
+      { label: 'IDFPR: roofing contractor licensing', url: 'https://idfpr.illinois.gov/profs/roof.html' },
+      { label: 'IDFPR: license lookup', url: 'https://idfpr.illinois.gov/checklicense.html' },
+      {
+        label: '225 ILCS 335/5.5 (roofers and insurance deductibles)',
+        url: 'https://www.ilga.gov/legislation/ilcs/fulltext?DocName=022503350K5.5',
+      },
+      { label: 'IDPH: plumbing program', url: 'https://dph.illinois.gov/topics-services/environmental-health-protection/plumbing.html' },
+      { label: 'Illinois Home Repair and Remodeling Act (815 ILCS 513)', url: 'https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2359' },
+      { label: 'Illinois Attorney General: avoid home repair fraud', url: 'https://illinoisattorneygeneral.gov/consumer-protection/home-repair/' },
+      {
+        label: 'City of Chicago: does my project need a licensed general contractor?',
+        url: 'https://www.chicago.gov/city/en/sites/guide-to-building-permits/home/help/faq/DOB/GC-license.html',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'michigan',
+    code: 'MI',
+    name: 'Michigan',
+    generalContractors: 'state',
+    short: 'A state license for most home jobs of $600 or more, including roofing.',
+    summary:
+      'Michigan’s Department of Licensing and Regulatory Affairs (LARA) licenses residential builders, maintenance and alteration contractors such as roofers, and electrical, plumbing and mechanical contractors. Most home jobs of $600 or more need a state license, and a builder license doesn’t cover electrical, plumbing or HVAC work.',
+    boards: [
+      {
+        name: 'LARA Bureau of Construction Codes: residential builders',
+        licenses:
+          'Residential builders, and maintenance and alteration contractors in specific trades such as roofing, siding, carpentry, concrete, masonry, gutters and basement waterproofing',
+        lookupUrl: 'https://www.michigan.gov/licenselookup',
+        lookupNote: 'Search by license number or name. For a maintenance and alteration contractor, check that the trade you need is on the license.',
+        website: 'https://www.michigan.gov/lara/bureau-list/bcc/sections/licensing-section/residential-builders',
+      },
+      {
+        name: 'LARA Bureau of Construction Codes: skilled trades',
+        licenses: 'Electrical, plumbing and mechanical (HVAC and refrigeration) contractors, and electricians and plumbers',
+        lookupUrl: 'https://www.michigan.gov/lara/i-need-to/find-or-verify-a-licensed-professional-or-business',
+        lookupNote: 'Under skilled trades, choose Electrician, Plumber or Mechanical Contractor to reach the license search.',
+        website: 'https://www.michigan.gov/lara/bureau-list/bcc/sections/licensing-section',
+      },
+    ],
+    whenRequired: [
+      'Paid residential construction, remodeling and repair needs a residential builder or maintenance and alteration license when labor and materials total $600 or more. Splitting a job into smaller contracts doesn’t avoid the rule.',
+      'A maintenance and alteration contractor may only take jobs in the trades listed on their license, such as roofing, siding or basement waterproofing.',
+      'Electrical, plumbing and mechanical work needs separate state contractor licenses. A residential builder must hire licensed contractors for that work.',
+      'Owners can work on a building on their own property for their own use without a builder license, and may do their own electrical, plumbing and heating work in a single-family home they own and live in. Plumbing and heating work still needs a permit.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s LARA license number and the exact name on the license. LARA says it’s a red flag if a contractor can’t give you either.',
+      'Search LARA’s license lookup by license number or name.',
+      'Confirm the license is active and fits the job: residential builder, the right maintenance and alteration trade such as roofing, or an electrical, plumbing or mechanical license.',
+      'For electrical, plumbing or HVAC work, check the company that will actually do that work, not just your builder.',
+      'Make sure the license number is on your written contract and that the contract says who will get the permits.',
+    ],
+    watchFor: [
+      'A residential builder license doesn’t cover electrical, plumbing or HVAC work. That work must be done by contractors with their own state license.',
+      'LARA must receive a complaint about a licensed builder within 18 months after completion, occupancy or purchase, whichever is latest. Contract, payment and warranty disputes go to civil court instead.',
+    ],
+    faq: [
+      {
+        q: 'Do contractors need a license in Michigan?',
+        a: 'Yes, for most home work. A residential builder or maintenance and alteration license from LARA is required when labor and materials total $600 or more.',
+      },
+      {
+        q: 'How do I look up a contractor’s license in Michigan?',
+        a: 'Use LARA’s license lookup and search by license number or name. Check that the license is active and covers the work being done.',
+      },
+      {
+        q: 'Do roofers need a license in Michigan?',
+        a: 'Yes. Roofing is one of the trades covered by the maintenance and alteration contractor license. Check that the roofer’s license lists roofing, or that they hold a full residential builder license.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in Michigan?',
+        a: 'Yes, in a single-family home you own and live in. Plumbing and heating work still needs a permit from your local building department.',
+      },
+    ],
+    sources: [
+      {
+        label: 'LARA: residential builders',
+        url: 'https://www.michigan.gov/lara/bureau-list/bcc/sections/licensing-section/residential-builders',
+      },
+      {
+        label: 'LARA: maintenance and alteration contractor license',
+        url: 'https://www.michigan.gov/lara/bureau-list/bcc/sections/licensing-section/residential-builders/lic-info/maintenance-alteration-contractor-license-information',
+      },
+      { label: 'LARA: license lookup', url: 'https://www.michigan.gov/licenselookup' },
+      { label: 'LARA: Bureau of Construction Codes FAQs', url: 'https://www.michigan.gov/lara/bureau-list/bcc/faq/bureau-of-construction-codes-faqs' },
+      { label: 'MCL 339.2403 (builder license exemptions)', url: 'https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-339-2403' },
+      { label: 'MCL 339.2411 (complaints)', url: 'https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-339-2411' },
+      {
+        label: 'LARA: tips for hiring contractors (July 2025)',
+        url: 'https://www.michigan.gov/lara/news-releases/2025/07/17/mi-dept-of-licensing-and-regulatory-affairs-offers-tips-for-hiring-contractors-this-summer',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
+
+/** "a" or "an" before a state name: an Illinois license, a Utah license. */
+export function article(name: string): 'a' | 'an' {
+  return /^[AEIO]/.test(name) ? 'an' : 'a';
+}
 
 export function stateBySlug(slug: string): StateGuide | undefined {
   return STATES.find((s) => s.slug === slug);

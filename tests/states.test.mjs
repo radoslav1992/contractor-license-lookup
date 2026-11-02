@@ -21,6 +21,8 @@ test('every state has a unique slug and code', () => {
 test('every guide is complete', () => {
   for (const s of STATES) {
     assert.ok(s.summary.length > 80, `${s.slug}: summary`);
+    // One line on the state list, and short enough for a search-result description.
+    assert.ok(s.short.length >= 40 && s.short.length <= 100 && s.short.endsWith('.'), `${s.slug}: short`);
     assert.ok(s.boards.length > 0, `${s.slug}: boards`);
     assert.ok(s.whenRequired.length > 0, `${s.slug}: whenRequired`);
     assert.ok(s.howToCheck.length >= 3, `${s.slug}: howToCheck`);
@@ -52,4 +54,12 @@ test('no guide goes more than a year without being re-checked', () => {
     const age = (Date.now() - checked) / DAY;
     assert.ok(age <= MAX_AGE_DAYS, `${s.slug}: last checked ${Math.round(age)} days ago; re-check its sources`);
   }
+});
+
+test('"a" or "an" matches the state name', async () => {
+  const { article } = await import('../src/data/states.ts');
+  assert.equal(article('Illinois'), 'an');
+  assert.equal(article('Ohio'), 'an');
+  assert.equal(article('Utah'), 'a');
+  assert.equal(article('Texas'), 'a');
 });

@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import StatePicker from '../components/StatePicker.astro';
-import { STATES } from '../data/states';
+import { STATES, article } from '../data/states';
 
 const states = [...STATES].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
@@ -72,8 +72,8 @@ const jsonLd = [
       {states.map((s) => (
         <li class="card">
           <h3><a href={`/${s.slug}`}>{s.name} contractor license lookup</a></h3>
-          <p>{s.summary.split('. ')[0]}.</p>
-          <a href={`/${s.slug}`}>How to check a {s.name} license →</a>
+          <p>{s.short}</p>
+          <a href={`/${s.slug}`}>How to check {article(s.name)} {s.name} license →</a>
         </li>
       ))}
     </ul>
