@@ -1110,6 +1110,138 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'wisconsin',
+    code: 'WI',
+    name: 'Wisconsin',
+    generalContractors: 'state',
+    short: 'State certification for contractors who pull permits on one- and two-family homes.',
+    summary:
+      'Wisconsin’s Department of Safety and Professional Services (DSPS) certifies dwelling contractors and licenses electricians, plumbers and HVAC contractors. A contractor who pulls a building permit for a one- or two-family home needs the state’s Dwelling Contractor credentials.',
+    boards: [
+      {
+        name: 'Wisconsin Department of Safety and Professional Services (DSPS)',
+        licenses:
+          'Dwelling Contractor and Dwelling Contractor Qualifier certifications, electrical contractors and electricians, master plumbers and plumbers, and HVAC contractor registrations',
+        lookupUrl: 'https://license.wi.gov',
+        lookupNote:
+          'Choose License Lookup in the top bar, then search by credential number, person’s name or organization name. When searching by number, put a space on each side of the dash.',
+        website: 'https://dsps.wi.gov',
+      },
+    ],
+    whenRequired: [
+      'A contractor who pulls a building permit for a one- or two-family home must hold a Dwelling Contractor certification and have a certified Dwelling Contractor Qualifier. An owner who lives, or will live, in the home can pull their own permit.',
+      'This covers jobs such as roofing, siding and insulation when the contractor pulls the permit. Your city or town decides which jobs need a permit.',
+      'Electrical businesses need a state electrical contractor license, and their workers must be licensed or registered electricians. Cities may not require their own electrician licenses.',
+      'Plumbing must be done by state-licensed plumbers under a master plumber, and HVAC businesses need a state HVAC contractor registration. Owners working on a home they own and live in are exempt from both.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s business name and both DSPS credential numbers: the Dwelling Contractor and the Dwelling Contractor Qualifier.',
+      'Go to the state’s LicensE site and choose License Lookup.',
+      'Search by credential number or name, and confirm the credential is active.',
+      'For electrical, plumbing or HVAC work, look up that trade credential the same way.',
+      'Ask your local building department whether your job needs a permit, and have the certified contractor pull it.',
+    ],
+    watchFor: [
+      'Before you sign, the contractor must tell you that you can ask for lien waivers. Ask for one with each payment: an unpaid subcontractor or supplier can put a lien on your home even if you paid the contractor in full.',
+      'Some contracts put the permits and insurance on the homeowner. If you pull the permit yourself, you have no assurance the contractor carries the required insurance.',
+    ],
+    faq: [
+      {
+        q: 'Does Wisconsin have a general contractor license?',
+        a: 'Not one license for all work. DSPS issues the Dwelling Contractor and Dwelling Contractor Qualifier certifications, which a contractor needs to pull building permits for one- and two-family homes.',
+      },
+      {
+        q: 'Does a roofer need a license in Wisconsin?',
+        a: 'A contractor who roofs a one- or two-family home and pulls the permit must hold both Dwelling Contractor certifications. Whether a reroof needs a permit depends on your city or town.',
+      },
+      {
+        q: 'What is a Dwelling Contractor Restricted certification?',
+        a: 'It is for contractors with a bond of at least $5,000 but under $25,000. They agree not to take any home job estimated above their bond amount.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in Wisconsin?',
+        a: 'If a contractor came to you and you signed a contract for more than $25 at your home or away from their business, you have three business days to cancel.',
+      },
+    ],
+    sources: [
+      { label: 'DSPS: Dwelling Contractor', url: 'https://dsps.wi.gov/a-z-professions-list/dwelling-contractor-dc/' },
+      { label: 'DSPS: credentialing and LicensE FAQ', url: 'https://dsps.wi.gov/credentialing-and-license-faq/' },
+      { label: 'Wis. Stat. § 101.654 (dwelling contractor certification)', url: 'https://docs.legis.wisconsin.gov/document/statutes/101.654' },
+      { label: 'Wis. Stat. § 101.862 (electrical licensing)', url: 'https://docs.legis.wisconsin.gov/statutes/statutes/101/IV/862' },
+      { label: 'Wis. Stat. § 145.06 (plumbing licenses)', url: 'https://docs.legis.wisconsin.gov/statutes/statutes/145/06' },
+      { label: 'DATCP: home improvement consumer tips', url: 'https://datcp.wi.gov/Pages/Publications/HI-ConsumerTips136.aspx' },
+      { label: 'DATCP: home liens', url: 'https://datcp.wi.gov/Pages/Publications/Liens262.aspx' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'minnesota',
+    code: 'MN',
+    name: 'Minnesota',
+    generalContractors: 'state',
+    short: 'A state license for home builders, remodelers and roofers who work for homeowners.',
+    summary:
+      'Minnesota’s Department of Labor and Industry (DLI) licenses residential building contractors, remodelers, roofers, electricians and plumbers. If you hire a licensed residential building contractor or remodeler, the state’s Contractor Recovery Fund can repay losses from their misconduct.',
+    boards: [
+      {
+        name: 'Minnesota Department of Labor and Industry (DLI)',
+        licenses:
+          'Residential building contractors, remodelers and roofers, electrical contractors and electricians, and plumbing contractors and plumbers. DLI also holds the required bonds for HVAC and gas contractors',
+        lookupUrl: 'https://www.dli.mn.gov/license-and-registration-lookup',
+        lookupNote: 'Choose “Continue as guest”, then search license and registration holders by license number, person’s name or company name.',
+        website: 'https://www.dli.mn.gov',
+      },
+    ],
+    whenRequired: [
+      'A contractor who works directly for the owner of a one- to four-unit home and offers more than one trade needs a residential building contractor or remodeler license. Remodelers work only on existing homes.',
+      'Roofing for a homeowner always needs a residential roofer, building contractor or remodeler license. A roofer license covers roofing only, not gutters, soffit or fascia.',
+      'Contractors who offer a single trade other than roofing, or earn $15,000 or less a year from residential work, may register or hold a yearly exemption instead.',
+      'Electrical work needs licensed electrical contractors, and plumbing businesses need a plumbing contractor license. HVAC and gas contractors aren’t licensed by the state but must file a $25,000 bond with DLI, and some cities license them.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Minnesota license number. Builder, remodeler and roofer licenses start with BC, CR or RR.',
+      'Be careful with numbers that start with IR: those are registrations, not licenses.',
+      'Search DLI’s license and registration lookup as a guest, by number or name.',
+      'Confirm the license is current, its type fits your job, and check for enforcement actions.',
+      'For HVAC or gas work, confirm the company has a mechanical contractor bond on file with DLI, and ask your city whether it needs a local license.',
+    ],
+    watchFor: [
+      'The Contractor Recovery Fund covers only licensed residential building contractors and remodelers, not roofers or registered contractors. You first need a court judgment, and must apply within two years after it becomes final. It pays up to $100,000 per homeowner.',
+      'Contractors may not offer to pay or rebate your insurance deductible. If you signed a roofing or remodeling contract to be paid by insurance, you can cancel within 72 hours after your insurer denies the claim.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small job in Minnesota?',
+        a: 'Not always. Contractors who offer a single trade other than roofing can register instead of getting a license, and those with $15,000 or less a year in residential work can hold an exemption. If you hire either, you can’t use the Contractor Recovery Fund.',
+      },
+      {
+        q: 'What is the Minnesota Contractor Recovery Fund?',
+        a: 'A state fund that repays homeowners for losses caused by a licensed residential building contractor’s or remodeler’s misconduct. You first need a court judgment against the licensee, and the fund pays up to $100,000 per homeowner.',
+      },
+      {
+        q: 'Does a roofer need a license in Minnesota?',
+        a: 'Yes, if the roofer works directly for you: a residential roofer, building contractor or remodeler license. A roofer license doesn’t cover gutters, soffit or fascia.',
+      },
+      {
+        q: 'Does a contractor have to warn me about mechanic’s liens?',
+        a: 'Yes, when subcontractors or suppliers will work on the job. The notice must be in the written contract, or delivered within 10 days if there’s no written contract. A contractor who skips it, or works without a required license, can’t file a mechanic’s lien.',
+      },
+    ],
+    sources: [
+      { label: 'DLI: who needs a license?', url: 'https://www.dli.mn.gov/business/residential-contractors/who-needs-license' },
+      { label: 'DLI: who needs a roofer license?', url: 'https://dli.mn.gov/business/residential-contractors/who-needs-roofer-license' },
+      { label: 'DLI: tips for hiring a contractor', url: 'https://www.dli.mn.gov/workers/homeowners/tips-hiring-contractor' },
+      { label: 'DLI: Contractor Recovery Fund', url: 'https://dli.mn.gov/workers/homeowners/contractor-recovery-fund' },
+      { label: 'Minn. Stat. § 326B.89 (Contractor Recovery Fund)', url: 'https://www.revisor.mn.gov/statutes/cite/326B.89' },
+      { label: 'Minn. Stat. § 326B.811 (insurance-paid roofing contracts)', url: 'https://www.revisor.mn.gov/statutes/cite/326B.811' },
+      {
+        label: 'DLI: mechanical contractor bond requirements',
+        url: 'https://www.dli.mn.gov/business/plumbing-contractors/mechanical-contractor-bond-requirements',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
