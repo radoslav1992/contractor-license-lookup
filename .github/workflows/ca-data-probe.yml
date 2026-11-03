@@ -1,4 +1,4 @@
-# Temporary: inspect what the California licensing board's data portal offers.
+# Temporary: is CSLB's site up?
 name: CA data probe
 on:
   push:
@@ -7,5 +7,10 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: python3 scripts/probe-cslb.py
+      - run: |
+          UA="Mozilla/5.0 (compatible; contractorlicenselookup.org data check)"
+          for u in https://www.cslb.ca.gov/ https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx https://www.cslb.ca.gov/OnlineServices/DataPortal/ https://www.cslb.ca.gov/OnlineServices/DataPortal/ContractorList; do
+            curl -s -A "$UA" -o body.html -D headers.txt -w "%{http_code} $u\n" "$u" || true
+            grep -iE "^(retry-after|server|x-|cf-|content-type)" headers.txt || true
+            sed -e 's/<[^>]*>/ /g' body.html | tr -s ' \n' | head -c 300; echo
+          done
