@@ -55,7 +55,7 @@ function httpsRequest(url, { method = 'GET', headers = {}, body } = {}) {
 /** The portal is an ASP.NET form: load it, choose "License Master", then press "CSV". */
 async function downloadMaster() {
   const cookies = new Map();
-  const request = async (form, step) => {
+  const request = async (form, step, url = PORTAL, hops = 0) => {
     const body = form ? new URLSearchParams(form).toString() : undefined;
     const headers = { 'User-Agent': USER_AGENT, Accept: '*/*' };
     if (cookies.size) headers.Cookie = [...cookies].map(([k, v]) => `${k}=${v}`).join('; ');
@@ -63,11 +63,17 @@ async function downloadMaster() {
       headers['Content-Type'] = 'application/x-www-form-urlencoded';
       headers['Content-Length'] = Buffer.byteLength(body);
     }
-    const res = await httpsRequest(PORTAL, { method: body ? 'POST' : 'GET', headers, body });
+    const res = await httpsRequest(url, { method: body ? 'POST' : 'GET', headers, body });
     for (const c of [res.headers['set-cookie'] ?? []].flat()) {
       const [pair] = c.split(';');
       const eq = pair.indexOf('=');
       cookies.set(pair.slice(0, eq).trim(), pair.slice(eq + 1).trim());
+    }
+    // The CSV button answers with a redirect to the file itself.
+    if ([301, 302, 303, 307].includes(res.status) && res.headers.location && hops < 3) {
+      const next = new URL(res.headers.location, url).href;
+      console.log(`CSLB redirected "${step}" to ${next}`);
+      return request(undefined, step, next, hops + 1);
     }
     if (res.status !== 200) {
       const retry = res.headers['retry-after'];
