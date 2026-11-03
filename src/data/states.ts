@@ -1110,6 +1110,755 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'wisconsin',
+    code: 'WI',
+    name: 'Wisconsin',
+    generalContractors: 'state',
+    short: 'State certification for contractors who pull permits on one- and two-family homes.',
+    summary:
+      'Wisconsin’s Department of Safety and Professional Services (DSPS) certifies dwelling contractors and licenses electricians, plumbers and HVAC contractors. A contractor who pulls a building permit for a one- or two-family home needs the state’s Dwelling Contractor credentials.',
+    boards: [
+      {
+        name: 'Wisconsin Department of Safety and Professional Services (DSPS)',
+        licenses:
+          'Dwelling Contractor and Dwelling Contractor Qualifier certifications, electrical contractors and electricians, master plumbers and plumbers, and HVAC contractor registrations',
+        lookupUrl: 'https://license.wi.gov',
+        lookupNote:
+          'Choose License Lookup in the top bar, then search by credential number, person’s name or organization name. When searching by number, put a space on each side of the dash.',
+        website: 'https://dsps.wi.gov',
+      },
+    ],
+    whenRequired: [
+      'A contractor who pulls a building permit for a one- or two-family home must hold a Dwelling Contractor certification and have a certified Dwelling Contractor Qualifier. An owner who lives, or will live, in the home can pull their own permit.',
+      'This covers jobs such as roofing, siding and insulation when the contractor pulls the permit. Your city or town decides which jobs need a permit.',
+      'Electrical businesses need a state electrical contractor license, and their workers must be licensed or registered electricians. Cities may not require their own electrician licenses.',
+      'Plumbing must be done by state-licensed plumbers under a master plumber, and HVAC businesses need a state HVAC contractor registration. Owners working on a home they own and live in are exempt from both.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s business name and both DSPS credential numbers: the Dwelling Contractor and the Dwelling Contractor Qualifier.',
+      'Go to the state’s LicensE site and choose License Lookup.',
+      'Search by credential number or name, and confirm the credential is active.',
+      'For electrical, plumbing or HVAC work, look up that trade credential the same way.',
+      'Ask your local building department whether your job needs a permit, and have the certified contractor pull it.',
+    ],
+    watchFor: [
+      'Before you sign, the contractor must tell you that you can ask for lien waivers. Ask for one with each payment: an unpaid subcontractor or supplier can put a lien on your home even if you paid the contractor in full.',
+      'Some contracts put the permits and insurance on the homeowner. If you pull the permit yourself, you have no assurance the contractor carries the required insurance.',
+    ],
+    faq: [
+      {
+        q: 'Does Wisconsin have a general contractor license?',
+        a: 'Not one license for all work. DSPS issues the Dwelling Contractor and Dwelling Contractor Qualifier certifications, which a contractor needs to pull building permits for one- and two-family homes.',
+      },
+      {
+        q: 'Does a roofer need a license in Wisconsin?',
+        a: 'A contractor who roofs a one- or two-family home and pulls the permit must hold both Dwelling Contractor certifications. Whether a reroof needs a permit depends on your city or town.',
+      },
+      {
+        q: 'What is a Dwelling Contractor Restricted certification?',
+        a: 'It is for contractors with a bond of at least $5,000 but under $25,000. They agree not to take any home job estimated above their bond amount.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in Wisconsin?',
+        a: 'If a contractor came to you and you signed a contract for more than $25 at your home or away from their business, you have three business days to cancel.',
+      },
+    ],
+    sources: [
+      { label: 'DSPS: Dwelling Contractor', url: 'https://dsps.wi.gov/a-z-professions-list/dwelling-contractor-dc/' },
+      { label: 'DSPS: credentialing and LicensE FAQ', url: 'https://dsps.wi.gov/credentialing-and-license-faq/' },
+      { label: 'Wis. Stat. § 101.654 (dwelling contractor certification)', url: 'https://docs.legis.wisconsin.gov/document/statutes/101.654' },
+      { label: 'Wis. Stat. § 101.862 (electrical licensing)', url: 'https://docs.legis.wisconsin.gov/statutes/statutes/101/IV/862' },
+      { label: 'Wis. Stat. § 145.06 (plumbing licenses)', url: 'https://docs.legis.wisconsin.gov/statutes/statutes/145/06' },
+      { label: 'DATCP: home improvement consumer tips', url: 'https://datcp.wi.gov/Pages/Publications/HI-ConsumerTips136.aspx' },
+      { label: 'DATCP: home liens', url: 'https://datcp.wi.gov/Pages/Publications/Liens262.aspx' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'minnesota',
+    code: 'MN',
+    name: 'Minnesota',
+    generalContractors: 'state',
+    short: 'A state license for home builders, remodelers and roofers who work for homeowners.',
+    summary:
+      'Minnesota’s Department of Labor and Industry (DLI) licenses residential building contractors, remodelers, roofers, electricians and plumbers. If you hire a licensed residential building contractor or remodeler, the state’s Contractor Recovery Fund can repay losses from their misconduct.',
+    boards: [
+      {
+        name: 'Minnesota Department of Labor and Industry (DLI)',
+        licenses:
+          'Residential building contractors, remodelers and roofers, electrical contractors and electricians, and plumbing contractors and plumbers. DLI also holds the required bonds for HVAC and gas contractors',
+        lookupUrl: 'https://www.dli.mn.gov/license-and-registration-lookup',
+        lookupNote: 'Choose “Continue as guest”, then search license and registration holders by license number, person’s name or company name.',
+        website: 'https://www.dli.mn.gov',
+      },
+    ],
+    whenRequired: [
+      'A contractor who works directly for the owner of a one- to four-unit home and offers more than one trade needs a residential building contractor or remodeler license. Remodelers work only on existing homes.',
+      'Roofing for a homeowner always needs a residential roofer, building contractor or remodeler license. A roofer license covers roofing only, not gutters, soffit or fascia.',
+      'Contractors who offer a single trade other than roofing, or earn $15,000 or less a year from residential work, may register or hold a yearly exemption instead.',
+      'Electrical work needs licensed electrical contractors, and plumbing businesses need a plumbing contractor license. HVAC and gas contractors aren’t licensed by the state but must file a $25,000 bond with DLI, and some cities license them.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Minnesota license number. Builder, remodeler and roofer licenses start with BC, CR or RR.',
+      'Be careful with numbers that start with IR: those are registrations, not licenses.',
+      'Search DLI’s license and registration lookup as a guest, by number or name.',
+      'Confirm the license is current, its type fits your job, and check for enforcement actions.',
+      'For HVAC or gas work, confirm the company has a mechanical contractor bond on file with DLI, and ask your city whether it needs a local license.',
+    ],
+    watchFor: [
+      'The Contractor Recovery Fund covers only licensed residential building contractors and remodelers, not roofers or registered contractors. You first need a court judgment, and must apply within two years after it becomes final. It pays up to $100,000 per homeowner.',
+      'Contractors may not offer to pay or rebate your insurance deductible. If you signed a roofing or remodeling contract to be paid by insurance, you can cancel within 72 hours after your insurer denies the claim.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small job in Minnesota?',
+        a: 'Not always. Contractors who offer a single trade other than roofing can register instead of getting a license, and those with $15,000 or less a year in residential work can hold an exemption. If you hire either, you can’t use the Contractor Recovery Fund.',
+      },
+      {
+        q: 'What is the Minnesota Contractor Recovery Fund?',
+        a: 'A state fund that repays homeowners for losses caused by a licensed residential building contractor’s or remodeler’s misconduct. You first need a court judgment against the licensee, and the fund pays up to $100,000 per homeowner.',
+      },
+      {
+        q: 'Does a roofer need a license in Minnesota?',
+        a: 'Yes, if the roofer works directly for you: a residential roofer, building contractor or remodeler license. A roofer license doesn’t cover gutters, soffit or fascia.',
+      },
+      {
+        q: 'Does a contractor have to warn me about mechanic’s liens?',
+        a: 'Yes, when subcontractors or suppliers will work on the job. The notice must be in the written contract, or delivered within 10 days if there’s no written contract. A contractor who skips it, or works without a required license, can’t file a mechanic’s lien.',
+      },
+    ],
+    sources: [
+      { label: 'DLI: who needs a license?', url: 'https://www.dli.mn.gov/business/residential-contractors/who-needs-license' },
+      { label: 'DLI: who needs a roofer license?', url: 'https://dli.mn.gov/business/residential-contractors/who-needs-roofer-license' },
+      { label: 'DLI: tips for hiring a contractor', url: 'https://www.dli.mn.gov/workers/homeowners/tips-hiring-contractor' },
+      { label: 'DLI: Contractor Recovery Fund', url: 'https://dli.mn.gov/workers/homeowners/contractor-recovery-fund' },
+      { label: 'Minn. Stat. § 326B.89 (Contractor Recovery Fund)', url: 'https://www.revisor.mn.gov/statutes/cite/326B.89' },
+      { label: 'Minn. Stat. § 326B.811 (insurance-paid roofing contracts)', url: 'https://www.revisor.mn.gov/statutes/cite/326B.811' },
+      {
+        label: 'DLI: mechanical contractor bond requirements',
+        url: 'https://www.dli.mn.gov/business/plumbing-contractors/mechanical-contractor-bond-requirements',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'tennessee',
+    code: 'TN',
+    name: 'Tennessee',
+    generalContractors: 'state-and-local',
+    short: 'A state license for jobs of $25,000 or more, plus a home improvement license in nine counties.',
+    summary:
+      'The Tennessee Board for Licensing Contractors licenses contractors for jobs of $25,000 or more, and issues home improvement and limited electrical and plumbing licenses for smaller work. Below $25,000 the rules depend on your county, so check with your local building codes office.',
+    boards: [
+      {
+        name: 'Tennessee Board for Licensing Contractors (Department of Commerce and Insurance)',
+        licenses:
+          'Contractors for jobs of $25,000 or more, including building, electrical, plumbing, HVAC, roofing and masonry work; home improvement contractors in nine counties; and limited licensed electricians and plumbers for smaller jobs',
+        lookupUrl: 'https://verify.tn.gov/',
+        lookupNote: 'The state’s free license search. Check that the license is active and that its classification and monetary limit fit your job.',
+        website: 'https://www.tn.gov/commerce/regboards/contractors.html',
+      },
+    ],
+    whenRequired: [
+      'A state contractor’s license is required before bidding on any project of $25,000 or more, counting labor and materials.',
+      'Electrical, plumbing, HVAC and roofing subcontractors need a contractor’s license when their part of the job is $25,000 or more.',
+      'In Bradley, Davidson, Hamilton, Haywood, Knox, Marion, Robertson, Rutherford and Shelby counties, residential remodeling jobs over $3,000 and under $25,000 need a state home improvement license.',
+      'Smaller electrical and plumbing jobs need a state limited license where the state handles permits, or a local license where your city or county has its own program. A job can’t be split up to stay under a limit.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Tennessee license number and the exact name on the license.',
+      'Look the contractor up in the state’s license search.',
+      'Confirm the license is active and that its classification and monetary limit cover your type and size of job.',
+      'For jobs under $25,000, ask your city or county building codes office which state or local license applies.',
+      'Ask the Board for Licensing Contractors about complaints or disciplinary history.',
+    ],
+    watchFor: [
+      'A county business license is not a contractor’s license. A contractor who asks you to pull the building permits yourself is a warning sign.',
+      'If a contractor takes your money and doesn’t do the work, report it to local law enforcement and the Division of Consumer Affairs: Tennessee’s theft law can apply.',
+    ],
+    faq: [
+      {
+        q: 'How do I check a contractor’s license in Tennessee?',
+        a: 'Use the state’s free license search at verify.tn.gov, and make sure the license is active and covers the type and size of your job.',
+      },
+      {
+        q: 'Do I need a licensed contractor for a job under $25,000 in Tennessee?',
+        a: 'It depends on where you live. In nine counties, remodeling jobs over $3,000 need a state home improvement license, and electrical or plumbing work may need a state limited license or a local license. Your building codes office can tell you what applies.',
+      },
+      {
+        q: 'Which Tennessee counties require a home improvement license?',
+        a: 'Bradley, Davidson, Hamilton, Haywood, Knox, Marion, Robertson, Rutherford and Shelby counties. The license covers residential remodeling jobs over $3,000 and under $25,000.',
+      },
+      {
+        q: 'Does a roofer or electrician need a state license in Tennessee?',
+        a: 'Yes, when their part of the job is $25,000 or more. Below that, electricians and plumbers may need a state limited license or a local license, depending on where you live.',
+      },
+    ],
+    sources: [
+      { label: 'Tennessee Board for Licensing Contractors', url: 'https://www.tn.gov/commerce/regboards/contractors.html' },
+      {
+        label: 'TDCI: Contractor Fraud Awareness Week 2026',
+        url: 'https://www.tn.gov/commerce/news/2026/5/18/tdci-highlights-consumer-awareness-during-contractor-fraud-awareness-week.html',
+      },
+      {
+        label: 'TDCI: counties that adopted the home improvement law',
+        url: 'https://tn.gov/commerce/regboards/hi/county-information-adopting-the-home-improvement-law.html',
+      },
+      { label: 'TDCI: limited licensed electrician', url: 'https://www.tn.gov/commerce/regboards/contractors/license/get/lle.html' },
+      {
+        label: 'TDCI: who needs a limited licensed plumber license',
+        url: 'https://www.tn.gov/commerce/regboards/llp/who-needs-a-limited-licensed-plumber--llp--license-.html',
+      },
+      { label: 'Tennessee Attorney General: avoiding home improvement fraud (2025)', url: 'https://www.tn.gov/attorneygeneral/news/2025/3/20/pr25-15.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'south-carolina',
+    code: 'SC',
+    name: 'South Carolina',
+    generalContractors: 'state',
+    short: 'A state license for home jobs over $5,000, and for trade work like roofing over $500.',
+    summary:
+      'South Carolina licenses contractors through two boards at the Department of Labor, Licensing and Regulation (LLR): the Residential Builders Commission for home builders and trades, and the Contractor’s Licensing Board for general and mechanical contractors. Most home improvement contractors fall under the Residential Builders Commission, but check both.',
+    boards: [
+      {
+        name: 'South Carolina Residential Builders Commission (LLR)',
+        licenses:
+          'Residential builders for home jobs over $5,000, and residential specialty contractors for trade jobs over $500, including residential electricians, plumbers and HVAC contractors and registered trades such as roofers',
+        lookupUrl: 'https://www.llr.sc.gov/',
+        lookupNote: 'Open the Licensee Lookup on the LLR website and search under the Residential Builders Commission.',
+        website: 'https://llr.sc.gov/res',
+      },
+      {
+        name: 'South Carolina Contractor’s Licensing Board (LLR)',
+        licenses: 'General and mechanical contractors when the regulated work costs more than $10,000, mainly commercial work',
+        lookupUrl: 'https://www.llr.sc.gov/',
+        lookupNote: 'Use the same LLR Licensee Lookup and search under the Contractor’s Licensing Board.',
+        website: 'https://llr.sc.gov/clb/clb_general.aspx',
+      },
+    ],
+    whenRequired: [
+      'A residential builder license is required to build, repair or improve a home when the job costs more than $5,000.',
+      'Residential specialty contractors such as roofers, electricians, plumbers and HVAC contractors need a registration or license for jobs over $500. The limit rose from $200 in May 2022.',
+      'General and mechanical contractors need a Contractor’s Licensing Board license when the work costs more than $10,000. The limit rose from $5,000 in May 2023.',
+      'A specialty registration doesn’t cover structural work or additions; those need a residential builder or general contractor license.',
+    ],
+    howToCheck: [
+      'Ask the contractor for photo ID and their South Carolina license or registration number.',
+      'Open the Licensee Lookup on the LLR website.',
+      'Search the Residential Builders Commission first. If the contractor isn’t listed, search the Contractor’s Licensing Board.',
+      'Confirm the license or registration is active and covers your type of work.',
+      'Check for complaints with the South Carolina Department of Consumer Affairs.',
+    ],
+    watchFor: [
+      'LLR advises a written contract that lists the contractor’s name, address and South Carolina license or registration number, the work, and the total cost with payment terms. Avoid large up-front payments.',
+    ],
+    faq: [
+      {
+        q: 'How do I check a contractor’s license in South Carolina?',
+        a: 'Use the Licensee Lookup on the LLR website. Most home improvement contractors are licensed by the Residential Builders Commission, but some by the Contractor’s Licensing Board, so check both.',
+      },
+      {
+        q: 'Do I need a licensed contractor for a small job in South Carolina?',
+        a: 'Often, yes. Trade work over $500, such as roofing or electrical work, needs a Residential Builders Commission registration or license, and a builder taking a home job over $5,000 needs a residential builder license.',
+      },
+      {
+        q: 'Who licenses electricians, plumbers and HVAC contractors in South Carolina?',
+        a: 'For homes, the Residential Builders Commission licenses residential electricians, plumbers and HVAC contractors. Commercial work over $10,000 falls under the Contractor’s Licensing Board.',
+      },
+      {
+        q: 'Did South Carolina’s contractor license limits change recently?',
+        a: 'Yes. In May 2022 the limit for residential specialty contractors rose from $200 to $500, and in May 2023 the Contractor’s Licensing Board limit rose from $5,000 to $10,000.',
+      },
+    ],
+    sources: [
+      { label: 'SC LLR: Residential Builders Commission', url: 'https://llr.sc.gov/res' },
+      { label: 'SC LLR: Contractor’s Licensing Board', url: 'https://llr.sc.gov/clb/clb_general.aspx' },
+      { label: 'SC LLR: residential builder FAQ', url: 'https://llr.sc.gov/res/PDF/FAQ/RBB%20FAQ.pdf' },
+      { label: 'SC LLR: residential specialty contractor FAQ', url: 'https://www.llr.sc.gov/res/PDF/FAQ/RBS%20FAQ.pdf' },
+      { label: 'SC LLR: Contractor’s Licensing Board 2023 legislative update', url: 'https://www.llr.sc.gov/clb/PDFFiles/CLB2023LegislativeUpdate.pdf' },
+      {
+        label: 'SC LLR: consumer alert on property repairs after Hurricane Helene (2024)',
+        url: 'https://www.llr.sc.gov/AboutUs/MediaCenter/news/2024/News%20Release%20-%20SC%20LLR%20Issues%20Consumer%20Alert%20for%20Property%20Repairs%20After%20Hurricane%20Helene.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'arizona',
+    code: 'AZ',
+    name: 'Arizona',
+    generalContractors: 'state',
+    short: 'A state ROC license for most home jobs of $1,000 or more, or any job needing a permit.',
+    summary:
+      'The Arizona Registrar of Contractors (ROC) licenses contractors statewide, including general, remodeling, electrical, plumbing, air-conditioning and roofing contractors. Only a license with a Current status can legally contract, so check it before you sign.',
+    boards: [
+      {
+        name: 'Arizona Registrar of Contractors (ROC)',
+        licenses:
+          'General and remodeling contractors and specialty trades, including residential electrical (R-11), plumbing (R-37), air conditioning and refrigeration (R-39) and roofing (R-42)',
+        lookupUrl: 'https://roc.az.gov/contractor-search',
+        lookupNote:
+          'Search by company name, person’s name or 6-digit license number. The record shows status, classification, bond and closed complaints from the past two years.',
+        website: 'https://roc.az.gov/',
+      },
+    ],
+    whenRequired: [
+      'A license is generally required when a job’s total price, including labor and materials, is $1,000 or more.',
+      'Any job that needs a local building permit requires a licensed contractor, whatever the price.',
+      'The small-job (handyman) exemption covers only casual or minor work. It doesn’t apply to work that is part of a larger project or split into smaller contracts to stay under the limit.',
+      'Unlicensed handymen who advertise must include the words “Not a Licensed Contractor” in their ads.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s 6-digit ROC license number and the business name on the license.',
+      'Search the ROC contractor search by license number, company name or person’s name.',
+      'Confirm the status is Current, the only status that can legally contract, and check again on the day you sign.',
+      'Make sure the license classification covers your job, such as R-39 for air conditioning or R-42 for roofing.',
+      'Call the phone number on the ROC record to confirm the person you’re dealing with works for that company.',
+    ],
+    watchFor: [
+      'The Residential Contractors’ Recovery Fund can pay up to $30,000 for losses caused by a contractor with a residential or dual license. It doesn’t cover commercial property.',
+      'A contractor’s written contract must list their license number, the total price, a description of the work and a notice of your right to complain to the ROC.',
+    ],
+    faq: [
+      {
+        q: 'Does a handyman need a license in Arizona?',
+        a: 'Only for bigger jobs. Someone without an ROC license may do casual or minor work if the total price is under $1,000 and no building permit is needed, and must say “Not a Licensed Contractor” in their ads.',
+      },
+      {
+        q: 'Who licenses electricians, plumbers and roofers in Arizona?',
+        a: 'The ROC licenses these trades as classifications, such as R-11 for residential electrical, R-37 for residential plumbing and R-42 for roofing. Check that the license includes the classification for your job.',
+      },
+      {
+        q: 'How long do I have to file a complaint against an Arizona contractor?',
+        a: 'Generally within two years of occupancy or of the date the work was last done.',
+      },
+      {
+        q: 'What is the Arizona Residential Contractors’ Recovery Fund?',
+        a: 'A state fund that can pay homeowners up to $30,000 for losses caused by a residential or dual licensed contractor. You generally go through the ROC complaint process or get a court judgment first.',
+      },
+    ],
+    sources: [
+      { label: 'Arizona ROC: contractor search', url: 'https://roc.az.gov/contractor-search' },
+      { label: 'Arizona ROC: before you hire a contractor', url: 'https://roc.az.gov/before-hire' },
+      { label: 'Arizona ROC: Recovery Fund', url: 'https://roc.az.gov/recovery-fund' },
+      { label: 'Arizona ROC: license classifications', url: 'https://roc.az.gov/license-classifications' },
+      { label: 'A.R.S. § 32-1121 (who doesn’t need a license)', url: 'https://www.azleg.gov/ars/32/01121.htm' },
+      { label: 'A.R.S. § 32-1158 (contract requirements)', url: 'https://www.azleg.gov/ars/32/01158.htm' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'colorado',
+    code: 'CO',
+    name: 'Colorado',
+    generalContractors: 'local-only',
+    short: 'No state general contractor license; the state licenses electricians and plumbers.',
+    summary:
+      'Colorado doesn’t license general contractors or roofers at the state level; cities and counties such as Denver and the Pikes Peak region set their own rules. The state licenses electricians and plumbers and registers electrical and plumbing contractors.',
+    boards: [
+      {
+        name: 'Colorado State Electrical Board (DORA)',
+        licenses: 'Master and journeyman electricians and residential wiremen, and registration of electrical contractors',
+        lookupUrl: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx',
+        lookupNote: 'Search by name, business name, city or license number. The search is case sensitive, so start with just the first and last name.',
+        website: 'https://dpo.colorado.gov/Electrical',
+      },
+      {
+        name: 'Colorado State Plumbing Board (DORA)',
+        licenses: 'Master, journeyworker and residential plumbers, and registration of plumbing contractors',
+        lookupUrl: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx',
+        lookupNote: 'Use the same DORA search by name, business name or license number.',
+        website: 'https://dpo.colorado.gov/Plumbing',
+      },
+      {
+        name: 'Denver Community Planning and Development: contractor licensing',
+        licenses: 'General, building, residential and specialty trade contractors working in Denver',
+        lookupUrl:
+          'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+        lookupNote: 'Use the “Verify a contractor’s license” link. Denver doesn’t accept contractor licenses from other counties or states.',
+        website:
+          'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+      },
+      {
+        name: 'Pikes Peak Regional Building Department',
+        licenses: 'Building, electrical, mechanical (HVAC), plumbing and other contractors in Colorado Springs, unincorporated El Paso County and nearby towns',
+        lookupUrl: 'https://www.pprbd.org/Search/Contractor',
+        lookupNote: 'Search by business name or license type. A contractor can’t get a permit unless its license is in good standing.',
+        website: 'https://www.pprbd.org/',
+      },
+    ],
+    whenRequired: [
+      'Electrical and plumbing work for hire must be done by state-licensed electricians or plumbers, or apprentices they supervise, working for a state-registered contractor.',
+      'General contracting, remodeling and roofing have no state license. Whether a local license is needed depends on your city or county.',
+      'You may do electrical or plumbing work on your own home without a license if you get a permit and pass inspections. This doesn’t apply to property for sale or rent.',
+      'In Denver, contractors need a Denver contractor license; the city doesn’t accept licenses from other counties or states.',
+    ],
+    howToCheck: [
+      'For electrical or plumbing work, ask for the worker’s state license number and the company’s contractor registration.',
+      'Search DORA’s license lookup by name, business name or license number, and confirm the license is active.',
+      'For general, remodeling, roofing or HVAC work, ask your city or county building department which local license applies.',
+      'In Denver, verify the license with Community Planning and Development; in Colorado Springs and El Paso County, use the Pikes Peak Regional Building Department search.',
+      'Make sure the contractor pulls the permit in its own name. A contractor may not work under a homeowner’s permit.',
+    ],
+    watchFor: [
+      'Colorado’s roofing law requires a written contract before work starts. If insurance is paying, you can cancel within 72 hours after your insurer denies the claim and get your deposit back. Cancel in writing.',
+      'After hail or wind storms, watch for door-to-door contractors who make big promises or want full payment before the work is done. Confirm their license with your city or county.',
+    ],
+    faq: [
+      {
+        q: 'Does Colorado require a general contractor license?',
+        a: 'No. Colorado doesn’t license general contractors or roofers at the state level. Many cities and counties, such as Denver and the Pikes Peak Regional Building Department, require their own contractor licenses.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Colorado?',
+        a: 'Use DORA’s license lookup and search by name, business name or license number. The State Electrical Board and State Plumbing Board license these trades.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in Colorado?',
+        a: 'Yes, on your own home, if you get a permit, pass inspections and do the work yourself. The home can’t be for sale or rent.',
+      },
+      {
+        q: 'Does Denver accept contractor licenses from other cities?',
+        a: 'No. A contractor working in Denver needs a Denver license; the city doesn’t accept licenses from other counties or states.',
+      },
+    ],
+    sources: [
+      { label: 'Colorado DORA: home and repair consumer protection', url: 'https://dora.colorado.gov/consumer-protection-home-and-repair' },
+      { label: 'Colorado DORA: license lookup', url: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx' },
+      { label: 'Colorado State Electrical Board', url: 'https://dpo.colorado.gov/Electrical' },
+      { label: 'Colorado State Plumbing Board: permits and inspections', url: 'https://dpo.colorado.gov/Plumbing/PermitInspectionInfo' },
+      {
+        label: 'Denver contractor licensing',
+        url: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+      },
+      { label: 'Pikes Peak Regional Building Department: contractor search', url: 'https://www.pprbd.org/Search/Contractor' },
+      { label: 'Colorado Attorney General: roofing contractor law', url: 'https://coag.gov/app/uploads/2020/10/CO-Roofing-Contractor-Law.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'indiana',
+    code: 'IN',
+    name: 'Indiana',
+    generalContractors: 'local-only',
+    short: 'Plumbers need a state license; other contractors are licensed by cities and counties.',
+    summary:
+      'Indiana has no state license for general contractors, electricians or HVAC contractors, so cities and counties such as Indianapolis and Allen County license them. Plumbers are the exception: the state licenses plumbing contractors and journeyman plumbers.',
+    boards: [
+      {
+        name: 'Indiana Professional Licensing Agency: Plumbing Commission',
+        licenses: 'Plumbing contractors, journeyman plumbers and apprentice plumbers statewide',
+        lookupUrl: 'https://secure.in.gov/pla/license/free-search-and-verify/',
+        lookupNote: 'Use the free Search & Verify tool by name or license number, and confirm the plumbing license is active.',
+        website: 'https://www.in.gov/pla/professions/plumbing-home/',
+      },
+      {
+        name: 'City of Indianapolis Department of Business and Neighborhood Services',
+        licenses: 'General, electrical, HVAC and wrecking contractors in Indianapolis, and city registration of state-licensed plumbing contractors',
+        lookupUrl: 'https://www.indy.gov/activity/licensed-contractors',
+        lookupNote:
+          'The city posts lists of licensed contractors, usually updated the first Monday of each month. Beech Grove, Lawrence, Southport and Speedway license contractors themselves.',
+        website: 'https://www.indy.gov/activity/contractor-licenses',
+      },
+    ],
+    whenRequired: [
+      'There is no state license for general contractors, electricians or HVAC contractors. Your city or county decides who needs a license.',
+      'Plumbing contractors and journeyman plumbers need a state license. In Indianapolis, they must also register with the city.',
+      'In Indianapolis, anyone doing construction, sewer, driveway or excavation work must be a listed contractor, and the hired contractor pulls the permits.',
+      'In Allen County, including Fort Wayne, all contractors and subcontractors must be licensed or registered with the county Building Department, which you can contact to confirm a license.',
+    ],
+    howToCheck: [
+      'Ask the contractor which license they hold and which city or county issued it.',
+      'For plumbing work, search the Professional Licensing Agency’s free Search & Verify tool and confirm the license is active.',
+      'In Indianapolis, find the contractor on the city’s licensed contractor lists.',
+      'Elsewhere, ask your city or county building department whether the contractor is licensed, bonded and insured there.',
+      'Check for complaints with the Attorney General’s Consumer Protection Division before you sign.',
+    ],
+    watchFor: [
+      'Home improvement contracts over $150 must be in writing, with the price, a description of the work and approximate start and finish dates. The Attorney General says you generally have three business days to cancel.',
+      'A contractor may not offer to pay or rebate your insurance deductible to win a job. Be wary of anyone who says “the city’s list just hasn’t been updated yet”: storm chasers use that line.',
+    ],
+    faq: [
+      {
+        q: 'Does Indiana have a state contractor license?',
+        a: 'Not for general contractors. The state licenses plumbers; cities and counties such as Indianapolis and Allen County license other contractors.',
+      },
+      {
+        q: 'How do I check a plumber’s license in Indiana?',
+        a: 'Use the Professional Licensing Agency’s free Search & Verify tool by name or license number, and make sure the license is active.',
+      },
+      {
+        q: 'How do I check a contractor in Indianapolis?',
+        a: 'Look the contractor up on the city’s licensed contractor lists. Licensed contractors have a bond and liability insurance on file with the city.',
+      },
+      {
+        q: 'Do I need a written contract for home improvement work in Indiana?',
+        a: 'Yes, for contracts over $150. It must show the price, the work and approximate start and finish dates.',
+      },
+    ],
+    sources: [
+      { label: 'Indiana PLA: plumbing', url: 'https://www.in.gov/pla/professions/plumbing-home/' },
+      { label: 'Indiana PLA: free Search & Verify', url: 'https://secure.in.gov/pla/license/free-search-and-verify/' },
+      { label: 'Indianapolis: contractor licenses', url: 'https://www.indy.gov/activity/contractor-licenses' },
+      { label: 'Indianapolis: licensed contractors', url: 'https://www.indy.gov/activity/licensed-contractors' },
+      { label: 'Allen County: contractor licensing', url: 'https://www.allencounty.in.gov/237/Contractor-Licensing' },
+      {
+        label: 'Indiana Attorney General: home improvement scams',
+        url: 'https://secure.in.gov/attorneygeneral/consumer-protection-division/files/CPD_Fact_Sheet-Home_improv_Scams.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'missouri',
+    code: 'MO',
+    name: 'Missouri',
+    generalContractors: 'local-only',
+    short: 'No state general contractor license; cities and counties such as Kansas City license them.',
+    summary:
+      'Missouri has no statewide general contractor license, so cities and counties such as Kansas City, St. Louis and St. Louis County license contractors and trades. The state offers an optional statewide license for electrical contractors, but local permits still apply.',
+    boards: [
+      {
+        name: 'Missouri Division of Professional Registration: Office of Statewide Electrical Contractors',
+        licenses: 'Electrical contractors who choose the optional statewide license',
+        lookupUrl: 'https://renew.pr.mo.gov/licensee-search.asp',
+        lookupNote: 'Search by name, license number, profession or county. Results show active licensees.',
+        website: 'https://pr.mo.gov/electricalcontractors.asp',
+      },
+      {
+        name: 'Kansas City, Missouri City Planning & Development: contractor licensing',
+        licenses: 'Residential building, electrical, plumbing, mechanical and other contractors in Kansas City, Missouri',
+        lookupUrl: 'https://www.kcmo.gov/city-hall/departments/city-planning-development/contractor-licensing',
+        lookupNote: 'Use the search for active licensed contractors on this page.',
+        website: 'https://www.kcmo.gov/city-hall/departments/city-planning-development',
+      },
+      {
+        name: 'St. Louis County Department of Transportation and Public Works',
+        licenses: 'Electrical contractors, master plumbers and mechanical (HVAC) contractors in St. Louis County. The county doesn’t license general contractors',
+        lookupUrl:
+          'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/mechanical-licensing/list-of-mechanical-certified-contractors/certified-mechanical-contractor-list/',
+        lookupNote: 'The county posts lists of certified mechanical contractors and licensed master plumbers. For electricians, contact the county.',
+        website: 'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/residential-building/',
+      },
+    ],
+    whenRequired: [
+      'There is no state license for general contractors. The city or county where the home is sets the rules.',
+      'In Kansas City, anyone who builds, structurally alters or enlarges a one- or two-family home needs a residential building contractor license or must work under one. An owner doing their own work on the single-family home they live in is exempt.',
+      'In the City of St. Louis, contractors need a city business license, and plumbing and mechanical permits go only to contractors licensed by the Building Division. The city has no online license search, so contact the Building Division.',
+      'In St. Louis County, electrical, plumbing and mechanical work must be done by contractors licensed with the county.',
+    ],
+    howToCheck: [
+      'Find out which city or county issues building permits for your address, since each sets its own rules.',
+      'In Kansas City, search the city’s active licensed contractors.',
+      'In St. Louis County, check the county’s lists of mechanical contractors and master plumbers, or contact Transportation and Public Works.',
+      'In the City of St. Louis, contact the Building Division to confirm a trade license, and look up past permits by address.',
+      'For a statewide electrical license, use the Division of Professional Registration’s licensee search, and check for complaints with the Attorney General.',
+    ],
+    watchFor: [
+      'If your insurer denies all or part of a claim, you can cancel an insurance-paid roofing or exterior repair contract until midnight of the fifth business day after the insurer’s written notice. The contractor must refund your payments within 10 days.',
+      'If you sign a contract at home after a door-to-door sales pitch, you generally have three business days to cancel in writing.',
+    ],
+    faq: [
+      {
+        q: 'Does Missouri have a state contractor license?',
+        a: 'Not for general contractors. Cities and counties such as Kansas City, St. Louis and St. Louis County license contractors and trades. The state offers an optional statewide electrical contractor license.',
+      },
+      {
+        q: 'Do electricians need a state license in Missouri?',
+        a: 'Not always. The statewide electrical contractor license is optional; many cities and counties license electrical contractors, and local permits and inspections still apply.',
+      },
+      {
+        q: 'How do I check a contractor in Kansas City, Missouri?',
+        a: 'Search the city’s active licensed contractors on the City Planning & Development contractor licensing page.',
+      },
+      {
+        q: 'Can I cancel a roofing contract if my insurance denies the claim?',
+        a: 'Yes. You can cancel before midnight of the fifth business day after the insurer’s written denial, by written notice to the address in the contract. The contractor must refund payments within 10 days, except for emergency work you approved in writing.',
+      },
+    ],
+    sources: [
+      { label: 'Missouri Office of Statewide Electrical Contractors', url: 'https://pr.mo.gov/electricalcontractors.asp' },
+      { label: 'Missouri Division of Professional Registration: licensee search', url: 'https://renew.pr.mo.gov/licensee-search.asp' },
+      { label: 'Kansas City, MO: contractor licensing', url: 'https://www.kcmo.gov/city-hall/departments/city-planning-development/contractor-licensing' },
+      {
+        label: 'St. Louis County: residential repairs and renovations guide',
+        url: 'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/publications-and-manuals/pw-residential-guides/repairs-and-renovations/',
+      },
+      { label: 'City of St. Louis: Building Division', url: 'https://www.stlouis-mo.gov/government/departments/public-safety/building/index.cfm' },
+      { label: 'RSMo § 407.725 (insurance-paid roofing contracts)', url: 'https://revisor.mo.gov/main/OneSection.aspx?section=407.725' },
+      { label: 'Missouri Attorney General: door-to-door sales', url: 'https://ago.mo.gov/get-help/programs-services-from-a-z/door-to-door-sales/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'massachusetts',
+    code: 'MA',
+    name: 'Massachusetts',
+    generalContractors: 'state',
+    short: 'Home improvement contractors register with the state; builders need a supervisor license.',
+    summary:
+      'Massachusetts registers home improvement contractors through the Office of Consumer Affairs and Business Regulation, and licenses construction supervisors, including roofers, through the Office of Public Safety and Inspections. Hire a registered contractor for work on your owner-occupied home: the state’s Guaranty Fund doesn’t protect you otherwise.',
+    boards: [
+      {
+        name: 'Office of Consumer Affairs and Business Regulation: Home Improvement Contractor program',
+        licenses: 'Home Improvement Contractor (HIC) registration for work on existing owner-occupied homes of one to four units',
+        lookupUrl: 'https://www.mass.gov/check-if-your-contractor-is-a-registered-home-improvement-contractor',
+        lookupNote: 'Links to the MA Contractor Hub search. Search by business name or registration number to see status and history.',
+        website: 'https://www.mass.gov/home-improvement-contractor-program',
+      },
+      {
+        name: 'Office of Public Safety and Inspections (OPSI)',
+        licenses:
+          'Construction Supervisor Licenses (CSL), including specialty licenses for roofing, windows and siding, and insulation, and refrigeration technician and contractor licenses',
+        lookupUrl: 'https://www.mass.gov/how-to/check-a-construction-supervisor-license',
+        lookupNote: 'Follow the link to OPSI’s license verification site and search by license type, number, name or city.',
+        website: 'https://www.mass.gov/construction-supervisor-licensing',
+      },
+      {
+        name: 'Division of Occupational Licensure: electricians, plumbers and gas fitters',
+        licenses: 'Electricians, and journeyman and master plumbers and gas fitters',
+        lookupUrl: 'https://www.mass.gov/info-details/division-of-occupational-licensure-check-a-license',
+        lookupNote: 'This page sends you to the right search for each trade. No account is needed.',
+        website: 'https://www.mass.gov/info-details/division-of-occupational-licensure-check-a-license',
+      },
+    ],
+    whenRequired: [
+      'HIC registration is required for work on an existing owner-occupied home of one to four units that is the owner’s primary residence. New construction, larger buildings, rentals and second homes aren’t covered.',
+      'Jobs under $500 in total are exempt from HIC registration, as are some very small part-time contractors and installers of central heating and air conditioning.',
+      'A Construction Supervisor License is required to supervise building work on one- and two-family homes. On an owner-occupied home, roofing, window and siding jobs need at least a specialty supervisor license plus HIC registration.',
+      'Electrical work needs a licensed electrician, and plumbing and gas work a licensed plumber or gas fitter.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s HIC registration number, construction supervisor license number and any trade license number. You can also ask to see their state HIC ID card.',
+      'Look up the HIC number or business name on the MA Contractor Hub, and review the registration status and history.',
+      'Check the supervisor license on OPSI’s license verification site.',
+      'Check electricians, plumbers and gas fitters through the Division of Occupational Licensure’s license check.',
+      'Make sure the name, license type and expiration date match the person and company on your contract.',
+    ],
+    watchFor: [
+      'A deposit can’t be more than one-third of the total price, or the cost of special-order materials if that is higher. Jobs over $1,000 need a written contract.',
+      'The HIC Guaranty Fund can pay up to $25,000 of your losses after an unpaid court judgment or arbitration award, but only if the contractor was registered.',
+    ],
+    faq: [
+      {
+        q: 'Does Massachusetts have a general contractor license?',
+        a: 'Not a single one. Contractors who work on owner-occupied homes register as Home Improvement Contractors, and the person supervising building work needs a Construction Supervisor License. The two aren’t interchangeable.',
+      },
+      {
+        q: 'Does a roofer need a license in Massachusetts?',
+        a: 'Yes. New or replacement roofing needs at least a roofing construction supervisor license, and on an owner-occupied home the contractor must also be HIC-registered. Your town usually requires a building permit too.',
+      },
+      {
+        q: 'Is there a minimum job size for HIC registration?',
+        a: 'Jobs under $500 in total are exempt, and so are some very small part-time contractors. A job can’t be split into smaller contracts to get under the limit.',
+      },
+      {
+        q: 'What is the Massachusetts HIC Guaranty Fund?',
+        a: 'It can repay up to $25,000 of your losses if you win a court judgment or arbitration award against a registered contractor and can’t collect. It doesn’t cover unregistered contractors.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Mass.gov: check if your contractor is a registered home improvement contractor',
+        url: 'https://www.mass.gov/check-if-your-contractor-is-a-registered-home-improvement-contractor',
+      },
+      { label: 'Mass.gov: HIC homeowner resources', url: 'https://www.mass.gov/info-details/hic-homeowner-resources' },
+      {
+        label: 'Mass.gov: when is a construction supervisor license required?',
+        url: 'https://www.mass.gov/info-details/when-is-a-construction-supervisor-license-required',
+      },
+      {
+        label: 'Mass.gov: work requiring an HIC registration or CSL',
+        url: 'https://www.mass.gov/doc/work-requiring-a-home-improvement-contractor-hic-registration-or-construction-supervisor-license-csl-0/download',
+      },
+      {
+        label: 'Mass.gov: Guaranty Fund claims',
+        url: 'https://www.mass.gov/info-details/file-a-guaranty-fund-claim-for-an-unpaid-hic-judgment',
+      },
+      {
+        label: 'M.G.L. c. 142A, § 2 (contracts and deposits)',
+        url: 'https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter142A/Section2',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'maryland',
+    code: 'MD',
+    name: 'Maryland',
+    generalContractors: 'state',
+    short: 'A state MHIC license for repair and remodeling work on existing homes.',
+    summary:
+      'The Maryland Home Improvement Commission (MHIC) licenses contractors and salespeople who remodel, repair or replace parts of existing homes, and separate state boards license electricians, plumbers and HVACR contractors. Check the MHIC license before you sign, and never pay more than one-third of the price as a deposit.',
+    boards: [
+      {
+        name: 'Maryland Home Improvement Commission (MHIC)',
+        licenses: 'Home improvement contractors and salespeople for remodeling, repair and replacement work on existing homes',
+        lookupUrl: 'https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_search/OP_search.cgi?calling_app=HIC%3A%3AHIC_qselect',
+        lookupNote: 'Search by contractor name, trade name, salesperson, location or license number.',
+        website: 'https://labor.maryland.gov/license/mhic/',
+      },
+      {
+        name: 'Maryland Department of Labor: electrician, plumbing and HVACR boards',
+        licenses: 'Electricians, plumbers and gas fitters, and heating, ventilation, air-conditioning and refrigeration contractors',
+        lookupUrl: 'https://labor.maryland.gov/pq/',
+        lookupNote:
+          'Choose the board on the licensing queries page. In Baltimore County and the WSSC area of Montgomery and Prince George’s counties, plumbers are licensed locally instead.',
+        website: 'https://labor.maryland.gov/pq/',
+      },
+    ],
+    whenRequired: [
+      'Anyone who does or sells home improvement work on an existing home needs an MHIC license, including remodeling, repairs and replacements such as tile and wood flooring.',
+      'The MHIC license doesn’t cover building new homes.',
+      'Electricians need a state license from the State Board of Electricians. Some counties also require a local registration.',
+      'Plumbers and gas fitters need a state Board of Plumbing license, except in Baltimore County and the WSSC area, which license plumbers locally. Heating and air-conditioning work needs a state HVACR license.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s MHIC license number, and for trade work the electrician, plumber or HVACR license number.',
+      'Search the MHIC public query by name or license number and confirm the license is active.',
+      'Look the contractor up on the MHIC disciplinary actions page.',
+      'Check electricians, plumbers and HVACR contractors on the Department of Labor’s licensing queries page. In Montgomery and Prince George’s counties, check plumbers with WSSC Water.',
+      'Make sure the name on the license matches the company on your contract.',
+    ],
+    watchFor: [
+      'Pay nothing before the contract is signed, and no more than one-third of the contract price as a deposit.',
+      'The MHIC Guaranty Fund can repay up to $30,000 of your losses, or the amount you paid the contractor if that is less. A claim starts with a complaint to the MHIC.',
+    ],
+    faq: [
+      {
+        q: 'Does Maryland have a general contractor license?',
+        a: 'Not for all construction. The MHIC license covers home improvement work on existing homes, such as remodeling, repairs and replacements, but not building new homes.',
+      },
+      {
+        q: 'How much can a Maryland contractor ask for up front?',
+        a: 'No more than one-third of the contract price as a deposit. The MHIC advises paying nothing before the contract is signed.',
+      },
+      {
+        q: 'What is the Maryland Home Improvement Guaranty Fund?',
+        a: 'It can repay homeowners for losses caused by a home improvement contractor, up to $30,000 or the amount you paid the contractor, whichever is less. You start by filing a complaint with the MHIC.',
+      },
+      {
+        q: 'Do electricians in Maryland need a state license?',
+        a: 'Yes, an apprentice, journeyperson or master license from the State Board of Electricians. Some counties also require a local registration, so check with your county permit office.',
+      },
+    ],
+    sources: [
+      { label: 'Maryland Home Improvement Commission', url: 'https://labor.maryland.gov/license/mhic/' },
+      {
+        label: 'MHIC public query',
+        url: 'https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_search/OP_search.cgi?calling_app=HIC%3A%3AHIC_qselect',
+      },
+      { label: 'MHIC disciplinary actions', url: 'https://labor.maryland.gov/license/mhic/mhicdisc.shtml' },
+      { label: 'MHIC Guaranty Fund FAQ', url: 'https://labor.maryland.gov/license/mhic/mhicfaqgf.shtml' },
+      { label: 'MHIC FAQ', url: 'https://www.labor.maryland.gov/license/mhic/mhicfaq.shtml' },
+      { label: 'Maryland Department of Labor: licensing queries', url: 'https://labor.maryland.gov/pq/' },
+      { label: 'Maryland State Board of Electricians', url: 'https://labor.maryland.gov/license/elec/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
