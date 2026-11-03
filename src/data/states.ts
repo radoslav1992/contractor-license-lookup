@@ -3185,6 +3185,169 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'new-mexico',
+    code: 'NM',
+    name: 'New Mexico',
+    generalContractors: 'state',
+    short: 'New Mexico’s CID licenses contractors statewide by classification, such as GB-2.',
+    summary:
+      'The Construction Industries Division (CID) of the New Mexico Regulation and Licensing Department licenses general building, electrical, mechanical and plumbing, LP gas and elevator contractors statewide. A license covers only the classifications shown on it, such as GB-2 for residential building or GS-21 for roofing, so check that it fits your job.',
+    boards: [
+      {
+        name: 'New Mexico Regulation and Licensing Department, Construction Industries Division (CID)',
+        licenses:
+          'General building contractors (GB-2 residential, GB-98 residential and commercial), specialty contractors such as GS-21 roofing, electrical, mechanical and plumbing (including HVAC and gas fitting), LP gas and elevator contractors, plus journeymen',
+        lookupUrl: 'https://www.rld.nm.gov/construction-industries/verify-a-license/',
+        lookupNote:
+          'Follow the link on this page to the license search, which PSI runs for CID. Check the license status, expiration date and classification.',
+        website: 'https://www.rld.nm.gov/construction-industries/',
+      },
+    ],
+    whenRequired: [
+      'Anyone who contracts for construction work in New Mexico needs a CID license, including general building, electrical, mechanical, plumbing, LP gas and elevator work.',
+      'A license covers only the classifications shown on it. GB-2 is residential building, GB-98 covers residential and commercial buildings including all GB-2 work, and GS-21 covers roofing.',
+      'A handyman doing casual, minor or inconsequential work, one project at a time, who earns no more than $7,200 a year doesn’t need a license but must file a declaration with CID every year. The exemption doesn’t cover certain electrical work.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s full business name and CID license number in writing.',
+      'Search CID’s license database, linked from its Verify a License page.',
+      'Confirm the license is active and the classification matches your job, such as GB-2 for residential building or GS-21 for roofing.',
+      'For electrical, plumbing, HVAC or gas work, make sure the contractor holds the matching electrical, mechanical and plumbing, or LP gas license.',
+      'Make sure a permit is pulled for the work, and report unlicensed contracting to CID.',
+    ],
+    watchFor: [
+      'Every CID licensee must keep a code bond. It pays to fix code violations that CID certifies and the contractor didn’t correct. Claims have a two-year time limit, so contact CID quickly.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small handyman job in New Mexico?',
+        a: 'A person doing casual, minor or inconsequential work, one project at a time, who earns no more than $7,200 a year is exempt but must file a declaration with CID every year. Bigger jobs need a licensed contractor, and the exemption doesn’t cover certain electrical work.',
+      },
+      {
+        q: 'What is the difference between a GB-2 and a GB-98 license in New Mexico?',
+        a: 'GB-2 is the residential building classification. GB-98 covers both residential and commercial buildings and includes all work allowed under GB-2.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in New Mexico?',
+        a: 'You can get a homeowner permit for work on your own primary residence, but you must first pass the required CID exam for electrical, plumbing or mechanical work. Homeowner permits don’t cover rental or other property.',
+      },
+      {
+        q: 'What happens if a contractor works without a license in New Mexico?',
+        a: 'Contracting without a license is against the law in New Mexico. CID can stop the project and file a criminal charge.',
+      },
+    ],
+    sources: [
+      { label: 'New Mexico CID: verify a license', url: 'https://www.rld.nm.gov/construction-industries/verify-a-license/' },
+      { label: 'New Mexico CID: bureaus', url: 'https://www.rld.nm.gov/construction-industries/find-a-bureau/bureaus/' },
+      { label: '14.6.6 NMAC (classifications and scopes)', url: 'https://www.srca.nm.gov/parts/title14/14.006.0006.html' },
+      {
+        label: 'New Mexico CID: handyman exemption form',
+        url: 'https://www.rld.nm.gov/uploads/FileLinks/548da1a538064745814c05ee0b4d8059/HANDYMAN_2017_505_841_6352.pdf',
+      },
+      { label: '14.5.2 NMAC (permits, including homeowner permits)', url: 'https://www.srca.nm.gov/parts/title14/14.005.0002.html' },
+      { label: '14.5.9 NMAC (code bond claims)', url: 'https://srca.nm.gov/parts/title14/14.005.0009.html' },
+      {
+        label: 'New Mexico CID: unlicensed violations',
+        url: 'https://www.rld.nm.gov/construction-industries/investigation-and-enforcement/unlicensed-violations/',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'nebraska',
+    code: 'NE',
+    name: 'Nebraska',
+    generalContractors: 'state-and-local',
+    short: 'Nebraska registers contractors statewide but has no state general contractor license.',
+    summary:
+      'Nebraska has no state general contractor license. Instead, contractors register with the Nebraska Department of Labor, which doesn’t test skill or guarantee quality. Electricians are licensed by the State Electrical Division, while plumbers and HVAC workers are licensed by cities such as Omaha and Lincoln.',
+    boards: [
+      {
+        name: 'Nebraska Department of Labor: contractor registration',
+        licenses: 'Statewide registration of contractors and subcontractors (a registration, not a skills license)',
+        lookupUrl: 'https://dol.nebraska.gov/conreg/Search',
+        lookupNote: 'No account is needed. Search by business name, registration number, city, ZIP code or county.',
+        website: 'https://dol.nebraska.gov/conreg',
+      },
+      {
+        name: 'Nebraska State Electrical Division',
+        licenses: 'Electrical contractors and electricians, plus state electrical permits and inspections',
+        lookupUrl: 'https://electrical.nebraska.gov/',
+        lookupNote: 'Use the Licensee Search link on the division’s website.',
+        website: 'https://electrical.nebraska.gov/',
+      },
+      {
+        name: 'City of Omaha Permits and Inspections',
+        licenses: 'Plumbers, HVAC workers, electricians and other trades working in Omaha',
+        lookupUrl: 'https://permits.cityofomaha.org/licensing-information',
+        lookupNote: 'Use the City of Omaha License Search link on this page.',
+        website: 'https://permits.cityofomaha.org/',
+      },
+      {
+        name: 'City of Lincoln Building and Safety',
+        licenses: 'Plumbing and mechanical (HVAC) trade professionals working in Lincoln',
+        lookupUrl: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+        lookupNote: 'Download the list of plumbing trade professionals from this page. For HVAC, see the city’s mechanical trade registration list.',
+        website: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+      },
+    ],
+    whenRequired: [
+      'Contractors and subcontractors who do construction work in Nebraska must register with the Department of Labor. People working on their own property, or earning less than $5,000 a year from construction, don’t have to register.',
+      'Contractors with employees must keep a current workers’ compensation certificate on file, or they’re dropped from the list of registered contractors.',
+      'Electrical work needs a license from the State Electrical Division. You may wire your own principal residence without a license if you get a permit and pass inspections, but not a rental, recreational property or a relative’s home.',
+      'Plumbing and HVAC work is licensed by cities, such as Omaha and Lincoln.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and Nebraska Department of Labor registration number.',
+      'Search the Department of Labor’s contractor registry and confirm the registration is current.',
+      'For electrical work, look up the electrician or electrical contractor with the State Electrical Division. In Omaha, also check the city’s license search, because Omaha issues its own electrical licenses.',
+      'For plumbing or HVAC work in Omaha or Lincoln, check the city’s license search or its list of licensed trade professionals.',
+      'Make sure the required permits are pulled before work starts.',
+    ],
+    watchFor: [
+      'If a home insurance claim will pay for the job, such as a storm-damaged roof, you can cancel the contract in writing until midnight of the third business day after you sign, or after your insurer tells you in writing that all or part of the claim isn’t covered, whichever is later.',
+      'Registration isn’t a quality check. The Department of Labor says it doesn’t ensure quality of work or protect against fraud.',
+    ],
+    faq: [
+      {
+        q: 'Does Nebraska require a general contractor license?',
+        a: 'No. Nebraska doesn’t issue a state general contractor license. Contractors must register with the Department of Labor, but registration doesn’t test skill or guarantee quality.',
+      },
+      {
+        q: 'How do I check if a contractor is registered in Nebraska?',
+        a: 'Use the Department of Labor’s free contractor registration search. You can search by business name, registration number, city or ZIP code without making an account.',
+      },
+      {
+        q: 'Who licenses plumbers in Nebraska?',
+        a: 'Cities, not a state board. Omaha’s Plumbing Board gives the master and journeyman plumber exams, and Lincoln Building and Safety keeps a list of plumbing trade professionals.',
+      },
+      {
+        q: 'Can I do my own electrical work in Nebraska?',
+        a: 'Yes, on a single-family home you own and live in as your principal residence. You must do the work yourself without pay, get a homeowner permit and pass inspections.',
+      },
+    ],
+    sources: [
+      { label: 'Nebraska Department of Labor: search registered contractors', url: 'https://dol.nebraska.gov/conreg/Search' },
+      {
+        label: 'Nebraska Department of Labor: contractor registration overview',
+        url: 'https://dol.nebraska.gov/LaborStandards/Contractors/Overview',
+      },
+      { label: 'Nebraska LB 162 (2009, Contractor Registration Act)', url: 'https://www.nebraskalegislature.gov/FloorDocs/101/PDF/Slip/LB162.pdf' },
+      { label: 'Nebraska State Electrical Division', url: 'https://electrical.nebraska.gov/' },
+      { label: 'Nebraska State Electrical Division: homeowner handout', url: 'https://electrical.nebraska.gov/homeowner-handout' },
+      { label: 'City of Omaha: licensing information', url: 'https://permits.cityofomaha.org/licensing-information' },
+      {
+        label: 'City of Lincoln: plumbing trade registration',
+        url: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+      },
+      {
+        label: 'Neb. Rev. Stat. § 44-8603 (Insured Homeowners Protection Act)',
+        url: 'https://nebraskalegislature.gov/laws/statutes.php?statute=44-8603',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
