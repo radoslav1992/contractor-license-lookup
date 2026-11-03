@@ -18,6 +18,11 @@ test('every state has a unique slug and code', () => {
   }
 });
 
+test('all 50 states and DC are covered', () => {
+  // The home page says so; this keeps that claim true.
+  assert.equal(STATES.length, 51);
+});
+
 test('every guide is complete', () => {
   for (const s of STATES) {
     assert.ok(s.summary.length > 80, `${s.slug}: summary`);

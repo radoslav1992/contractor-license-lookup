@@ -3518,6 +3518,679 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'rhode-island',
+    code: 'RI',
+    name: 'Rhode Island',
+    generalContractors: 'state',
+    short: 'Rhode Island registers home and commercial contractors; trades get separate licenses.',
+    summary:
+      'Rhode Island’s Contractors’ Registration and Licensing Board (CRLB) registers contractors who build or repair homes and commercial buildings, and the Department of Labor and Training (DLT) licenses electricians, plumbers and HVAC trades. Most contractors only need to register today, but a new state license for anyone who supervises new home construction or structurally remodels a home starts January 1, 2028.',
+    boards: [
+      {
+        name: 'Rhode Island Contractors’ Registration and Licensing Board (CRLB)',
+        licenses: 'General contractors, remodelers and most subcontractors for residential and commercial work, plus commercial roofing licenses',
+        lookupUrl: 'https://crb.ri.gov/consumer/search-registrantlicensee',
+        lookupNote: 'Search the contractor’s name and confirm the registration or license is active.',
+        website: 'https://crb.ri.gov/',
+      },
+      {
+        name: 'Rhode Island Department of Labor and Training (DLT): Professional Regulation',
+        licenses:
+          'Electricians, plumbers, pipefitters, refrigeration mechanics, heating and air conditioning mechanics, sheet metal workers and other trades',
+        lookupUrl: 'https://dltweb.dlt.ri.gov/profregsonline/',
+        lookupNote:
+          'Use the license search on this site to search by trade, license number, name or city. A separate Violations page shows violation history.',
+        website: 'https://dlt.ri.gov/regulation-and-safety/professional-regulation',
+      },
+    ],
+    whenRequired: [
+      'Contractors, remodelers and most subcontractors who build, repair, demolish or move residential or commercial structures must register with the CRLB. A registered contractor’s employees don’t need their own registration.',
+      'A person working under one contract worth less than $500 in labor and materials doesn’t need to register, but anyone who advertises as a contractor must.',
+      'Licensed electricians and plumbers don’t need CRLB registration unless they contract for work outside their DLT license. Commercial roofers need a separate CRLB commercial roofing license.',
+      'Starting January 1, 2028, anyone who supervises construction of a new home or structurally remodels a one- to four-family home must hold a new state residential contractor license.',
+    ],
+    howToCheck: [
+      'Search the contractor’s name in the CRLB registrant search and confirm the status is active.',
+      'For electrical, plumbing or HVAC work, look up the worker’s license in the DLT search and check the Violations page.',
+      'Ask for proof of liability insurance. Registered contractors must carry at least $500,000.',
+      'For any job over $1,000, get a written contract that shows the contractor’s registration number.',
+      'Ask for the Notice of Possible Mechanics’ Lien before work starts.',
+    ],
+    watchFor: [
+      'CRLB complaints must be filed within one year after the work is finished or you move in. The board takes claims of $10,000 or less; larger claims go to Superior Court.',
+      'An arbitration clause in your contract can block a CRLB complaint unless both sides waive it within 45 days, so read that clause before you sign.',
+    ],
+    faq: [
+      {
+        q: 'Does Rhode Island require a general contractor license?',
+        a: 'Today, most contractors must register with the CRLB rather than hold a license. Starting January 1, 2028, anyone who supervises new home construction or structurally remodels a one- to four-family home will need a new state residential contractor license.',
+      },
+      {
+        q: 'How do I check if a Rhode Island contractor is registered?',
+        a: 'Use the CRLB’s registrant and licensee search. For electricians, plumbers and HVAC trades, use the DLT Professional Regulations Online license search.',
+      },
+      {
+        q: 'Do handymen need to register in Rhode Island?',
+        a: 'Usually, yes. A person doing a single job worth less than $500 in total doesn’t need to register, but anyone who advertises as a contractor must be registered.',
+      },
+      {
+        q: 'How do I file a complaint against a contractor in Rhode Island?',
+        a: 'File online with the CRLB and include your contract, proof of payment and photos. The board takes claims of $10,000 or less, filed within one year after the work is done.',
+      },
+    ],
+    sources: [
+      { label: 'Rhode Island CRLB: search a registrant or licensee', url: 'https://crb.ri.gov/consumer/search-registrantlicensee' },
+      { label: 'Rhode Island CRLB: contractor FAQs', url: 'https://crb.ri.gov/contractor-registration/faqs' },
+      { label: 'Rhode Island CRLB: complaint filing overview', url: 'https://crb.ri.gov/consumer/complaint-filing-overview' },
+      {
+        label: 'Rhode Island CRLB: what homeowners should know (2023)',
+        url: 'https://crb.ri.gov/sites/g/files/xkgbur711/files/2024-01/What%20Homeowners%20Should%20Know_03.08.2023.pdf',
+      },
+      {
+        label: 'R.I. Gen. Laws § 5-65-3 (registration and written contracts)',
+        url: 'https://webserver.rilegislature.gov/Statutes/TITLE5/5-65/5-65-3.HTM',
+      },
+      {
+        label: 'R.I. Gen. Laws § 5-65.4-3 (residential contractor license from 2028)',
+        url: 'https://webserver.rilegislature.gov/Statutes/TITLE5/5-65.4/5-65.4-3.htm',
+      },
+      { label: 'Rhode Island DLT: Professional Regulation', url: 'https://dlt.ri.gov/regulation-and-safety/professional-regulation' },
+      { label: 'Rhode Island DLT: Professional Regulations Online', url: 'https://dltweb.dlt.ri.gov/profregsonline/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'delaware',
+    code: 'DE',
+    name: 'Delaware',
+    generalContractors: 'state-and-local',
+    short: 'Delaware licenses contractor businesses; electricians, plumbers and HVAC need trade licenses.',
+    summary:
+      'Delaware contractors must get a business license from the Division of Revenue and register with the Department of Labor, while the Division of Professional Regulation’s boards license electricians, plumbers and HVACR contractors. The Division of Revenue license is a business license, not a skills test, and Attorney General rules have covered home improvement contracts since November 1, 2023.',
+    boards: [
+      {
+        name: 'Delaware Division of Revenue',
+        licenses: 'Business licenses for every resident and nonresident contractor doing business in Delaware',
+        lookupUrl: 'https://revenue.delaware.gov/business-license-search/',
+        lookupNote: 'Search the business name and check that the license is current. It shows a business license, not trade skills.',
+        website: 'https://revenue.delaware.gov/',
+      },
+      {
+        name: 'Delaware Department of Labor: Office of Contractor Registration',
+        licenses: 'Registration of construction service businesses before they begin work in Delaware',
+        lookupUrl: 'https://contractorregistry.delaware.gov/',
+        lookupNote: 'The registry lists only contractors the department has certified. A contractor who isn’t listed hasn’t applied or has been removed.',
+        website: 'https://labor.delaware.gov/divisions/industrial-affairs/construction-industry/contractor-registration-act/',
+      },
+      {
+        name: 'Delaware Division of Professional Regulation (DELPROS)',
+        licenses:
+          'Electricians (Board of Electrical Examiners), and master plumbers and HVACR contractors (Board of Plumbing, Heating, Ventilation, Air Conditioning and Refrigeration Examiners)',
+        lookupUrl: 'https://delpros.delaware.gov/OH_VerifyLicense',
+        lookupNote: 'The DELPROS license look-up is free and shows real-time data from the state licensing database.',
+        website: 'https://dpr.delaware.gov/',
+      },
+    ],
+    whenRequired: [
+      'Any contractor doing business in Delaware must register with and get a business license from the Division of Revenue.',
+      'Construction service businesses must also register with the Department of Labor’s Office of Contractor Registration before they begin work.',
+      'Plumbing and HVACR work needs a Delaware board license, and a license from another state doesn’t count. Electrical work needs a license from the Board of Electrical Examiners.',
+      'Your city or county may also require its own business license.',
+    ],
+    howToCheck: [
+      'Search the business in the Division of Revenue’s business license search and confirm the license is current.',
+      'Look up the company in the Department of Labor’s contractor registry.',
+      'For electrical, plumbing or HVACR work, look up the license holder in the free DELPROS license look-up.',
+      'Ask your city or county whether your project needs a local license or permit.',
+      'Before you sign, get a complete written contract and the Attorney General’s home improvement summary of rights.',
+    ],
+    watchFor: [
+      'Since November 1, 2023, home improvement contractors must fill in all final terms of the contract and give you the Attorney General’s summary of rights before you sign. A contractor may not call a binding contract just an estimate.',
+      'For many door-to-door sales of $25 or more made at your home, you can cancel until midnight of the third business day, and the seller must give you a cancellation notice.',
+    ],
+    faq: [
+      {
+        q: 'Does Delaware require a general contractor license?',
+        a: 'General contractors need a Division of Revenue business license and Department of Labor registration. These show the business is licensed and registered, not that it passed a skills test. Electricians, plumbers and HVACR contractors need separate trade licenses.',
+      },
+      {
+        q: 'How do I check a contractor’s license in Delaware?',
+        a: 'Check the Division of Revenue’s business license search and the Department of Labor’s contractor registry. For electricians, plumbers and HVACR contractors, use the DELPROS license look-up.',
+      },
+      {
+        q: 'Where do I complain about a contractor in Delaware?',
+        a: 'File a consumer complaint online with the Delaware Department of Justice. Its Consumer Mediation Unit often handles contract disputes through informal mediation, and its Consumer Protection Unit enforces the home improvement rules.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Delaware Division of Revenue: contractors (resident and nonresident)',
+        url: 'https://revenue.delaware.gov/business-tax-forms/contractors-resident-and-non-resident/',
+      },
+      { label: 'Delaware Division of Revenue: business license search', url: 'https://revenue.delaware.gov/business-license-search/' },
+      {
+        label: 'Delaware Department of Labor: Contractor Registration Act',
+        url: 'https://labor.delaware.gov/divisions/industrial-affairs/construction-industry/contractor-registration-act/',
+      },
+      { label: 'Delaware DELPROS: license look-up', url: 'https://delpros.delaware.gov/OH_VerifyLicense' },
+      { label: 'Delaware Plumbing and HVACR Board: FAQs', url: 'https://dpr.delaware.gov/boards/plumbers/faqs/' },
+      {
+        label: 'Delaware Department of Justice: home improvement rules summary',
+        url: 'https://attorneygeneral.delaware.gov/wp-content/uploads/sites/50/2023/11/Home-Improvement-Regs-Summary.pdf',
+      },
+      { label: 'Delaware Department of Justice: consumer complaints', url: 'https://attorneygeneral.delaware.gov/fraud/cmu/complaint/' },
+      { label: '6 Del. C. ch. 44 (home solicitation sales)', url: 'https://delcode.delaware.gov/title6/c044/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'south-dakota',
+    code: 'SD',
+    name: 'South Dakota',
+    generalContractors: 'local-only',
+    short: 'South Dakota licenses electricians and plumbers, but not general contractors.',
+    summary:
+      'South Dakota doesn’t license general or remodeling contractors at the state level, so cities such as Sioux Falls and Rapid City do, while the state Electrical and Plumbing Commissions license those trades. A contractor’s excise tax license from the Department of Revenue is a tax registration, not proof of skill.',
+    boards: [
+      {
+        name: 'South Dakota Plumbing Commission',
+        licenses: 'Plumbing contractors, journeyman plumbers, specialty licensees and small onsite wastewater installers',
+        lookupUrl: 'https://dlr.sd.gov/plumbing/consumer_info.aspx',
+        lookupNote: 'Open the lists of licensed plumbers and specialty licensees on this page, and check the date on each list.',
+        website: 'https://dlr.sd.gov/plumbing/default.aspx',
+      },
+      {
+        name: 'City of Sioux Falls: contractor licensing',
+        licenses:
+          'Residential building contractors, residential roofing and repair contractors, and electrical, plumbing and mechanical (heating, air conditioning and refrigeration) contractors working in Sioux Falls',
+        lookupUrl:
+          'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing/currently-licensed-contractors',
+        website: 'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing',
+      },
+      {
+        name: 'City of Rapid City Building Services',
+        licenses: 'Residential, commercial, siding, roofing, electrical, mechanical, gas, plumbing and sign contractors working in Rapid City',
+        lookupUrl: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+        lookupNote: 'Open the Current Licensed Contractors Report on this page. It’s a PDF list, not a search, so check its date.',
+        website: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+      },
+    ],
+    whenRequired: [
+      'The state doesn’t license general or remodeling contractors. Every contractor must get a free contractor’s excise tax license from the Department of Revenue before starting work, but it’s a tax registration only.',
+      'Electrical work for others must be done by a contractor licensed by the South Dakota Electrical Commission. Homeowners may wire their own home or farmstead only with a homeowner permit approved before work starts, and not on rental or commercial property.',
+      'Plumbing on property connected to a public water or sewer system needs a Plumbing Commission license. Homeowners may do plumbing on a home they own and live in.',
+      'Sioux Falls requires a city license for residential building work and for shingling, siding, and window or door replacement on homes. Rapid City licenses residential, roofing, siding, electrical, mechanical, gas and plumbing contractors.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city licenses they hold, and for each license number.',
+      'In Sioux Falls, check the city’s list of currently licensed contractors. In Rapid City, open the licensed contractor report on the Building Services page.',
+      'For an electrician, contact the South Dakota Electrical Commission at 605-773-3573 to verify the license, since it has no online search.',
+      'For a plumber, check the Plumbing Commission’s lists of licensed plumbers and note the date on the list.',
+      'Ask the Attorney General’s Consumer Protection Division whether complaints have been filed against the company.',
+    ],
+    watchFor: [
+      'You can cancel a written storm-damage roofing contract within 72 hours after signing, or within 72 hours after learning your insurer denied all or part of the claim. The roofer must give you a cancellation form and refund your payments within 10 days, though you may owe for emergency repairs.',
+      'Roofing contractors may not advertise or promise to pay or rebate any part of your insurance deductible.',
+    ],
+    faq: [
+      {
+        q: 'Does South Dakota require a contractor license?',
+        a: 'Not at the state level for general or remodeling work. Check with the city where the work is done, since Sioux Falls and Rapid City license contractors. Electricians and plumbers need state licenses.',
+      },
+      {
+        q: 'Is a contractor’s excise tax license the same as a contractor license?',
+        a: 'No. It’s a free tax registration from the Department of Revenue that every contractor must have. It doesn’t show training or skill.',
+      },
+      {
+        q: 'How do I check an electrician’s license in South Dakota?',
+        a: 'Contact the South Dakota Electrical Commission by phone or email. It doesn’t have a public online search.',
+      },
+      {
+        q: 'Can I cancel a roofing contract after a storm in South Dakota?',
+        a: 'Yes. You can cancel within 72 hours of signing, or within 72 hours after learning your insurer denied all or part of the claim. Send written notice to the address in the contract.',
+      },
+    ],
+    sources: [
+      { label: 'South Dakota Department of Revenue: contractor’s excise tax', url: 'https://dor.sd.gov/businesses/taxes/contractors-excise-tax/' },
+      { label: 'South Dakota Electrical Commission: licensing', url: 'https://dlr.sd.gov/electrical/licensing.aspx' },
+      { label: 'South Dakota Electrical Commission: homeowner wiring', url: 'https://dlr.sd.gov/electrical/homeowner_wiring.aspx' },
+      { label: 'SDCL ch. 36-25 (plumbing licensing)', url: 'https://sdlegislature.gov/Statutes/36-25' },
+      { label: 'SDCL ch. 37-24 (including roofing contracts)', url: 'https://sdlegislature.gov/Statutes/37-24' },
+      {
+        label: 'City of Sioux Falls: contractor licensing',
+        url: 'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing',
+      },
+      {
+        label: 'City of Rapid City: Building Services',
+        url: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+      },
+      {
+        label: 'South Dakota Consumer Protection: construction and home improvement',
+        url: 'https://consumer.sd.gov/fastfacts/construction.aspx',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'north-dakota',
+    code: 'ND',
+    name: 'North Dakota',
+    generalContractors: 'state',
+    short: 'North Dakota’s Secretary of State licenses contractors for jobs over $4,000.',
+    summary:
+      'North Dakota’s Secretary of State licenses contractors for any job over $4,000, and the license class limits how large a single job can be. Electricians and plumbers need separate state board licenses, and cities such as Fargo also license roofers, plumbers and HVAC contractors.',
+    boards: [
+      {
+        name: 'North Dakota Secretary of State',
+        licenses: 'Contractor licenses in Classes A through D for general contractors, subcontractors and other contractors on jobs over $4,000',
+        lookupUrl: 'https://firststop.sos.nd.gov/search/contractor',
+        lookupNote: 'Search the contractor in FirstStop and confirm the license is in good standing and its class covers your job’s price.',
+        website: 'https://www.sos.nd.gov/business/licensing-registration/contractors',
+      },
+      {
+        name: 'North Dakota State Electrical Board',
+        licenses: 'Electricians and electrical contractors',
+        lookupUrl: 'https://www.ndseb.com/search-1/lookup-a-licensedorregistered-electrician/',
+        lookupNote: 'Enter the last name only, or the 4- or 5-digit license number.',
+        website: 'https://www.ndseb.com/',
+      },
+      {
+        name: 'North Dakota State Plumbing Board',
+        licenses: 'Master, journeyman and apprentice plumbers, sewer and water installers, and water conditioning contractors and installers',
+        lookupUrl: 'https://www.ndplumbingboard.gov/licensing-license-lookup',
+        website: 'https://www.ndplumbingboard.gov/',
+      },
+      {
+        name: 'City of Fargo Inspections',
+        licenses: 'Home roofers, plumbers, and heating and air conditioning contractors working in Fargo',
+        lookupUrl: 'https://permits.fargond.gov/',
+        lookupNote: 'Use the Contractor Status option in the city’s permit portal.',
+        website: 'https://fargond.gov/city-government/departments/inspections/selecting-a-contractor',
+      },
+    ],
+    whenRequired: [
+      'A Secretary of State contractor license is required when a job’s cost, value or price is more than $4,000. This covers general contractors, subcontractors and out-of-state contractors.',
+      'The license class caps the size of each job: Class D up to $100,000, Class C up to $300,000, Class B up to $500,000, and Class A has no limit.',
+      'Electricians need a State Electrical Board license and plumbers a State Plumbing Board license, separate from the Secretary of State license.',
+      'Fargo also requires city licenses for home roofers, plumbers, and heating and air conditioning contractors, and Bismarck licenses mechanical (HVAC) installers.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and North Dakota license number.',
+      'Search FirstStop on the Secretary of State’s site. Confirm the license is in good standing and its class covers your job’s price; licenses renew each year by March 1.',
+      'For an electrician, use the State Electrical Board lookup. For a plumber, use the State Plumbing Board license lookup.',
+      'In Fargo, check roofers, plumbers and HVAC contractors through the city’s Contractor Status search. In Bismarck, ask Building Inspections about mechanical licenses.',
+      'Read the Attorney General’s guide to hiring a contractor before you sign.',
+    ],
+    watchFor: [
+      'If insurance is paying for the work, you can cancel the contract until midnight of the fifth business day after you sign, or after your insurer tells you in writing that all or part of the claim isn’t covered, whichever is later. The contractor must refund your payments within 10 days.',
+      'The state Insurance Department says a contractor who offers to pay or cover your insurance deductible is breaking North Dakota law, and warns about out-of-state crews that arrive after storms.',
+    ],
+    faq: [
+      {
+        q: 'Does North Dakota require a contractor license?',
+        a: 'Yes. Anyone doing a job worth more than $4,000 must hold a contractor license from the Secretary of State. Electricians and plumbers also need licenses from their state boards.',
+      },
+      {
+        q: 'What do North Dakota contractor license classes mean?',
+        a: 'The class sets the largest single job a contractor may take. Class D covers jobs up to $100,000, Class C up to $300,000, Class B up to $500,000, and Class A has no cap.',
+      },
+      {
+        q: 'Does a Secretary of State contractor license cover electrical or plumbing work?',
+        a: 'No. Electricians are licensed by the State Electrical Board and plumbers by the State Plumbing Board, so check those boards separately.',
+      },
+      {
+        q: 'Can I cancel a contract that my insurance is paying for?',
+        a: 'Yes. You can cancel until midnight of the fifth business day after signing, or after your insurer says in writing that all or part of the claim isn’t covered, whichever is later. Give the contractor signed, dated written notice.',
+      },
+    ],
+    sources: [
+      { label: 'North Dakota Secretary of State: contractors', url: 'https://www.sos.nd.gov/business/licensing-registration/contractors' },
+      { label: 'North Dakota Attorney General: hiring a contractor', url: 'https://attorneygeneral.nd.gov/consumer-resources/hiring-a-contractor/' },
+      { label: 'N.D. Century Code ch. 43-07 (contractors)', url: 'https://ndlegis.gov/cencode/t43c07.pdf' },
+      { label: 'N.D. Century Code ch. 26.1-39.2 (residential contractor contracts)', url: 'https://ndlegis.gov/cencode/t26-1c39-2.pdf' },
+      {
+        label: 'North Dakota Insurance Department: contractor scams after storms',
+        url: 'https://www.insurance.nd.gov/news/beware-contractor-scams-and-fraud-following-recent-storms-godfread-says',
+      },
+      { label: 'North Dakota State Electrical Board: license lookup', url: 'https://www.ndseb.com/search-1/lookup-a-licensedorregistered-electrician/' },
+      { label: 'City of Fargo: selecting a contractor', url: 'https://fargond.gov/city-government/departments/inspections/selecting-a-contractor' },
+      { label: 'City of Bismarck: mechanical installers', url: 'https://www.bismarcknd.gov/1729/Mechanical-Installers' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'wyoming',
+    code: 'WY',
+    name: 'Wyoming',
+    generalContractors: 'local-only',
+    short: 'Wyoming has no state contractor license; the state licenses electricians.',
+    summary:
+      'Wyoming has no state general contractor license, so cities and counties such as Cheyenne and Casper license contractors and trades under their own rules. Electrical work is different: electricians and electrical contractors need a state license from the Department of Fire Prevention and Electrical Safety, run by the State Fire Marshal.',
+    boards: [
+      {
+        name: 'Wyoming Department of Fire Prevention and Electrical Safety (State Fire Marshal)',
+        licenses: 'Electrical contractors, master and journeyman electricians, electrical technicians and registered apprentices statewide',
+        lookupUrl: 'https://wsfm.wyo.gov/',
+        lookupNote: 'Use the Public Portal and Look Up link on the State Fire Marshal’s home page to check an electrical license.',
+        website: 'https://wsfm.wyo.gov/electrical-safety/licensing',
+      },
+      {
+        name: 'City of Cheyenne Building Permitting and Licensing',
+        licenses: 'Contractor companies and their qualified supervisors for building and trade work in Cheyenne',
+        lookupUrl: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+        lookupNote:
+          'Follow the link on this page to the city’s OpenGov portal, choose Search, and look up contractor licensing. A company license is valid only together with an individual Qualified Supervisor license.',
+        website: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+      },
+      {
+        name: 'City of Casper Building Inspection Division',
+        licenses: 'General contractors and subcontractors, plumbing, mechanical and electrical contractors working in Casper',
+        lookupUrl: 'https://www.casperwy.gov/services/building_and_inspections/contractor_licensing/index.php',
+        lookupNote:
+          'Open the newest Licensed Contractors PDF on this page and check its date. It shows each license’s class, number and renewal status.',
+        website: 'https://www.casperwy.gov/services/building_and_inspections/index.php',
+      },
+    ],
+    whenRequired: [
+      'Building, remodeling, plumbing and mechanical licenses are local, so ask the city or county where the work is done.',
+      'Electrical work must be done by a state-licensed electrical contractor using licensed master or journeyman electricians, or registered apprentices they supervise.',
+      'Owners may do their own wiring on property they own or lease that isn’t for immediate resale, but the work must still meet code and may need a wiring permit.',
+      'Since July 1, 2024, a city or county that licenses contractors must accept an active license of the same type from another Wyoming city or county if the contractor meets conditions, such as passing an ICC or equivalent exam.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city or county license they hold, and for the license number.',
+      'In Cheyenne, search contractor licensing in the city’s OpenGov portal, linked from the Building Permitting and Licensing page.',
+      'In Casper, find the contractor on the newest Licensed Contractors list on the city’s Contractor Licensing page.',
+      'For electrical work, check the electrician and the electrical contractor in the State Fire Marshal’s Public Portal and Look Up.',
+      'Elsewhere, ask your city or county building department whether it licenses contractors, and make sure the needed permits are pulled before work starts.',
+    ],
+    watchFor: [
+      'Wyoming lien law requires contractors to give you written notices about lien rights. Keep every notice, and ask for lien waivers so subcontractors and suppliers are paid and can’t put a lien on your home.',
+    ],
+    faq: [
+      {
+        q: 'Does Wyoming have a state contractor license?',
+        a: 'No. Wyoming doesn’t issue a state general contractor license. Cities and counties license contractors, but electricians and electrical contractors need a state license.',
+      },
+      {
+        q: 'How do I check an electrician’s license in Wyoming?',
+        a: 'Use the Public Portal and Look Up on the Wyoming State Fire Marshal’s website. Check both the electrician and the electrical contractor they work for.',
+      },
+      {
+        q: 'Can I do my own electrical work in Wyoming?',
+        a: 'State law waives the electrical license for owners wiring property they own or lease that isn’t for immediate resale. You still have to meet code, and you may need a wiring permit.',
+      },
+      {
+        q: 'Is a Cheyenne contractor license valid in Casper?',
+        a: 'Not automatically. Since July 1, 2024, a city or county that licenses contractors must accept a same-type license from another Wyoming city or county if the contractor meets certain conditions, but the contractor may still have to apply.',
+      },
+    ],
+    sources: [
+      { label: 'Wyoming State Fire Marshal: electrical licensing', url: 'https://wsfm.wyo.gov/electrical-safety/licensing' },
+      { label: 'Wyoming State Fire Marshal: wiring permits', url: 'https://wsfm.wyo.gov/electrical-safety/wiring-permits-1' },
+      {
+        label: 'Wyoming Statutes: Department of Fire Prevention and Electrical Safety',
+        url: 'https://wyoleg.gov/NXT/gateway.dll/2025%20Wyoming%20Statutes/2025%20Titles/1921/1996/1997',
+      },
+      { label: 'Wyoming 2024 Enrolled Act 37 (contractor license recognition)', url: 'https://wyoleg.gov/2024/Enroll/SF0114.pdf' },
+      { label: 'Wyoming Statutes Title 29 (liens)', url: 'https://wyoleg.gov/statutes/compress/title29.pdf' },
+      {
+        label: 'City of Cheyenne: Building Permitting and Licensing',
+        url: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+      },
+      {
+        label: 'City of Casper: contractor licensing',
+        url: 'https://www.casperwy.gov/services/building_and_inspections/contractor_licensing/index.php',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'washington-dc',
+    code: 'DC',
+    name: 'Washington, DC',
+    generalContractors: 'state',
+    short: 'DC’s DLCP licenses home improvement and general contractors, plus electricians and plumbers.',
+    summary:
+      'The DC Department of Licensing and Consumer Protection (DLCP) licenses home improvement contractors, general contractors and construction managers, and its Board of Industrial Trades licenses electricians, plumbers and other trades. Home improvement contractors must post a $25,000 surety bond and have a licensed home improvement salesperson.',
+    boards: [
+      {
+        name: 'DC Department of Licensing and Consumer Protection (DLCP): business licensing',
+        licenses:
+          'Business licenses for home improvement contractors, home improvement salespersons, and general contractors and construction managers (Classes A, B, C, G and H)',
+        lookupUrl: 'https://boss.dc.gov/',
+        lookupNote:
+          'DLCP moved business licensing to BOSS in August 2026. Choose Global Search under Search, and search by business or person name, address or license number.',
+        website: 'https://dlcp.dc.gov/page/contractor-and-construction-services',
+      },
+      {
+        name: 'DC Board of Industrial Trades (DLCP)',
+        licenses:
+          'Electricians, plumbers and gasfitters, refrigeration and air conditioning mechanics, asbestos workers, steam and operating engineers, and elevator trades',
+        lookupUrl: 'https://dlcp.dc.gov/page/board-industrial-trades-0',
+        lookupNote: 'Use the Verify an Occupational/Professional License link on this page.',
+        website: 'https://dlcp.dc.gov/service/occupational-and-professional-licensing-opl',
+      },
+    ],
+    whenRequired: [
+      'Home improvement contractors need a Home Improvement Contractor license and at least one licensed home improvement salesperson. To get the license, they must post a $25,000 surety bond and carry liability insurance.',
+      'General contractors and construction managers are licensed by class, based on the value of a single contract: Class H up to $500,000, Class G up to $2 million, Class C up to $5 million, Class B up to $10 million, and Class A with no limit.',
+      'Electrical, plumbing and gasfitting, and refrigeration and air conditioning work needs a Board of Industrial Trades license. Subcontractors need their own business license and can’t work under the general contractor’s.',
+      'DLCP treats unlicensed home improvement work as a violation of DC’s consumer protection law.',
+    ],
+    howToCheck: [
+      'Ask for the company’s legal name, its business license number and the name of its home improvement salesperson.',
+      'Search the business in BOSS and confirm the license is active and is a home improvement or general contractor license.',
+      'For electrical, plumbing, gas or HVAC work, check the tradesperson’s own license through the Board of Industrial Trades’ license verification.',
+      'Ask for proof of general liability insurance.',
+      'Check each subcontractor too, because each one needs its own license.',
+    ],
+    watchFor: [
+      'DLCP advises getting several estimates, having someone you trust review the contract, and paying in phases tied to project milestones after the first deposit.',
+      'DLCP’s sample home improvement contract includes a notice of your right to cancel before midnight of the third business day after signing. Look for this notice in your contract.',
+    ],
+    faq: [
+      {
+        q: 'Does a contractor need a license to remodel my home in DC?',
+        a: 'Yes. DLCP says all home improvement contractors must hold a Home Improvement Contractor license and have a licensed home improvement salesperson.',
+      },
+      {
+        q: 'How do I check a contractor’s license in DC?',
+        a: 'Search the business in DLCP’s BOSS system using Global Search. Make sure the license is active and is the right type for your job.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in DC?',
+        a: 'DLCP’s Board of Industrial Trades licenses electricians, plumbers and gasfitters, refrigeration and air conditioning mechanics and other trades.',
+      },
+      {
+        q: 'Does a subcontractor need its own license in DC?',
+        a: 'Yes. DLCP says the general contractor’s license doesn’t cover a subcontractor’s business, so each subcontractor needs its own license.',
+      },
+    ],
+    sources: [
+      { label: 'DC DLCP: contractor and construction services', url: 'https://dlcp.dc.gov/page/contractor-and-construction-services' },
+      { label: 'DC DLCP: home improvement contractor requirements', url: 'https://dlcp.dc.gov/node/1618836' },
+      {
+        label: 'DC DLCP: mandatory insurance levels and claims support',
+        url: 'https://dlcp.dc.gov/page/mandatory-insurance-levels-and-claims-support-0',
+      },
+      { label: 'DC DLCP: Board of Industrial Trades', url: 'https://dlcp.dc.gov/page/board-industrial-trades-0' },
+      { label: 'DC DLCP: business licensing FAQs', url: 'https://dlcp.dc.gov/page/business-licensing-faqs' },
+      {
+        label: 'DC DLCP: tips for DC homeowners before you renovate',
+        url: 'https://dlcp.dc.gov/release/you-renovate-revamp-essential-tips-dc-homeowners-summer',
+      },
+      {
+        label: 'DC DLCP: BOSS frequently asked questions (August 2026)',
+        url: 'https://dlcp.dc.gov/sites/default/files/public/BOSS%20Frequently%20Asked%20Questions%20-%20August%202026.pdf',
+      },
+      {
+        label: 'DC DLCP: sample home improvement contract',
+        url: 'https://dlcp.dc.gov/sites/default/files/dc/sites/DLCP/publication/attachments/Home%20Improvement%20Contract%20-%20Sample%20(Fillable)%20.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'alaska',
+    code: 'AK',
+    name: 'Alaska',
+    generalContractors: 'state',
+    short: 'Alaska registers all paid construction contractors, including handymen, through CBPL.',
+    summary:
+      'Alaska’s Division of Corporations, Business and Professional Licensing (CBPL) registers all paid construction contractors and licenses electrical and mechanical administrators, while the Department of Labor and Workforce Development certifies individual electricians and plumbers. Every registered contractor must carry a bond and insurance, and handymen may only take projects of $10,000 or less.',
+    boards: [
+      {
+        name: 'Alaska Division of Corporations, Business and Professional Licensing (CBPL)',
+        licenses:
+          'Construction contractor registrations (general, general with residential endorsement, specialty such as roofing, mechanical, and handyman) and electrical and mechanical administrator licenses',
+        lookupUrl: 'https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ProfessionalLicenseSearch.aspx',
+        lookupNote:
+          'Search by name or license number. Results show whether the license is current, its type, the owner and any past licensing action.',
+        website: 'https://www.commerce.alaska.gov/web/cbpl/professionallicensing/constructioncontractors.aspx',
+      },
+    ],
+    whenRequired: [
+      'Anyone paid to do construction work must be registered with CBPL, bonded and insured, however small the job.',
+      'A handyman registration covers only projects of $10,000 or less in total, including all labor and materials.',
+      'A general contractor needs a residential endorsement to build new homes or to do residential remodeling worth more than 25% of the structure’s value.',
+      'An electrical business must have a licensed electrical administrator, and a plumbing or heating business a licensed mechanical administrator. The electricians and plumbers doing the work need their own certificate of fitness from the Department of Labor and Workforce Development.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and CBPL registration number.',
+      'Search CBPL’s professional license search. Confirm the registration is current and fits your job: handyman for projects of $10,000 or less, or specialty, mechanical, or general with a residential endorsement.',
+      'For electrical, plumbing or heating work, ask who the business’s licensed electrical or mechanical administrator is and search that person too.',
+      'Ask the contractor to show current proof of the bond and insurance that state law requires.',
+      'Ask the electricians and plumbers on the job to show their certificate of fitness, which they must carry. There’s no online search for these, but the Department of Labor’s Mechanical Inspection Section (mi@alaska.gov) can confirm one.',
+    ],
+    watchFor: [
+      'Some contractors say “licensed and insured” when they have only a business license and liability insurance. A CBPL registration comes with a bond, from $5,000 for handymen up to $25,000 for general contractors, and you can sue on that bond over improper work or breach of contract.',
+      'If you buy goods or services of $10 or more at your home, or anywhere other than the seller’s place of business, Alaska law gives you five days to cancel, and the seller must tell you about this right.',
+    ],
+    faq: [
+      {
+        q: 'Do handymen need a license in Alaska?',
+        a: 'Yes. Handymen must register with CBPL and carry a $5,000 bond and insurance. They can only take projects of $10,000 or less in total labor and materials.',
+      },
+      {
+        q: 'What is a residential endorsement in Alaska?',
+        a: 'It’s an add-on to a general contractor registration. A general contractor needs it to build new homes or to do residential remodeling worth more than 25% of the structure’s value.',
+      },
+      {
+        q: 'How do I check an electrician or plumber in Alaska?',
+        a: 'Search the electrical or plumbing business in CBPL’s license search. Individual electricians and plumbers hold a certificate of fitness from the Department of Labor and must carry it on the job, and the Mechanical Inspection Section can confirm one.',
+      },
+      {
+        q: 'Do roofers need a license in Alaska?',
+        a: 'Yes. Roofing is a specialty contractor trade in Alaska, so a roofer you pay must hold an active CBPL contractor registration with a bond and insurance.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Alaska CBPL: construction contractors',
+        url: 'https://www.commerce.alaska.gov/web/cbpl/professionallicensing/constructioncontractors.aspx',
+      },
+      {
+        label: 'Alaska CBPL: hiring a contractor',
+        url: 'https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ConstructionContractors/HiringaContractor.aspx',
+      },
+      {
+        label: 'Alaska CBPL: construction contractor statutes and regulations (2023)',
+        url: 'https://www.commerce.alaska.gov/web/portals/5/pub/contractorstatutes.pdf',
+      },
+      {
+        label: 'Alaska CBPL: specialty contractor trades list',
+        url: 'https://www.commerce.alaska.gov/web/Portals/5/pub/con4818_specialty%20contractor%20trades%20list.pdf',
+      },
+      { label: 'Alaska Department of Labor: plumbing and electrical', url: 'https://labor.alaska.gov/lss/plumbing_electrical.htm' },
+      {
+        label: 'Alaska Department of Labor: certificates of fitness statutes and regulations',
+        url: 'https://labor.alaska.gov/lss/forms/cof-regs.pdf',
+      },
+      { label: 'Alaska Department of Labor: homeowner’s guide to hiring a contractor', url: 'https://labor.alaska.gov/lss/forms/Hiring_a_contractor.pdf' },
+      { label: 'Alaska Department of Law: consumer protection laws', url: 'https://law.alaska.gov/department/civil/consumer/laws.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'vermont',
+    code: 'VT',
+    name: 'Vermont',
+    generalContractors: 'state',
+    short: 'Vermont’s OPR registers residential contractors for home jobs over $10,000.',
+    summary:
+      'Vermont doesn’t license general contractors, but since April 1, 2023, the Office of Professional Regulation (OPR) has required residential contractors to register for jobs over $10,000, and the Division of Fire Safety licenses electricians and plumbers. The Attorney General also keeps a public registry of people convicted of home improvement fraud.',
+    boards: [
+      {
+        name: 'Vermont Office of Professional Regulation (OPR)',
+        licenses: 'Residential contractor registration for jobs over $10,000, including building, remodeling, repair, roofing, painting, paving and weatherization',
+        lookupUrl: 'https://sos.vermont.gov/opr/find-a-professional',
+        lookupNote: 'Most searches work with just the name. Results show the registration type, status, dates and any discipline.',
+        website: 'https://sos.vermont.gov/residential-contractors/homeowner-resources',
+      },
+      {
+        name: 'Vermont Division of Fire Safety',
+        licenses: 'Electricians and plumbers, plus certifications for oil burner installers and natural gas and propane installers',
+        lookupUrl: 'https://data.vermont.gov/Government/DFS-Licensing-MasterList/cy8e-89cz/data',
+        lookupNote:
+          'This is the division’s master list of active licenses on Vermont’s open data site. Search by name to see the license type and expiration date.',
+        website: 'https://firesafety.vermont.gov/licensing',
+      },
+    ],
+    whenRequired: [
+      'Residential contractors must register with OPR before contracting with a homeowner for work worth more than $10,000, including labor and materials.',
+      'Covered work includes building, remodeling and repairing homes and buildings with four or fewer units, including roofing, painting, paving, weatherization, and heating, plumbing, electrical and solar work.',
+      'Employees of a registered business don’t need their own registration, and neither do licensed tradespeople, engineers or architects working within their license.',
+      'Electrical and plumbing work needs a Division of Fire Safety license, except for owners working on their own owner-occupied, freestanding single-family home. The exception doesn’t cover rentals.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and OPR registration number.',
+      'Search OPR’s Find a Professional tool. Confirm the registration is active and look for any discipline.',
+      'For electrical or plumbing work, look up the electrician or plumber by name in the Division of Fire Safety’s licensing master list.',
+      'Search the Attorney General’s Home and Land Improvement Fraud Registry for the contractor’s name.',
+      'Ask to see proof of insurance, and get a written contract before you pay a deposit.',
+    ],
+    watchFor: [
+      'Jobs over $10,000 need a written contract signed before you pay a deposit or work starts. It must include the scope of work and how changes are handled, and any change must be in a signed writing.',
+      'If a contractor sells you a job at your home, you can generally cancel until midnight of the third business day after signing, and the seller must give you a written cancellation notice.',
+    ],
+    faq: [
+      {
+        q: 'Does Vermont license general contractors?',
+        a: 'No. Vermont doesn’t license general contractors, but residential contractors must register with OPR for jobs over $10,000. Electricians and plumbers are licensed separately by the Division of Fire Safety.',
+      },
+      {
+        q: 'Does a contractor need to register for a job under $10,000 in Vermont?',
+        a: 'No. OPR registration applies only above $10,000. Electrical and plumbing work still needs a licensed tradesperson, whatever the job size.',
+      },
+      {
+        q: 'What is Vermont’s home improvement fraud registry?',
+        a: 'The Attorney General keeps a public list of people and businesses convicted of home improvement fraud, or that settled civil fraud claims with the state. Search it before you hire anyone.',
+      },
+      {
+        q: 'How do I report a problem with a Vermont contractor?',
+        a: 'File a complaint with the Attorney General’s Consumer Assistance Program, or with OPR if the contractor is registered. Home improvement fraud is a crime, so also report suspected fraud to local police.',
+      },
+    ],
+    sources: [
+      { label: 'Vermont OPR: residential contractor FAQs', url: 'https://sos.vermont.gov/residential-contractors/residential-contractor-faqs' },
+      { label: 'Vermont OPR: Find a Professional', url: 'https://sos.vermont.gov/opr/find-a-professional' },
+      { label: '26 V.S.A. ch. 106 (residential contractors)', url: 'https://legislature.vermont.gov/statutes/fullchapter/26/106' },
+      { label: 'Vermont Division of Fire Safety: trade licensing', url: 'https://firesafety.vermont.gov/licensing' },
+      {
+        label: 'Vermont Division of Fire Safety: licensing master list (open data)',
+        url: 'https://data.vermont.gov/Government/DFS-Licensing-MasterList/cy8e-89cz/data',
+      },
+      { label: 'Vermont Attorney General: home improvements', url: 'https://ago.vermont.gov/home-improvements' },
+      {
+        label: 'Vermont Attorney General: Home and Land Improvement Fraud Registry',
+        url: 'https://ago.vermont.gov/cap/home-and-land-improvement-fraud-registry',
+      },
+      { label: '9 V.S.A. § 2454 (home solicitation sales)', url: 'https://legislature.vermont.gov/statutes/section/09/063/02454' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
