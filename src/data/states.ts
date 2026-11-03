@@ -3859,6 +3859,179 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'wyoming',
+    code: 'WY',
+    name: 'Wyoming',
+    generalContractors: 'local-only',
+    short: 'Wyoming has no state contractor license; the state licenses electricians.',
+    summary:
+      'Wyoming has no state general contractor license, so cities and counties such as Cheyenne and Casper license contractors and trades under their own rules. Electrical work is different: electricians and electrical contractors need a state license from the Department of Fire Prevention and Electrical Safety, run by the State Fire Marshal.',
+    boards: [
+      {
+        name: 'Wyoming Department of Fire Prevention and Electrical Safety (State Fire Marshal)',
+        licenses: 'Electrical contractors, master and journeyman electricians, electrical technicians and registered apprentices statewide',
+        lookupUrl: 'https://wsfm.wyo.gov/',
+        lookupNote: 'Use the Public Portal and Look Up link on the State Fire Marshal’s home page to check an electrical license.',
+        website: 'https://wsfm.wyo.gov/electrical-safety/licensing',
+      },
+      {
+        name: 'City of Cheyenne Building Permitting and Licensing',
+        licenses: 'Contractor companies and their qualified supervisors for building and trade work in Cheyenne',
+        lookupUrl: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+        lookupNote:
+          'Follow the link on this page to the city’s OpenGov portal, choose Search, and look up contractor licensing. A company license is valid only together with an individual Qualified Supervisor license.',
+        website: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+      },
+      {
+        name: 'City of Casper Building Inspection Division',
+        licenses: 'General contractors and subcontractors, plumbing, mechanical and electrical contractors working in Casper',
+        lookupUrl: 'https://www.casperwy.gov/services/building_and_inspections/contractor_licensing/index.php',
+        lookupNote:
+          'Open the newest Licensed Contractors PDF on this page and check its date. It shows each license’s class, number and renewal status.',
+        website: 'https://www.casperwy.gov/services/building_and_inspections/index.php',
+      },
+    ],
+    whenRequired: [
+      'Building, remodeling, plumbing and mechanical licenses are local, so ask the city or county where the work is done.',
+      'Electrical work must be done by a state-licensed electrical contractor using licensed master or journeyman electricians, or registered apprentices they supervise.',
+      'Owners may do their own wiring on property they own or lease that isn’t for immediate resale, but the work must still meet code and may need a wiring permit.',
+      'Since July 1, 2024, a city or county that licenses contractors must accept an active license of the same type from another Wyoming city or county if the contractor meets conditions, such as passing an ICC or equivalent exam.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city or county license they hold, and for the license number.',
+      'In Cheyenne, search contractor licensing in the city’s OpenGov portal, linked from the Building Permitting and Licensing page.',
+      'In Casper, find the contractor on the newest Licensed Contractors list on the city’s Contractor Licensing page.',
+      'For electrical work, check the electrician and the electrical contractor in the State Fire Marshal’s Public Portal and Look Up.',
+      'Elsewhere, ask your city or county building department whether it licenses contractors, and make sure the needed permits are pulled before work starts.',
+    ],
+    watchFor: [
+      'Wyoming lien law requires contractors to give you written notices about lien rights. Keep every notice, and ask for lien waivers so subcontractors and suppliers are paid and can’t put a lien on your home.',
+    ],
+    faq: [
+      {
+        q: 'Does Wyoming have a state contractor license?',
+        a: 'No. Wyoming doesn’t issue a state general contractor license. Cities and counties license contractors, but electricians and electrical contractors need a state license.',
+      },
+      {
+        q: 'How do I check an electrician’s license in Wyoming?',
+        a: 'Use the Public Portal and Look Up on the Wyoming State Fire Marshal’s website. Check both the electrician and the electrical contractor they work for.',
+      },
+      {
+        q: 'Can I do my own electrical work in Wyoming?',
+        a: 'State law waives the electrical license for owners wiring property they own or lease that isn’t for immediate resale. You still have to meet code, and you may need a wiring permit.',
+      },
+      {
+        q: 'Is a Cheyenne contractor license valid in Casper?',
+        a: 'Not automatically. Since July 1, 2024, a city or county that licenses contractors must accept a same-type license from another Wyoming city or county if the contractor meets certain conditions, but the contractor may still have to apply.',
+      },
+    ],
+    sources: [
+      { label: 'Wyoming State Fire Marshal: electrical licensing', url: 'https://wsfm.wyo.gov/electrical-safety/licensing' },
+      { label: 'Wyoming State Fire Marshal: wiring permits', url: 'https://wsfm.wyo.gov/electrical-safety/wiring-permits-1' },
+      {
+        label: 'Wyoming Statutes: Department of Fire Prevention and Electrical Safety',
+        url: 'https://wyoleg.gov/NXT/gateway.dll/2025%20Wyoming%20Statutes/2025%20Titles/1921/1996/1997',
+      },
+      { label: 'Wyoming 2024 Enrolled Act 37 (contractor license recognition)', url: 'https://wyoleg.gov/2024/Enroll/SF0114.pdf' },
+      { label: 'Wyoming Statutes Title 29 (liens)', url: 'https://wyoleg.gov/statutes/compress/title29.pdf' },
+      {
+        label: 'City of Cheyenne: Building Permitting and Licensing',
+        url: 'https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing',
+      },
+      {
+        label: 'City of Casper: contractor licensing',
+        url: 'https://www.casperwy.gov/services/building_and_inspections/contractor_licensing/index.php',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'washington-dc',
+    code: 'DC',
+    name: 'Washington, DC',
+    generalContractors: 'state',
+    short: 'DC’s DLCP licenses home improvement and general contractors, plus electricians and plumbers.',
+    summary:
+      'The DC Department of Licensing and Consumer Protection (DLCP) licenses home improvement contractors, general contractors and construction managers, and its Board of Industrial Trades licenses electricians, plumbers and other trades. Home improvement contractors must post a $25,000 surety bond and have a licensed home improvement salesperson.',
+    boards: [
+      {
+        name: 'DC Department of Licensing and Consumer Protection (DLCP): business licensing',
+        licenses:
+          'Business licenses for home improvement contractors, home improvement salespersons, and general contractors and construction managers (Classes A, B, C, G and H)',
+        lookupUrl: 'https://boss.dc.gov/',
+        lookupNote:
+          'DLCP moved business licensing to BOSS in August 2026. Choose Global Search under Search, and search by business or person name, address or license number.',
+        website: 'https://dlcp.dc.gov/page/contractor-and-construction-services',
+      },
+      {
+        name: 'DC Board of Industrial Trades (DLCP)',
+        licenses:
+          'Electricians, plumbers and gasfitters, refrigeration and air conditioning mechanics, asbestos workers, steam and operating engineers, and elevator trades',
+        lookupUrl: 'https://dlcp.dc.gov/page/board-industrial-trades-0',
+        lookupNote: 'Use the Verify an Occupational/Professional License link on this page.',
+        website: 'https://dlcp.dc.gov/service/occupational-and-professional-licensing-opl',
+      },
+    ],
+    whenRequired: [
+      'Home improvement contractors need a Home Improvement Contractor license and at least one licensed home improvement salesperson. To get the license, they must post a $25,000 surety bond and carry liability insurance.',
+      'General contractors and construction managers are licensed by class, based on the value of a single contract: Class H up to $500,000, Class G up to $2 million, Class C up to $5 million, Class B up to $10 million, and Class A with no limit.',
+      'Electrical, plumbing and gasfitting, and refrigeration and air conditioning work needs a Board of Industrial Trades license. Subcontractors need their own business license and can’t work under the general contractor’s.',
+      'DLCP treats unlicensed home improvement work as a violation of DC’s consumer protection law.',
+    ],
+    howToCheck: [
+      'Ask for the company’s legal name, its business license number and the name of its home improvement salesperson.',
+      'Search the business in BOSS and confirm the license is active and is a home improvement or general contractor license.',
+      'For electrical, plumbing, gas or HVAC work, check the tradesperson’s own license through the Board of Industrial Trades’ license verification.',
+      'Ask for proof of general liability insurance.',
+      'Check each subcontractor too, because each one needs its own license.',
+    ],
+    watchFor: [
+      'DLCP advises getting several estimates, having someone you trust review the contract, and paying in phases tied to project milestones after the first deposit.',
+      'DLCP’s sample home improvement contract includes a notice of your right to cancel before midnight of the third business day after signing. Look for this notice in your contract.',
+    ],
+    faq: [
+      {
+        q: 'Does a contractor need a license to remodel my home in DC?',
+        a: 'Yes. DLCP says all home improvement contractors must hold a Home Improvement Contractor license and have a licensed home improvement salesperson.',
+      },
+      {
+        q: 'How do I check a contractor’s license in DC?',
+        a: 'Search the business in DLCP’s BOSS system using Global Search. Make sure the license is active and is the right type for your job.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in DC?',
+        a: 'DLCP’s Board of Industrial Trades licenses electricians, plumbers and gasfitters, refrigeration and air conditioning mechanics and other trades.',
+      },
+      {
+        q: 'Does a subcontractor need its own license in DC?',
+        a: 'Yes. DLCP says the general contractor’s license doesn’t cover a subcontractor’s business, so each subcontractor needs its own license.',
+      },
+    ],
+    sources: [
+      { label: 'DC DLCP: contractor and construction services', url: 'https://dlcp.dc.gov/page/contractor-and-construction-services' },
+      { label: 'DC DLCP: home improvement contractor requirements', url: 'https://dlcp.dc.gov/node/1618836' },
+      {
+        label: 'DC DLCP: mandatory insurance levels and claims support',
+        url: 'https://dlcp.dc.gov/page/mandatory-insurance-levels-and-claims-support-0',
+      },
+      { label: 'DC DLCP: Board of Industrial Trades', url: 'https://dlcp.dc.gov/page/board-industrial-trades-0' },
+      { label: 'DC DLCP: business licensing FAQs', url: 'https://dlcp.dc.gov/page/business-licensing-faqs' },
+      {
+        label: 'DC DLCP: tips for DC homeowners before you renovate',
+        url: 'https://dlcp.dc.gov/release/you-renovate-revamp-essential-tips-dc-homeowners-summer',
+      },
+      {
+        label: 'DC DLCP: BOSS frequently asked questions (August 2026)',
+        url: 'https://dlcp.dc.gov/sites/default/files/public/BOSS%20Frequently%20Asked%20Questions%20-%20August%202026.pdf',
+      },
+      {
+        label: 'DC DLCP: sample home improvement contract',
+        url: 'https://dlcp.dc.gov/sites/default/files/dc/sites/DLCP/publication/attachments/Home%20Improvement%20Contract%20-%20Sample%20(Fillable)%20.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
