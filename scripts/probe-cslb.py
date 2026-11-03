@@ -19,13 +19,17 @@ def post(page, target, extra):
     req = urllib.request.Request(URL, data=urllib.parse.urlencode(data).encode(), headers={"User-Agent": UA})
     return opener.open(req, timeout=600)
 
-page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
-step2 = post(page, "ctl00$MainContent$ddlStatus", {"ctl00$MainContent$ddlStatus": "M"}).read().decode("utf-8", "replace")
-i = step2.find('id="MainContent_uplinks"')
-print("--- links area after choosing License Master")
-print(re.sub(r"<[^>]+>", " ", step2[i:i + 2500]).split("Back")[0])
-resp = post(step2, "ctl00$MainContent$lbMasterCSV", {"ctl00$MainContent$ddlStatus": "M"})
-body = resp.read()
+import time
+for attempt in range(1, 5):
+    try:
+        page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
+        step2 = post(page, "ctl00$MainContent$ddlStatus", {"ctl00$MainContent$ddlStatus": "M"}).read().decode("utf-8", "replace")
+        resp = post(step2, "ctl00$MainContent$lbMasterCSV", {"ctl00$MainContent$ddlStatus": "M"})
+        body = resp.read()
+        break
+    except Exception as e:
+        print(f"attempt {attempt} failed: {e!r}")
+        time.sleep(20 * attempt)
 print("--- download ->", resp.status, resp.headers.get("Content-Type"), resp.headers.get("Content-Disposition"), len(body), "bytes")
 if body[:2] == b"PK":
     z = zipfile.ZipFile(io.BytesIO(body))
