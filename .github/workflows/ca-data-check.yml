@@ -1,0 +1,19 @@
+# Temporary: run the California pipeline on the real CSLB file and check it.
+name: CA data check
+on:
+  push:
+    branches: [ca-license-search]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run data:ca
+      - run: node scripts/ca-check.mjs
+      - run: npm run build && find dist -type f | wc -l

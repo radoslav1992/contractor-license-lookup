@@ -38,6 +38,8 @@ export interface StateGuide {
   sources: { label: string; url: string }[];
   /** ISO date the facts were last checked. */
   lastChecked: string;
+  /** This state's page has a search box over the board's own data file. */
+  liveSearch?: 'ca';
 }
 
 export const STATES: StateGuide[] = [
@@ -105,8 +107,13 @@ export const STATES: StateGuide[] = [
         label: 'CSLB Instant License Check',
         url: 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx',
       },
+      {
+        label: 'CSLB Data Portal: master list of California licensed contractors (the search above uses this file)',
+        url: 'https://www.cslb.ca.gov/OnlineServices/DataPortal/ContractorList',
+      },
     ],
     lastChecked: '2026-11-03',
+    liveSearch: 'ca',
   },
   {
     slug: 'florida',

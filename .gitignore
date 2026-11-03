@@ -4,3 +4,6 @@ dist/
 .wrangler/
 .env
 .DS_Store
+# California search data: rebuilt by `npm run data:ca`, never committed
+.cache/
+public/data/
