@@ -9,13 +9,14 @@
 // retries, keeps the last good download in .cache/cslb/, and falls back to it
 // (up to MAX_CACHE_AGE_DAYS old) rather than publish an empty search.
 
+import https from 'node:https';
 import { mkdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { gunzipSync, gzipSync } from 'node:zlib';
 import { MIN_LICENSES, buildCaData, parseCsv } from '../src/lib/ca-build.ts';
 
 const PORTAL = 'https://www.cslb.ca.gov/OnlineServices/DataPortal/ContractorList';
-const USER_AGENT = 'Mozilla/5.0 (compatible; contractorlicenselookup.org; weekly public data download)';
+const USER_AGENT = 'Mozilla/5.0 (compatible; contractorlicenselookup.org)';
 const CACHE_DIR = '.cache/cslb';
 const CACHE_FILE = join(CACHE_DIR, 'MasterLicenseData.csv.gz');
 const CACHE_DATE = join(CACHE_DIR, 'downloaded.txt');
@@ -28,27 +29,48 @@ const MAX_FILES = 18_000;
 const today = () => new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/**
+ * A plain HTTPS request. CSLB's firewall turns away Node's built-in fetch
+ * (which adds browser-style headers) with a 503, so send only what we set.
+ */
+function httpsRequest(url, { method = 'GET', headers = {}, body } = {}) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(url, { method, headers, timeout: 10 * 60 * 1000 }, async (res) => {
+      try {
+        const chunks = [];
+        // Rejects if the server closes the connection before the end.
+        for await (const chunk of res) chunks.push(chunk);
+        resolve({ status: res.statusCode ?? 0, statusText: res.statusMessage ?? '', headers: res.headers, body: Buffer.concat(chunks) });
+      } catch (err) {
+        reject(new Error(`connection dropped: ${err.message}`));
+      }
+    });
+    req.on('timeout', () => req.destroy(new Error('timed out')));
+    req.on('error', reject);
+    if (body) req.write(body);
+    req.end();
+  });
+}
+
 /** The portal is an ASP.NET form: load it, choose "License Master", then press "CSV". */
 async function downloadMaster() {
   const cookies = new Map();
-  const request = async (body, step) => {
-    const res = await fetch(PORTAL, {
-      method: body ? 'POST' : 'GET',
-      body: body ? new URLSearchParams(body) : undefined,
-      headers: {
-        'User-Agent': USER_AGENT,
-        Cookie: [...cookies].map(([k, v]) => `${k}=${v}`).join('; '),
-        ...(body ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}),
-      },
-      signal: AbortSignal.timeout(10 * 60 * 1000),
-    });
-    for (const c of res.headers.getSetCookie()) {
+  const request = async (form, step) => {
+    const body = form ? new URLSearchParams(form).toString() : undefined;
+    const headers = { 'User-Agent': USER_AGENT, Accept: '*/*' };
+    if (cookies.size) headers.Cookie = [...cookies].map(([k, v]) => `${k}=${v}`).join('; ');
+    if (body) {
+      headers['Content-Type'] = 'application/x-www-form-urlencoded';
+      headers['Content-Length'] = Buffer.byteLength(body);
+    }
+    const res = await httpsRequest(PORTAL, { method: body ? 'POST' : 'GET', headers, body });
+    for (const c of [res.headers['set-cookie'] ?? []].flat()) {
       const [pair] = c.split(';');
       const eq = pair.indexOf('=');
       cookies.set(pair.slice(0, eq).trim(), pair.slice(eq + 1).trim());
     }
-    if (!res.ok) {
-      const retry = res.headers.get('retry-after');
+    if (res.status !== 200) {
+      const retry = res.headers['retry-after'];
       throw new Error(`CSLB answered ${res.status} ${res.statusText} at step "${step}"${retry ? ` (retry after ${retry})` : ''}`);
     }
     return res;
@@ -63,11 +85,12 @@ async function downloadMaster() {
   const postBack = (html, target, step) =>
     request({ ...hidden(html), __EVENTTARGET: target, __EVENTARGUMENT: '', ctl00$MainContent$ddlStatus: 'M' }, step);
 
-  const form = await (await request(undefined, 'open the data portal')).text();
-  const chosen = await (await postBack(form, 'ctl00$MainContent$ddlStatus', 'choose License Master')).text();
+  const form = (await request(undefined, 'open the data portal')).body.toString('utf8');
+  const chosen = (await postBack(form, 'ctl00$MainContent$ddlStatus', 'choose License Master')).body.toString('utf8');
   const res = await postBack(chosen, 'ctl00$MainContent$lbMasterCSV', 'download the CSV');
-  if (!/csv/i.test(res.headers.get('content-type') ?? '')) throw new Error(`expected a CSV, got ${res.headers.get('content-type')}`);
-  return Buffer.from(await res.arrayBuffer()).toString('utf8').replace(/^﻿/, '');
+  const type = String(res.headers['content-type'] ?? '');
+  if (!/csv/i.test(type)) throw new Error(`expected a CSV, got ${type || 'no content type'}`);
+  return res.body.toString('utf8').replace(/^\uFEFF/, '');
 }
 
 function check(rows) {
