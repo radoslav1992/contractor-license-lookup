@@ -3518,6 +3518,172 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'rhode-island',
+    code: 'RI',
+    name: 'Rhode Island',
+    generalContractors: 'state',
+    short: 'Rhode Island registers home and commercial contractors; trades get separate licenses.',
+    summary:
+      'Rhode Island’s Contractors’ Registration and Licensing Board (CRLB) registers contractors who build or repair homes and commercial buildings, and the Department of Labor and Training (DLT) licenses electricians, plumbers and HVAC trades. Most contractors only need to register today, but a new state license for anyone who supervises new home construction or structurally remodels a home starts January 1, 2028.',
+    boards: [
+      {
+        name: 'Rhode Island Contractors’ Registration and Licensing Board (CRLB)',
+        licenses: 'General contractors, remodelers and most subcontractors for residential and commercial work, plus commercial roofing licenses',
+        lookupUrl: 'https://crb.ri.gov/consumer/search-registrantlicensee',
+        lookupNote: 'Search the contractor’s name and confirm the registration or license is active.',
+        website: 'https://crb.ri.gov/',
+      },
+      {
+        name: 'Rhode Island Department of Labor and Training (DLT): Professional Regulation',
+        licenses:
+          'Electricians, plumbers, pipefitters, refrigeration mechanics, heating and air conditioning mechanics, sheet metal workers and other trades',
+        lookupUrl: 'https://dltweb.dlt.ri.gov/profregsonline/',
+        lookupNote:
+          'Use the license search on this site to search by trade, license number, name or city. A separate Violations page shows violation history.',
+        website: 'https://dlt.ri.gov/regulation-and-safety/professional-regulation',
+      },
+    ],
+    whenRequired: [
+      'Contractors, remodelers and most subcontractors who build, repair, demolish or move residential or commercial structures must register with the CRLB. A registered contractor’s employees don’t need their own registration.',
+      'A person working under one contract worth less than $500 in labor and materials doesn’t need to register, but anyone who advertises as a contractor must.',
+      'Licensed electricians and plumbers don’t need CRLB registration unless they contract for work outside their DLT license. Commercial roofers need a separate CRLB commercial roofing license.',
+      'Starting January 1, 2028, anyone who supervises construction of a new home or structurally remodels a one- to four-family home must hold a new state residential contractor license.',
+    ],
+    howToCheck: [
+      'Search the contractor’s name in the CRLB registrant search and confirm the status is active.',
+      'For electrical, plumbing or HVAC work, look up the worker’s license in the DLT search and check the Violations page.',
+      'Ask for proof of liability insurance. Registered contractors must carry at least $500,000.',
+      'For any job over $1,000, get a written contract that shows the contractor’s registration number.',
+      'Ask for the Notice of Possible Mechanics’ Lien before work starts.',
+    ],
+    watchFor: [
+      'CRLB complaints must be filed within one year after the work is finished or you move in. The board takes claims of $10,000 or less; larger claims go to Superior Court.',
+      'An arbitration clause in your contract can block a CRLB complaint unless both sides waive it within 45 days, so read that clause before you sign.',
+    ],
+    faq: [
+      {
+        q: 'Does Rhode Island require a general contractor license?',
+        a: 'Today, most contractors must register with the CRLB rather than hold a license. Starting January 1, 2028, anyone who supervises new home construction or structurally remodels a one- to four-family home will need a new state residential contractor license.',
+      },
+      {
+        q: 'How do I check if a Rhode Island contractor is registered?',
+        a: 'Use the CRLB’s registrant and licensee search. For electricians, plumbers and HVAC trades, use the DLT Professional Regulations Online license search.',
+      },
+      {
+        q: 'Do handymen need to register in Rhode Island?',
+        a: 'Usually, yes. A person doing a single job worth less than $500 in total doesn’t need to register, but anyone who advertises as a contractor must be registered.',
+      },
+      {
+        q: 'How do I file a complaint against a contractor in Rhode Island?',
+        a: 'File online with the CRLB and include your contract, proof of payment and photos. The board takes claims of $10,000 or less, filed within one year after the work is done.',
+      },
+    ],
+    sources: [
+      { label: 'Rhode Island CRLB: search a registrant or licensee', url: 'https://crb.ri.gov/consumer/search-registrantlicensee' },
+      { label: 'Rhode Island CRLB: contractor FAQs', url: 'https://crb.ri.gov/contractor-registration/faqs' },
+      { label: 'Rhode Island CRLB: complaint filing overview', url: 'https://crb.ri.gov/consumer/complaint-filing-overview' },
+      {
+        label: 'Rhode Island CRLB: what homeowners should know (2023)',
+        url: 'https://crb.ri.gov/sites/g/files/xkgbur711/files/2024-01/What%20Homeowners%20Should%20Know_03.08.2023.pdf',
+      },
+      {
+        label: 'R.I. Gen. Laws § 5-65-3 (registration and written contracts)',
+        url: 'https://webserver.rilegislature.gov/Statutes/TITLE5/5-65/5-65-3.HTM',
+      },
+      {
+        label: 'R.I. Gen. Laws § 5-65.4-3 (residential contractor license from 2028)',
+        url: 'https://webserver.rilegislature.gov/Statutes/TITLE5/5-65.4/5-65.4-3.htm',
+      },
+      { label: 'Rhode Island DLT: Professional Regulation', url: 'https://dlt.ri.gov/regulation-and-safety/professional-regulation' },
+      { label: 'Rhode Island DLT: Professional Regulations Online', url: 'https://dltweb.dlt.ri.gov/profregsonline/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'delaware',
+    code: 'DE',
+    name: 'Delaware',
+    generalContractors: 'state-and-local',
+    short: 'Delaware licenses contractor businesses; electricians, plumbers and HVAC need trade licenses.',
+    summary:
+      'Delaware contractors must get a business license from the Division of Revenue and register with the Department of Labor, while the Division of Professional Regulation’s boards license electricians, plumbers and HVACR contractors. The Division of Revenue license is a business license, not a skills test, and Attorney General rules have covered home improvement contracts since November 1, 2023.',
+    boards: [
+      {
+        name: 'Delaware Division of Revenue',
+        licenses: 'Business licenses for every resident and nonresident contractor doing business in Delaware',
+        lookupUrl: 'https://revenue.delaware.gov/business-license-search/',
+        lookupNote: 'Search the business name and check that the license is current. It shows a business license, not trade skills.',
+        website: 'https://revenue.delaware.gov/',
+      },
+      {
+        name: 'Delaware Department of Labor: Office of Contractor Registration',
+        licenses: 'Registration of construction service businesses before they begin work in Delaware',
+        lookupUrl: 'https://contractorregistry.delaware.gov/',
+        lookupNote: 'The registry lists only contractors the department has certified. A contractor who isn’t listed hasn’t applied or has been removed.',
+        website: 'https://labor.delaware.gov/divisions/industrial-affairs/construction-industry/contractor-registration-act/',
+      },
+      {
+        name: 'Delaware Division of Professional Regulation (DELPROS)',
+        licenses:
+          'Electricians (Board of Electrical Examiners), and master plumbers and HVACR contractors (Board of Plumbing, Heating, Ventilation, Air Conditioning and Refrigeration Examiners)',
+        lookupUrl: 'https://delpros.delaware.gov/OH_VerifyLicense',
+        lookupNote: 'The DELPROS license look-up is free and shows real-time data from the state licensing database.',
+        website: 'https://dpr.delaware.gov/',
+      },
+    ],
+    whenRequired: [
+      'Any contractor doing business in Delaware must register with and get a business license from the Division of Revenue.',
+      'Construction service businesses must also register with the Department of Labor’s Office of Contractor Registration before they begin work.',
+      'Plumbing and HVACR work needs a Delaware board license, and a license from another state doesn’t count. Electrical work needs a license from the Board of Electrical Examiners.',
+      'Your city or county may also require its own business license.',
+    ],
+    howToCheck: [
+      'Search the business in the Division of Revenue’s business license search and confirm the license is current.',
+      'Look up the company in the Department of Labor’s contractor registry.',
+      'For electrical, plumbing or HVACR work, look up the license holder in the free DELPROS license look-up.',
+      'Ask your city or county whether your project needs a local license or permit.',
+      'Before you sign, get a complete written contract and the Attorney General’s home improvement summary of rights.',
+    ],
+    watchFor: [
+      'Since November 1, 2023, home improvement contractors must fill in all final terms of the contract and give you the Attorney General’s summary of rights before you sign. A contractor may not call a binding contract just an estimate.',
+      'For many door-to-door sales of $25 or more made at your home, you can cancel until midnight of the third business day, and the seller must give you a cancellation notice.',
+    ],
+    faq: [
+      {
+        q: 'Does Delaware require a general contractor license?',
+        a: 'General contractors need a Division of Revenue business license and Department of Labor registration. These show the business is licensed and registered, not that it passed a skills test. Electricians, plumbers and HVACR contractors need separate trade licenses.',
+      },
+      {
+        q: 'How do I check a contractor’s license in Delaware?',
+        a: 'Check the Division of Revenue’s business license search and the Department of Labor’s contractor registry. For electricians, plumbers and HVACR contractors, use the DELPROS license look-up.',
+      },
+      {
+        q: 'Where do I complain about a contractor in Delaware?',
+        a: 'File a consumer complaint online with the Delaware Department of Justice. Its Consumer Mediation Unit often handles contract disputes through informal mediation, and its Consumer Protection Unit enforces the home improvement rules.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Delaware Division of Revenue: contractors (resident and nonresident)',
+        url: 'https://revenue.delaware.gov/business-tax-forms/contractors-resident-and-non-resident/',
+      },
+      { label: 'Delaware Division of Revenue: business license search', url: 'https://revenue.delaware.gov/business-license-search/' },
+      {
+        label: 'Delaware Department of Labor: Contractor Registration Act',
+        url: 'https://labor.delaware.gov/divisions/industrial-affairs/construction-industry/contractor-registration-act/',
+      },
+      { label: 'Delaware DELPROS: license look-up', url: 'https://delpros.delaware.gov/OH_VerifyLicense' },
+      { label: 'Delaware Plumbing and HVACR Board: FAQs', url: 'https://dpr.delaware.gov/boards/plumbers/faqs/' },
+      {
+        label: 'Delaware Department of Justice: home improvement rules summary',
+        url: 'https://attorneygeneral.delaware.gov/wp-content/uploads/sites/50/2023/11/Home-Improvement-Regs-Summary.pdf',
+      },
+      { label: 'Delaware Department of Justice: consumer complaints', url: 'https://attorneygeneral.delaware.gov/fraud/cmu/complaint/' },
+      { label: '6 Del. C. ch. 44 (home solicitation sales)', url: 'https://delcode.delaware.gov/title6/c044/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
