@@ -1,51 +1,58 @@
 """Temporary: download CSLB's statewide License Master CSV and describe it."""
-import csv, html, http.cookiejar, io, re, sys, urllib.parse, urllib.request
+import csv, html, http.cookiejar, io, re, urllib.parse, urllib.request, zipfile
+from collections import Counter
 
-URL = "https://www.cslb.ca.gov/OnlineServices/DataPortal/ContractorList"
+BASE = "https://www.cslb.ca.gov/OnlineServices/DataPortal/"
+URL = BASE + "ContractorList"
 UA = "Mozilla/5.0 (compatible; contractorlicenselookup.org data check)"
 jar = http.cookiejar.CookieJar()
 opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 opener.addheaders = [("User-Agent", UA)]
 
-page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
-start = page.find("Statewide Public Database Files")
-print("--- form around the download links")
-print(re.sub(r"\s+", " ", page[start - 3000:start + 2500]))
-print("--- status/format options")
-for m in re.finditer(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)</option>', page):
-    print(m.group(1), "|", m.group(2))
+def hidden(page):
+    return {n: html.unescape(v) for n, v in re.findall(r'<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"', page)}
 
-fields = dict(re.findall(r'<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"', page))
-targets = re.findall(r"__doPostBack\(&#39;([^&]+)&#39;", page)
-print("--- postback targets:", sorted(set(targets)))
-master = next((t for t in targets if "aster" in t), None)
-select = re.search(r'<select name="([^"]+)"', page)
-options = re.findall(r'<option[^>]*value="([^"]*)"', page)
-for fmt in [o for o in options if "csv" in o.lower()] or options[:1]:
-    data = {k: html.unescape(v) for k, v in fields.items()}
-    data["__EVENTTARGET"] = master or ""
-    data["__EVENTARGUMENT"] = ""
-    if select:
-        data[select.group(1)] = fmt
+def post(page, target, extra):
+    data = hidden(page)
+    data.update({"__EVENTTARGET": target, "__EVENTARGUMENT": ""})
+    data.update(extra)
     req = urllib.request.Request(URL, data=urllib.parse.urlencode(data).encode(), headers={"User-Agent": UA})
-    resp = opener.open(req, timeout=300)
-    body = resp.read()
-    print("--- download with", fmt, "->", resp.status, resp.headers.get("Content-Type"), resp.headers.get("Content-Disposition"), len(body), "bytes")
-    if body[:2] == b"PK":
-        import zipfile
-        z = zipfile.ZipFile(io.BytesIO(body))
-        print("zip contents:", [(i.filename, i.file_size) for i in z.infolist()])
-        body = z.read(z.infolist()[0])
-    text = body.decode("utf-8-sig", "replace")
-    if text.lstrip().startswith("<"):
-        print(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text))[:1500])
-        continue
+    return opener.open(req, timeout=600)
+
+page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
+step2 = post(page, "ctl00$MainContent$ddlStatus", {"ctl00$MainContent$ddlStatus": "M"}).read().decode("utf-8", "replace")
+i = step2.find("MainContent_uplinks")
+links_html = step2[i:i + 3000]
+print("--- links area after choosing License Master")
+print(re.sub(r"\s+", " ", links_html[:2000]))
+
+href = re.search(r'href="([^"]+)"', links_html)
+link = html.unescape(href.group(1)) if href else ""
+print("--- link:", link)
+m = re.search(r"__doPostBack\('([^']+)'", link)
+if m:
+    resp = post(step2, m.group(1), {"ctl00$MainContent$ddlStatus": "M"})
+else:
+    resp = opener.open(urllib.parse.urljoin(URL, link), timeout=600)
+body = resp.read()
+print("--- download ->", resp.status, resp.headers.get("Content-Type"), resp.headers.get("Content-Disposition"), len(body), "bytes")
+if body[:2] == b"PK":
+    z = zipfile.ZipFile(io.BytesIO(body))
+    print("zip contents:", [(x.filename, x.file_size) for x in z.infolist()])
+    body = z.read(z.infolist()[0])
+text = body.decode("utf-8-sig", "replace")
+if text.lstrip().startswith("<"):
+    print(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text))[:1500])
+else:
     rows = list(csv.reader(io.StringIO(text)))
     print("rows:", len(rows))
     print("header:", rows[0])
     for r in rows[1:3]:
-        print("sample:", [c[:25] for c in r])
-    status_col = next((i for i, h in enumerate(rows[0]) if "status" in h.lower()), None)
-    if status_col is not None:
-        from collections import Counter
-        print("status counts:", Counter(r[status_col] for r in rows[1:] if len(r) > status_col).most_common(15))
+        print("sample:", [c[:30] for c in r])
+    for name in rows[0]:
+        if any(k in name.lower() for k in ("status", "class", "county", "type", "wc")):
+            col = rows[0].index(name)
+            print(f"{name}:", Counter(r[col] for r in rows[1:] if len(r) > col).most_common(12))
+    for idx, name in enumerate(rows[0]):
+        vals = [r[idx] for r in rows[1:2000] if len(r) > idx and r[idx]]
+        print(f"  {idx} {name}: filled {len(vals)}/1999, max len {max((len(v) for v in vals), default=0)}")
