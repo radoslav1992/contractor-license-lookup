@@ -31,6 +31,8 @@ const ROWS = [
   row({ ...BASE, LicenseNo: '1000002', BusinessName: 'QUARTZ VALLEY BUILDERS', City: 'FRESNO', County: 'Fresno', 'Classifications(s)': 'B| C10', ExpirationDate: '06/30/2026' }),
   row({ ...BASE, LicenseNo: '1000003', BusinessName: 'ZEPHYR ELECTRIC', City: 'OAKLAND', County: 'Alameda', 'Classifications(s)': 'C-7| C10', PrimaryStatus: 'Contr Bond Susp' }),
   row({ ...BASE, LicenseNo: '0999004', BusinessName: 'KESTREL PLUMBING, "THE BEST"', City: 'CHICO', County: 'Butte', 'Classifications(s)': 'C36', InactivationDate: '03/01/2026' }),
+  row({ ...BASE, LicenseNo: '1001006', BusinessName: 'BAYVIEW ELECTRIC', FullBusinessName: 'M EXAMPLE INC DBA BAYVIEW ELECTRIC', 'BUS-NAME-2': 'M EXAMPLE INC', City: 'NAPA', County: 'Napa', 'Classifications(s)': 'C10' }),
+  row({ ...BASE, LicenseNo: '1001007', BusinessName: 'SAMPLE JOHN PAUL', FullBusinessName: 'JOHN PAUL SAMPLE', City: 'NAPA', County: 'Napa', BusinessType: 'Sole Owner', 'Classifications(s)': 'C33' }),
   row({
     ...BASE, LicenseNo: '1001005', BusinessName: 'JANE Q SAMPLE', FullBusinessName: 'SAMPLE HOME REPAIR', City: 'DAVIS',
     County: 'Yolo', BusinessType: 'Sole Owner', 'Classifications(s)': 'B', WorkersCompCoverageType: "Workers' Compensation Insurance",
@@ -73,8 +75,8 @@ test('status: suspended, expired, inactive and active', () => {
 
 test('buildCaData writes license and name files without addresses or phone numbers', () => {
   const { files, meta, stats } = buildCaData(parseCsv(csv), '2026-11-03');
-  assert.equal(stats.licenses, 5);
-  assert.equal(meta.count, 5);
+  assert.equal(stats.licenses, 7);
+  assert.equal(meta.count, 7);
 
   const shard = files.get('lic/1000.json');
   assert.deepEqual(Object.keys(shard).sort(), ['1000001', '1000002', '1000003']);
@@ -90,7 +92,13 @@ test('buildCaData writes license and name files without addresses or phone numbe
   assert.equal(files.get('lic/1000.json')['1000003'].why, 'Contr Bond Susp');
 
   const sole = files.get('lic/1001.json')['1001005'];
-  assert.equal(sole.alt, 'SAMPLE HOME REPAIR');
+  assert.equal(sole.nm, 'SAMPLE HOME REPAIR');
+  assert.equal(sole.alt, 'JANE Q SAMPLE');
+  // The full name is shown; names that only repeat its words are dropped.
+  assert.equal(files.get('lic/1001.json')['1001006'].nm, 'M EXAMPLE INC DBA BAYVIEW ELECTRIC');
+  assert.equal(files.get('lic/1001.json')['1001006'].alt, undefined);
+  assert.equal(files.get('lic/1001.json')['1001007'].nm, 'JOHN PAUL SAMPLE');
+  assert.equal(files.get('lic/1001.json')['1001007'].alt, undefined);
   assert.deepEqual(sole.wc, { t: "Workers' Compensation Insurance", co: 'EXAMPLE MUTUAL', exp: '2027-07-01' });
 
   const everything = JSON.stringify([...files.values()]);

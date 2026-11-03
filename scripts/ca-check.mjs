@@ -1,38 +1,40 @@
 // Temporary: sanity-check the real index against CSLB's own license pages.
 import { readdir, readFile, stat } from 'node:fs/promises';
-import { classLabel } from '../src/lib/ca-search.ts';
+import { tokens } from '../src/lib/ca-search.ts';
 
 const dir = 'public/data/ca';
 const meta = JSON.parse(await readFile(`${dir}/meta.json`, 'utf8'));
-console.log('meta:', meta.asOf, meta.count, 'heavy words:', meta.heavy.length, meta.heavy.join(' '));
 const recs = [];
 for (const f of await readdir(`${dir}/lic`)) Object.values(JSON.parse(await readFile(`${dir}/lic/${f}`, 'utf8'))).forEach((r) => recs.push(r));
-const count = (fn) => recs.reduce((m, r) => (m.set(fn(r), (m.get(fn(r)) ?? 0) + 1), m), new Map());
-console.log('statuses:', [...count((r) => r.st)]);
-console.log('suspension reasons:', [...count((r) => r.why ?? '')].sort((a, b) => b[1] - a[1]).slice(0, 25));
-console.log('workers comp types:', [...count((r) => r.wc?.t ?? '')]);
-const codes = new Map();
-recs.forEach((r) => r.cls.forEach((c) => codes.set(c, (codes.get(c) ?? 0) + 1)));
-console.log('codes without a name:', [...codes].filter(([c]) => classLabel(c) === c).sort((a, b) => b[1] - a[1]));
-console.log('D codes:', [...codes].filter(([c]) => c.startsWith('D')).length, 'all codes:', codes.size);
-console.log('alt-name samples:', recs.filter((r) => r.alt && r.type === 'Corporation').slice(0, 8).map((r) => [r.nm, r.alt]));
-console.log('sole-owner alt samples:', recs.filter((r) => r.alt && r.type === 'Sole Owner').slice(0, 4).map((r) => [r.nm, r.alt]));
+console.log('licenses:', recs.length, 'statuses:', JSON.stringify([...recs.reduce((m, r) => m.set(r.st, (m.get(r.st) ?? 0) + 1), new Map())]));
+const exps = recs.map((r) => r.exp).filter(Boolean).sort();
+console.log('expiration range:', exps[0], '…', exps.at(-1), 'past:', exps.filter((e) => e < meta.asOf).length);
+const freq = new Map();
+for (const r of recs) for (const t of new Set(tokens(`${r.nm} ${r.alt ?? ''}`))) freq.set(t, (freq.get(t) ?? 0) + 1);
+const top = [...freq].filter(([t]) => t.length >= 3).sort((a, b) => b[1] - a[1]);
+console.log('words 1000-2500:', top.filter(([, c]) => c <= 2500 && c > 1000).map(([t, c]) => `${t} ${c}`).join(', '));
+console.log('CON words:', top.filter(([t, c]) => t.startsWith('CON') && c <= 2500).slice(0, 12).map(([t, c]) => `${t} ${c}`).join(', '));
+console.log('name samples:', JSON.stringify(recs.filter((r) => r.alt).slice(0, 6).map((r) => [r.type, r.nm, r.alt])));
 const sizes = [];
 for (const f of await readdir(`${dir}/name`)) sizes.push([f, (await stat(`${dir}/name/${f}`)).size]);
 sizes.sort((a, b) => b[1] - a[1]);
-console.log('name files:', sizes.length, 'largest (KB):', sizes.slice(0, 12).map(([f, s]) => `${f} ${Math.round(s / 1024)}`).join(', '));
-console.log('total name KB:', Math.round(sizes.reduce((a, [, s]) => a + s, 0) / 1024));
+console.log('largest name files (KB):', sizes.slice(0, 6).map(([f, s]) => `${f} ${Math.round(s / 1024)}`).join(', '));
 
-const pick = (st, k) => recs.filter((r) => r.st === st).slice(0, k);
-for (const r of [...pick('A', 1), ...pick('E', 2), ...pick('I', 3), ...pick('S', 2)]) {
+const ua = { 'User-Agent': 'Mozilla/5.0 (compatible; contractorlicenselookup.org)', Accept: '*/*' };
+const inactive = recs.filter((r) => r.st === 'I').slice(0, 3);
+const active = recs.filter((r) => r.st === 'A').slice(100, 101);
+for (const r of [...active, ...inactive]) {
+  const { default: https } = await import('node:https');
   const url = `https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=${r.n}`;
-  try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; contractorlicenselookup.org data check)' } });
-    const text = (await res.text()).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
-    const i = text.indexOf('License Status');
-    console.log(`${r.st} ${r.n} exp=${r.exp} why=${r.why ?? ''} -> HTTP ${res.status}: ${i >= 0 ? text.slice(i, i + 260) : text.slice(0, 200)}`);
-  } catch (e) {
-    console.log(r.st, r.n, 'detail page error', e.message);
-  }
-  await new Promise((s) => setTimeout(s, 1500));
+  const html = await new Promise((res) =>
+    https.get(url, { headers: ua }, async (resp) => {
+      const c = [];
+      for await (const x of resp) c.push(x);
+      res(`HTTP ${resp.statusCode} ` + Buffer.concat(c).toString('utf8'));
+    }).on('error', (e) => res(`error ${e.message}`)),
+  );
+  const text = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  const hits = [...text.matchAll(/(this license|license status|inactive|suspend|expired|current and active)/gi)].slice(0, 4).map((m) => text.slice(Math.max(0, m.index - 60), m.index + 160));
+  console.log(`--- ${r.st} ${r.n} "${r.nm}" ${text.slice(0, 12)} hits:`, JSON.stringify(hits));
+  await new Promise((s) => setTimeout(s, 2000));
 }

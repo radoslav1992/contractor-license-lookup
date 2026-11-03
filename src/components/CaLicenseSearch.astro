@@ -17,8 +17,8 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
   <p class="search-status" data-status role="status" aria-live="polite"></p>
   <ul class="results" data-results></ul>
   <p class="search-note">
-    The file lists current licenses and expired licenses that can still be renewed. Cancelled and revoked licenses
-    aren’t included, and a license’s status can change at any time, so always confirm it on
+    The file covers licenses that are current or can still be renewed. Cancelled and revoked licenses aren’t
+    included, and a license’s status can change at any time, so always confirm it on
     <a href={CSLB_CHECK} target="_blank" rel="noopener">CSLB’s Instant License Check</a> before you hire.
   </p>
 </section>
@@ -48,6 +48,11 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
     'Susp - No Qualifier': 'no qualifying individual',
     'Judgement Susp': 'unpaid judgment',
     'Family Sup Susp': 'family support order',
+    'SOS Suspension': 'the business is suspended by the California Secretary of State',
+    'QUAL Bond SUSP': 'qualifying individual’s bond',
+    'Discp Bond SUSP': 'disciplinary bond',
+    'Citation Susp': 'unresolved citation',
+    'ARB Suspension': 'arbitration award',
   };
   const WORKERS_COMP: Record<string, string> = {
     Exempt: 'Exempt: the contractor has certified that it has no employees',
@@ -242,6 +247,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
       const asOf = meta ? ` in the ${formatDate(meta.asOf)} file` : '';
       switch (rec.st) {
         case 'A':
+          if (rec.exp && rec.exp < new Date().toISOString().slice(0, 10)) return `Expired on ${formatDate(rec.exp)}`;
           return `Active${asOf}`;
         case 'E':
           return rec.exp ? `Expired on ${formatDate(rec.exp)}` : 'Expired';

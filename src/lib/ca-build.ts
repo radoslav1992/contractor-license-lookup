@@ -97,6 +97,19 @@ export function licenseStatus(row: {
   return { st: 'A' };
 }
 
+/** Names that add words the main name doesn't already have. */
+export function otherNames(main: string, candidates: string[]): string[] {
+  const seen = new Set(tokens(main));
+  const out: string[] = [];
+  for (const name of candidates) {
+    const words = tokens(name);
+    if (words.length === 0 || words.every((w) => seen.has(w))) continue;
+    words.forEach((w) => seen.add(w));
+    out.push(name);
+  }
+  return out;
+}
+
 export interface BuildResult {
   /** Path under public/data/ca → JSON value */
   files: Map<string, unknown>;
@@ -117,10 +130,11 @@ export function buildCaData(rows: string[][], asOf: string): BuildResult {
     const n = get(r, 'LicenseNo').replace(/^0+/, '');
     if (!/^\d+$/.test(n)) continue;
 
-    const nm = get(r, 'BusinessName');
-    const others = [get(r, 'FullBusinessName'), get(r, 'BUS-NAME-2')].filter(
-      (v, i, all) => v && v.replace(/\s+/g, ' ') !== nm.replace(/\s+/g, ' ') && all.indexOf(v) === i,
-    );
+    // FullBusinessName is the complete name in natural order ("M TABBERT INC DBA
+    // BAYSIDE ELECTRIC", "RANDALL MARK DOCKERY"); BusinessName may be the trading
+    // name or "LAST FIRST", and BUS-NAME-2 the legal entity behind a trading name.
+    const nm = get(r, 'FullBusinessName') || get(r, 'BusinessName');
+    const others = otherNames(nm, [get(r, 'BusinessName'), get(r, 'BUS-NAME-2')]);
     const expires = isoDate(get(r, 'ExpirationDate'));
     const status = licenseStatus({
       primary: get(r, 'PrimaryStatus'),
