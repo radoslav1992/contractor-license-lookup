@@ -1693,6 +1693,172 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'massachusetts',
+    code: 'MA',
+    name: 'Massachusetts',
+    generalContractors: 'state',
+    short: 'Home improvement contractors register with the state; builders need a supervisor license.',
+    summary:
+      'Massachusetts registers home improvement contractors through the Office of Consumer Affairs and Business Regulation, and licenses construction supervisors, including roofers, through the Office of Public Safety and Inspections. Hire a registered contractor for work on your owner-occupied home: the state’s Guaranty Fund doesn’t protect you otherwise.',
+    boards: [
+      {
+        name: 'Office of Consumer Affairs and Business Regulation: Home Improvement Contractor program',
+        licenses: 'Home Improvement Contractor (HIC) registration for work on existing owner-occupied homes of one to four units',
+        lookupUrl: 'https://www.mass.gov/check-if-your-contractor-is-a-registered-home-improvement-contractor',
+        lookupNote: 'Links to the MA Contractor Hub search. Search by business name or registration number to see status and history.',
+        website: 'https://www.mass.gov/home-improvement-contractor-program',
+      },
+      {
+        name: 'Office of Public Safety and Inspections (OPSI)',
+        licenses:
+          'Construction Supervisor Licenses (CSL), including specialty licenses for roofing, windows and siding, and insulation, and refrigeration technician and contractor licenses',
+        lookupUrl: 'https://www.mass.gov/how-to/check-a-construction-supervisor-license',
+        lookupNote: 'Follow the link to OPSI’s license verification site and search by license type, number, name or city.',
+        website: 'https://www.mass.gov/construction-supervisor-licensing',
+      },
+      {
+        name: 'Division of Occupational Licensure: electricians, plumbers and gas fitters',
+        licenses: 'Electricians, and journeyman and master plumbers and gas fitters',
+        lookupUrl: 'https://www.mass.gov/info-details/division-of-occupational-licensure-check-a-license',
+        lookupNote: 'This page sends you to the right search for each trade. No account is needed.',
+        website: 'https://www.mass.gov/info-details/division-of-occupational-licensure-check-a-license',
+      },
+    ],
+    whenRequired: [
+      'HIC registration is required for work on an existing owner-occupied home of one to four units that is the owner’s primary residence. New construction, larger buildings, rentals and second homes aren’t covered.',
+      'Jobs under $500 in total are exempt from HIC registration, as are some very small part-time contractors and installers of central heating and air conditioning.',
+      'A Construction Supervisor License is required to supervise building work on one- and two-family homes. On an owner-occupied home, roofing, window and siding jobs need at least a specialty supervisor license plus HIC registration.',
+      'Electrical work needs a licensed electrician, and plumbing and gas work a licensed plumber or gas fitter.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s HIC registration number, construction supervisor license number and any trade license number. You can also ask to see their state HIC ID card.',
+      'Look up the HIC number or business name on the MA Contractor Hub, and review the registration status and history.',
+      'Check the supervisor license on OPSI’s license verification site.',
+      'Check electricians, plumbers and gas fitters through the Division of Occupational Licensure’s license check.',
+      'Make sure the name, license type and expiration date match the person and company on your contract.',
+    ],
+    watchFor: [
+      'A deposit can’t be more than one-third of the total price, or the cost of special-order materials if that is higher. Jobs over $1,000 need a written contract.',
+      'The HIC Guaranty Fund can pay up to $25,000 of your losses after an unpaid court judgment or arbitration award, but only if the contractor was registered.',
+    ],
+    faq: [
+      {
+        q: 'Does Massachusetts have a general contractor license?',
+        a: 'Not a single one. Contractors who work on owner-occupied homes register as Home Improvement Contractors, and the person supervising building work needs a Construction Supervisor License. The two aren’t interchangeable.',
+      },
+      {
+        q: 'Does a roofer need a license in Massachusetts?',
+        a: 'Yes. New or replacement roofing needs at least a roofing construction supervisor license, and on an owner-occupied home the contractor must also be HIC-registered. Your town usually requires a building permit too.',
+      },
+      {
+        q: 'Is there a minimum job size for HIC registration?',
+        a: 'Jobs under $500 in total are exempt, and so are some very small part-time contractors. A job can’t be split into smaller contracts to get under the limit.',
+      },
+      {
+        q: 'What is the Massachusetts HIC Guaranty Fund?',
+        a: 'It can repay up to $25,000 of your losses if you win a court judgment or arbitration award against a registered contractor and can’t collect. It doesn’t cover unregistered contractors.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Mass.gov: check if your contractor is a registered home improvement contractor',
+        url: 'https://www.mass.gov/check-if-your-contractor-is-a-registered-home-improvement-contractor',
+      },
+      { label: 'Mass.gov: HIC homeowner resources', url: 'https://www.mass.gov/info-details/hic-homeowner-resources' },
+      {
+        label: 'Mass.gov: when is a construction supervisor license required?',
+        url: 'https://www.mass.gov/info-details/when-is-a-construction-supervisor-license-required',
+      },
+      {
+        label: 'Mass.gov: work requiring an HIC registration or CSL',
+        url: 'https://www.mass.gov/doc/work-requiring-a-home-improvement-contractor-hic-registration-or-construction-supervisor-license-csl-0/download',
+      },
+      {
+        label: 'Mass.gov: Guaranty Fund claims',
+        url: 'https://www.mass.gov/info-details/file-a-guaranty-fund-claim-for-an-unpaid-hic-judgment',
+      },
+      {
+        label: 'M.G.L. c. 142A, § 2 (contracts and deposits)',
+        url: 'https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter142A/Section2',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'maryland',
+    code: 'MD',
+    name: 'Maryland',
+    generalContractors: 'state',
+    short: 'A state MHIC license for repair and remodeling work on existing homes.',
+    summary:
+      'The Maryland Home Improvement Commission (MHIC) licenses contractors and salespeople who remodel, repair or replace parts of existing homes, and separate state boards license electricians, plumbers and HVACR contractors. Check the MHIC license before you sign, and never pay more than one-third of the price as a deposit.',
+    boards: [
+      {
+        name: 'Maryland Home Improvement Commission (MHIC)',
+        licenses: 'Home improvement contractors and salespeople for remodeling, repair and replacement work on existing homes',
+        lookupUrl: 'https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_search/OP_search.cgi?calling_app=HIC%3A%3AHIC_qselect',
+        lookupNote: 'Search by contractor name, trade name, salesperson, location or license number.',
+        website: 'https://labor.maryland.gov/license/mhic/',
+      },
+      {
+        name: 'Maryland Department of Labor: electrician, plumbing and HVACR boards',
+        licenses: 'Electricians, plumbers and gas fitters, and heating, ventilation, air-conditioning and refrigeration contractors',
+        lookupUrl: 'https://labor.maryland.gov/pq/',
+        lookupNote:
+          'Choose the board on the licensing queries page. In Baltimore County and the WSSC area of Montgomery and Prince George’s counties, plumbers are licensed locally instead.',
+        website: 'https://labor.maryland.gov/pq/',
+      },
+    ],
+    whenRequired: [
+      'Anyone who does or sells home improvement work on an existing home needs an MHIC license, including remodeling, repairs and replacements such as tile and wood flooring.',
+      'The MHIC license doesn’t cover building new homes.',
+      'Electricians need a state license from the State Board of Electricians. Some counties also require a local registration.',
+      'Plumbers and gas fitters need a state Board of Plumbing license, except in Baltimore County and the WSSC area, which license plumbers locally. Heating and air-conditioning work needs a state HVACR license.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s MHIC license number, and for trade work the electrician, plumber or HVACR license number.',
+      'Search the MHIC public query by name or license number and confirm the license is active.',
+      'Look the contractor up on the MHIC disciplinary actions page.',
+      'Check electricians, plumbers and HVACR contractors on the Department of Labor’s licensing queries page. In Montgomery and Prince George’s counties, check plumbers with WSSC Water.',
+      'Make sure the name on the license matches the company on your contract.',
+    ],
+    watchFor: [
+      'Pay nothing before the contract is signed, and no more than one-third of the contract price as a deposit.',
+      'The MHIC Guaranty Fund can repay up to $30,000 of your losses, or the amount you paid the contractor if that is less. A claim starts with a complaint to the MHIC.',
+    ],
+    faq: [
+      {
+        q: 'Does Maryland have a general contractor license?',
+        a: 'Not for all construction. The MHIC license covers home improvement work on existing homes, such as remodeling, repairs and replacements, but not building new homes.',
+      },
+      {
+        q: 'How much can a Maryland contractor ask for up front?',
+        a: 'No more than one-third of the contract price as a deposit. The MHIC advises paying nothing before the contract is signed.',
+      },
+      {
+        q: 'What is the Maryland Home Improvement Guaranty Fund?',
+        a: 'It can repay homeowners for losses caused by a home improvement contractor, up to $30,000 or the amount you paid the contractor, whichever is less. You start by filing a complaint with the MHIC.',
+      },
+      {
+        q: 'Do electricians in Maryland need a state license?',
+        a: 'Yes, an apprentice, journeyperson or master license from the State Board of Electricians. Some counties also require a local registration, so check with your county permit office.',
+      },
+    ],
+    sources: [
+      { label: 'Maryland Home Improvement Commission', url: 'https://labor.maryland.gov/license/mhic/' },
+      {
+        label: 'MHIC public query',
+        url: 'https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_search/OP_search.cgi?calling_app=HIC%3A%3AHIC_qselect',
+      },
+      { label: 'MHIC disciplinary actions', url: 'https://labor.maryland.gov/license/mhic/mhicdisc.shtml' },
+      { label: 'MHIC Guaranty Fund FAQ', url: 'https://labor.maryland.gov/license/mhic/mhicfaqgf.shtml' },
+      { label: 'MHIC FAQ', url: 'https://www.labor.maryland.gov/license/mhic/mhicfaq.shtml' },
+      { label: 'Maryland Department of Labor: licensing queries', url: 'https://labor.maryland.gov/pq/' },
+      { label: 'Maryland State Board of Electricians', url: 'https://labor.maryland.gov/license/elec/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
