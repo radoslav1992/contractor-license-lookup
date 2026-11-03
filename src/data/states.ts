@@ -2702,6 +2702,822 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'kansas',
+    code: 'KS',
+    name: 'Kansas',
+    generalContractors: 'local-only',
+    short: 'Kansas has no statewide contractor license; roofers register with the Attorney General.',
+    summary:
+      'Kansas doesn’t issue a statewide general contractor license, so cities and counties set their own licensing rules, including for trades such as electrical and plumbing. Roofing is the exception: most roofers must register with the Kansas Attorney General, and you can check them in its online directory.',
+    boards: [
+      {
+        name: 'Kansas Attorney General: roofing registration',
+        licenses: 'Residential and commercial roofing contractors, under the Kansas Roofing Contractor Registration Act',
+        lookupUrl: 'https://www.ag.ks.gov/divisions/public-protection/resources/roofing-registration-directory',
+        lookupNote:
+          'Search by company details, or leave the fields blank to list every registered roofer. Look for “In Good Standing”. “Exempt” means a general contractor that told the office it meets the legal exemption.',
+        website: 'https://www.ag.ks.gov/divisions/civil/licensing-inspections/roofing-registration',
+      },
+      {
+        name: 'Johnson County Contractor Licensing',
+        licenses:
+          'General, residential and trade contractors, including electrical, mechanical, plumbing and roofing, in unincorporated Johnson County and participating cities such as Overland Park, Olathe, Lenexa and Shawnee',
+        lookupUrl: 'https://cls.jocogov.org/searchcontractor',
+        lookupNote: 'Search by company, by person or by license class.',
+        website: 'https://www.jocogov.org/department/contractor-licensing',
+      },
+      {
+        name: 'Metropolitan Area Building and Construction Department (MABCD), Wichita and Sedgwick County',
+        licenses:
+          'General contractors (Class A, B, C residential and D) and trade contractors such as electrical, plumbing and roofing in Wichita, unincorporated Sedgwick County and contracted small cities',
+        lookupUrl: 'https://mabcdportal.sedgwickcounty.org/Views/CDR/CDRLookUpMain.aspx',
+        lookupNote: 'Choose Lookup Contractor License, then search by license number or name.',
+        website: 'https://www.sedgwickcounty.org/mabcd/contractor-licensing/',
+      },
+    ],
+    whenRequired: [
+      'Kansas has no state license for general contractors or remodelers. Cities and counties set their own rules, and some also license electrical, plumbing and HVAC contractors.',
+      'Roofing contractors must register with the Attorney General before doing paid residential or commercial roofing anywhere in Kansas.',
+      'Owners roofing their own property are exempt from roofing registration, as are jobs under $2,000 in labor and materials by someone who doesn’t advertise as a roofer, and some general contractors that meet criteria in state law.',
+      'State roofing registration is in addition to any city or county license, so a roofer in Johnson County or Wichita may need both.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city or county license they hold, and for the license number.',
+      'In Johnson County, search the county’s Contractor Licensing portal. In Wichita and Sedgwick County, use the MABCD online lookup.',
+      'Anywhere else in Kansas, ask your city or county building department which license is required and how to check it.',
+      'For any roofing job, search the Attorney General’s roofing registration directory and confirm the status is “In Good Standing”.',
+      'Make sure the contractor, not you, pulls the building permit. The Attorney General warns that a contractor who asks you to pull it may not be registered.',
+    ],
+    watchFor: [
+      'For door-to-door sales of $25 or more, Kansas law lets you cancel until midnight of the third business day after you sign. The seller must tell you about this right.',
+      'After storms, the Attorney General warns about unregistered roofers going door to door. Check the roofing directory before you sign anything.',
+    ],
+    faq: [
+      {
+        q: 'Does Kansas require a general contractor license?',
+        a: 'Not at the state level. Cities and counties set their own contractor licensing rules, so check with the building or licensing office where the work will be done.',
+      },
+      {
+        q: 'How do I check if a roofer is registered in Kansas?',
+        a: 'Search the Kansas Attorney General’s roofing registration directory and look for “In Good Standing”. The Attorney General says registration isn’t an endorsement, so still check references and insurance.',
+      },
+      {
+        q: 'How do I look up a contractor license in Wichita or Johnson County?',
+        a: 'For Wichita and Sedgwick County, use the MABCD online license lookup. For Johnson County and its participating cities, use the county’s Contractor Licensing search.',
+      },
+      {
+        q: 'Can a general contractor replace my roof without roofing registration?',
+        a: 'Some general contractors are exempt if they meet criteria in state law, and they may appear in the directory as “Exempt”. If you’re unsure, ask the contractor for proof of registration or exemption.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Kansas Attorney General: roofing registration directory',
+        url: 'https://www.ag.ks.gov/divisions/public-protection/resources/roofing-registration-directory',
+      },
+      {
+        label: 'Kansas Attorney General: roofing information for consumers',
+        url: 'https://www.ag.ks.gov/divisions/civil/licensing-inspections/roofing-registration/roofing-faqs-for-consumers',
+      },
+      {
+        label: 'K.S.A. 50-6,129 (roofing registration exemptions)',
+        url: 'https://www.kslegislature.gov/b2025_26/laws/050_000_0000_chapter/050_006_0000_article/050_006_0129_section/050_006_0129_k/',
+      },
+      { label: 'Kansas Business One Stop: construction starter kit', url: 'https://ksbiz.kansas.gov/business-starter-kit/construction/' },
+      { label: 'Johnson County Contractor Licensing', url: 'https://www.jocogov.org/department/contractor-licensing' },
+      { label: 'MABCD: contractor licensing (Wichita and Sedgwick County)', url: 'https://www.sedgwickcounty.org/mabcd/contractor-licensing/' },
+      { label: 'K.S.A. 50-640 (door-to-door sales cancellation)', url: 'https://ksrevisor.gov/statutes/chapters/ch50/050_006_0040.html' },
+      {
+        label: 'Kansas Attorney General: your home and car',
+        url: 'https://www.ag.ks.gov/divisions/public-protection/consumer-protection/your-home-and-car',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'mississippi',
+    code: 'MS',
+    name: 'Mississippi',
+    generalContractors: 'state',
+    short: 'Mississippi’s State Board of Contractors licenses jobs above set dollar amounts.',
+    summary:
+      'The Mississippi State Board of Contractors (MSBOC) licenses commercial contractors on jobs over $50,000, and residential builders, remodelers and roofers above set amounts. Since July 1, 2022, electrical, plumbing, HVAC and mechanical subcontractors on those home projects also need a state license.',
+    boards: [
+      {
+        name: 'Mississippi State Board of Contractors (MSBOC)',
+        licenses:
+          'Commercial contractors, residential builders, remodelers and roofers, and residential electrical, plumbing, HVAC and mechanical subcontractors',
+        lookupUrl: 'https://search.msboc.us/ConsolidatedSearch.cfm',
+        lookupNote:
+          'Search by company name, qualifying person’s name or license number. Enter license numbers as digits only, and check that the type (Commercial or Residential), status and classification fit your job.',
+        website: 'https://www.msboc.us/',
+      },
+    ],
+    whenRequired: [
+      'Building a new home costing more than $50,000 needs a state residential license, such as Residential Builder.',
+      'Remodeling, additions or repairs over $10,000, and roofing on a home over $10,000, need a state residential license, such as Residential Remodeler or Residential Roofer.',
+      'Since July 1, 2022, electrical, plumbing, HVAC and mechanical subcontractors on those home projects need a state license, however small their part of the job.',
+      'Commercial jobs over $50,000 need a commercial license. For work below the state limits, the MSBOC says to check with your city or county.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s MSBOC license number and the exact company name on the license.',
+      'Search the MSBOC database by company name, qualifying person’s name or license number.',
+      'Confirm the license is active and its classification covers your job, such as Residential Remodeler, Residential Roofer or Residential Builder.',
+      'For electrical, plumbing or HVAC work on a covered home project, check the subcontractor’s own license too.',
+      'Check the MSBOC violators list. For jobs under the state limits, ask your city or county building office which license applies.',
+    ],
+    watchFor: [
+      'Don’t pull a permit for work an unlicensed person will do. The MSBOC warns that you take on the contractor’s duties, such as inspections and code compliance, and can be held responsible for bad work.',
+      'The MSBOC advises a written contract that lists the contractor’s license number and ties payments to finished work, with final payment only after all liens are released.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor to remodel my home in Mississippi?',
+        a: 'Yes, if the remodeling, addition or repair costs more than $10,000. The contractor needs a residential license from the Mississippi State Board of Contractors.',
+      },
+      {
+        q: 'How do I look up a Mississippi contractor license?',
+        a: 'Use the Mississippi State Board of Contractors’ online search. You can search by company name, qualifying person’s name or license number.',
+      },
+      {
+        q: 'Do electricians and plumbers need a state license in Mississippi?',
+        a: 'On a home project that needs a state license, the electrical, plumbing, HVAC and mechanical subcontractors must also be licensed by the MSBOC. Smaller jobs fall under city or county rules.',
+      },
+      {
+        q: 'Can I build my own house in Mississippi without a license?',
+        a: 'Yes. Mississippi has a homeowner exemption for building your own home, and since July 1, 2022, it’s limited to one home per calendar year.',
+      },
+    ],
+    sources: [
+      { label: 'MSBOC: frequently asked questions', url: 'https://www.msboc.us/general-info/frequently-asked-questions/' },
+      { label: 'MSBOC: contractor license search', url: 'https://search.msboc.us/ConsolidatedSearch.cfm' },
+      {
+        label: 'MSBOC: HB 1163 residential licensing law changes',
+        url: 'https://www.msboc.us/wp-content/uploads/2023/01/HB-1163-FACT-SHEET57.pdf',
+      },
+      { label: 'MSBOC: classifications', url: 'https://www.msboc.us/classifications/' },
+      { label: 'MSBOC: hire a contractor', url: 'https://www.msboc.us/consumers/hire-a-contractor/' },
+      { label: 'MSBOC: owner risks', url: 'https://www.msboc.us/consumers/owner-risks/' },
+      { label: 'MSBOC: violators', url: 'https://www.msboc.us/consumers/violators/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'hawaii',
+    code: 'HI',
+    name: 'Hawaii',
+    generalContractors: 'state',
+    short: 'Hawaii licenses contractors for jobs over $1,500 or any job that needs a permit.',
+    summary:
+      'Hawaii’s Contractors License Board, part of the Department of Commerce and Consumer Affairs (DCCA), licenses general and specialty contractors, and a separate Board of Electricians and Plumbers licenses individual electricians and plumbers. You need a licensed contractor for any job over $1,500 in labor and materials, or any job that needs a building, electrical or plumbing permit.',
+    boards: [
+      {
+        name: 'Hawaii DCCA: Contractors License Board and Board of Electricians and Plumbers',
+        licenses:
+          'General engineering (A), general building (B) and specialty (C) contractors, such as C-13 electrical, C-37 plumbing, C-42 roofing and C-52 ventilating and air conditioning, plus individual electricians and plumbers',
+        lookupUrl: 'https://mypvl.dcca.hawaii.gov/public-license-search/',
+        lookupNote:
+          'Search by business or person name, or by license number. Results show status, expiration date and any disciplinary action. For complaint history, also check DCCA’s Business Check.',
+        website: 'https://cca.hawaii.gov/pvl/boards/contractor/',
+      },
+    ],
+    whenRequired: [
+      'A contractor license is required for any project over $1,500 in labor and materials combined.',
+      'Any project that needs a building, electrical or plumbing permit requires a licensed contractor, whatever the price.',
+      'The small-job exemption doesn’t cover electrical or plumbing work, work that’s part of a larger project, or a job split into smaller contracts to stay under the limit.',
+      'Owners can build or repair their own property under an owner-builder exemption, but generally can’t sell or lease it for one year after it’s finished.',
+    ],
+    howToCheck: [
+      'Search the contractor’s name or license number in DCCA’s public license search.',
+      'Confirm the license is current and its classification fits your job, such as C-42 for roofing or C-52 for air conditioning.',
+      'For electrical or plumbing work, confirm the business holds a C-13 or C-37 contractor license and the workers hold electrician or plumber licenses.',
+      'Check DCCA’s Business Check for complaints and unlicensed-activity investigations.',
+      'Get a written contract signed by both sides before work starts.',
+    ],
+    watchFor: [
+      'Hawaii’s Contractors Recovery Fund can repay owners of homes, condos and co-op units harmed by a licensed contractor, up to $12,500 per contract and $25,000 per contractor. You must first win a court judgment and try to collect, and the fund doesn’t cover unlicensed contractors.',
+      'A licensed contractor must explain your lien rights and your right to demand bonding, and give you a written contract signed by both sides before work begins.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small repair in Hawaii?',
+        a: 'Not always. A handyman can do a job under $1,500 in labor and materials if it needs no permit. The exemption doesn’t cover electrical or plumbing work.',
+      },
+      {
+        q: 'How do I look up a contractor’s license in Hawaii?',
+        a: 'Use DCCA’s public license search and enter the business name, person’s name or license number. It shows the license status, expiration date and any disciplinary action.',
+      },
+      {
+        q: 'Is an electrician’s license enough to hire someone for electrical work in Hawaii?',
+        a: 'No. An electrician or plumber license doesn’t let a person contract for the work. The business also needs a contractor license, such as C-13 electrical or C-37 plumbing.',
+      },
+      {
+        q: 'Where do I file a complaint against a contractor in Hawaii?',
+        a: 'File with DCCA’s Regulated Industries Complaints Office (RICO), which handles complaints about licensed contractors and reports of unlicensed activity.',
+      },
+    ],
+    sources: [
+      { label: 'Hawaii DCCA: public license search', url: 'https://mypvl.dcca.hawaii.gov/public-license-search/' },
+      { label: 'Hawaii DCCA: hire a licensed contractor', url: 'https://cca.hawaii.gov/pvl/hire-a-licensed-contractor/' },
+      {
+        label: 'HRS § 444-2 (exemptions)',
+        url: 'https://www.capitol.hawaii.gov/hrscurrent/vol10_ch0436-0474/HRS0444/HRS_0444-0002.htm',
+      },
+      {
+        label: 'HRS § 444-25.5 (disclosure and contracts)',
+        url: 'https://www.capitol.hawaii.gov/hrscurrent/vol10_ch0436-0474/HRS0444/HRS_0444-0025_0005.htm',
+      },
+      {
+        label: 'Hawaii DCCA: Contractors Recovery Fund consumer information (2026)',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/05/CLB-260123-CLB-CRF.pdf',
+      },
+      {
+        label: 'Hawaii RICO: top 10 tips for construction projects',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/05/CLB-260123-Top-10-Tips-for-Construction-Projects.pdf',
+      },
+      {
+        label: 'Hawaii RICO: hiring electricians and plumbers',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/01/CLB-190718-Hiring-Electricians-and-Plumbers.pdf',
+      },
+      { label: 'Hawaii DCCA: Business Check', url: 'https://cca.hawaii.gov/business-check/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'new-hampshire',
+    code: 'NH',
+    name: 'New Hampshire',
+    generalContractors: 'local-only',
+    short: 'New Hampshire licenses electricians and plumbers, but not general contractors.',
+    summary:
+      'New Hampshire has no state license for general or home improvement contractors, and towns handle building permits. The Office of Professional Licensure and Certification (OPLC) licenses electricians, plumbers and gas fitters, so for other work check insurance, references and the written contract carefully.',
+    boards: [
+      {
+        name: 'New Hampshire Office of Professional Licensure and Certification (OPLC)',
+        licenses: 'Electricians (Electricians’ Board), and plumbers and fuel gas fitters (Mechanical Licensing Board)',
+        lookupUrl: 'https://www.oplc.nh.gov/license-lookup',
+        lookupNote:
+          'OPLC’s downloadable licensee lists aren’t real time, so use the lookup for current status. If you can’t find a plumber or gas fitter, ask OPLC for a verification letter.',
+        website: 'https://www.oplc.nh.gov/',
+      },
+    ],
+    whenRequired: [
+      'No state license is needed for general contracting, remodeling or home improvement work. Ask your town about building permits.',
+      'Electrical work done for pay must be done by a licensed electrician. Homeowners may do their own electrical work in a single-family home they own and live in.',
+      'Plumbing and fuel gas work needs a Mechanical Licensing Board license, with the same exemption for owners working on their own single-family main home.',
+    ],
+    howToCheck: [
+      'Ask your town building department which permits the job needs, since the state doesn’t license general contractors.',
+      'For electrical, plumbing or gas work, search the worker in the OPLC license lookup and confirm the license is active.',
+      'Ask for a certificate of insurance and confirm the coverage directly with the insurance company.',
+      'Get written, itemized estimates and a signed contract that lists the work, materials, total price and payment schedule.',
+      'If something goes wrong, file a written complaint with the Attorney General’s Consumer Protection and Antitrust Bureau.',
+    ],
+    watchFor: [
+      'Be careful with large up-front payments. The Attorney General calls a down payment of more than half the cost, or full payment before the job is done, a red flag.',
+      'If you buy $150 or more in goods or services from a seller who comes to your home, state law generally lets you cancel in writing until midnight of the third business day.',
+    ],
+    faq: [
+      {
+        q: 'Does New Hampshire require a contractor license?',
+        a: 'Not for general contractors or home improvement work. The state does license electricians, plumbers and gas fitters through the OPLC.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in New Hampshire?',
+        a: 'Use the license lookup on the OPLC website. You can also ask the OPLC for a formal verification letter.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in New Hampshire?',
+        a: 'Yes, in a single-family home you own and live in as your main home. Anyone you pay to do electrical, plumbing or gas work must be licensed.',
+      },
+      {
+        q: 'Where do I complain about a home contractor in New Hampshire?',
+        a: 'File a written complaint with the Attorney General’s Consumer Protection and Antitrust Bureau, online, by mail or by email.',
+      },
+    ],
+    sources: [
+      { label: 'New Hampshire OPLC: license lookup', url: 'https://www.oplc.nh.gov/license-lookup' },
+      {
+        label: 'New Hampshire Attorney General: consumer alert on hiring home contractors',
+        url: 'https://www.doj.nh.gov/resources/press-releases/consumer-alert-attorney-general-encourages-public-take-steps-protect-0',
+      },
+      {
+        label: 'New Hampshire Attorney General: risks involved with hiring a contractor (July 2024)',
+        url: 'https://mm.nh.gov/files/uploads/doj/remote-docs/07012024-nh-consumer-insight-risks-hiring-a-contractor.pdf',
+      },
+      { label: 'RSA 319-C:15 (electricians; homeowner’s exception)', url: 'https://gc.nh.gov/rsa/html/XXX/319-C/319-C-15.htm' },
+      { label: 'RSA 153:36 (mechanical licensing exceptions)', url: 'https://gc.nh.gov/rsa/html/XII/153/153-36.htm' },
+      { label: 'RSA 361-B (home solicitation sales)', url: 'https://gc.nh.gov/rsa/html/XXXIII-A/361-B/361-B-mrg.htm' },
+      {
+        label: 'New Hampshire Attorney General: consumer complaints',
+        url: 'https://www.doj.nh.gov/citizens/consumer-protection-antitrust-bureau/consumer-complaints',
+      },
+      {
+        label: 'New Hampshire Insurance Department: how to verify your contractor’s insurance',
+        url: 'https://www.insurance.nh.gov/news-and-media/blog/how-verify-if-your-contractor-has-right-insurance',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'maine',
+    code: 'ME',
+    name: 'Maine',
+    generalContractors: 'local-only',
+    short: 'Maine licenses electricians, plumbers and fuel technicians, but not general contractors.',
+    summary:
+      'Maine doesn’t license or regulate general contractors, remodelers or roofers. The state does license electricians, plumbers, and oil, solid fuel, propane and natural gas technicians, and any home job over $3,000 needs a written contract.',
+    boards: [
+      {
+        name: 'Maine Office of Professional and Occupational Regulation (OPOR)',
+        licenses:
+          'Electricians (Electricians’ Examining Board), plumbers (Plumbers’ Examining Board), oil, solid fuel, propane and natural gas technicians (Maine Fuel Board), and door-to-door home repair sellers',
+        lookupUrl: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx',
+        lookupNote: 'Choose the board, such as the Electricians’ Examining Board, then search by name. Results update in real time.',
+        website: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx',
+      },
+    ],
+    whenRequired: [
+      'Maine has no state license for general contractors, remodelers, roofers or framers. Your town handles building permits and code enforcement.',
+      'Electrical work needs a licensed electrician and plumbing a licensed plumber. Homeowners may do their own electrical and plumbing work in a single-family home they own and live in.',
+      'Work on oil, solid fuel, propane or natural gas heating equipment needs a Maine Fuel Board license.',
+      'A door-to-door home repair seller with no permanent place of business in your town must hold a state license and put the license number on your contract.',
+    ],
+    howToCheck: [
+      'Ask the electrician, plumber or heating technician for their full name and Maine license number.',
+      'Search the OPOR license database by board and name, and confirm the license is active.',
+      'If a seller came to your door, ask for their door-to-door home repair seller license number and check it in the same database.',
+      'For a general contractor there’s no state license to check, so check references and ask the Attorney General’s Consumer Protection Division about complaints.',
+      'Ask your town’s code enforcement officer or plumbing inspector which permits and inspections your job needs.',
+    ],
+    watchFor: [
+      'Any home construction or repair job over $3,000 needs a written contract signed by you and the contractor, with a copy for you before work starts. The down payment can be no more than one-third of the price, and the contract must include a warranty and ways to settle disputes.',
+      'A door-to-door home repair contract must tell you that you can cancel within three business days.',
+    ],
+    faq: [
+      {
+        q: 'Does Maine require a general contractor license?',
+        a: 'No. The Maine Attorney General says the state doesn’t license or regulate home contractors. A bill to license residential general contractors (LD 1226) died when the Legislature adjourned in April 2026.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Maine?',
+        a: 'Use the free OPOR license database. Choose the Electricians’ Examining Board or the Plumbers’ Examining Board, search by name, and confirm the license is active.',
+      },
+      {
+        q: 'Do I need a written contract for home repairs in Maine?',
+        a: 'Yes, if the job costs more than $3,000 in materials or labor. Both of you must sign it, and the down payment can’t be more than one-third of the price.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in Maine?',
+        a: 'Usually, in a single-family home you own and live in, as long as the work meets code. Check with your town about permits and inspections.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Maine Attorney General: home construction and repair',
+        url: 'https://www.maine.gov/ag/consumer-protection/consumer-help-topics/housing/home-construction-and-repair',
+      },
+      {
+        label: 'Maine Attorney General: home construction contracts',
+        url: 'https://www.maine.gov/ag/consumer-protection/consumer-help-topics/housing/home-construction-contracts',
+      },
+      { label: '10 M.R.S. § 1487 (home construction contracts)', url: 'https://legislature.maine.gov/statutes/10/title10sec1487.html' },
+      { label: 'Maine OPOR: license search', url: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx' },
+      { label: 'Maine Electricians’ Examining Board', url: 'https://www.maine.gov/pfr/professionallicensing/professions/electricians' },
+      { label: 'Maine Fuel Board', url: 'https://www.maine.gov/pfr/professionallicensing/professions/maine-fuel-board' },
+      {
+        label: 'Maine OPOR: door-to-door home repair sellers',
+        url: 'https://www.maine.gov/pfr/professionallicensing/professions/door-to-door-home-repair-sellers',
+      },
+      {
+        label: 'Maine Legislature: LD 1226 status',
+        url: 'https://legislature.maine.gov/bills/display_ps.asp?snum=132&paper=HP0801&PID=1456',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'montana',
+    code: 'MT',
+    name: 'Montana',
+    generalContractors: 'state',
+    short: 'Montana has licensed construction contractors since January 2026; trades have state boards.',
+    summary:
+      'Since January 1, 2026, Montana’s Department of Labor and Industry (DLI) has licensed construction contractors in place of its old registration, and state boards license electricians and plumbers. Contractors with no employees are exempt, so a missing license isn’t always a red flag, and DLI doesn’t judge the quality of a contractor’s work.',
+    boards: [
+      {
+        name: 'Montana Department of Labor and Industry (DLI)',
+        licenses:
+          'Construction contractors, including general contractors, remodelers and roofers (Construction Contractor License program), electricians and electrical contractors (State Electrical Board), and plumbers (Board of Plumbers)',
+        lookupUrl: 'https://boards.bsd.dli.mt.gov/_global-pages/additional-license-information/lookup-individual',
+        lookupNote:
+          'Search by name or license number. If you can’t find a construction contractor here, also try the exemption and registration search below.',
+        website: 'https://boards.bsd.dli.mt.gov/construction-contractor/',
+      },
+      {
+        name: 'Montana DLI: Independent Contractor Exemption Certificates',
+        licenses: 'Exemption certificates for self-employed workers with no employees, which aren’t a skills license',
+        lookupUrl: 'https://erdcontractors.mt.gov/ICCROnlineSearch/registrationlookup.jsp',
+        lookupNote: 'This older search also lists past contractor registrations.',
+        website: 'https://erd.dli.mt.gov/work-comp-regulations/montana-contractor/independent-contractor/',
+      },
+    ],
+    whenRequired: [
+      'Since January 1, 2026, construction contractors must hold a DLI construction contractor license, which replaced the old registration. Registrations active on December 31, 2025 became licenses automatically.',
+      'Exemptions include independent contractors with no employees, owners working on their own property, and licensed electricians and plumbers working within their license.',
+      'Electrical work needs a licensed electrician, and plumbing a licensed plumber. Owners may do their own electrical and plumbing work on a home they live in, but not on a rental or a home built to sell.',
+      'Cities and counties can’t require their own contractor licenses, but they still issue building permits.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s full business name and Montana license number.',
+      'Search DLI’s licensee lookup and confirm the license is active.',
+      'For electrical or plumbing work, also look up the electrician’s or plumber’s own license and the electrical contractor license.',
+      'If the contractor says they have no employees and are exempt, ask for their Independent Contractor Exemption Certificate and check it in DLI’s exemption search.',
+      'Ask for proof of liability and workers’ compensation insurance, and ask your local building department which permits you need.',
+    ],
+    watchFor: [
+      'Under Montana law you can be responsible for materials even after you pay your contractor, so a supplier could put a lien on your home if the contractor doesn’t pay them.',
+      'A license doesn’t mean DLI checks the quality of the work. Get a detailed written contract with dates, materials, warranties and who pulls permits, and avoid large up-front payments.',
+    ],
+    faq: [
+      {
+        q: 'Does Montana require a contractor license?',
+        a: 'Yes. Since January 1, 2026, construction contractors must be licensed with the Montana Department of Labor and Industry. Independent contractors with no employees and a few other groups are exempt.',
+      },
+      {
+        q: 'Is Montana’s contractor license the same as the old registration?',
+        a: 'It replaced the registration program, and active registrations became licenses automatically. DLI says it doesn’t review the quality of a contractor’s work.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Montana?',
+        a: 'Use DLI’s free licensee lookup and search by name or license number. The State Electrical Board and the Board of Plumbers both use it.',
+      },
+      {
+        q: 'Can my city require its own contractor license in Montana?',
+        a: 'No. State law bars cities and counties from requiring their own contractor licenses, registrations or bonds for the same purpose. Local governments still issue building permits.',
+      },
+    ],
+    sources: [
+      { label: 'Montana DLI: Construction Contractor License program', url: 'https://boards.bsd.dli.mt.gov/construction-contractor/' },
+      {
+        label: 'Montana DLI: HB 239 notice to construction contractors',
+        url: 'https://erd.dli.mt.gov/_docs/work-comp-regs/HB-239-Notice-to-Construction-Contractors.pdf',
+      },
+      {
+        label: 'Montana DLI: licensee lookup',
+        url: 'https://boards.bsd.dli.mt.gov/_global-pages/additional-license-information/lookup-individual',
+      },
+      {
+        label: 'Montana DOJ Office of Consumer Protection: choosing a contractor',
+        url: 'https://dojmt.gov/office-of-consumer-protection/choosing-a-contractor/',
+      },
+      {
+        label: 'MCA 37-45-204 (local authority over contractors)',
+        url: 'https://archive.legmt.gov/bills/MCA/title_0370/chapter_0450/part_0020/section_0040/0370-0450-0020-0040.html',
+      },
+      { label: 'Montana State Electrical Board', url: 'https://boards.bsd.dli.mt.gov/electrical/' },
+      { label: 'Montana Board of Plumbers', url: 'https://boards.bsd.dli.mt.gov/plumbers/' },
+      {
+        label: '2025 House Bill 239 (Chapter 644)',
+        url: 'https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0644.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'new-mexico',
+    code: 'NM',
+    name: 'New Mexico',
+    generalContractors: 'state',
+    short: 'New Mexico’s CID licenses contractors statewide by classification, such as GB-2.',
+    summary:
+      'The Construction Industries Division (CID) of the New Mexico Regulation and Licensing Department licenses general building, electrical, mechanical and plumbing, LP gas and elevator contractors statewide. A license covers only the classifications shown on it, such as GB-2 for residential building or GS-21 for roofing, so check that it fits your job.',
+    boards: [
+      {
+        name: 'New Mexico Regulation and Licensing Department, Construction Industries Division (CID)',
+        licenses:
+          'General building contractors (GB-2 residential, GB-98 residential and commercial), specialty contractors such as GS-21 roofing, electrical, mechanical and plumbing (including HVAC and gas fitting), LP gas and elevator contractors, plus journeymen',
+        lookupUrl: 'https://www.rld.nm.gov/construction-industries/verify-a-license/',
+        lookupNote:
+          'Follow the link on this page to the license search, which PSI runs for CID. Check the license status, expiration date and classification.',
+        website: 'https://www.rld.nm.gov/construction-industries/',
+      },
+    ],
+    whenRequired: [
+      'Anyone who contracts for construction work in New Mexico needs a CID license, including general building, electrical, mechanical, plumbing, LP gas and elevator work.',
+      'A license covers only the classifications shown on it. GB-2 is residential building, GB-98 covers residential and commercial buildings including all GB-2 work, and GS-21 covers roofing.',
+      'A handyman doing casual, minor or inconsequential work, one project at a time, who earns no more than $7,200 a year doesn’t need a license but must file a declaration with CID every year. The exemption doesn’t cover certain electrical work.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s full business name and CID license number in writing.',
+      'Search CID’s license database, linked from its Verify a License page.',
+      'Confirm the license is active and the classification matches your job, such as GB-2 for residential building or GS-21 for roofing.',
+      'For electrical, plumbing, HVAC or gas work, make sure the contractor holds the matching electrical, mechanical and plumbing, or LP gas license.',
+      'Make sure a permit is pulled for the work, and report unlicensed contracting to CID.',
+    ],
+    watchFor: [
+      'Every CID licensee must keep a code bond. It pays to fix code violations that CID certifies and the contractor didn’t correct. Claims have a two-year time limit, so contact CID quickly.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small handyman job in New Mexico?',
+        a: 'A person doing casual, minor or inconsequential work, one project at a time, who earns no more than $7,200 a year is exempt but must file a declaration with CID every year. Bigger jobs need a licensed contractor, and the exemption doesn’t cover certain electrical work.',
+      },
+      {
+        q: 'What is the difference between a GB-2 and a GB-98 license in New Mexico?',
+        a: 'GB-2 is the residential building classification. GB-98 covers both residential and commercial buildings and includes all work allowed under GB-2.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in New Mexico?',
+        a: 'You can get a homeowner permit for work on your own primary residence, but you must first pass the required CID exam for electrical, plumbing or mechanical work. Homeowner permits don’t cover rental or other property.',
+      },
+      {
+        q: 'What happens if a contractor works without a license in New Mexico?',
+        a: 'Contracting without a license is against the law in New Mexico. CID can stop the project and file a criminal charge.',
+      },
+    ],
+    sources: [
+      { label: 'New Mexico CID: verify a license', url: 'https://www.rld.nm.gov/construction-industries/verify-a-license/' },
+      { label: 'New Mexico CID: bureaus', url: 'https://www.rld.nm.gov/construction-industries/find-a-bureau/bureaus/' },
+      { label: '14.6.6 NMAC (classifications and scopes)', url: 'https://www.srca.nm.gov/parts/title14/14.006.0006.html' },
+      {
+        label: 'New Mexico CID: handyman exemption form',
+        url: 'https://www.rld.nm.gov/uploads/FileLinks/548da1a538064745814c05ee0b4d8059/HANDYMAN_2017_505_841_6352.pdf',
+      },
+      { label: '14.5.2 NMAC (permits, including homeowner permits)', url: 'https://www.srca.nm.gov/parts/title14/14.005.0002.html' },
+      { label: '14.5.9 NMAC (code bond claims)', url: 'https://srca.nm.gov/parts/title14/14.005.0009.html' },
+      {
+        label: 'New Mexico CID: unlicensed violations',
+        url: 'https://www.rld.nm.gov/construction-industries/investigation-and-enforcement/unlicensed-violations/',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'nebraska',
+    code: 'NE',
+    name: 'Nebraska',
+    generalContractors: 'state-and-local',
+    short: 'Nebraska registers contractors statewide but has no state general contractor license.',
+    summary:
+      'Nebraska has no state general contractor license. Instead, contractors register with the Nebraska Department of Labor, which doesn’t test skill or guarantee quality. Electricians are licensed by the State Electrical Division, while plumbers and HVAC workers are licensed by cities such as Omaha and Lincoln.',
+    boards: [
+      {
+        name: 'Nebraska Department of Labor: contractor registration',
+        licenses: 'Statewide registration of contractors and subcontractors (a registration, not a skills license)',
+        lookupUrl: 'https://dol.nebraska.gov/conreg/Search',
+        lookupNote: 'No account is needed. Search by business name, registration number, city, ZIP code or county.',
+        website: 'https://dol.nebraska.gov/conreg',
+      },
+      {
+        name: 'Nebraska State Electrical Division',
+        licenses: 'Electrical contractors and electricians, plus state electrical permits and inspections',
+        lookupUrl: 'https://electrical.nebraska.gov/',
+        lookupNote: 'Use the Licensee Search link on the division’s website.',
+        website: 'https://electrical.nebraska.gov/',
+      },
+      {
+        name: 'City of Omaha Permits and Inspections',
+        licenses: 'Plumbers, HVAC workers, electricians and other trades working in Omaha',
+        lookupUrl: 'https://permits.cityofomaha.org/licensing-information',
+        lookupNote: 'Use the City of Omaha License Search link on this page.',
+        website: 'https://permits.cityofomaha.org/',
+      },
+      {
+        name: 'City of Lincoln Building and Safety',
+        licenses: 'Plumbing and mechanical (HVAC) trade professionals working in Lincoln',
+        lookupUrl: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+        lookupNote: 'Download the list of plumbing trade professionals from this page. For HVAC, see the city’s mechanical trade registration list.',
+        website: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+      },
+    ],
+    whenRequired: [
+      'Contractors and subcontractors who do construction work in Nebraska must register with the Department of Labor. People working on their own property, or earning less than $5,000 a year from construction, don’t have to register.',
+      'Contractors with employees must keep a current workers’ compensation certificate on file, or they’re dropped from the list of registered contractors.',
+      'Electrical work needs a license from the State Electrical Division. You may wire your own principal residence without a license if you get a permit and pass inspections, but not a rental, recreational property or a relative’s home.',
+      'Plumbing and HVAC work is licensed by cities, such as Omaha and Lincoln.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and Nebraska Department of Labor registration number.',
+      'Search the Department of Labor’s contractor registry and confirm the registration is current.',
+      'For electrical work, look up the electrician or electrical contractor with the State Electrical Division. In Omaha, also check the city’s license search, because Omaha issues its own electrical licenses.',
+      'For plumbing or HVAC work in Omaha or Lincoln, check the city’s license search or its list of licensed trade professionals.',
+      'Make sure the required permits are pulled before work starts.',
+    ],
+    watchFor: [
+      'If a home insurance claim will pay for the job, such as a storm-damaged roof, you can cancel the contract in writing until midnight of the third business day after you sign, or after your insurer tells you in writing that all or part of the claim isn’t covered, whichever is later.',
+      'Registration isn’t a quality check. The Department of Labor says it doesn’t ensure quality of work or protect against fraud.',
+    ],
+    faq: [
+      {
+        q: 'Does Nebraska require a general contractor license?',
+        a: 'No. Nebraska doesn’t issue a state general contractor license. Contractors must register with the Department of Labor, but registration doesn’t test skill or guarantee quality.',
+      },
+      {
+        q: 'How do I check if a contractor is registered in Nebraska?',
+        a: 'Use the Department of Labor’s free contractor registration search. You can search by business name, registration number, city or ZIP code without making an account.',
+      },
+      {
+        q: 'Who licenses plumbers in Nebraska?',
+        a: 'Cities, not a state board. Omaha’s Plumbing Board gives the master and journeyman plumber exams, and Lincoln Building and Safety keeps a list of plumbing trade professionals.',
+      },
+      {
+        q: 'Can I do my own electrical work in Nebraska?',
+        a: 'Yes, on a single-family home you own and live in as your principal residence. You must do the work yourself without pay, get a homeowner permit and pass inspections.',
+      },
+    ],
+    sources: [
+      { label: 'Nebraska Department of Labor: search registered contractors', url: 'https://dol.nebraska.gov/conreg/Search' },
+      {
+        label: 'Nebraska Department of Labor: contractor registration overview',
+        url: 'https://dol.nebraska.gov/LaborStandards/Contractors/Overview',
+      },
+      { label: 'Nebraska LB 162 (2009, Contractor Registration Act)', url: 'https://www.nebraskalegislature.gov/FloorDocs/101/PDF/Slip/LB162.pdf' },
+      { label: 'Nebraska State Electrical Division', url: 'https://electrical.nebraska.gov/' },
+      { label: 'Nebraska State Electrical Division: homeowner handout', url: 'https://electrical.nebraska.gov/homeowner-handout' },
+      { label: 'City of Omaha: licensing information', url: 'https://permits.cityofomaha.org/licensing-information' },
+      {
+        label: 'City of Lincoln: plumbing trade registration',
+        url: 'https://www.lincoln.ne.gov/City/Departments/Building-Safety/Plumbing/Plumbing-Contractors-Licensing-and-Registration',
+      },
+      {
+        label: 'Neb. Rev. Stat. § 44-8603 (Insured Homeowners Protection Act)',
+        url: 'https://nebraskalegislature.gov/laws/statutes.php?statute=44-8603',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'idaho',
+    code: 'ID',
+    name: 'Idaho',
+    generalContractors: 'state',
+    short: 'Idaho registers contractors through DOPL for most jobs of $2,000 or more.',
+    summary:
+      'Idaho’s Division of Occupational and Professional Licenses (DOPL) registers contractors through the Idaho Contractors Board, and separate DOPL boards license electrical, plumbing and HVAC work. DOPL says contractor registration is a registration, not a license, so for trade work also check that the company holds the right DOPL trade license.',
+    boards: [
+      {
+        name: 'Idaho Contractors Board (DOPL)',
+        licenses: 'Contractor registration for building, altering, repairing, improving and demolishing structures',
+        lookupUrl: 'https://dopl.idaho.gov/con/',
+        lookupNote:
+          'Choose Search for a Registration on this page. To see formal actions against a contractor, use the Public Search in DOPL Online Services.',
+        website: 'https://dopl.idaho.gov/',
+      },
+      {
+        name: 'Idaho DOPL: Electrical, Plumbing and HVAC boards',
+        licenses:
+          'Electrical contractors and electricians (Electrical Board), plumbing contractors and plumbers (State Plumbing Board), and HVAC contractors and journeymen (HVAC Board)',
+        lookupUrl: 'https://dopl.idaho.gov/',
+        lookupNote: 'Use Search for a License or Registration on the DOPL home page.',
+        website: 'https://dopl.idaho.gov/',
+      },
+    ],
+    whenRequired: [
+      'A contractor must register with DOPL before doing construction work unless an exemption applies. Casual or minor jobs under $2,000 for labor and materials are exempt, but not when the work is part of a larger project or split up to avoid registering.',
+      'Electrical, plumbing and HVAC work needs a DOPL trade license. Licensed trade contractors working within their license don’t also need contractor registration.',
+      'Owners working on their own property are generally exempt from registration, with limits for owners who build or remodel to resell.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and Idaho registration number.',
+      'Search the Contractors Board registration search, and confirm the registration is active and the name matches your bid or contract.',
+      'For electrical, plumbing or HVAC work, use DOPL’s license search to confirm the company holds a contractor license for that trade.',
+      'To see formal actions against a contractor, use the Public Search in DOPL Online Services.',
+      'Before you sign a home job over $2,000, ask for the written disclosure Idaho law requires and a current certificate of liability insurance.',
+    ],
+    watchFor: [
+      'For work over $2,000 on a home with one to four units, the general contractor must give you a written disclosure before you sign. It explains your right to ask for lien waivers, proof of liability and workers’ compensation insurance, and an extended title insurance policy.',
+      'Registered contractors must carry general liability insurance of at least $300,000, so ask for a current certificate.',
+    ],
+    faq: [
+      {
+        q: 'Does Idaho require contractors to be licensed?',
+        a: 'Idaho requires contractors to register with DOPL through the Idaho Contractors Board, which DOPL says is a registration, not a license. Electricians, plumbers and HVAC contractors need separate DOPL trade licenses.',
+      },
+      {
+        q: 'Do I need a registered contractor for a small job in Idaho?',
+        a: 'Casual or minor jobs under $2,000 for labor and materials are exempt. The exemption doesn’t apply if the work is part of a larger project or split into smaller contracts to avoid registering.',
+      },
+      {
+        q: 'How do I check an Idaho electrician, plumber or HVAC license?',
+        a: 'Use Search for a License or Registration on the DOPL website. DOPL issues electrical, plumbing and HVAC licenses through its Electrical, Plumbing and HVAC boards.',
+      },
+      {
+        q: 'Does a licensed Idaho electrician or plumber also need contractor registration?',
+        a: 'Not for work within their trade license, according to DOPL. They need registration if they take on contracting work beyond it.',
+      },
+    ],
+    sources: [
+      { label: 'Idaho DOPL: Contractors Board', url: 'https://dopl.idaho.gov/con/' },
+      { label: 'Idaho DOPL: Contractors Board FAQ', url: 'https://dopl.idaho.gov/con/con-faq/' },
+      {
+        label: 'Idaho Code § 54-5205 (contractor registration exemptions)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title54/t54ch52/sect54-5205/',
+      },
+      {
+        label: 'Idaho Code § 54-5210 (registration and insurance)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title54/t54ch52/sect54-5210/',
+      },
+      {
+        label: 'Idaho Code § 45-525 (homeowner disclosure for contracts over $2,000)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title45/t45ch5/sect45-525/',
+      },
+      {
+        label: 'Idaho Code § 54-1002 (electrical licenses required)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/Title54/T54CH10/SECT54-1002/',
+      },
+      { label: 'Idaho DOPL: Electrical Board', url: 'https://dopl.idaho.gov/ele/' },
+      { label: 'Idaho DOPL: HVAC Board', url: 'https://dopl.idaho.gov/hvac/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'west-virginia',
+    code: 'WV',
+    name: 'West Virginia',
+    generalContractors: 'state',
+    short: 'West Virginia licenses contractors for home projects of $5,000 or more.',
+    summary:
+      'The West Virginia Contractor Licensing Board licenses contractors when a project costs $5,000 or more for residential work, or $25,000 or more for commercial work. Electricians are licensed separately by the State Fire Marshal, and plumbers and HVAC technicians by the Division of Labor.',
+    boards: [
+      {
+        name: 'West Virginia Contractor Licensing Board',
+        licenses:
+          'Contractors on projects of $5,000 or more for residential work or $25,000 or more for commercial work, in classifications such as residential, general building, remodeling and repair, electrical, plumbing, HVAC and specialty',
+        lookupUrl: 'https://wvclboard.wv.gov/verify/',
+        lookupNote:
+          'Search by license number (it starts with WV, and part of the number works), company name, DBA, city, county or classification. The board says the search is updated in real time.',
+        website: 'https://wvclboard.wv.gov/',
+      },
+      {
+        name: 'West Virginia Division of Labor',
+        licenses: 'Master and journeyman plumbers, plumbers in training, and HVAC technicians',
+        lookupUrl: 'https://labor.wv.gov/database-search',
+        lookupNote: 'The license database has separate searches for certified plumbers and certified HVAC technicians.',
+        website: 'https://labor.wv.gov/',
+      },
+      {
+        name: 'West Virginia State Fire Marshal: Regulatory and Licensing Division',
+        licenses: 'Master and journeyman electricians',
+        lookupUrl: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+        lookupNote: 'Use the Online Licensee Search link on this page, and search by name, city or license number.',
+        website: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+      },
+    ],
+    whenRequired: [
+      'A contractor license is required when the whole project costs $5,000 or more for residential work or $25,000 or more for commercial work, counting all labor and materials, not just one contractor’s share.',
+      'Owners or occupants who do the work on their own property themselves don’t need a contractor license. Some older state pages still show a $2,500 limit, but the current law uses $5,000 and $25,000.',
+      'Plumbing work needs a Division of Labor plumber license, and HVAC work a Division of Labor HVAC technician license. People working on their own single-family home, or an immediate family member’s, are exempt from the plumber license.',
+      'Electrical work needs a State Fire Marshal electrician license, except on property the person or their immediate family owns or leases.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s license number, which starts with WV, and the exact company name.',
+      'Search the Contractor Licensing Board’s contractor search by number, company name, DBA, city or county.',
+      'Confirm the license is active and its classification fits your job, such as residential, plumbing, electrical or HVAC.',
+      'For a plumber or HVAC technician, use the Division of Labor’s license database. For an electrician, use the State Fire Marshal’s licensee search.',
+      'Make sure the license number on your contract and in the contractor’s ads matches what you found, since state law requires it to appear there.',
+    ],
+    watchFor: [
+      'For licensed contracting work of $10,000 or more, state law requires a written contract that describes the work and its cost and is signed by both you and the contractor.',
+      'If an insurance claim is paying for a roof repair, you can cancel the roofing contract before midnight of the fifth business day after your insurer tells you all or part of the claim isn’t covered. The roofer can’t demand payment until that window ends and must refund payments within 10 days of a cancellation.',
+    ],
+    faq: [
+      {
+        q: 'Does West Virginia require a contractor license?',
+        a: 'Yes, for projects that cost $5,000 or more for residential work or $25,000 or more for commercial work, including all labor and materials. The West Virginia Contractor Licensing Board issues these licenses.',
+      },
+      {
+        q: 'How do I look up a contractor license in West Virginia?',
+        a: 'Use the Contractor Licensing Board’s contractor search. You can search by license number, company name, DBA, city, county or classification.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in West Virginia?',
+        a: 'The State Fire Marshal’s Office licenses electricians. The Division of Labor licenses plumbers and HVAC technicians.',
+      },
+      {
+        q: 'Does a West Virginia home improvement job need a written contract?',
+        a: 'Yes, for licensed contracting work of $10,000 or more, including materials and labor. The contract must describe the work and cost, be signed by both sides and show the contractor’s license number.',
+      },
+    ],
+    sources: [
+      { label: 'West Virginia Contractor Licensing Board: contractor search', url: 'https://wvclboard.wv.gov/verify/' },
+      { label: 'W. Va. Code § 30-42-3 (contractor definition and thresholds)', url: 'https://code.wvlegislature.gov/30-42-3/' },
+      { label: 'West Virginia Contractor Licensing Board: FAQ', url: 'https://wvclboard.wv.gov/www/download_resource.aspx?ID=208' },
+      { label: 'W. Va. Code § 30-42-6 (license number and written contracts)', url: 'https://code.wvlegislature.gov/30-42-6/' },
+      { label: 'West Virginia Division of Labor: license database search', url: 'https://labor.wv.gov/database-search' },
+      {
+        label: 'West Virginia Division of Labor: plumber certification FAQ',
+        url: 'https://labor.wv.gov/licensing/plumber-certification/plumber-certification-faq',
+      },
+      {
+        label: 'West Virginia State Fire Marshal: Regulatory and Licensing Division',
+        url: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+      },
+      { label: 'W. Va. Code § 46A-6M-3 (roofing contracts paid by insurance)', url: 'https://code.wvlegislature.gov/46A-6M-3/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
