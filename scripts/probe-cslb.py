@@ -47,3 +47,60 @@ else:
     for idx, name in enumerate(rows[0]):
         vals = [r[idx] for r in rows[1:2000] if len(r) > idx and r[idx]]
         print(f"  {idx} {name}: filled {len(vals)}/1999, max len {max((len(v) for v in vals), default=0)}")
+
+# ---- round 2: semantics and index sizing
+import datetime
+H = rows[0]
+col = {h: i for i, h in enumerate(H)}
+data = [r for r in rows[1:] if len(r) == len(H)]
+print("--- classification codes")
+codes = Counter(c.strip() for r in data for c in r[col["Classifications(s)"]].split("|"))
+print(sorted(codes.items()))
+print("--- name fields samples")
+shown = 0
+for r in data:
+    if r[col["BUS-NAME-2"]] or r[col["FullBusinessName"]]:
+        print([r[col[k]] for k in ("BusinessType", "BusinessName", "BUS-NAME-2", "FullBusinessName", "NAME-TP-2")])
+        shown += 1
+        if shown >= 12: break
+print("NAME-TP-2:", Counter(r[col["NAME-TP-2"]] for r in data).most_common(8))
+today = datetime.date(2026, 11, 3)
+def d(s):
+    s = s.strip()
+    try: return datetime.datetime.strptime(s, "%m/%d/%Y").date()
+    except ValueError: return None
+expired = [r for r in data if d(r[col["ExpirationDate"]]) and d(r[col["ExpirationDate"]]) < today]
+inactive = [r for r in data if r[col["InactivationDate"]].strip()]
+print("expired:", len(expired), "inactivation set:", len(inactive))
+for r in inactive[:5]:
+    print("inactive sample:", [r[col[k]] for k in ("LicenseNo", "IssueDate", "ExpirationDate", "InactivationDate", "ReactivationDate", "PrimaryStatus")])
+picks = {"clear": next(r for r in data if r[col["PrimaryStatus"]] == "CLEAR" and r not in expired and not r[col["InactivationDate"]].strip()),
+         "expired": expired[0] if expired else None,
+         "inactive": inactive[0] if inactive else None,
+         "inactive2": inactive[1] if len(inactive) > 1 else None,
+         "bondsusp": next((r for r in data if r[col["PrimaryStatus"]] == "Contr Bond Susp"), None),
+         "wcsusp": next((r for r in data if r[col["PrimaryStatus"]] == "Work Comp Susp"), None)}
+for label, r in picks.items():
+    if not r: continue
+    n = r[col["LicenseNo"]].strip()
+    u = f"https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum={n}"
+    try:
+        p = opener.open(u, timeout=60).read().decode("utf-8", "replace")
+        t = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", p))
+        k = t.find("License Status")
+        print(f"--- {label} {n} file: exp={r[col['ExpirationDate']]} inact={r[col['InactivationDate']]} react={r[col['ReactivationDate']]} prim={r[col['PrimaryStatus']]} sec={r[col['SecondaryStatus']]}")
+        print("    cslb page:", t[k:k + 400] if k >= 0 else t[:300])
+    except Exception as e:
+        print(label, n, "detail page error", e)
+STOP = {"INC", "LLC", "CO", "CORP", "CORPORATION", "COMPANY", "THE", "AND", "OF", "DBA", "LP", "LLP", "LTD", "A"}
+def toks(name):
+    return [t for t in re.findall(r"[A-Z0-9]+", name.upper()) if t not in STOP and len(t) >= 2]
+for size in (2, 3):
+    shards = Counter()
+    for r in data:
+        names = {r[col["BusinessName"]], r[col["FullBusinessName"]], r[col["BUS-NAME-2"]]}
+        keys = {t[:size] for nm in names if nm for t in toks(nm)}
+        for k in keys: shards[k] += 1
+    print(f"--- {size}-char keys: {len(shards)} files, biggest {shards.most_common(8)}")
+lic = Counter(int(r[col["LicenseNo"]]) // 1000 for r in data if r[col["LicenseNo"]].strip().isdigit())
+print("license shards:", len(lic), "max", lic.most_common(3), "min/max license", min(int(r[col["LicenseNo"]]) for r in data), max(int(r[col["LicenseNo"]]) for r in data))
