@@ -1,14 +1,15 @@
 name: Deploy
 
 # Builds the site with fresh California license data and deploys it to
-# Cloudflare: on every push to main, and every Monday so the California search
-# is never more than a week behind the CSLB file. Needs the
+# Cloudflare: on every push to main, and every Monday and Thursday so the
+# California search stays within a few days of the CSLB file (and the cached
+# fallback copy is used often enough that GitHub doesn't evict it). Needs the
 # CLOUDFLARE_API_TOKEN repository secret (see README).
 on:
   push:
     branches: [main]
   schedule:
-    - cron: '23 10 * * 1'
+    - cron: '23 10 * * 1,4'
   workflow_dispatch:
 
 concurrency:

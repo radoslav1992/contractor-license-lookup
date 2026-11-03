@@ -31,7 +31,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 /** The portal is an ASP.NET form: load it, choose "License Master", then press "CSV". */
 async function downloadMaster() {
   const cookies = new Map();
-  const request = async (body) => {
+  const request = async (body, step) => {
     const res = await fetch(PORTAL, {
       method: body ? 'POST' : 'GET',
       body: body ? new URLSearchParams(body) : undefined,
@@ -47,7 +47,10 @@ async function downloadMaster() {
       const eq = pair.indexOf('=');
       cookies.set(pair.slice(0, eq).trim(), pair.slice(eq + 1).trim());
     }
-    if (!res.ok) throw new Error(`CSLB answered ${res.status}`);
+    if (!res.ok) {
+      const retry = res.headers.get('retry-after');
+      throw new Error(`CSLB answered ${res.status} ${res.statusText} at step "${step}"${retry ? ` (retry after ${retry})` : ''}`);
+    }
     return res;
   };
   const hidden = (html) => {
@@ -57,12 +60,12 @@ async function downloadMaster() {
     }
     return fields;
   };
-  const postBack = (html, target) =>
-    request({ ...hidden(html), __EVENTTARGET: target, __EVENTARGUMENT: '', ctl00$MainContent$ddlStatus: 'M' });
+  const postBack = (html, target, step) =>
+    request({ ...hidden(html), __EVENTTARGET: target, __EVENTARGUMENT: '', ctl00$MainContent$ddlStatus: 'M' }, step);
 
-  const form = await (await request()).text();
-  const chosen = await (await postBack(form, 'ctl00$MainContent$ddlStatus')).text();
-  const res = await postBack(chosen, 'ctl00$MainContent$lbMasterCSV');
+  const form = await (await request(undefined, 'open the data portal')).text();
+  const chosen = await (await postBack(form, 'ctl00$MainContent$ddlStatus', 'choose License Master')).text();
+  const res = await postBack(chosen, 'ctl00$MainContent$lbMasterCSV', 'download the CSV');
   if (!/csv/i.test(res.headers.get('content-type') ?? '')) throw new Error(`expected a CSV, got ${res.headers.get('content-type')}`);
   return Buffer.from(await res.arrayBuffer()).toString('utf8').replace(/^﻿/, '');
 }
@@ -87,7 +90,7 @@ async function freshOrCached() {
     } catch (err) {
       lastError = err;
       console.warn(`Download attempt ${attempt} of ${ATTEMPTS} failed: ${err.message}`);
-      if (attempt < ATTEMPTS) await sleep(30_000 * attempt);
+      if (attempt < ATTEMPTS) await sleep(60_000 * attempt);
     }
   }
   const cachedOn = await readFile(CACHE_DATE, 'utf8').then((s) => s.trim(), () => null);
