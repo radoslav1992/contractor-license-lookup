@@ -1242,6 +1242,303 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'tennessee',
+    code: 'TN',
+    name: 'Tennessee',
+    generalContractors: 'state-and-local',
+    short: 'A state license for jobs of $25,000 or more, plus a home improvement license in nine counties.',
+    summary:
+      'The Tennessee Board for Licensing Contractors licenses contractors for jobs of $25,000 or more, and issues home improvement and limited electrical and plumbing licenses for smaller work. Below $25,000 the rules depend on your county, so check with your local building codes office.',
+    boards: [
+      {
+        name: 'Tennessee Board for Licensing Contractors (Department of Commerce and Insurance)',
+        licenses:
+          'Contractors for jobs of $25,000 or more, including building, electrical, plumbing, HVAC, roofing and masonry work; home improvement contractors in nine counties; and limited licensed electricians and plumbers for smaller jobs',
+        lookupUrl: 'https://verify.tn.gov/',
+        lookupNote: 'The state’s free license search. Check that the license is active and that its classification and monetary limit fit your job.',
+        website: 'https://www.tn.gov/commerce/regboards/contractors.html',
+      },
+    ],
+    whenRequired: [
+      'A state contractor’s license is required before bidding on any project of $25,000 or more, counting labor and materials.',
+      'Electrical, plumbing, HVAC and roofing subcontractors need a contractor’s license when their part of the job is $25,000 or more.',
+      'In Bradley, Davidson, Hamilton, Haywood, Knox, Marion, Robertson, Rutherford and Shelby counties, residential remodeling jobs over $3,000 and under $25,000 need a state home improvement license.',
+      'Smaller electrical and plumbing jobs need a state limited license where the state handles permits, or a local license where your city or county has its own program. A job can’t be split up to stay under a limit.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Tennessee license number and the exact name on the license.',
+      'Look the contractor up in the state’s license search.',
+      'Confirm the license is active and that its classification and monetary limit cover your type and size of job.',
+      'For jobs under $25,000, ask your city or county building codes office which state or local license applies.',
+      'Ask the Board for Licensing Contractors about complaints or disciplinary history.',
+    ],
+    watchFor: [
+      'A county business license is not a contractor’s license. A contractor who asks you to pull the building permits yourself is a warning sign.',
+      'If a contractor takes your money and doesn’t do the work, report it to local law enforcement and the Division of Consumer Affairs: Tennessee’s theft law can apply.',
+    ],
+    faq: [
+      {
+        q: 'How do I check a contractor’s license in Tennessee?',
+        a: 'Use the state’s free license search at verify.tn.gov, and make sure the license is active and covers the type and size of your job.',
+      },
+      {
+        q: 'Do I need a licensed contractor for a job under $25,000 in Tennessee?',
+        a: 'It depends on where you live. In nine counties, remodeling jobs over $3,000 need a state home improvement license, and electrical or plumbing work may need a state limited license or a local license. Your building codes office can tell you what applies.',
+      },
+      {
+        q: 'Which Tennessee counties require a home improvement license?',
+        a: 'Bradley, Davidson, Hamilton, Haywood, Knox, Marion, Robertson, Rutherford and Shelby counties. The license covers residential remodeling jobs over $3,000 and under $25,000.',
+      },
+      {
+        q: 'Does a roofer or electrician need a state license in Tennessee?',
+        a: 'Yes, when their part of the job is $25,000 or more. Below that, electricians and plumbers may need a state limited license or a local license, depending on where you live.',
+      },
+    ],
+    sources: [
+      { label: 'Tennessee Board for Licensing Contractors', url: 'https://www.tn.gov/commerce/regboards/contractors.html' },
+      {
+        label: 'TDCI: Contractor Fraud Awareness Week 2026',
+        url: 'https://www.tn.gov/commerce/news/2026/5/18/tdci-highlights-consumer-awareness-during-contractor-fraud-awareness-week.html',
+      },
+      {
+        label: 'TDCI: counties that adopted the home improvement law',
+        url: 'https://tn.gov/commerce/regboards/hi/county-information-adopting-the-home-improvement-law.html',
+      },
+      { label: 'TDCI: limited licensed electrician', url: 'https://www.tn.gov/commerce/regboards/contractors/license/get/lle.html' },
+      {
+        label: 'TDCI: who needs a limited licensed plumber license',
+        url: 'https://www.tn.gov/commerce/regboards/llp/who-needs-a-limited-licensed-plumber--llp--license-.html',
+      },
+      { label: 'Tennessee Attorney General: avoiding home improvement fraud (2025)', url: 'https://www.tn.gov/attorneygeneral/news/2025/3/20/pr25-15.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'south-carolina',
+    code: 'SC',
+    name: 'South Carolina',
+    generalContractors: 'state',
+    short: 'A state license for home jobs over $5,000, and for trade work like roofing over $500.',
+    summary:
+      'South Carolina licenses contractors through two boards at the Department of Labor, Licensing and Regulation (LLR): the Residential Builders Commission for home builders and trades, and the Contractor’s Licensing Board for general and mechanical contractors. Most home improvement contractors fall under the Residential Builders Commission, but check both.',
+    boards: [
+      {
+        name: 'South Carolina Residential Builders Commission (LLR)',
+        licenses:
+          'Residential builders for home jobs over $5,000, and residential specialty contractors for trade jobs over $500, including residential electricians, plumbers and HVAC contractors and registered trades such as roofers',
+        lookupUrl: 'https://www.llr.sc.gov/',
+        lookupNote: 'Open the Licensee Lookup on the LLR website and search under the Residential Builders Commission.',
+        website: 'https://llr.sc.gov/res',
+      },
+      {
+        name: 'South Carolina Contractor’s Licensing Board (LLR)',
+        licenses: 'General and mechanical contractors when the regulated work costs more than $10,000, mainly commercial work',
+        lookupUrl: 'https://www.llr.sc.gov/',
+        lookupNote: 'Use the same LLR Licensee Lookup and search under the Contractor’s Licensing Board.',
+        website: 'https://llr.sc.gov/clb/clb_general.aspx',
+      },
+    ],
+    whenRequired: [
+      'A residential builder license is required to build, repair or improve a home when the job costs more than $5,000.',
+      'Residential specialty contractors such as roofers, electricians, plumbers and HVAC contractors need a registration or license for jobs over $500. The limit rose from $200 in May 2022.',
+      'General and mechanical contractors need a Contractor’s Licensing Board license when the work costs more than $10,000. The limit rose from $5,000 in May 2023.',
+      'A specialty registration doesn’t cover structural work or additions; those need a residential builder or general contractor license.',
+    ],
+    howToCheck: [
+      'Ask the contractor for photo ID and their South Carolina license or registration number.',
+      'Open the Licensee Lookup on the LLR website.',
+      'Search the Residential Builders Commission first. If the contractor isn’t listed, search the Contractor’s Licensing Board.',
+      'Confirm the license or registration is active and covers your type of work.',
+      'Check for complaints with the South Carolina Department of Consumer Affairs.',
+    ],
+    watchFor: [
+      'LLR advises a written contract that lists the contractor’s name, address and South Carolina license or registration number, the work, and the total cost with payment terms. Avoid large up-front payments.',
+    ],
+    faq: [
+      {
+        q: 'How do I check a contractor’s license in South Carolina?',
+        a: 'Use the Licensee Lookup on the LLR website. Most home improvement contractors are licensed by the Residential Builders Commission, but some by the Contractor’s Licensing Board, so check both.',
+      },
+      {
+        q: 'Do I need a licensed contractor for a small job in South Carolina?',
+        a: 'Often, yes. Trade work over $500, such as roofing or electrical work, needs a Residential Builders Commission registration or license, and a builder taking a home job over $5,000 needs a residential builder license.',
+      },
+      {
+        q: 'Who licenses electricians, plumbers and HVAC contractors in South Carolina?',
+        a: 'For homes, the Residential Builders Commission licenses residential electricians, plumbers and HVAC contractors. Commercial work over $10,000 falls under the Contractor’s Licensing Board.',
+      },
+      {
+        q: 'Did South Carolina’s contractor license limits change recently?',
+        a: 'Yes. In May 2022 the limit for residential specialty contractors rose from $200 to $500, and in May 2023 the Contractor’s Licensing Board limit rose from $5,000 to $10,000.',
+      },
+    ],
+    sources: [
+      { label: 'SC LLR: Residential Builders Commission', url: 'https://llr.sc.gov/res' },
+      { label: 'SC LLR: Contractor’s Licensing Board', url: 'https://llr.sc.gov/clb/clb_general.aspx' },
+      { label: 'SC LLR: residential builder FAQ', url: 'https://llr.sc.gov/res/PDF/FAQ/RBB%20FAQ.pdf' },
+      { label: 'SC LLR: residential specialty contractor FAQ', url: 'https://www.llr.sc.gov/res/PDF/FAQ/RBS%20FAQ.pdf' },
+      { label: 'SC LLR: Contractor’s Licensing Board 2023 legislative update', url: 'https://www.llr.sc.gov/clb/PDFFiles/CLB2023LegislativeUpdate.pdf' },
+      {
+        label: 'SC LLR: consumer alert on property repairs after Hurricane Helene (2024)',
+        url: 'https://www.llr.sc.gov/AboutUs/MediaCenter/news/2024/News%20Release%20-%20SC%20LLR%20Issues%20Consumer%20Alert%20for%20Property%20Repairs%20After%20Hurricane%20Helene.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'arizona',
+    code: 'AZ',
+    name: 'Arizona',
+    generalContractors: 'state',
+    short: 'A state ROC license for most home jobs of $1,000 or more, or any job needing a permit.',
+    summary:
+      'The Arizona Registrar of Contractors (ROC) licenses contractors statewide, including general, remodeling, electrical, plumbing, air-conditioning and roofing contractors. Only a license with a Current status can legally contract, so check it before you sign.',
+    boards: [
+      {
+        name: 'Arizona Registrar of Contractors (ROC)',
+        licenses:
+          'General and remodeling contractors and specialty trades, including residential electrical (R-11), plumbing (R-37), air conditioning and refrigeration (R-39) and roofing (R-42)',
+        lookupUrl: 'https://roc.az.gov/contractor-search',
+        lookupNote:
+          'Search by company name, person’s name or 6-digit license number. The record shows status, classification, bond and closed complaints from the past two years.',
+        website: 'https://roc.az.gov/',
+      },
+    ],
+    whenRequired: [
+      'A license is generally required when a job’s total price, including labor and materials, is $1,000 or more.',
+      'Any job that needs a local building permit requires a licensed contractor, whatever the price.',
+      'The small-job (handyman) exemption covers only casual or minor work. It doesn’t apply to work that is part of a larger project or split into smaller contracts to stay under the limit.',
+      'Unlicensed handymen who advertise must include the words “Not a Licensed Contractor” in their ads.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s 6-digit ROC license number and the business name on the license.',
+      'Search the ROC contractor search by license number, company name or person’s name.',
+      'Confirm the status is Current, the only status that can legally contract, and check again on the day you sign.',
+      'Make sure the license classification covers your job, such as R-39 for air conditioning or R-42 for roofing.',
+      'Call the phone number on the ROC record to confirm the person you’re dealing with works for that company.',
+    ],
+    watchFor: [
+      'The Residential Contractors’ Recovery Fund can pay up to $30,000 for losses caused by a contractor with a residential or dual license. It doesn’t cover commercial property.',
+      'A contractor’s written contract must list their license number, the total price, a description of the work and a notice of your right to complain to the ROC.',
+    ],
+    faq: [
+      {
+        q: 'Does a handyman need a license in Arizona?',
+        a: 'Only for bigger jobs. Someone without an ROC license may do casual or minor work if the total price is under $1,000 and no building permit is needed, and must say “Not a Licensed Contractor” in their ads.',
+      },
+      {
+        q: 'Who licenses electricians, plumbers and roofers in Arizona?',
+        a: 'The ROC licenses these trades as classifications, such as R-11 for residential electrical, R-37 for residential plumbing and R-42 for roofing. Check that the license includes the classification for your job.',
+      },
+      {
+        q: 'How long do I have to file a complaint against an Arizona contractor?',
+        a: 'Generally within two years of occupancy or of the date the work was last done.',
+      },
+      {
+        q: 'What is the Arizona Residential Contractors’ Recovery Fund?',
+        a: 'A state fund that can pay homeowners up to $30,000 for losses caused by a residential or dual licensed contractor. You generally go through the ROC complaint process or get a court judgment first.',
+      },
+    ],
+    sources: [
+      { label: 'Arizona ROC: contractor search', url: 'https://roc.az.gov/contractor-search' },
+      { label: 'Arizona ROC: before you hire a contractor', url: 'https://roc.az.gov/before-hire' },
+      { label: 'Arizona ROC: Recovery Fund', url: 'https://roc.az.gov/recovery-fund' },
+      { label: 'Arizona ROC: license classifications', url: 'https://roc.az.gov/license-classifications' },
+      { label: 'A.R.S. § 32-1121 (who doesn’t need a license)', url: 'https://www.azleg.gov/ars/32/01121.htm' },
+      { label: 'A.R.S. § 32-1158 (contract requirements)', url: 'https://www.azleg.gov/ars/32/01158.htm' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'colorado',
+    code: 'CO',
+    name: 'Colorado',
+    generalContractors: 'local-only',
+    short: 'No state general contractor license; the state licenses electricians and plumbers.',
+    summary:
+      'Colorado doesn’t license general contractors or roofers at the state level; cities and counties such as Denver and the Pikes Peak region set their own rules. The state licenses electricians and plumbers and registers electrical and plumbing contractors.',
+    boards: [
+      {
+        name: 'Colorado State Electrical Board (DORA)',
+        licenses: 'Master and journeyman electricians and residential wiremen, and registration of electrical contractors',
+        lookupUrl: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx',
+        lookupNote: 'Search by name, business name, city or license number. The search is case sensitive, so start with just the first and last name.',
+        website: 'https://dpo.colorado.gov/Electrical',
+      },
+      {
+        name: 'Colorado State Plumbing Board (DORA)',
+        licenses: 'Master, journeyworker and residential plumbers, and registration of plumbing contractors',
+        lookupUrl: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx',
+        lookupNote: 'Use the same DORA search by name, business name or license number.',
+        website: 'https://dpo.colorado.gov/Plumbing',
+      },
+      {
+        name: 'Denver Community Planning and Development: contractor licensing',
+        licenses: 'General, building, residential and specialty trade contractors working in Denver',
+        lookupUrl:
+          'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+        lookupNote: 'Use the “Verify a contractor’s license” link. Denver doesn’t accept contractor licenses from other counties or states.',
+        website:
+          'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+      },
+      {
+        name: 'Pikes Peak Regional Building Department',
+        licenses: 'Building, electrical, mechanical (HVAC), plumbing and other contractors in Colorado Springs, unincorporated El Paso County and nearby towns',
+        lookupUrl: 'https://www.pprbd.org/Search/Contractor',
+        lookupNote: 'Search by business name or license type. A contractor can’t get a permit unless its license is in good standing.',
+        website: 'https://www.pprbd.org/',
+      },
+    ],
+    whenRequired: [
+      'Electrical and plumbing work for hire must be done by state-licensed electricians or plumbers, or apprentices they supervise, working for a state-registered contractor.',
+      'General contracting, remodeling and roofing have no state license. Whether a local license is needed depends on your city or county.',
+      'You may do electrical or plumbing work on your own home without a license if you get a permit and pass inspections. This doesn’t apply to property for sale or rent.',
+      'In Denver, contractors need a Denver contractor license; the city doesn’t accept licenses from other counties or states.',
+    ],
+    howToCheck: [
+      'For electrical or plumbing work, ask for the worker’s state license number and the company’s contractor registration.',
+      'Search DORA’s license lookup by name, business name or license number, and confirm the license is active.',
+      'For general, remodeling, roofing or HVAC work, ask your city or county building department which local license applies.',
+      'In Denver, verify the license with Community Planning and Development; in Colorado Springs and El Paso County, use the Pikes Peak Regional Building Department search.',
+      'Make sure the contractor pulls the permit in its own name. A contractor may not work under a homeowner’s permit.',
+    ],
+    watchFor: [
+      'Colorado’s roofing law requires a written contract before work starts. If insurance is paying, you can cancel within 72 hours after your insurer denies the claim and get your deposit back. Cancel in writing.',
+      'After hail or wind storms, watch for door-to-door contractors who make big promises or want full payment before the work is done. Confirm their license with your city or county.',
+    ],
+    faq: [
+      {
+        q: 'Does Colorado require a general contractor license?',
+        a: 'No. Colorado doesn’t license general contractors or roofers at the state level. Many cities and counties, such as Denver and the Pikes Peak Regional Building Department, require their own contractor licenses.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Colorado?',
+        a: 'Use DORA’s license lookup and search by name, business name or license number. The State Electrical Board and State Plumbing Board license these trades.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in Colorado?',
+        a: 'Yes, on your own home, if you get a permit, pass inspections and do the work yourself. The home can’t be for sale or rent.',
+      },
+      {
+        q: 'Does Denver accept contractor licenses from other cities?',
+        a: 'No. A contractor working in Denver needs a Denver license; the city doesn’t accept licenses from other counties or states.',
+      },
+    ],
+    sources: [
+      { label: 'Colorado DORA: home and repair consumer protection', url: 'https://dora.colorado.gov/consumer-protection-home-and-repair' },
+      { label: 'Colorado DORA: license lookup', url: 'https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx' },
+      { label: 'Colorado State Electrical Board', url: 'https://dpo.colorado.gov/Electrical' },
+      { label: 'Colorado State Plumbing Board: permits and inspections', url: 'https://dpo.colorado.gov/Plumbing/PermitInspectionInfo' },
+      {
+        label: 'Denver contractor licensing',
+        url: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing',
+      },
+      { label: 'Pikes Peak Regional Building Department: contractor search', url: 'https://www.pprbd.org/Search/Contractor' },
+      { label: 'Colorado Attorney General: roofing contractor law', url: 'https://coag.gov/app/uploads/2020/10/CO-Roofing-Contractor-Law.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
