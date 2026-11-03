@@ -2863,6 +2863,163 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'hawaii',
+    code: 'HI',
+    name: 'Hawaii',
+    generalContractors: 'state',
+    short: 'Hawaii licenses contractors for jobs over $1,500 or any job that needs a permit.',
+    summary:
+      'Hawaii’s Contractors License Board, part of the Department of Commerce and Consumer Affairs (DCCA), licenses general and specialty contractors, and a separate Board of Electricians and Plumbers licenses individual electricians and plumbers. You need a licensed contractor for any job over $1,500 in labor and materials, or any job that needs a building, electrical or plumbing permit.',
+    boards: [
+      {
+        name: 'Hawaii DCCA: Contractors License Board and Board of Electricians and Plumbers',
+        licenses:
+          'General engineering (A), general building (B) and specialty (C) contractors, such as C-13 electrical, C-37 plumbing, C-42 roofing and C-52 ventilating and air conditioning, plus individual electricians and plumbers',
+        lookupUrl: 'https://mypvl.dcca.hawaii.gov/public-license-search/',
+        lookupNote:
+          'Search by business or person name, or by license number. Results show status, expiration date and any disciplinary action. For complaint history, also check DCCA’s Business Check.',
+        website: 'https://cca.hawaii.gov/pvl/boards/contractor/',
+      },
+    ],
+    whenRequired: [
+      'A contractor license is required for any project over $1,500 in labor and materials combined.',
+      'Any project that needs a building, electrical or plumbing permit requires a licensed contractor, whatever the price.',
+      'The small-job exemption doesn’t cover electrical or plumbing work, work that’s part of a larger project, or a job split into smaller contracts to stay under the limit.',
+      'Owners can build or repair their own property under an owner-builder exemption, but generally can’t sell or lease it for one year after it’s finished.',
+    ],
+    howToCheck: [
+      'Search the contractor’s name or license number in DCCA’s public license search.',
+      'Confirm the license is current and its classification fits your job, such as C-42 for roofing or C-52 for air conditioning.',
+      'For electrical or plumbing work, confirm the business holds a C-13 or C-37 contractor license and the workers hold electrician or plumber licenses.',
+      'Check DCCA’s Business Check for complaints and unlicensed-activity investigations.',
+      'Get a written contract signed by both sides before work starts.',
+    ],
+    watchFor: [
+      'Hawaii’s Contractors Recovery Fund can repay owners of homes, condos and co-op units harmed by a licensed contractor, up to $12,500 per contract and $25,000 per contractor. You must first win a court judgment and try to collect, and the fund doesn’t cover unlicensed contractors.',
+      'A licensed contractor must explain your lien rights and your right to demand bonding, and give you a written contract signed by both sides before work begins.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small repair in Hawaii?',
+        a: 'Not always. A handyman can do a job under $1,500 in labor and materials if it needs no permit. The exemption doesn’t cover electrical or plumbing work.',
+      },
+      {
+        q: 'How do I look up a contractor’s license in Hawaii?',
+        a: 'Use DCCA’s public license search and enter the business name, person’s name or license number. It shows the license status, expiration date and any disciplinary action.',
+      },
+      {
+        q: 'Is an electrician’s license enough to hire someone for electrical work in Hawaii?',
+        a: 'No. An electrician or plumber license doesn’t let a person contract for the work. The business also needs a contractor license, such as C-13 electrical or C-37 plumbing.',
+      },
+      {
+        q: 'Where do I file a complaint against a contractor in Hawaii?',
+        a: 'File with DCCA’s Regulated Industries Complaints Office (RICO), which handles complaints about licensed contractors and reports of unlicensed activity.',
+      },
+    ],
+    sources: [
+      { label: 'Hawaii DCCA: public license search', url: 'https://mypvl.dcca.hawaii.gov/public-license-search/' },
+      { label: 'Hawaii DCCA: hire a licensed contractor', url: 'https://cca.hawaii.gov/pvl/hire-a-licensed-contractor/' },
+      {
+        label: 'HRS § 444-2 (exemptions)',
+        url: 'https://www.capitol.hawaii.gov/hrscurrent/vol10_ch0436-0474/HRS0444/HRS_0444-0002.htm',
+      },
+      {
+        label: 'HRS § 444-25.5 (disclosure and contracts)',
+        url: 'https://www.capitol.hawaii.gov/hrscurrent/vol10_ch0436-0474/HRS0444/HRS_0444-0025_0005.htm',
+      },
+      {
+        label: 'Hawaii DCCA: Contractors Recovery Fund consumer information (2026)',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/05/CLB-260123-CLB-CRF.pdf',
+      },
+      {
+        label: 'Hawaii RICO: top 10 tips for construction projects',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/05/CLB-260123-Top-10-Tips-for-Construction-Projects.pdf',
+      },
+      {
+        label: 'Hawaii RICO: hiring electricians and plumbers',
+        url: 'https://cca.hawaii.gov/wp-content/uploads/2026/01/CLB-190718-Hiring-Electricians-and-Plumbers.pdf',
+      },
+      { label: 'Hawaii DCCA: Business Check', url: 'https://cca.hawaii.gov/business-check/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'new-hampshire',
+    code: 'NH',
+    name: 'New Hampshire',
+    generalContractors: 'local-only',
+    short: 'New Hampshire licenses electricians and plumbers, but not general contractors.',
+    summary:
+      'New Hampshire has no state license for general or home improvement contractors, and towns handle building permits. The Office of Professional Licensure and Certification (OPLC) licenses electricians, plumbers and gas fitters, so for other work check insurance, references and the written contract carefully.',
+    boards: [
+      {
+        name: 'New Hampshire Office of Professional Licensure and Certification (OPLC)',
+        licenses: 'Electricians (Electricians’ Board), and plumbers and fuel gas fitters (Mechanical Licensing Board)',
+        lookupUrl: 'https://www.oplc.nh.gov/license-lookup',
+        lookupNote:
+          'OPLC’s downloadable licensee lists aren’t real time, so use the lookup for current status. If you can’t find a plumber or gas fitter, ask OPLC for a verification letter.',
+        website: 'https://www.oplc.nh.gov/',
+      },
+    ],
+    whenRequired: [
+      'No state license is needed for general contracting, remodeling or home improvement work. Ask your town about building permits.',
+      'Electrical work done for pay must be done by a licensed electrician. Homeowners may do their own electrical work in a single-family home they own and live in.',
+      'Plumbing and fuel gas work needs a Mechanical Licensing Board license, with the same exemption for owners working on their own single-family main home.',
+    ],
+    howToCheck: [
+      'Ask your town building department which permits the job needs, since the state doesn’t license general contractors.',
+      'For electrical, plumbing or gas work, search the worker in the OPLC license lookup and confirm the license is active.',
+      'Ask for a certificate of insurance and confirm the coverage directly with the insurance company.',
+      'Get written, itemized estimates and a signed contract that lists the work, materials, total price and payment schedule.',
+      'If something goes wrong, file a written complaint with the Attorney General’s Consumer Protection and Antitrust Bureau.',
+    ],
+    watchFor: [
+      'Be careful with large up-front payments. The Attorney General calls a down payment of more than half the cost, or full payment before the job is done, a red flag.',
+      'If you buy $150 or more in goods or services from a seller who comes to your home, state law generally lets you cancel in writing until midnight of the third business day.',
+    ],
+    faq: [
+      {
+        q: 'Does New Hampshire require a contractor license?',
+        a: 'Not for general contractors or home improvement work. The state does license electricians, plumbers and gas fitters through the OPLC.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in New Hampshire?',
+        a: 'Use the license lookup on the OPLC website. You can also ask the OPLC for a formal verification letter.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in New Hampshire?',
+        a: 'Yes, in a single-family home you own and live in as your main home. Anyone you pay to do electrical, plumbing or gas work must be licensed.',
+      },
+      {
+        q: 'Where do I complain about a home contractor in New Hampshire?',
+        a: 'File a written complaint with the Attorney General’s Consumer Protection and Antitrust Bureau, online, by mail or by email.',
+      },
+    ],
+    sources: [
+      { label: 'New Hampshire OPLC: license lookup', url: 'https://www.oplc.nh.gov/license-lookup' },
+      {
+        label: 'New Hampshire Attorney General: consumer alert on hiring home contractors',
+        url: 'https://www.doj.nh.gov/resources/press-releases/consumer-alert-attorney-general-encourages-public-take-steps-protect-0',
+      },
+      {
+        label: 'New Hampshire Attorney General: risks involved with hiring a contractor (July 2024)',
+        url: 'https://mm.nh.gov/files/uploads/doj/remote-docs/07012024-nh-consumer-insight-risks-hiring-a-contractor.pdf',
+      },
+      { label: 'RSA 319-C:15 (electricians; homeowner’s exception)', url: 'https://gc.nh.gov/rsa/html/XXX/319-C/319-C-15.htm' },
+      { label: 'RSA 153:36 (mechanical licensing exceptions)', url: 'https://gc.nh.gov/rsa/html/XII/153/153-36.htm' },
+      { label: 'RSA 361-B (home solicitation sales)', url: 'https://gc.nh.gov/rsa/html/XXXIII-A/361-B/361-B-mrg.htm' },
+      {
+        label: 'New Hampshire Attorney General: consumer complaints',
+        url: 'https://www.doj.nh.gov/citizens/consumer-protection-antitrust-bureau/consumer-complaints',
+      },
+      {
+        label: 'New Hampshire Insurance Department: how to verify your contractor’s insurance',
+        url: 'https://www.insurance.nh.gov/news-and-media/blog/how-verify-if-your-contractor-has-right-insurance',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
