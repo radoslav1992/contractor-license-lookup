@@ -3684,6 +3684,181 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'south-dakota',
+    code: 'SD',
+    name: 'South Dakota',
+    generalContractors: 'local-only',
+    short: 'South Dakota licenses electricians and plumbers, but not general contractors.',
+    summary:
+      'South Dakota doesn’t license general or remodeling contractors at the state level, so cities such as Sioux Falls and Rapid City do, while the state Electrical and Plumbing Commissions license those trades. A contractor’s excise tax license from the Department of Revenue is a tax registration, not proof of skill.',
+    boards: [
+      {
+        name: 'South Dakota Plumbing Commission',
+        licenses: 'Plumbing contractors, journeyman plumbers, specialty licensees and small onsite wastewater installers',
+        lookupUrl: 'https://dlr.sd.gov/plumbing/consumer_info.aspx',
+        lookupNote: 'Open the lists of licensed plumbers and specialty licensees on this page, and check the date on each list.',
+        website: 'https://dlr.sd.gov/plumbing/default.aspx',
+      },
+      {
+        name: 'City of Sioux Falls: contractor licensing',
+        licenses:
+          'Residential building contractors, residential roofing and repair contractors, and electrical, plumbing and mechanical (heating, air conditioning and refrigeration) contractors working in Sioux Falls',
+        lookupUrl:
+          'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing/currently-licensed-contractors',
+        website: 'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing',
+      },
+      {
+        name: 'City of Rapid City Building Services',
+        licenses: 'Residential, commercial, siding, roofing, electrical, mechanical, gas, plumbing and sign contractors working in Rapid City',
+        lookupUrl: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+        lookupNote: 'Open the Current Licensed Contractors Report on this page. It’s a PDF list, not a search, so check its date.',
+        website: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+      },
+    ],
+    whenRequired: [
+      'The state doesn’t license general or remodeling contractors. Every contractor must get a free contractor’s excise tax license from the Department of Revenue before starting work, but it’s a tax registration only.',
+      'Electrical work for others must be done by a contractor licensed by the South Dakota Electrical Commission. Homeowners may wire their own home or farmstead only with a homeowner permit approved before work starts, and not on rental or commercial property.',
+      'Plumbing on property connected to a public water or sewer system needs a Plumbing Commission license. Homeowners may do plumbing on a home they own and live in.',
+      'Sioux Falls requires a city license for residential building work and for shingling, siding, and window or door replacement on homes. Rapid City licenses residential, roofing, siding, electrical, mechanical, gas and plumbing contractors.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city licenses they hold, and for each license number.',
+      'In Sioux Falls, check the city’s list of currently licensed contractors. In Rapid City, open the licensed contractor report on the Building Services page.',
+      'For an electrician, contact the South Dakota Electrical Commission at 605-773-3573 to verify the license, since it has no online search.',
+      'For a plumber, check the Plumbing Commission’s lists of licensed plumbers and note the date on the list.',
+      'Ask the Attorney General’s Consumer Protection Division whether complaints have been filed against the company.',
+    ],
+    watchFor: [
+      'You can cancel a written storm-damage roofing contract within 72 hours after signing, or within 72 hours after learning your insurer denied all or part of the claim. The roofer must give you a cancellation form and refund your payments within 10 days, though you may owe for emergency repairs.',
+      'Roofing contractors may not advertise or promise to pay or rebate any part of your insurance deductible.',
+    ],
+    faq: [
+      {
+        q: 'Does South Dakota require a contractor license?',
+        a: 'Not at the state level for general or remodeling work. Check with the city where the work is done, since Sioux Falls and Rapid City license contractors. Electricians and plumbers need state licenses.',
+      },
+      {
+        q: 'Is a contractor’s excise tax license the same as a contractor license?',
+        a: 'No. It’s a free tax registration from the Department of Revenue that every contractor must have. It doesn’t show training or skill.',
+      },
+      {
+        q: 'How do I check an electrician’s license in South Dakota?',
+        a: 'Contact the South Dakota Electrical Commission by phone or email. It doesn’t have a public online search.',
+      },
+      {
+        q: 'Can I cancel a roofing contract after a storm in South Dakota?',
+        a: 'Yes. You can cancel within 72 hours of signing, or within 72 hours after learning your insurer denied all or part of the claim. Send written notice to the address in the contract.',
+      },
+    ],
+    sources: [
+      { label: 'South Dakota Department of Revenue: contractor’s excise tax', url: 'https://dor.sd.gov/businesses/taxes/contractors-excise-tax/' },
+      { label: 'South Dakota Electrical Commission: licensing', url: 'https://dlr.sd.gov/electrical/licensing.aspx' },
+      { label: 'South Dakota Electrical Commission: homeowner wiring', url: 'https://dlr.sd.gov/electrical/homeowner_wiring.aspx' },
+      { label: 'SDCL ch. 36-25 (plumbing licensing)', url: 'https://sdlegislature.gov/Statutes/36-25' },
+      { label: 'SDCL ch. 37-24 (including roofing contracts)', url: 'https://sdlegislature.gov/Statutes/37-24' },
+      {
+        label: 'City of Sioux Falls: contractor licensing',
+        url: 'https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing/contractor-licensing',
+      },
+      {
+        label: 'City of Rapid City: Building Services',
+        url: 'https://www.rcgov.org/departments/community-planning-development/building-services.html',
+      },
+      {
+        label: 'South Dakota Consumer Protection: construction and home improvement',
+        url: 'https://consumer.sd.gov/fastfacts/construction.aspx',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'north-dakota',
+    code: 'ND',
+    name: 'North Dakota',
+    generalContractors: 'state',
+    short: 'North Dakota’s Secretary of State licenses contractors for jobs over $4,000.',
+    summary:
+      'North Dakota’s Secretary of State licenses contractors for any job over $4,000, and the license class limits how large a single job can be. Electricians and plumbers need separate state board licenses, and cities such as Fargo also license roofers, plumbers and HVAC contractors.',
+    boards: [
+      {
+        name: 'North Dakota Secretary of State',
+        licenses: 'Contractor licenses in Classes A through D for general contractors, subcontractors and other contractors on jobs over $4,000',
+        lookupUrl: 'https://firststop.sos.nd.gov/search/contractor',
+        lookupNote: 'Search the contractor in FirstStop and confirm the license is in good standing and its class covers your job’s price.',
+        website: 'https://www.sos.nd.gov/business/licensing-registration/contractors',
+      },
+      {
+        name: 'North Dakota State Electrical Board',
+        licenses: 'Electricians and electrical contractors',
+        lookupUrl: 'https://www.ndseb.com/search-1/lookup-a-licensedorregistered-electrician/',
+        lookupNote: 'Enter the last name only, or the 4- or 5-digit license number.',
+        website: 'https://www.ndseb.com/',
+      },
+      {
+        name: 'North Dakota State Plumbing Board',
+        licenses: 'Master, journeyman and apprentice plumbers, sewer and water installers, and water conditioning contractors and installers',
+        lookupUrl: 'https://www.ndplumbingboard.gov/licensing-license-lookup',
+        website: 'https://www.ndplumbingboard.gov/',
+      },
+      {
+        name: 'City of Fargo Inspections',
+        licenses: 'Home roofers, plumbers, and heating and air conditioning contractors working in Fargo',
+        lookupUrl: 'https://permits.fargond.gov/',
+        lookupNote: 'Use the Contractor Status option in the city’s permit portal.',
+        website: 'https://fargond.gov/city-government/departments/inspections/selecting-a-contractor',
+      },
+    ],
+    whenRequired: [
+      'A Secretary of State contractor license is required when a job’s cost, value or price is more than $4,000. This covers general contractors, subcontractors and out-of-state contractors.',
+      'The license class caps the size of each job: Class D up to $100,000, Class C up to $300,000, Class B up to $500,000, and Class A has no limit.',
+      'Electricians need a State Electrical Board license and plumbers a State Plumbing Board license, separate from the Secretary of State license.',
+      'Fargo also requires city licenses for home roofers, plumbers, and heating and air conditioning contractors, and Bismarck licenses mechanical (HVAC) installers.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and North Dakota license number.',
+      'Search FirstStop on the Secretary of State’s site. Confirm the license is in good standing and its class covers your job’s price; licenses renew each year by March 1.',
+      'For an electrician, use the State Electrical Board lookup. For a plumber, use the State Plumbing Board license lookup.',
+      'In Fargo, check roofers, plumbers and HVAC contractors through the city’s Contractor Status search. In Bismarck, ask Building Inspections about mechanical licenses.',
+      'Read the Attorney General’s guide to hiring a contractor before you sign.',
+    ],
+    watchFor: [
+      'If insurance is paying for the work, you can cancel the contract until midnight of the fifth business day after you sign, or after your insurer tells you in writing that all or part of the claim isn’t covered, whichever is later. The contractor must refund your payments within 10 days.',
+      'The state Insurance Department says a contractor who offers to pay or cover your insurance deductible is breaking North Dakota law, and warns about out-of-state crews that arrive after storms.',
+    ],
+    faq: [
+      {
+        q: 'Does North Dakota require a contractor license?',
+        a: 'Yes. Anyone doing a job worth more than $4,000 must hold a contractor license from the Secretary of State. Electricians and plumbers also need licenses from their state boards.',
+      },
+      {
+        q: 'What do North Dakota contractor license classes mean?',
+        a: 'The class sets the largest single job a contractor may take. Class D covers jobs up to $100,000, Class C up to $300,000, Class B up to $500,000, and Class A has no cap.',
+      },
+      {
+        q: 'Does a Secretary of State contractor license cover electrical or plumbing work?',
+        a: 'No. Electricians are licensed by the State Electrical Board and plumbers by the State Plumbing Board, so check those boards separately.',
+      },
+      {
+        q: 'Can I cancel a contract that my insurance is paying for?',
+        a: 'Yes. You can cancel until midnight of the fifth business day after signing, or after your insurer says in writing that all or part of the claim isn’t covered, whichever is later. Give the contractor signed, dated written notice.',
+      },
+    ],
+    sources: [
+      { label: 'North Dakota Secretary of State: contractors', url: 'https://www.sos.nd.gov/business/licensing-registration/contractors' },
+      { label: 'North Dakota Attorney General: hiring a contractor', url: 'https://attorneygeneral.nd.gov/consumer-resources/hiring-a-contractor/' },
+      { label: 'N.D. Century Code ch. 43-07 (contractors)', url: 'https://ndlegis.gov/cencode/t43c07.pdf' },
+      { label: 'N.D. Century Code ch. 26.1-39.2 (residential contractor contracts)', url: 'https://ndlegis.gov/cencode/t26-1c39-2.pdf' },
+      {
+        label: 'North Dakota Insurance Department: contractor scams after storms',
+        url: 'https://www.insurance.nd.gov/news/beware-contractor-scams-and-fraud-following-recent-storms-godfread-says',
+      },
+      { label: 'North Dakota State Electrical Board: license lookup', url: 'https://www.ndseb.com/search-1/lookup-a-licensedorregistered-electrician/' },
+      { label: 'City of Fargo: selecting a contractor', url: 'https://fargond.gov/city-government/departments/inspections/selecting-a-contractor' },
+      { label: 'City of Bismarck: mechanical installers', url: 'https://www.bismarcknd.gov/1729/Mechanical-Installers' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
