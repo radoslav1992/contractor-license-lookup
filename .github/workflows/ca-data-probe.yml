@@ -1,0 +1,25 @@
+# Temporary: inspect what the California licensing board's data portal offers.
+name: CA data probe
+on:
+  push:
+    branches: [ca-data-probe]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect data portal pages
+        run: |
+          UA="Mozilla/5.0 (compatible; contractorlicenselookup.org data check)"
+          for u in \
+            https://www.cslb.ca.gov/OnlineServices/DataPortal/ \
+            https://www.cslb.ca.gov/OnlineServices/DataPortal/ContractorList \
+            https://www.cslb.ca.gov/OnlineServices/DataPortal/ListByCounty; do
+            echo "=================== $u"
+            curl -sSL -A "$UA" -o page.html -w "HTTP %{http_code} %{url_effective} %{size_download} bytes\n" "$u" || true
+            echo "--- links"
+            grep -oiE '(href|src|action)="[^"]+"' page.html | grep -viE '\.(css|png|jpg|gif|svg|ico)|javascript:void|#' | sort -u | head -80
+            echo "--- inputs"
+            grep -oiE '<(input|select|button)[^>]+>' page.html | grep -viE '__VIEWSTATE|__EVENTVALIDATION|__VIEWSTATEGENERATOR' | head -60
+            echo "--- text"
+            sed -e 's/<script[^>]*>.*<\/script>//g' -e 's/<[^>]*>/\n/g' page.html | sed -e 's/^[[:space:]]*//' | grep -v '^$' | grep -iE 'download|file|csv|excel|xls|zip|master|week|daily|updated|current|terms|fee|charge|record|personnel|workers|bond' | head -60
+          done
