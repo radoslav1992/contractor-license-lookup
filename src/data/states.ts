@@ -3020,6 +3020,171 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'maine',
+    code: 'ME',
+    name: 'Maine',
+    generalContractors: 'local-only',
+    short: 'Maine licenses electricians, plumbers and fuel technicians, but not general contractors.',
+    summary:
+      'Maine doesn’t license or regulate general contractors, remodelers or roofers. The state does license electricians, plumbers, and oil, solid fuel, propane and natural gas technicians, and any home job over $3,000 needs a written contract.',
+    boards: [
+      {
+        name: 'Maine Office of Professional and Occupational Regulation (OPOR)',
+        licenses:
+          'Electricians (Electricians’ Examining Board), plumbers (Plumbers’ Examining Board), oil, solid fuel, propane and natural gas technicians (Maine Fuel Board), and door-to-door home repair sellers',
+        lookupUrl: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx',
+        lookupNote: 'Choose the board, such as the Electricians’ Examining Board, then search by name. Results update in real time.',
+        website: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx',
+      },
+    ],
+    whenRequired: [
+      'Maine has no state license for general contractors, remodelers, roofers or framers. Your town handles building permits and code enforcement.',
+      'Electrical work needs a licensed electrician and plumbing a licensed plumber. Homeowners may do their own electrical and plumbing work in a single-family home they own and live in.',
+      'Work on oil, solid fuel, propane or natural gas heating equipment needs a Maine Fuel Board license.',
+      'A door-to-door home repair seller with no permanent place of business in your town must hold a state license and put the license number on your contract.',
+    ],
+    howToCheck: [
+      'Ask the electrician, plumber or heating technician for their full name and Maine license number.',
+      'Search the OPOR license database by board and name, and confirm the license is active.',
+      'If a seller came to your door, ask for their door-to-door home repair seller license number and check it in the same database.',
+      'For a general contractor there’s no state license to check, so check references and ask the Attorney General’s Consumer Protection Division about complaints.',
+      'Ask your town’s code enforcement officer or plumbing inspector which permits and inspections your job needs.',
+    ],
+    watchFor: [
+      'Any home construction or repair job over $3,000 needs a written contract signed by you and the contractor, with a copy for you before work starts. The down payment can be no more than one-third of the price, and the contract must include a warranty and ways to settle disputes.',
+      'A door-to-door home repair contract must tell you that you can cancel within three business days.',
+    ],
+    faq: [
+      {
+        q: 'Does Maine require a general contractor license?',
+        a: 'No. The Maine Attorney General says the state doesn’t license or regulate home contractors. A bill to license residential general contractors (LD 1226) died when the Legislature adjourned in April 2026.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Maine?',
+        a: 'Use the free OPOR license database. Choose the Electricians’ Examining Board or the Plumbers’ Examining Board, search by name, and confirm the license is active.',
+      },
+      {
+        q: 'Do I need a written contract for home repairs in Maine?',
+        a: 'Yes, if the job costs more than $3,000 in materials or labor. Both of you must sign it, and the down payment can’t be more than one-third of the price.',
+      },
+      {
+        q: 'Can I do my own electrical or plumbing work in Maine?',
+        a: 'Usually, in a single-family home you own and live in, as long as the work meets code. Check with your town about permits and inspections.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Maine Attorney General: home construction and repair',
+        url: 'https://www.maine.gov/ag/consumer-protection/consumer-help-topics/housing/home-construction-and-repair',
+      },
+      {
+        label: 'Maine Attorney General: home construction contracts',
+        url: 'https://www.maine.gov/ag/consumer-protection/consumer-help-topics/housing/home-construction-contracts',
+      },
+      { label: '10 M.R.S. § 1487 (home construction contracts)', url: 'https://legislature.maine.gov/statutes/10/title10sec1487.html' },
+      { label: 'Maine OPOR: license search', url: 'https://www.pfr.maine.gov/almsonline/almsquery/SearchIndividual.aspx' },
+      { label: 'Maine Electricians’ Examining Board', url: 'https://www.maine.gov/pfr/professionallicensing/professions/electricians' },
+      { label: 'Maine Fuel Board', url: 'https://www.maine.gov/pfr/professionallicensing/professions/maine-fuel-board' },
+      {
+        label: 'Maine OPOR: door-to-door home repair sellers',
+        url: 'https://www.maine.gov/pfr/professionallicensing/professions/door-to-door-home-repair-sellers',
+      },
+      {
+        label: 'Maine Legislature: LD 1226 status',
+        url: 'https://legislature.maine.gov/bills/display_ps.asp?snum=132&paper=HP0801&PID=1456',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'montana',
+    code: 'MT',
+    name: 'Montana',
+    generalContractors: 'state',
+    short: 'Montana has licensed construction contractors since January 2026; trades have state boards.',
+    summary:
+      'Since January 1, 2026, Montana’s Department of Labor and Industry (DLI) has licensed construction contractors in place of its old registration, and state boards license electricians and plumbers. Contractors with no employees are exempt, so a missing license isn’t always a red flag, and DLI doesn’t judge the quality of a contractor’s work.',
+    boards: [
+      {
+        name: 'Montana Department of Labor and Industry (DLI)',
+        licenses:
+          'Construction contractors, including general contractors, remodelers and roofers (Construction Contractor License program), electricians and electrical contractors (State Electrical Board), and plumbers (Board of Plumbers)',
+        lookupUrl: 'https://boards.bsd.dli.mt.gov/_global-pages/additional-license-information/lookup-individual',
+        lookupNote:
+          'Search by name or license number. If you can’t find a construction contractor here, also try the exemption and registration search below.',
+        website: 'https://boards.bsd.dli.mt.gov/construction-contractor/',
+      },
+      {
+        name: 'Montana DLI: Independent Contractor Exemption Certificates',
+        licenses: 'Exemption certificates for self-employed workers with no employees, which aren’t a skills license',
+        lookupUrl: 'https://erdcontractors.mt.gov/ICCROnlineSearch/registrationlookup.jsp',
+        lookupNote: 'This older search also lists past contractor registrations.',
+        website: 'https://erd.dli.mt.gov/work-comp-regulations/montana-contractor/independent-contractor/',
+      },
+    ],
+    whenRequired: [
+      'Since January 1, 2026, construction contractors must hold a DLI construction contractor license, which replaced the old registration. Registrations active on December 31, 2025 became licenses automatically.',
+      'Exemptions include independent contractors with no employees, owners working on their own property, and licensed electricians and plumbers working within their license.',
+      'Electrical work needs a licensed electrician, and plumbing a licensed plumber. Owners may do their own electrical and plumbing work on a home they live in, but not on a rental or a home built to sell.',
+      'Cities and counties can’t require their own contractor licenses, but they still issue building permits.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s full business name and Montana license number.',
+      'Search DLI’s licensee lookup and confirm the license is active.',
+      'For electrical or plumbing work, also look up the electrician’s or plumber’s own license and the electrical contractor license.',
+      'If the contractor says they have no employees and are exempt, ask for their Independent Contractor Exemption Certificate and check it in DLI’s exemption search.',
+      'Ask for proof of liability and workers’ compensation insurance, and ask your local building department which permits you need.',
+    ],
+    watchFor: [
+      'Under Montana law you can be responsible for materials even after you pay your contractor, so a supplier could put a lien on your home if the contractor doesn’t pay them.',
+      'A license doesn’t mean DLI checks the quality of the work. Get a detailed written contract with dates, materials, warranties and who pulls permits, and avoid large up-front payments.',
+    ],
+    faq: [
+      {
+        q: 'Does Montana require a contractor license?',
+        a: 'Yes. Since January 1, 2026, construction contractors must be licensed with the Montana Department of Labor and Industry. Independent contractors with no employees and a few other groups are exempt.',
+      },
+      {
+        q: 'Is Montana’s contractor license the same as the old registration?',
+        a: 'It replaced the registration program, and active registrations became licenses automatically. DLI says it doesn’t review the quality of a contractor’s work.',
+      },
+      {
+        q: 'How do I check an electrician’s or plumber’s license in Montana?',
+        a: 'Use DLI’s free licensee lookup and search by name or license number. The State Electrical Board and the Board of Plumbers both use it.',
+      },
+      {
+        q: 'Can my city require its own contractor license in Montana?',
+        a: 'No. State law bars cities and counties from requiring their own contractor licenses, registrations or bonds for the same purpose. Local governments still issue building permits.',
+      },
+    ],
+    sources: [
+      { label: 'Montana DLI: Construction Contractor License program', url: 'https://boards.bsd.dli.mt.gov/construction-contractor/' },
+      {
+        label: 'Montana DLI: HB 239 notice to construction contractors',
+        url: 'https://erd.dli.mt.gov/_docs/work-comp-regs/HB-239-Notice-to-Construction-Contractors.pdf',
+      },
+      {
+        label: 'Montana DLI: licensee lookup',
+        url: 'https://boards.bsd.dli.mt.gov/_global-pages/additional-license-information/lookup-individual',
+      },
+      {
+        label: 'Montana DOJ Office of Consumer Protection: choosing a contractor',
+        url: 'https://dojmt.gov/office-of-consumer-protection/choosing-a-contractor/',
+      },
+      {
+        label: 'MCA 37-45-204 (local authority over contractors)',
+        url: 'https://archive.legmt.gov/bills/MCA/title_0370/chapter_0450/part_0020/section_0040/0370-0450-0020-0040.html',
+      },
+      { label: 'Montana State Electrical Board', url: 'https://boards.bsd.dli.mt.gov/electrical/' },
+      { label: 'Montana Board of Plumbers', url: 'https://boards.bsd.dli.mt.gov/plumbers/' },
+      {
+        label: '2025 House Bill 239 (Chapter 644)',
+        url: 'https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0644.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
