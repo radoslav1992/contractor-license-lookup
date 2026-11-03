@@ -78,7 +78,8 @@ export function titleCase(value: string): string {
  * The license's state on the day of the file.
  * - S: CSLB lists a suspension (anything other than CLEAR).
  * - E: the expiration date has passed.
- * - I: inactivated and not reactivated since.
+ * - I: an inactivation date with no later reactivation. CSLB's pages couldn't
+ *   confirm what these fields mean, so the search says "check status" for it.
  * - A: none of the above.
  */
 export function licenseStatus(row: {
@@ -136,10 +137,11 @@ export function buildCaData(rows: string[][], asOf: string): BuildResult {
     const nm = get(r, 'FullBusinessName') || get(r, 'BusinessName');
     const others = otherNames(nm, [get(r, 'BusinessName'), get(r, 'BUS-NAME-2')]);
     const expires = isoDate(get(r, 'ExpirationDate'));
+    const inactivated = isoDate(get(r, 'InactivationDate'));
     const status = licenseStatus({
       primary: get(r, 'PrimaryStatus'),
       expires,
-      inactivated: isoDate(get(r, 'InactivationDate')),
+      inactivated,
       reactivated: isoDate(get(r, 'ReactivationDate')),
       asOf,
     });
@@ -163,6 +165,7 @@ export function buildCaData(rows: string[][], asOf: string): BuildResult {
     if (issued) rec.iss = issued;
     if (expires) rec.exp = expires;
     if (status.why) rec.why = status.why;
+    if (status.st === 'I' && inactivated) rec.inact = inactivated;
 
     const surety = get(r, 'CBSuretyCompany');
     if (surety) {

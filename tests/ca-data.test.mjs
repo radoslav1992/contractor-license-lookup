@@ -88,6 +88,7 @@ test('buildCaData writes license and name files without addresses or phone numbe
 
   // Leading zeros are dropped, so "0999004" is found as 999004.
   assert.equal(files.get('lic/999.json')['999004'].st, 'I');
+  assert.equal(files.get('lic/999.json')['999004'].inact, '2026-03-01');
   assert.equal(files.get('lic/1000.json')['1000002'].st, 'E');
   assert.equal(files.get('lic/1000.json')['1000003'].why, 'Contr Bond Susp');
 
@@ -126,6 +127,7 @@ test('queries: license numbers, index keys and matching', () => {
   assert.equal(queryKey('sunny slope roofing', heavy), 'sun');
   assert.equal(queryKey('kestrel construction', heavy), 'kes');
   assert.equal(queryKey('construction inc', heavy), null);
+  assert.equal(queryKey('contractors inc', heavy), null);
   assert.ok(matchesQuery('SUNNY SLOPE ROOFING INC', 'sunny roof'));
   assert.ok(!matchesQuery('SUNNY SLOPE ROOFING INC', 'sunny plumbing'));
 });

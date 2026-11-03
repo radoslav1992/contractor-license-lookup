@@ -26,7 +26,6 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
 <script>
   import {
     classLabel,
-    cslbLicenseUrl,
     licenseQuery,
     licenseShard,
     matchesQuery,
@@ -40,7 +39,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
 
   const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx';
   const MAX_RESULTS = 50;
-  const STATUS: Record<StatusCode, string> = { A: 'Active', E: 'Expired', I: 'Inactive', S: 'Suspended', X: 'Check status' };
+  const STATUS: Record<StatusCode, string> = { A: 'Active', E: 'Expired', I: 'Check status', S: 'Suspended', X: 'Check status' };
   const SUSPENSION: Record<string, string> = {
     'Contr Bond Susp': 'contractor’s bond',
     'Work Comp Susp': 'workers’ compensation insurance',
@@ -238,8 +237,10 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
       if (where) row('Location', where);
       row('Contractor’s bond', bondText(rec));
       row('Workers’ comp', workersCompText(rec));
-      const check = link(cslbLicenseUrl(rec.n), 'Check this license on CSLB');
-      row('Verify', check);
+      // CSLB doesn't allow links straight to a license, so open its search.
+      const verify = el('span', '', `Enter license ${rec.n} on `);
+      verify.append(link(CSLB_CHECK, 'CSLB’s Instant License Check'));
+      row('Verify', verify);
       li.append(dl);
     }
 
@@ -252,7 +253,9 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
         case 'E':
           return rec.exp ? `Expired on ${formatDate(rec.exp)}` : 'Expired';
         case 'I':
-          return 'Inactive: it can’t be used for contracting until it’s reactivated';
+          return rec.inact
+            ? `CSLB’s file lists an inactivation date of ${formatDate(rec.inact)} and no later reactivation. Check the current status on CSLB.`
+            : 'Check the current status on CSLB';
         case 'S': {
           const why = rec.why ? SUSPENSION[rec.why] ?? `CSLB code “${rec.why}”` : '';
           return why ? `Suspended (${why})` : 'Suspended';

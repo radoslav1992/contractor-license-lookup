@@ -3,7 +3,8 @@
 
 /** Words that say nothing about which business it is. Never used as index keys. */
 export const STOP_WORDS = new Set([
-  'A', 'AN', 'AND', 'THE', 'OF', 'DBA', 'INC', 'LLC', 'LP', 'LLP', 'LTD', 'CO', 'CORP', 'CORPORATION', 'COMPANY',
+  'A', 'AN', 'AND', 'THE', 'OF', 'DBA', 'INC', 'INCORPORATED', 'LLC', 'LP', 'LLP', 'LTD', 'CO', 'CORP', 'CORPORATION',
+  'COMPANY', 'ENTERPRISES', 'CONTRACTOR', 'CONTRACTORS', 'CONTRACTING', 'CONDITIONING',
 ]);
 
 /** Status letters used in the published files. */
@@ -47,6 +48,8 @@ export interface LicenseRecord {
   st: StatusCode;
   /** CSLB's own status text when the license is suspended or unusual */
   why?: string;
+  /** Inactivation date with no later reactivation, YYYY-MM-DD */
+  inact?: string;
   cls: string[];
   bond?: Bond;
   wc?: WorkersComp;
@@ -163,9 +166,4 @@ const CLASS_NAMES: Record<string, string> = {
 export function classLabel(code: string): string {
   const name = CLASS_NAMES[code] ?? (/^D-\d+$/.test(code) ? 'Limited Specialty' : undefined);
   return name ? `${code} ${name}` : code;
-}
-
-/** Link to the license on CSLB's own Instant License Check. */
-export function cslbLicenseUrl(license: string): string {
-  return `https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=${encodeURIComponent(license)}`;
 }
