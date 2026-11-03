@@ -1859,6 +1859,167 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'connecticut',
+    code: 'CT',
+    name: 'Connecticut',
+    generalContractors: 'state',
+    short: 'Home improvement contractors register with the state, and the trades are licensed.',
+    summary:
+      'The Connecticut Department of Consumer Protection (DCP) registers home improvement and new home construction contractors, and its examining boards license electricians, plumbers and heating and cooling contractors. All of these can be checked on the state’s eLicense site, and only people who hired a registered home improvement contractor can claim from the Guaranty Fund.',
+    boards: [
+      {
+        name: 'Connecticut Department of Consumer Protection: contractor registration',
+        licenses: 'Home improvement contractors and salespeople, including roofing companies, and new home construction contractors',
+        lookupUrl: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+        lookupNote: 'Search by name, business name or credential number; filling in just one or two fields works best. Check that the status is active.',
+        website: 'https://portal.ct.gov/dcp/trade-practices-division/home-improvement-for-consumers',
+      },
+      {
+        name: 'Connecticut Department of Consumer Protection: trade examining boards',
+        licenses: 'Electrical, plumbing and piping, and heating, cooling and sheet metal contractors and journeypersons',
+        lookupUrl: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+        lookupNote: 'Use the same eLicense search. Contractor licenses (such as E-1, P-1 or S-1) are the ones that can sign contracts and pull permits.',
+        website: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+      },
+    ],
+    whenRequired: [
+      'A contractor must register with DCP before advertising or starting home improvement work once their home improvement contracts total more than $1,000 in a year.',
+      'All roofing companies must have an active home improvement contractor registration.',
+      'Electrical, plumbing and heating and cooling work needs a state trade license. A trade licensee working within their license doesn’t also need home improvement registration.',
+      'Anyone who builds new homes needs a separate new home construction contractor registration before a building permit can be issued.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Connecticut registration or license number. Home improvement contractors must show it on contracts and ads.',
+      'Search the eLicense lookup by name, business name or number.',
+      'Make sure the credential fits the job: home improvement registration for remodeling and roofing, new home construction registration for a new house, or a trade license for electrical, plumbing or HVAC work.',
+      'Check that the status is active and the expiration date hasn’t passed.',
+      'Agree in writing on who will pull the building permit, and confirm it with your local building official.',
+    ],
+    watchFor: [
+      'The Home Improvement Guaranty Fund can repay up to $25,000 per contract, but only if your contractor was registered. You need a court judgment first, must apply within two years of it, and the fund doesn’t cover new home construction.',
+      'Home improvement contracts must be in writing, signed and dated, and show the contractor’s registration number. You can cancel until midnight of the third business day after signing, and Saturday counts as a business day.',
+    ],
+    faq: [
+      {
+        q: 'What license does a remodeling contractor need in Connecticut?',
+        a: 'A home improvement contractor registration from DCP. New home builders need a new home construction contractor registration instead, and electricians, plumbers and HVAC contractors need state trade licenses.',
+      },
+      {
+        q: 'Do roofers need to be registered in Connecticut?',
+        a: 'Yes. All roofing companies must have an active home improvement contractor registration. Check it on eLicense before you sign.',
+      },
+      {
+        q: 'How much can the Connecticut Home Improvement Guaranty Fund pay?',
+        a: 'Up to $25,000 per contract (up from $15,000 since July 2022), if you hired a registered contractor. You need a court judgment against the contractor before you apply.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in Connecticut?',
+        a: 'Yes, until midnight of the third business day after signing; Saturday counts as a business day. The contractor must give you written notice of this right.',
+      },
+    ],
+    sources: [
+      { label: 'Connecticut eLicense lookup', url: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx' },
+      { label: 'DCP: home improvement for consumers', url: 'https://portal.ct.gov/dcp/trade-practices-division/home-improvement-for-consumers' },
+      { label: 'Connecticut General Statutes ch. 400 (home improvement contractors)', url: 'https://www.cga.ct.gov/current/pub/chap_400.htm' },
+      {
+        label: 'DCP: Home Improvement Guaranty Fund',
+        url: 'https://portal.ct.gov/dcp/knowledge-base/articles/consumer-topics/home-improvement/home-improvement-guaranty-fund',
+      },
+      {
+        label: 'DCP: scammers posing as roofing companies (2025)',
+        url: 'https://portal.ct.gov/dcp/news-releases-from-the-department-of-consumer-protection/2025-news-releases/be-aware-of-scammers-posing-as-roofing-companies',
+      },
+      { label: 'Office of Legislative Research: Guaranty Fund increase (2023)', url: 'https://cga.ct.gov/2023/rpt/pdf/2023-R-0170.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'iowa',
+    code: 'IA',
+    name: 'Iowa',
+    generalContractors: 'state-and-local',
+    short: 'Contractors register with the state; electricians, plumbers and HVAC need state licenses.',
+    summary:
+      'Iowa’s Department of Inspections, Appeals, and Licensing (DIAL) registers construction contractors, and its boards license electricians, plumbers and HVAC contractors. Registration is required once a contractor earns $2,000 a year from construction, but it exists to enforce insurance and tax rules and doesn’t vouch for quality.',
+    boards: [
+      {
+        name: 'Iowa Department of Inspections, Appeals, and Licensing (DIAL): contractor registration',
+        licenses: 'Construction contractors, including general contractors, remodelers, roofers and painters',
+        lookupUrl: 'https://dial.iowa.gov/licenses/building/contractors',
+        lookupNote: 'Use the contractor registration search linked from this page, one field at a time. Expired registrations don’t appear.',
+        website: 'https://dial.iowa.gov/',
+      },
+      {
+        name: 'Iowa Electrical Examining Board (DIAL)',
+        licenses: 'Electricians and electrical contractors',
+        lookupUrl: 'https://dial.iowa.gov/boards-0/electrical-examining-board',
+        lookupNote: 'Use the “Find a Licensed Electrician” link on the board’s page.',
+        website: 'https://dial.iowa.gov/licenses/building/electrical-licensing',
+      },
+      {
+        name: 'Iowa Plumbing and Mechanical Systems Board (DIAL)',
+        licenses: 'Plumbing, HVAC, refrigeration, sheet metal and hydronic professionals and contractors',
+        lookupUrl: 'https://dial.iowa.gov/boards-0/plumbing-mechanical',
+        lookupNote: 'Use the online license search on the board’s page.',
+        website: 'https://dial.iowa.gov/licenses/building/plumbing-mechanical',
+      },
+    ],
+    whenRequired: [
+      'Anyone who earns at least $2,000 a year from construction work must register with DIAL, including general contractors, roofers and painters.',
+      'People who earn less, or work only on their own property, don’t have to register.',
+      'Electrical work for others needs a state electrical license. An owner may do electrical work on the existing single-family home they live in, but new houses need a licensed electrical contractor.',
+      'Plumbing, HVAC, refrigeration, sheet metal and hydronic work needs a license from the Plumbing and Mechanical Systems Board.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Iowa registration number, and for electrical, plumbing or HVAC work their state license number.',
+      'Search DIAL’s contractor registration, and make sure the business name matches and the registration is current.',
+      'Check electricians with the Electrical Examining Board, and plumbers and HVAC contractors with the Plumbing and Mechanical Systems Board.',
+      'Ask your city building department about local rules. Some cities, such as Ames, also register contractors.',
+      'Check for complaints too: registration doesn’t guarantee quality or insurance.',
+    ],
+    watchFor: [
+      'For most sales of $25 or more made at your home, you have three business days to cancel, and the seller must give you written notice of this right.',
+      'Avoid large up-front payments, and ask for a lien waiver when you make the final payment. On home jobs, the general contractor must post a notice to the state’s mechanics’ lien registry within 10 days after work begins.',
+    ],
+    faq: [
+      {
+        q: 'Does Iowa require a general contractor license?',
+        a: 'Not a license, but a state registration with DIAL once a contractor earns $2,000 a year from construction. Some cities add their own registration rules.',
+      },
+      {
+        q: 'Does contractor registration mean a contractor is qualified?',
+        a: 'No. Registration exists to make sure contractors follow workers’ compensation and unemployment insurance laws. It doesn’t guarantee quality, reliability or insurance coverage.',
+      },
+      {
+        q: 'Do electricians and HVAC contractors need a license in Iowa?',
+        a: 'Yes. The Electrical Examining Board licenses electricians, and the Plumbing and Mechanical Systems Board licenses plumbing, HVAC, refrigeration, sheet metal and hydronic work.',
+      },
+      {
+        q: 'Can I cancel a contract I signed at my home in Iowa?',
+        a: 'Often, yes: you have three business days to cancel most sales of $25 or more made at your home. If you weren’t given written notice of this right, the time runs from when you get it.',
+      },
+    ],
+    sources: [
+      { label: 'Iowa DIAL: contractor registration', url: 'https://dial.iowa.gov/licenses/building/contractors' },
+      { label: 'Iowa Code § 91C.1 (contractors and exemptions)', url: 'https://www.legis.iowa.gov/docs/code/91C.1.pdf' },
+      {
+        label: 'Iowa DIAL: electrical licensing FAQs',
+        url: 'https://dial.iowa.gov/licenses/building/electrical-licensing/electrical-licensing-faqs',
+      },
+      { label: 'Iowa DIAL: Plumbing and Mechanical Systems Board', url: 'https://dial.iowa.gov/boards-0/plumbing-mechanical' },
+      {
+        label: 'Iowa Attorney General: home improvement and contractor tips',
+        url: 'https://www.iowaattorneygeneral.gov/for-consumers/general-consumer-information/home-property/home-improvement-contractor-tips',
+      },
+      {
+        label: 'Iowa Attorney General: right to cancel',
+        url: 'https://www.iowaattorneygeneral.gov/for-consumers/general-consumer-information/right-to-cancel',
+      },
+      { label: 'Iowa Code § 572.13A (notice of commencement of work)', url: 'https://www.legis.iowa.gov/docs/code/572.13A.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
