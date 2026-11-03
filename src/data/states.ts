@@ -2702,6 +2702,167 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'kansas',
+    code: 'KS',
+    name: 'Kansas',
+    generalContractors: 'local-only',
+    short: 'Kansas has no statewide contractor license; roofers register with the Attorney General.',
+    summary:
+      'Kansas doesn’t issue a statewide general contractor license, so cities and counties set their own licensing rules, including for trades such as electrical and plumbing. Roofing is the exception: most roofers must register with the Kansas Attorney General, and you can check them in its online directory.',
+    boards: [
+      {
+        name: 'Kansas Attorney General: roofing registration',
+        licenses: 'Residential and commercial roofing contractors, under the Kansas Roofing Contractor Registration Act',
+        lookupUrl: 'https://www.ag.ks.gov/divisions/public-protection/resources/roofing-registration-directory',
+        lookupNote:
+          'Search by company details, or leave the fields blank to list every registered roofer. Look for “In Good Standing”. “Exempt” means a general contractor that told the office it meets the legal exemption.',
+        website: 'https://www.ag.ks.gov/divisions/civil/licensing-inspections/roofing-registration',
+      },
+      {
+        name: 'Johnson County Contractor Licensing',
+        licenses:
+          'General, residential and trade contractors, including electrical, mechanical, plumbing and roofing, in unincorporated Johnson County and participating cities such as Overland Park, Olathe, Lenexa and Shawnee',
+        lookupUrl: 'https://cls.jocogov.org/searchcontractor',
+        lookupNote: 'Search by company, by person or by license class.',
+        website: 'https://www.jocogov.org/department/contractor-licensing',
+      },
+      {
+        name: 'Metropolitan Area Building and Construction Department (MABCD), Wichita and Sedgwick County',
+        licenses:
+          'General contractors (Class A, B, C residential and D) and trade contractors such as electrical, plumbing and roofing in Wichita, unincorporated Sedgwick County and contracted small cities',
+        lookupUrl: 'https://mabcdportal.sedgwickcounty.org/Views/CDR/CDRLookUpMain.aspx',
+        lookupNote: 'Choose Lookup Contractor License, then search by license number or name.',
+        website: 'https://www.sedgwickcounty.org/mabcd/contractor-licensing/',
+      },
+    ],
+    whenRequired: [
+      'Kansas has no state license for general contractors or remodelers. Cities and counties set their own rules, and some also license electrical, plumbing and HVAC contractors.',
+      'Roofing contractors must register with the Attorney General before doing paid residential or commercial roofing anywhere in Kansas.',
+      'Owners roofing their own property are exempt from roofing registration, as are jobs under $2,000 in labor and materials by someone who doesn’t advertise as a roofer, and some general contractors that meet criteria in state law.',
+      'State roofing registration is in addition to any city or county license, so a roofer in Johnson County or Wichita may need both.',
+    ],
+    howToCheck: [
+      'Ask the contractor which city or county license they hold, and for the license number.',
+      'In Johnson County, search the county’s Contractor Licensing portal. In Wichita and Sedgwick County, use the MABCD online lookup.',
+      'Anywhere else in Kansas, ask your city or county building department which license is required and how to check it.',
+      'For any roofing job, search the Attorney General’s roofing registration directory and confirm the status is “In Good Standing”.',
+      'Make sure the contractor, not you, pulls the building permit. The Attorney General warns that a contractor who asks you to pull it may not be registered.',
+    ],
+    watchFor: [
+      'For door-to-door sales of $25 or more, Kansas law lets you cancel until midnight of the third business day after you sign. The seller must tell you about this right.',
+      'After storms, the Attorney General warns about unregistered roofers going door to door. Check the roofing directory before you sign anything.',
+    ],
+    faq: [
+      {
+        q: 'Does Kansas require a general contractor license?',
+        a: 'Not at the state level. Cities and counties set their own contractor licensing rules, so check with the building or licensing office where the work will be done.',
+      },
+      {
+        q: 'How do I check if a roofer is registered in Kansas?',
+        a: 'Search the Kansas Attorney General’s roofing registration directory and look for “In Good Standing”. The Attorney General says registration isn’t an endorsement, so still check references and insurance.',
+      },
+      {
+        q: 'How do I look up a contractor license in Wichita or Johnson County?',
+        a: 'For Wichita and Sedgwick County, use the MABCD online license lookup. For Johnson County and its participating cities, use the county’s Contractor Licensing search.',
+      },
+      {
+        q: 'Can a general contractor replace my roof without roofing registration?',
+        a: 'Some general contractors are exempt if they meet criteria in state law, and they may appear in the directory as “Exempt”. If you’re unsure, ask the contractor for proof of registration or exemption.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Kansas Attorney General: roofing registration directory',
+        url: 'https://www.ag.ks.gov/divisions/public-protection/resources/roofing-registration-directory',
+      },
+      {
+        label: 'Kansas Attorney General: roofing information for consumers',
+        url: 'https://www.ag.ks.gov/divisions/civil/licensing-inspections/roofing-registration/roofing-faqs-for-consumers',
+      },
+      {
+        label: 'K.S.A. 50-6,129 (roofing registration exemptions)',
+        url: 'https://www.kslegislature.gov/b2025_26/laws/050_000_0000_chapter/050_006_0000_article/050_006_0129_section/050_006_0129_k/',
+      },
+      { label: 'Kansas Business One Stop: construction starter kit', url: 'https://ksbiz.kansas.gov/business-starter-kit/construction/' },
+      { label: 'Johnson County Contractor Licensing', url: 'https://www.jocogov.org/department/contractor-licensing' },
+      { label: 'MABCD: contractor licensing (Wichita and Sedgwick County)', url: 'https://www.sedgwickcounty.org/mabcd/contractor-licensing/' },
+      { label: 'K.S.A. 50-640 (door-to-door sales cancellation)', url: 'https://ksrevisor.gov/statutes/chapters/ch50/050_006_0040.html' },
+      {
+        label: 'Kansas Attorney General: your home and car',
+        url: 'https://www.ag.ks.gov/divisions/public-protection/consumer-protection/your-home-and-car',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'mississippi',
+    code: 'MS',
+    name: 'Mississippi',
+    generalContractors: 'state',
+    short: 'Mississippi’s State Board of Contractors licenses jobs above set dollar amounts.',
+    summary:
+      'The Mississippi State Board of Contractors (MSBOC) licenses commercial contractors on jobs over $50,000, and residential builders, remodelers and roofers above set amounts. Since July 1, 2022, electrical, plumbing, HVAC and mechanical subcontractors on those home projects also need a state license.',
+    boards: [
+      {
+        name: 'Mississippi State Board of Contractors (MSBOC)',
+        licenses:
+          'Commercial contractors, residential builders, remodelers and roofers, and residential electrical, plumbing, HVAC and mechanical subcontractors',
+        lookupUrl: 'https://search.msboc.us/ConsolidatedSearch.cfm',
+        lookupNote:
+          'Search by company name, qualifying person’s name or license number. Enter license numbers as digits only, and check that the type (Commercial or Residential), status and classification fit your job.',
+        website: 'https://www.msboc.us/',
+      },
+    ],
+    whenRequired: [
+      'Building a new home costing more than $50,000 needs a state residential license, such as Residential Builder.',
+      'Remodeling, additions or repairs over $10,000, and roofing on a home over $10,000, need a state residential license, such as Residential Remodeler or Residential Roofer.',
+      'Since July 1, 2022, electrical, plumbing, HVAC and mechanical subcontractors on those home projects need a state license, however small their part of the job.',
+      'Commercial jobs over $50,000 need a commercial license. For work below the state limits, the MSBOC says to check with your city or county.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s MSBOC license number and the exact company name on the license.',
+      'Search the MSBOC database by company name, qualifying person’s name or license number.',
+      'Confirm the license is active and its classification covers your job, such as Residential Remodeler, Residential Roofer or Residential Builder.',
+      'For electrical, plumbing or HVAC work on a covered home project, check the subcontractor’s own license too.',
+      'Check the MSBOC violators list. For jobs under the state limits, ask your city or county building office which license applies.',
+    ],
+    watchFor: [
+      'Don’t pull a permit for work an unlicensed person will do. The MSBOC warns that you take on the contractor’s duties, such as inspections and code compliance, and can be held responsible for bad work.',
+      'The MSBOC advises a written contract that lists the contractor’s license number and ties payments to finished work, with final payment only after all liens are released.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor to remodel my home in Mississippi?',
+        a: 'Yes, if the remodeling, addition or repair costs more than $10,000. The contractor needs a residential license from the Mississippi State Board of Contractors.',
+      },
+      {
+        q: 'How do I look up a Mississippi contractor license?',
+        a: 'Use the Mississippi State Board of Contractors’ online search. You can search by company name, qualifying person’s name or license number.',
+      },
+      {
+        q: 'Do electricians and plumbers need a state license in Mississippi?',
+        a: 'On a home project that needs a state license, the electrical, plumbing, HVAC and mechanical subcontractors must also be licensed by the MSBOC. Smaller jobs fall under city or county rules.',
+      },
+      {
+        q: 'Can I build my own house in Mississippi without a license?',
+        a: 'Yes. Mississippi has a homeowner exemption for building your own home, and since July 1, 2022, it’s limited to one home per calendar year.',
+      },
+    ],
+    sources: [
+      { label: 'MSBOC: frequently asked questions', url: 'https://www.msboc.us/general-info/frequently-asked-questions/' },
+      { label: 'MSBOC: contractor license search', url: 'https://search.msboc.us/ConsolidatedSearch.cfm' },
+      {
+        label: 'MSBOC: HB 1163 residential licensing law changes',
+        url: 'https://www.msboc.us/wp-content/uploads/2023/01/HB-1163-FACT-SHEET57.pdf',
+      },
+      { label: 'MSBOC: classifications', url: 'https://www.msboc.us/classifications/' },
+      { label: 'MSBOC: hire a contractor', url: 'https://www.msboc.us/consumers/hire-a-contractor/' },
+      { label: 'MSBOC: owner risks', url: 'https://www.msboc.us/consumers/owner-risks/' },
+      { label: 'MSBOC: violators', url: 'https://www.msboc.us/consumers/violators/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
