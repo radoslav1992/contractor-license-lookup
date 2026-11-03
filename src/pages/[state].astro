@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { STATES, type StateGuide } from '../data/states';
+import { STATES, article, type StateGuide } from '../data/states';
 
 export function getStaticPaths() {
   return STATES.map((state) => ({ params: { state: state.slug }, props: { state } }));
@@ -35,7 +35,7 @@ const jsonLd = [
 ---
 <Base
   title={`${state.name} Contractor License Lookup — How to Check a License`}
-  description={`How to check a ${state.name} contractor’s license with the official board. ${state.summary.split('. ')[0]}.`}
+  description={`How to check ${article(state.name)} ${state.name} contractor’s license with the official board. ${state.short}`}
   jsonLd={jsonLd}
 >
   <div class="wrap">
@@ -46,8 +46,8 @@ const jsonLd = [
     {state.generalContractors === 'local-only' && (
       <div class="callout" role="note">
         <strong>{state.name} has no state general contractor license.</strong>
-        Check trade licenses with the boards below, and ask your city or county whether the contractor is registered
-        and pulls permits there.
+        Use the searches below, and ask your city or county whether the contractor is licensed or registered there
+        and pulls permits.
       </div>
     )}
 
@@ -71,7 +71,7 @@ const jsonLd = [
       {state.whenRequired.map((w) => <li>{w}</li>)}
     </ul>
 
-    <h2>How to check a {state.name} contractor</h2>
+    <h2>How to check {article(state.name)} {state.name} contractor</h2>
     <ol class="steps">
       {state.howToCheck.map((s) => <li>{s}</li>)}
     </ol>
