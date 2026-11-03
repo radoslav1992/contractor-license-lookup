@@ -21,19 +21,10 @@ def post(page, target, extra):
 
 page = opener.open(URL, timeout=60).read().decode("utf-8", "replace")
 step2 = post(page, "ctl00$MainContent$ddlStatus", {"ctl00$MainContent$ddlStatus": "M"}).read().decode("utf-8", "replace")
-i = step2.find("MainContent_uplinks")
-links_html = step2[i:i + 3000]
+i = step2.find('id="MainContent_uplinks"')
 print("--- links area after choosing License Master")
-print(re.sub(r"\s+", " ", links_html[:2000]))
-
-href = re.search(r'href="([^"]+)"', links_html)
-link = html.unescape(href.group(1)) if href else ""
-print("--- link:", link)
-m = re.search(r"__doPostBack\('([^']+)'", link)
-if m:
-    resp = post(step2, m.group(1), {"ctl00$MainContent$ddlStatus": "M"})
-else:
-    resp = opener.open(urllib.parse.urljoin(URL, link), timeout=600)
+print(re.sub(r"<[^>]+>", " ", step2[i:i + 2500]).split("Back")[0])
+resp = post(step2, "ctl00$MainContent$lbMasterCSV", {"ctl00$MainContent$ddlStatus": "M"})
 body = resp.read()
 print("--- download ->", resp.status, resp.headers.get("Content-Type"), resp.headers.get("Content-Disposition"), len(body), "bytes")
 if body[:2] == b"PK":
