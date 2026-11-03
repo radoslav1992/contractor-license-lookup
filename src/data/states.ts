@@ -3348,6 +3348,176 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'idaho',
+    code: 'ID',
+    name: 'Idaho',
+    generalContractors: 'state',
+    short: 'Idaho registers contractors through DOPL for most jobs of $2,000 or more.',
+    summary:
+      'Idaho’s Division of Occupational and Professional Licenses (DOPL) registers contractors through the Idaho Contractors Board, and separate DOPL boards license electrical, plumbing and HVAC work. DOPL says contractor registration is a registration, not a license, so for trade work also check that the company holds the right DOPL trade license.',
+    boards: [
+      {
+        name: 'Idaho Contractors Board (DOPL)',
+        licenses: 'Contractor registration for building, altering, repairing, improving and demolishing structures',
+        lookupUrl: 'https://dopl.idaho.gov/con/',
+        lookupNote:
+          'Choose Search for a Registration on this page. To see formal actions against a contractor, use the Public Search in DOPL Online Services.',
+        website: 'https://dopl.idaho.gov/',
+      },
+      {
+        name: 'Idaho DOPL: Electrical, Plumbing and HVAC boards',
+        licenses:
+          'Electrical contractors and electricians (Electrical Board), plumbing contractors and plumbers (State Plumbing Board), and HVAC contractors and journeymen (HVAC Board)',
+        lookupUrl: 'https://dopl.idaho.gov/',
+        lookupNote: 'Use Search for a License or Registration on the DOPL home page.',
+        website: 'https://dopl.idaho.gov/',
+      },
+    ],
+    whenRequired: [
+      'A contractor must register with DOPL before doing construction work unless an exemption applies. Casual or minor jobs under $2,000 for labor and materials are exempt, but not when the work is part of a larger project or split up to avoid registering.',
+      'Electrical, plumbing and HVAC work needs a DOPL trade license. Licensed trade contractors working within their license don’t also need contractor registration.',
+      'Owners working on their own property are generally exempt from registration, with limits for owners who build or remodel to resell.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and Idaho registration number.',
+      'Search the Contractors Board registration search, and confirm the registration is active and the name matches your bid or contract.',
+      'For electrical, plumbing or HVAC work, use DOPL’s license search to confirm the company holds a contractor license for that trade.',
+      'To see formal actions against a contractor, use the Public Search in DOPL Online Services.',
+      'Before you sign a home job over $2,000, ask for the written disclosure Idaho law requires and a current certificate of liability insurance.',
+    ],
+    watchFor: [
+      'For work over $2,000 on a home with one to four units, the general contractor must give you a written disclosure before you sign. It explains your right to ask for lien waivers, proof of liability and workers’ compensation insurance, and an extended title insurance policy.',
+      'Registered contractors must carry general liability insurance of at least $300,000, so ask for a current certificate.',
+    ],
+    faq: [
+      {
+        q: 'Does Idaho require contractors to be licensed?',
+        a: 'Idaho requires contractors to register with DOPL through the Idaho Contractors Board, which DOPL says is a registration, not a license. Electricians, plumbers and HVAC contractors need separate DOPL trade licenses.',
+      },
+      {
+        q: 'Do I need a registered contractor for a small job in Idaho?',
+        a: 'Casual or minor jobs under $2,000 for labor and materials are exempt. The exemption doesn’t apply if the work is part of a larger project or split into smaller contracts to avoid registering.',
+      },
+      {
+        q: 'How do I check an Idaho electrician, plumber or HVAC license?',
+        a: 'Use Search for a License or Registration on the DOPL website. DOPL issues electrical, plumbing and HVAC licenses through its Electrical, Plumbing and HVAC boards.',
+      },
+      {
+        q: 'Does a licensed Idaho electrician or plumber also need contractor registration?',
+        a: 'Not for work within their trade license, according to DOPL. They need registration if they take on contracting work beyond it.',
+      },
+    ],
+    sources: [
+      { label: 'Idaho DOPL: Contractors Board', url: 'https://dopl.idaho.gov/con/' },
+      { label: 'Idaho DOPL: Contractors Board FAQ', url: 'https://dopl.idaho.gov/con/con-faq/' },
+      {
+        label: 'Idaho Code § 54-5205 (contractor registration exemptions)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title54/t54ch52/sect54-5205/',
+      },
+      {
+        label: 'Idaho Code § 54-5210 (registration and insurance)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title54/t54ch52/sect54-5210/',
+      },
+      {
+        label: 'Idaho Code § 45-525 (homeowner disclosure for contracts over $2,000)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/title45/t45ch5/sect45-525/',
+      },
+      {
+        label: 'Idaho Code § 54-1002 (electrical licenses required)',
+        url: 'https://legislature.idaho.gov/statutesrules/idstat/Title54/T54CH10/SECT54-1002/',
+      },
+      { label: 'Idaho DOPL: Electrical Board', url: 'https://dopl.idaho.gov/ele/' },
+      { label: 'Idaho DOPL: HVAC Board', url: 'https://dopl.idaho.gov/hvac/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'west-virginia',
+    code: 'WV',
+    name: 'West Virginia',
+    generalContractors: 'state',
+    short: 'West Virginia licenses contractors for home projects of $5,000 or more.',
+    summary:
+      'The West Virginia Contractor Licensing Board licenses contractors when a project costs $5,000 or more for residential work, or $25,000 or more for commercial work. Electricians are licensed separately by the State Fire Marshal, and plumbers and HVAC technicians by the Division of Labor.',
+    boards: [
+      {
+        name: 'West Virginia Contractor Licensing Board',
+        licenses:
+          'Contractors on projects of $5,000 or more for residential work or $25,000 or more for commercial work, in classifications such as residential, general building, remodeling and repair, electrical, plumbing, HVAC and specialty',
+        lookupUrl: 'https://wvclboard.wv.gov/verify/',
+        lookupNote:
+          'Search by license number (it starts with WV, and part of the number works), company name, DBA, city, county or classification. The board says the search is updated in real time.',
+        website: 'https://wvclboard.wv.gov/',
+      },
+      {
+        name: 'West Virginia Division of Labor',
+        licenses: 'Master and journeyman plumbers, plumbers in training, and HVAC technicians',
+        lookupUrl: 'https://labor.wv.gov/database-search',
+        lookupNote: 'The license database has separate searches for certified plumbers and certified HVAC technicians.',
+        website: 'https://labor.wv.gov/',
+      },
+      {
+        name: 'West Virginia State Fire Marshal: Regulatory and Licensing Division',
+        licenses: 'Master and journeyman electricians',
+        lookupUrl: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+        lookupNote: 'Use the Online Licensee Search link on this page, and search by name, city or license number.',
+        website: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+      },
+    ],
+    whenRequired: [
+      'A contractor license is required when the whole project costs $5,000 or more for residential work or $25,000 or more for commercial work, counting all labor and materials, not just one contractor’s share.',
+      'Owners or occupants who do the work on their own property themselves don’t need a contractor license. Some older state pages still show a $2,500 limit, but the current law uses $5,000 and $25,000.',
+      'Plumbing work needs a Division of Labor plumber license, and HVAC work a Division of Labor HVAC technician license. People working on their own single-family home, or an immediate family member’s, are exempt from the plumber license.',
+      'Electrical work needs a State Fire Marshal electrician license, except on property the person or their immediate family owns or leases.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s license number, which starts with WV, and the exact company name.',
+      'Search the Contractor Licensing Board’s contractor search by number, company name, DBA, city or county.',
+      'Confirm the license is active and its classification fits your job, such as residential, plumbing, electrical or HVAC.',
+      'For a plumber or HVAC technician, use the Division of Labor’s license database. For an electrician, use the State Fire Marshal’s licensee search.',
+      'Make sure the license number on your contract and in the contractor’s ads matches what you found, since state law requires it to appear there.',
+    ],
+    watchFor: [
+      'For licensed contracting work of $10,000 or more, state law requires a written contract that describes the work and its cost and is signed by both you and the contractor.',
+      'If an insurance claim is paying for a roof repair, you can cancel the roofing contract before midnight of the fifth business day after your insurer tells you all or part of the claim isn’t covered. The roofer can’t demand payment until that window ends and must refund payments within 10 days of a cancellation.',
+    ],
+    faq: [
+      {
+        q: 'Does West Virginia require a contractor license?',
+        a: 'Yes, for projects that cost $5,000 or more for residential work or $25,000 or more for commercial work, including all labor and materials. The West Virginia Contractor Licensing Board issues these licenses.',
+      },
+      {
+        q: 'How do I look up a contractor license in West Virginia?',
+        a: 'Use the Contractor Licensing Board’s contractor search. You can search by license number, company name, DBA, city, county or classification.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in West Virginia?',
+        a: 'The State Fire Marshal’s Office licenses electricians. The Division of Labor licenses plumbers and HVAC technicians.',
+      },
+      {
+        q: 'Does a West Virginia home improvement job need a written contract?',
+        a: 'Yes, for licensed contracting work of $10,000 or more, including materials and labor. The contract must describe the work and cost, be signed by both sides and show the contractor’s license number.',
+      },
+    ],
+    sources: [
+      { label: 'West Virginia Contractor Licensing Board: contractor search', url: 'https://wvclboard.wv.gov/verify/' },
+      { label: 'W. Va. Code § 30-42-3 (contractor definition and thresholds)', url: 'https://code.wvlegislature.gov/30-42-3/' },
+      { label: 'West Virginia Contractor Licensing Board: FAQ', url: 'https://wvclboard.wv.gov/www/download_resource.aspx?ID=208' },
+      { label: 'W. Va. Code § 30-42-6 (license number and written contracts)', url: 'https://code.wvlegislature.gov/30-42-6/' },
+      { label: 'West Virginia Division of Labor: license database search', url: 'https://labor.wv.gov/database-search' },
+      {
+        label: 'West Virginia Division of Labor: plumber certification FAQ',
+        url: 'https://labor.wv.gov/licensing/plumber-certification/plumber-certification-faq',
+      },
+      {
+        label: 'West Virginia State Fire Marshal: Regulatory and Licensing Division',
+        url: 'https://firemarshal.wv.gov/regulatory-and-licensing-division',
+      },
+      { label: 'W. Va. Code § 46A-6M-3 (roofing contracts paid by insurance)', url: 'https://code.wvlegislature.gov/46A-6M-3/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
