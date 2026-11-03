@@ -4032,6 +4032,165 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'alaska',
+    code: 'AK',
+    name: 'Alaska',
+    generalContractors: 'state',
+    short: 'Alaska registers all paid construction contractors, including handymen, through CBPL.',
+    summary:
+      'Alaska’s Division of Corporations, Business and Professional Licensing (CBPL) registers all paid construction contractors and licenses electrical and mechanical administrators, while the Department of Labor and Workforce Development certifies individual electricians and plumbers. Every registered contractor must carry a bond and insurance, and handymen may only take projects of $10,000 or less.',
+    boards: [
+      {
+        name: 'Alaska Division of Corporations, Business and Professional Licensing (CBPL)',
+        licenses:
+          'Construction contractor registrations (general, general with residential endorsement, specialty such as roofing, mechanical, and handyman) and electrical and mechanical administrator licenses',
+        lookupUrl: 'https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ProfessionalLicenseSearch.aspx',
+        lookupNote:
+          'Search by name or license number. Results show whether the license is current, its type, the owner and any past licensing action.',
+        website: 'https://www.commerce.alaska.gov/web/cbpl/professionallicensing/constructioncontractors.aspx',
+      },
+    ],
+    whenRequired: [
+      'Anyone paid to do construction work must be registered with CBPL, bonded and insured, however small the job.',
+      'A handyman registration covers only projects of $10,000 or less in total, including all labor and materials.',
+      'A general contractor needs a residential endorsement to build new homes or to do residential remodeling worth more than 25% of the structure’s value.',
+      'An electrical business must have a licensed electrical administrator, and a plumbing or heating business a licensed mechanical administrator. The electricians and plumbers doing the work need their own certificate of fitness from the Department of Labor and Workforce Development.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and CBPL registration number.',
+      'Search CBPL’s professional license search. Confirm the registration is current and fits your job: handyman for projects of $10,000 or less, or specialty, mechanical, or general with a residential endorsement.',
+      'For electrical, plumbing or heating work, ask who the business’s licensed electrical or mechanical administrator is and search that person too.',
+      'Ask the contractor to show current proof of the bond and insurance that state law requires.',
+      'Ask the electricians and plumbers on the job to show their certificate of fitness, which they must carry. There’s no online search for these, but the Department of Labor’s Mechanical Inspection Section (mi@alaska.gov) can confirm one.',
+    ],
+    watchFor: [
+      'Some contractors say “licensed and insured” when they have only a business license and liability insurance. A CBPL registration comes with a bond, from $5,000 for handymen up to $25,000 for general contractors, and you can sue on that bond over improper work or breach of contract.',
+      'If you buy goods or services of $10 or more at your home, or anywhere other than the seller’s place of business, Alaska law gives you five days to cancel, and the seller must tell you about this right.',
+    ],
+    faq: [
+      {
+        q: 'Do handymen need a license in Alaska?',
+        a: 'Yes. Handymen must register with CBPL and carry a $5,000 bond and insurance. They can only take projects of $10,000 or less in total labor and materials.',
+      },
+      {
+        q: 'What is a residential endorsement in Alaska?',
+        a: 'It’s an add-on to a general contractor registration. A general contractor needs it to build new homes or to do residential remodeling worth more than 25% of the structure’s value.',
+      },
+      {
+        q: 'How do I check an electrician or plumber in Alaska?',
+        a: 'Search the electrical or plumbing business in CBPL’s license search. Individual electricians and plumbers hold a certificate of fitness from the Department of Labor and must carry it on the job, and the Mechanical Inspection Section can confirm one.',
+      },
+      {
+        q: 'Do roofers need a license in Alaska?',
+        a: 'Yes. Roofing is a specialty contractor trade in Alaska, so a roofer you pay must hold an active CBPL contractor registration with a bond and insurance.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Alaska CBPL: construction contractors',
+        url: 'https://www.commerce.alaska.gov/web/cbpl/professionallicensing/constructioncontractors.aspx',
+      },
+      {
+        label: 'Alaska CBPL: hiring a contractor',
+        url: 'https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ConstructionContractors/HiringaContractor.aspx',
+      },
+      {
+        label: 'Alaska CBPL: construction contractor statutes and regulations (2023)',
+        url: 'https://www.commerce.alaska.gov/web/portals/5/pub/contractorstatutes.pdf',
+      },
+      {
+        label: 'Alaska CBPL: specialty contractor trades list',
+        url: 'https://www.commerce.alaska.gov/web/Portals/5/pub/con4818_specialty%20contractor%20trades%20list.pdf',
+      },
+      { label: 'Alaska Department of Labor: plumbing and electrical', url: 'https://labor.alaska.gov/lss/plumbing_electrical.htm' },
+      {
+        label: 'Alaska Department of Labor: certificates of fitness statutes and regulations',
+        url: 'https://labor.alaska.gov/lss/forms/cof-regs.pdf',
+      },
+      { label: 'Alaska Department of Labor: homeowner’s guide to hiring a contractor', url: 'https://labor.alaska.gov/lss/forms/Hiring_a_contractor.pdf' },
+      { label: 'Alaska Department of Law: consumer protection laws', url: 'https://law.alaska.gov/department/civil/consumer/laws.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'vermont',
+    code: 'VT',
+    name: 'Vermont',
+    generalContractors: 'state',
+    short: 'Vermont’s OPR registers residential contractors for home jobs over $10,000.',
+    summary:
+      'Vermont doesn’t license general contractors, but since April 1, 2023, the Office of Professional Regulation (OPR) has required residential contractors to register for jobs over $10,000, and the Division of Fire Safety licenses electricians and plumbers. The Attorney General also keeps a public registry of people convicted of home improvement fraud.',
+    boards: [
+      {
+        name: 'Vermont Office of Professional Regulation (OPR)',
+        licenses: 'Residential contractor registration for jobs over $10,000, including building, remodeling, repair, roofing, painting, paving and weatherization',
+        lookupUrl: 'https://sos.vermont.gov/opr/find-a-professional',
+        lookupNote: 'Most searches work with just the name. Results show the registration type, status, dates and any discipline.',
+        website: 'https://sos.vermont.gov/residential-contractors/homeowner-resources',
+      },
+      {
+        name: 'Vermont Division of Fire Safety',
+        licenses: 'Electricians and plumbers, plus certifications for oil burner installers and natural gas and propane installers',
+        lookupUrl: 'https://data.vermont.gov/Government/DFS-Licensing-MasterList/cy8e-89cz/data',
+        lookupNote:
+          'This is the division’s master list of active licenses on Vermont’s open data site. Search by name to see the license type and expiration date.',
+        website: 'https://firesafety.vermont.gov/licensing',
+      },
+    ],
+    whenRequired: [
+      'Residential contractors must register with OPR before contracting with a homeowner for work worth more than $10,000, including labor and materials.',
+      'Covered work includes building, remodeling and repairing homes and buildings with four or fewer units, including roofing, painting, paving, weatherization, and heating, plumbing, electrical and solar work.',
+      'Employees of a registered business don’t need their own registration, and neither do licensed tradespeople, engineers or architects working within their license.',
+      'Electrical and plumbing work needs a Division of Fire Safety license, except for owners working on their own owner-occupied, freestanding single-family home. The exception doesn’t cover rentals.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and OPR registration number.',
+      'Search OPR’s Find a Professional tool. Confirm the registration is active and look for any discipline.',
+      'For electrical or plumbing work, look up the electrician or plumber by name in the Division of Fire Safety’s licensing master list.',
+      'Search the Attorney General’s Home and Land Improvement Fraud Registry for the contractor’s name.',
+      'Ask to see proof of insurance, and get a written contract before you pay a deposit.',
+    ],
+    watchFor: [
+      'Jobs over $10,000 need a written contract signed before you pay a deposit or work starts. It must include the scope of work and how changes are handled, and any change must be in a signed writing.',
+      'If a contractor sells you a job at your home, you can generally cancel until midnight of the third business day after signing, and the seller must give you a written cancellation notice.',
+    ],
+    faq: [
+      {
+        q: 'Does Vermont license general contractors?',
+        a: 'No. Vermont doesn’t license general contractors, but residential contractors must register with OPR for jobs over $10,000. Electricians and plumbers are licensed separately by the Division of Fire Safety.',
+      },
+      {
+        q: 'Does a contractor need to register for a job under $10,000 in Vermont?',
+        a: 'No. OPR registration applies only above $10,000. Electrical and plumbing work still needs a licensed tradesperson, whatever the job size.',
+      },
+      {
+        q: 'What is Vermont’s home improvement fraud registry?',
+        a: 'The Attorney General keeps a public list of people and businesses convicted of home improvement fraud, or that settled civil fraud claims with the state. Search it before you hire anyone.',
+      },
+      {
+        q: 'How do I report a problem with a Vermont contractor?',
+        a: 'File a complaint with the Attorney General’s Consumer Assistance Program, or with OPR if the contractor is registered. Home improvement fraud is a crime, so also report suspected fraud to local police.',
+      },
+    ],
+    sources: [
+      { label: 'Vermont OPR: residential contractor FAQs', url: 'https://sos.vermont.gov/residential-contractors/residential-contractor-faqs' },
+      { label: 'Vermont OPR: Find a Professional', url: 'https://sos.vermont.gov/opr/find-a-professional' },
+      { label: '26 V.S.A. ch. 106 (residential contractors)', url: 'https://legislature.vermont.gov/statutes/fullchapter/26/106' },
+      { label: 'Vermont Division of Fire Safety: trade licensing', url: 'https://firesafety.vermont.gov/licensing' },
+      {
+        label: 'Vermont Division of Fire Safety: licensing master list (open data)',
+        url: 'https://data.vermont.gov/Government/DFS-Licensing-MasterList/cy8e-89cz/data',
+      },
+      { label: 'Vermont Attorney General: home improvements', url: 'https://ago.vermont.gov/home-improvements' },
+      {
+        label: 'Vermont Attorney General: Home and Land Improvement Fraud Registry',
+        url: 'https://ago.vermont.gov/cap/home-and-land-improvement-fraud-registry',
+      },
+      { label: '9 V.S.A. § 2454 (home solicitation sales)', url: 'https://legislature.vermont.gov/statutes/section/09/063/02454' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
