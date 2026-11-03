@@ -1539,6 +1539,160 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'indiana',
+    code: 'IN',
+    name: 'Indiana',
+    generalContractors: 'local-only',
+    short: 'Plumbers need a state license; other contractors are licensed by cities and counties.',
+    summary:
+      'Indiana has no state license for general contractors, electricians or HVAC contractors, so cities and counties such as Indianapolis and Allen County license them. Plumbers are the exception: the state licenses plumbing contractors and journeyman plumbers.',
+    boards: [
+      {
+        name: 'Indiana Professional Licensing Agency: Plumbing Commission',
+        licenses: 'Plumbing contractors, journeyman plumbers and apprentice plumbers statewide',
+        lookupUrl: 'https://secure.in.gov/pla/license/free-search-and-verify/',
+        lookupNote: 'Use the free Search & Verify tool by name or license number, and confirm the plumbing license is active.',
+        website: 'https://www.in.gov/pla/professions/plumbing-home/',
+      },
+      {
+        name: 'City of Indianapolis Department of Business and Neighborhood Services',
+        licenses: 'General, electrical, HVAC and wrecking contractors in Indianapolis, and city registration of state-licensed plumbing contractors',
+        lookupUrl: 'https://www.indy.gov/activity/licensed-contractors',
+        lookupNote:
+          'The city posts lists of licensed contractors, usually updated the first Monday of each month. Beech Grove, Lawrence, Southport and Speedway license contractors themselves.',
+        website: 'https://www.indy.gov/activity/contractor-licenses',
+      },
+    ],
+    whenRequired: [
+      'There is no state license for general contractors, electricians or HVAC contractors. Your city or county decides who needs a license.',
+      'Plumbing contractors and journeyman plumbers need a state license. In Indianapolis, they must also register with the city.',
+      'In Indianapolis, anyone doing construction, sewer, driveway or excavation work must be a listed contractor, and the hired contractor pulls the permits.',
+      'In Allen County, including Fort Wayne, all contractors and subcontractors must be licensed or registered with the county Building Department, which you can contact to confirm a license.',
+    ],
+    howToCheck: [
+      'Ask the contractor which license they hold and which city or county issued it.',
+      'For plumbing work, search the Professional Licensing Agency’s free Search & Verify tool and confirm the license is active.',
+      'In Indianapolis, find the contractor on the city’s licensed contractor lists.',
+      'Elsewhere, ask your city or county building department whether the contractor is licensed, bonded and insured there.',
+      'Check for complaints with the Attorney General’s Consumer Protection Division before you sign.',
+    ],
+    watchFor: [
+      'Home improvement contracts over $150 must be in writing, with the price, a description of the work and approximate start and finish dates. The Attorney General says you generally have three business days to cancel.',
+      'A contractor may not offer to pay or rebate your insurance deductible to win a job. Be wary of anyone who says “the city’s list just hasn’t been updated yet”: storm chasers use that line.',
+    ],
+    faq: [
+      {
+        q: 'Does Indiana have a state contractor license?',
+        a: 'Not for general contractors. The state licenses plumbers; cities and counties such as Indianapolis and Allen County license other contractors.',
+      },
+      {
+        q: 'How do I check a plumber’s license in Indiana?',
+        a: 'Use the Professional Licensing Agency’s free Search & Verify tool by name or license number, and make sure the license is active.',
+      },
+      {
+        q: 'How do I check a contractor in Indianapolis?',
+        a: 'Look the contractor up on the city’s licensed contractor lists. Licensed contractors have a bond and liability insurance on file with the city.',
+      },
+      {
+        q: 'Do I need a written contract for home improvement work in Indiana?',
+        a: 'Yes, for contracts over $150. It must show the price, the work and approximate start and finish dates.',
+      },
+    ],
+    sources: [
+      { label: 'Indiana PLA: plumbing', url: 'https://www.in.gov/pla/professions/plumbing-home/' },
+      { label: 'Indiana PLA: free Search & Verify', url: 'https://secure.in.gov/pla/license/free-search-and-verify/' },
+      { label: 'Indianapolis: contractor licenses', url: 'https://www.indy.gov/activity/contractor-licenses' },
+      { label: 'Indianapolis: licensed contractors', url: 'https://www.indy.gov/activity/licensed-contractors' },
+      { label: 'Allen County: contractor licensing', url: 'https://www.allencounty.in.gov/237/Contractor-Licensing' },
+      {
+        label: 'Indiana Attorney General: home improvement scams',
+        url: 'https://secure.in.gov/attorneygeneral/consumer-protection-division/files/CPD_Fact_Sheet-Home_improv_Scams.pdf',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'missouri',
+    code: 'MO',
+    name: 'Missouri',
+    generalContractors: 'local-only',
+    short: 'No state general contractor license; cities and counties such as Kansas City license them.',
+    summary:
+      'Missouri has no statewide general contractor license, so cities and counties such as Kansas City, St. Louis and St. Louis County license contractors and trades. The state offers an optional statewide license for electrical contractors, but local permits still apply.',
+    boards: [
+      {
+        name: 'Missouri Division of Professional Registration: Office of Statewide Electrical Contractors',
+        licenses: 'Electrical contractors who choose the optional statewide license',
+        lookupUrl: 'https://renew.pr.mo.gov/licensee-search.asp',
+        lookupNote: 'Search by name, license number, profession or county. Results show active licensees.',
+        website: 'https://pr.mo.gov/electricalcontractors.asp',
+      },
+      {
+        name: 'Kansas City, Missouri City Planning & Development: contractor licensing',
+        licenses: 'Residential building, electrical, plumbing, mechanical and other contractors in Kansas City, Missouri',
+        lookupUrl: 'https://www.kcmo.gov/city-hall/departments/city-planning-development/contractor-licensing',
+        lookupNote: 'Use the search for active licensed contractors on this page.',
+        website: 'https://www.kcmo.gov/city-hall/departments/city-planning-development',
+      },
+      {
+        name: 'St. Louis County Department of Transportation and Public Works',
+        licenses: 'Electrical contractors, master plumbers and mechanical (HVAC) contractors in St. Louis County. The county doesn’t license general contractors',
+        lookupUrl:
+          'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/mechanical-licensing/list-of-mechanical-certified-contractors/certified-mechanical-contractor-list/',
+        lookupNote: 'The county posts lists of certified mechanical contractors and licensed master plumbers. For electricians, contact the county.',
+        website: 'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/residential-building/',
+      },
+    ],
+    whenRequired: [
+      'There is no state license for general contractors. The city or county where the home is sets the rules.',
+      'In Kansas City, anyone who builds, structurally alters or enlarges a one- or two-family home needs a residential building contractor license or must work under one. An owner doing their own work on the single-family home they live in is exempt.',
+      'In the City of St. Louis, contractors need a city business license, and plumbing and mechanical permits go only to contractors licensed by the Building Division. The city has no online license search, so contact the Building Division.',
+      'In St. Louis County, electrical, plumbing and mechanical work must be done by contractors licensed with the county.',
+    ],
+    howToCheck: [
+      'Find out which city or county issues building permits for your address, since each sets its own rules.',
+      'In Kansas City, search the city’s active licensed contractors.',
+      'In St. Louis County, check the county’s lists of mechanical contractors and master plumbers, or contact Transportation and Public Works.',
+      'In the City of St. Louis, contact the Building Division to confirm a trade license, and look up past permits by address.',
+      'For a statewide electrical license, use the Division of Professional Registration’s licensee search, and check for complaints with the Attorney General.',
+    ],
+    watchFor: [
+      'If your insurer denies all or part of a claim, you can cancel an insurance-paid roofing or exterior repair contract until midnight of the fifth business day after the insurer’s written notice. The contractor must refund your payments within 10 days.',
+      'If you sign a contract at home after a door-to-door sales pitch, you generally have three business days to cancel in writing.',
+    ],
+    faq: [
+      {
+        q: 'Does Missouri have a state contractor license?',
+        a: 'Not for general contractors. Cities and counties such as Kansas City, St. Louis and St. Louis County license contractors and trades. The state offers an optional statewide electrical contractor license.',
+      },
+      {
+        q: 'Do electricians need a state license in Missouri?',
+        a: 'Not always. The statewide electrical contractor license is optional; many cities and counties license electrical contractors, and local permits and inspections still apply.',
+      },
+      {
+        q: 'How do I check a contractor in Kansas City, Missouri?',
+        a: 'Search the city’s active licensed contractors on the City Planning & Development contractor licensing page.',
+      },
+      {
+        q: 'Can I cancel a roofing contract if my insurance denies the claim?',
+        a: 'Yes. You can cancel before midnight of the fifth business day after the insurer’s written denial, by written notice to the address in the contract. The contractor must refund payments within 10 days, except for emergency work you approved in writing.',
+      },
+    ],
+    sources: [
+      { label: 'Missouri Office of Statewide Electrical Contractors', url: 'https://pr.mo.gov/electricalcontractors.asp' },
+      { label: 'Missouri Division of Professional Registration: licensee search', url: 'https://renew.pr.mo.gov/licensee-search.asp' },
+      { label: 'Kansas City, MO: contractor licensing', url: 'https://www.kcmo.gov/city-hall/departments/city-planning-development/contractor-licensing' },
+      {
+        label: 'St. Louis County: residential repairs and renovations guide',
+        url: 'https://stlouiscountymo.gov/st-louis-county-departments/transportation-and-public-works/publications-and-manuals/pw-residential-guides/repairs-and-renovations/',
+      },
+      { label: 'City of St. Louis: Building Division', url: 'https://www.stlouis-mo.gov/government/departments/public-safety/building/index.cfm' },
+      { label: 'RSMo § 407.725 (insurance-paid roofing contracts)', url: 'https://revisor.mo.gov/main/OneSection.aspx?section=407.725' },
+      { label: 'Missouri Attorney General: door-to-door sales', url: 'https://ago.mo.gov/get-help/programs-services-from-a-z/door-to-door-sales/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
