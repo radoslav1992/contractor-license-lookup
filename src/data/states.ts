@@ -1859,6 +1859,849 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
   },
+  {
+    slug: 'connecticut',
+    code: 'CT',
+    name: 'Connecticut',
+    generalContractors: 'state',
+    short: 'Home improvement contractors register with the state, and the trades are licensed.',
+    summary:
+      'The Connecticut Department of Consumer Protection (DCP) registers home improvement and new home construction contractors, and its examining boards license electricians, plumbers and heating and cooling contractors. All of these can be checked on the state’s eLicense site, and only people who hired a registered home improvement contractor can claim from the Guaranty Fund.',
+    boards: [
+      {
+        name: 'Connecticut Department of Consumer Protection: contractor registration',
+        licenses: 'Home improvement contractors and salespeople, including roofing companies, and new home construction contractors',
+        lookupUrl: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+        lookupNote: 'Search by name, business name or credential number; filling in just one or two fields works best. Check that the status is active.',
+        website: 'https://portal.ct.gov/dcp/trade-practices-division/home-improvement-for-consumers',
+      },
+      {
+        name: 'Connecticut Department of Consumer Protection: trade examining boards',
+        licenses: 'Electrical, plumbing and piping, and heating, cooling and sheet metal contractors and journeypersons',
+        lookupUrl: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+        lookupNote: 'Use the same eLicense search. Contractor licenses (such as E-1, P-1 or S-1) are the ones that can sign contracts and pull permits.',
+        website: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx',
+      },
+    ],
+    whenRequired: [
+      'A contractor must register with DCP before advertising or starting home improvement work once their home improvement contracts total more than $1,000 in a year.',
+      'All roofing companies must have an active home improvement contractor registration.',
+      'Electrical, plumbing and heating and cooling work needs a state trade license. A trade licensee working within their license doesn’t also need home improvement registration.',
+      'Anyone who builds new homes needs a separate new home construction contractor registration before a building permit can be issued.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Connecticut registration or license number. Home improvement contractors must show it on contracts and ads.',
+      'Search the eLicense lookup by name, business name or number.',
+      'Make sure the credential fits the job: home improvement registration for remodeling and roofing, new home construction registration for a new house, or a trade license for electrical, plumbing or HVAC work.',
+      'Check that the status is active and the expiration date hasn’t passed.',
+      'Agree in writing on who will pull the building permit, and confirm it with your local building official.',
+    ],
+    watchFor: [
+      'The Home Improvement Guaranty Fund can repay up to $25,000 per contract, but only if your contractor was registered. You need a court judgment first, must apply within two years of it, and the fund doesn’t cover new home construction.',
+      'Home improvement contracts must be in writing, signed and dated, and show the contractor’s registration number. You can cancel until midnight of the third business day after signing, and Saturday counts as a business day.',
+    ],
+    faq: [
+      {
+        q: 'What license does a remodeling contractor need in Connecticut?',
+        a: 'A home improvement contractor registration from DCP. New home builders need a new home construction contractor registration instead, and electricians, plumbers and HVAC contractors need state trade licenses.',
+      },
+      {
+        q: 'Do roofers need to be registered in Connecticut?',
+        a: 'Yes. All roofing companies must have an active home improvement contractor registration. Check it on eLicense before you sign.',
+      },
+      {
+        q: 'How much can the Connecticut Home Improvement Guaranty Fund pay?',
+        a: 'Up to $25,000 per contract (up from $15,000 since July 2022), if you hired a registered contractor. You need a court judgment against the contractor before you apply.',
+      },
+      {
+        q: 'Can I cancel a home improvement contract in Connecticut?',
+        a: 'Yes, until midnight of the third business day after signing; Saturday counts as a business day. The contractor must give you written notice of this right.',
+      },
+    ],
+    sources: [
+      { label: 'Connecticut eLicense lookup', url: 'https://www.elicense.ct.gov/Lookup/LicenseLookup.aspx' },
+      { label: 'DCP: home improvement for consumers', url: 'https://portal.ct.gov/dcp/trade-practices-division/home-improvement-for-consumers' },
+      { label: 'Connecticut General Statutes ch. 400 (home improvement contractors)', url: 'https://www.cga.ct.gov/current/pub/chap_400.htm' },
+      {
+        label: 'DCP: Home Improvement Guaranty Fund',
+        url: 'https://portal.ct.gov/dcp/knowledge-base/articles/consumer-topics/home-improvement/home-improvement-guaranty-fund',
+      },
+      {
+        label: 'DCP: scammers posing as roofing companies (2025)',
+        url: 'https://portal.ct.gov/dcp/news-releases-from-the-department-of-consumer-protection/2025-news-releases/be-aware-of-scammers-posing-as-roofing-companies',
+      },
+      { label: 'Office of Legislative Research: Guaranty Fund increase (2023)', url: 'https://cga.ct.gov/2023/rpt/pdf/2023-R-0170.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'iowa',
+    code: 'IA',
+    name: 'Iowa',
+    generalContractors: 'state-and-local',
+    short: 'Contractors register with the state; electricians, plumbers and HVAC need state licenses.',
+    summary:
+      'Iowa’s Department of Inspections, Appeals, and Licensing (DIAL) registers construction contractors, and its boards license electricians, plumbers and HVAC contractors. Registration is required once a contractor earns $2,000 a year from construction, but it exists to enforce insurance and tax rules and doesn’t vouch for quality.',
+    boards: [
+      {
+        name: 'Iowa Department of Inspections, Appeals, and Licensing (DIAL): contractor registration',
+        licenses: 'Construction contractors, including general contractors, remodelers, roofers and painters',
+        lookupUrl: 'https://dial.iowa.gov/licenses/building/contractors',
+        lookupNote: 'Use the contractor registration search linked from this page, one field at a time. Expired registrations don’t appear.',
+        website: 'https://dial.iowa.gov/',
+      },
+      {
+        name: 'Iowa Electrical Examining Board (DIAL)',
+        licenses: 'Electricians and electrical contractors',
+        lookupUrl: 'https://dial.iowa.gov/boards-0/electrical-examining-board',
+        lookupNote: 'Use the “Find a Licensed Electrician” link on the board’s page.',
+        website: 'https://dial.iowa.gov/licenses/building/electrical-licensing',
+      },
+      {
+        name: 'Iowa Plumbing and Mechanical Systems Board (DIAL)',
+        licenses: 'Plumbing, HVAC, refrigeration, sheet metal and hydronic professionals and contractors',
+        lookupUrl: 'https://dial.iowa.gov/boards-0/plumbing-mechanical',
+        lookupNote: 'Use the online license search on the board’s page.',
+        website: 'https://dial.iowa.gov/licenses/building/plumbing-mechanical',
+      },
+    ],
+    whenRequired: [
+      'Anyone who earns at least $2,000 a year from construction work must register with DIAL, including general contractors, roofers and painters.',
+      'People who earn less, or work only on their own property, don’t have to register.',
+      'Electrical work for others needs a state electrical license. An owner may do electrical work on the existing single-family home they live in, but new houses need a licensed electrical contractor.',
+      'Plumbing, HVAC, refrigeration, sheet metal and hydronic work needs a license from the Plumbing and Mechanical Systems Board.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s Iowa registration number, and for electrical, plumbing or HVAC work their state license number.',
+      'Search DIAL’s contractor registration, and make sure the business name matches and the registration is current.',
+      'Check electricians with the Electrical Examining Board, and plumbers and HVAC contractors with the Plumbing and Mechanical Systems Board.',
+      'Ask your city building department about local rules. Some cities, such as Ames, also register contractors.',
+      'Check for complaints too: registration doesn’t guarantee quality or insurance.',
+    ],
+    watchFor: [
+      'For most sales of $25 or more made at your home, you have three business days to cancel, and the seller must give you written notice of this right.',
+      'Avoid large up-front payments, and ask for a lien waiver when you make the final payment. On home jobs, the general contractor must post a notice to the state’s mechanics’ lien registry within 10 days after work begins.',
+    ],
+    faq: [
+      {
+        q: 'Does Iowa require a general contractor license?',
+        a: 'Not a license, but a state registration with DIAL once a contractor earns $2,000 a year from construction. Some cities add their own registration rules.',
+      },
+      {
+        q: 'Does contractor registration mean a contractor is qualified?',
+        a: 'No. Registration exists to make sure contractors follow workers’ compensation and unemployment insurance laws. It doesn’t guarantee quality, reliability or insurance coverage.',
+      },
+      {
+        q: 'Do electricians and HVAC contractors need a license in Iowa?',
+        a: 'Yes. The Electrical Examining Board licenses electricians, and the Plumbing and Mechanical Systems Board licenses plumbing, HVAC, refrigeration, sheet metal and hydronic work.',
+      },
+      {
+        q: 'Can I cancel a contract I signed at my home in Iowa?',
+        a: 'Often, yes: you have three business days to cancel most sales of $25 or more made at your home. If you weren’t given written notice of this right, the time runs from when you get it.',
+      },
+    ],
+    sources: [
+      { label: 'Iowa DIAL: contractor registration', url: 'https://dial.iowa.gov/licenses/building/contractors' },
+      { label: 'Iowa Code § 91C.1 (contractors and exemptions)', url: 'https://www.legis.iowa.gov/docs/code/91C.1.pdf' },
+      {
+        label: 'Iowa DIAL: electrical licensing FAQs',
+        url: 'https://dial.iowa.gov/licenses/building/electrical-licensing/electrical-licensing-faqs',
+      },
+      { label: 'Iowa DIAL: Plumbing and Mechanical Systems Board', url: 'https://dial.iowa.gov/boards-0/plumbing-mechanical' },
+      {
+        label: 'Iowa Attorney General: home improvement and contractor tips',
+        url: 'https://www.iowaattorneygeneral.gov/for-consumers/general-consumer-information/home-property/home-improvement-contractor-tips',
+      },
+      {
+        label: 'Iowa Attorney General: right to cancel',
+        url: 'https://www.iowaattorneygeneral.gov/for-consumers/general-consumer-information/right-to-cancel',
+      },
+      { label: 'Iowa Code § 572.13A (notice of commencement of work)', url: 'https://www.legis.iowa.gov/docs/code/572.13A.pdf' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'alabama',
+    code: 'AL',
+    name: 'Alabama',
+    generalContractors: 'state',
+    short: 'Alabama has separate state boards for home builders, general contractors and each trade.',
+    summary:
+      'Alabama splits contractor licensing among state boards. The Home Builders Licensure Board covers home building, remodeling and roofing, and the Licensing Board for General Contractors covers large, mainly commercial projects. Electricians, plumbers and gas fitters, and HVAC contractors each have their own board, so check the one that matches the job.',
+    boards: [
+      {
+        name: 'Alabama Home Builders Licensure Board',
+        licenses: 'Home builders and remodelers (unlimited and limited licenses) and residential roofers',
+        lookupUrl: 'https://hblb.alabama.gov/?p=1515',
+        lookupNote: 'Search by any field. The name search also finds names that sound alike.',
+        website: 'https://hblb.alabama.gov/',
+      },
+      {
+        name: 'Alabama Licensing Board for General Contractors',
+        licenses: 'General contractors on projects of $100,000 or more, mainly commercial and industrial',
+        lookupUrl: 'https://genconbd.alabama.gov/search/',
+        website: 'https://genconbd.alabama.gov/',
+      },
+      {
+        name: 'Alabama Electrical Contractors Board',
+        licenses: 'Electrical contractors and journeyman electricians',
+        lookupUrl: 'https://aecb.alabama.gov/consumers/',
+        lookupNote: 'Choose Licensee Search on the board’s Consumers page.',
+        website: 'https://aecb.alabama.gov/',
+      },
+      {
+        name: 'Alabama Plumbers and Gas Fitters Examining Board',
+        licenses: 'Master and journeyman plumbers and gas fitters, and registered apprentices',
+        lookupUrl: 'https://pgfb.alabama.gov/',
+        lookupNote: 'Open Licensee Search from the Consumers menu on the board’s website.',
+        website: 'https://pgfb.alabama.gov/',
+      },
+      {
+        name: 'Alabama Board of Heating, Air Conditioning and Refrigeration Contractors',
+        licenses: 'HVAC and refrigeration contractors who install, service or repair systems',
+        lookupUrl: 'https://hacr.alabama.gov/',
+        lookupNote: 'Look for the license search on the board’s website, or contact the board to confirm a certification.',
+        website: 'https://hacr.alabama.gov/',
+      },
+    ],
+    whenRequired: [
+      'Building, remodeling or repairing a home needs a Home Builders Licensure Board license when the total cost, including labor and materials, is more than $10,000. Work that affects the structure or involves more than one trade needs an unlimited license.',
+      'Roof work done directly for a homeowner needs a Home Builders Licensure Board license when it costs more than $2,500. A roofer license or an unlimited home builder license qualifies.',
+      'Large projects of $100,000 or more, mainly commercial, need a license from the Licensing Board for General Contractors. The minimum rose from $50,000 to $100,000 on October 1, 2024, so older guides may show the lower figure.',
+      'Electrical, plumbing and gas fitting, and HVAC work each need a license or certification from that trade’s state board.',
+    ],
+    howToCheck: [
+      'Ask for the exact name on the license and the license number.',
+      'For home building, remodeling and roofing, search the Home Builders Licensure Board. For large commercial projects, search the Licensing Board for General Contractors.',
+      'For electrical, plumbing, gas or HVAC work, check with that trade’s board.',
+      'Confirm the license is active, the name matches your contract, and the license type fits the job: unlimited, limited or roofer.',
+      'If you can’t find the contractor or the results are unclear, contact the board before you sign or pay.',
+    ],
+    watchFor: [
+      'The Home Builders Licensure Board’s Homeowners Recovery Fund can pay up to $30,000 when you win a court judgment against a licensed builder and can’t collect. A board complaint alone isn’t enough, and the fund doesn’t cover work by roofer-license holders.',
+      'After storms, the Attorney General warns never to pay in full up front and to ask to see the contractor’s state license.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a remodel in Alabama?',
+        a: 'Yes, if the total cost is more than $10,000, including labor and materials. The contractor needs a license from the Home Builders Licensure Board, and the board encourages homeowners to hire licensees even for smaller jobs.',
+      },
+      {
+        q: 'Does a roofer need a license in Alabama?',
+        a: 'Yes, for roof work done directly for a homeowner that costs more than $2,500. The roofer must be licensed and bonded through the Home Builders Licensure Board. A holder of an unlimited home builder license can also do roofing.',
+      },
+      {
+        q: 'What is the difference between a limited and an unlimited home builder license?',
+        a: 'An unlimited license covers any residential work, up to building a new home. A limited license covers work in one trade that doesn’t affect the home’s structure, and it doesn’t allow roofing.',
+      },
+      {
+        q: 'Who licenses general contractors in Alabama?',
+        a: 'The Alabama Licensing Board for General Contractors licenses contractors on projects of $100,000 or more, mainly commercial work. Home builders and remodelers are licensed by the Home Builders Licensure Board instead.',
+      },
+    ],
+    sources: [
+      { label: 'Alabama Home Builders Licensure Board: Licensee Search', url: 'https://hblb.alabama.gov/?p=1515' },
+      {
+        label: 'Alabama Home Builders Licensure Board: How do I obtain a Home Builder’s License?',
+        url: 'https://hblb.alabama.gov/faq/how-do-i-obtain-a-home-builders-license/',
+      },
+      {
+        label: 'Alabama Home Builders Licensure Board: law effective October 1, 2025',
+        url: 'https://hblb.alabama.gov/wp-content/uploads/2025/10/HBLB-Law-Effective-October-1-2025.pdf',
+      },
+      {
+        label: 'Alabama Home Builders Licensure Board: Recovery Fund payment increase',
+        url: 'https://hblb.alabama.gov/home-builders-licensure-board-increases-potential-recovery-fund-payments-to-homeowners/',
+      },
+      {
+        label: 'Alabama Licensing Board for General Contractors: changes under Act 2024-277',
+        url: 'https://genconbd.alabama.gov/14104/changes-to-the-alabama-licensing-board-for-general-contractors-section-of-the-code-of-alabama/',
+      },
+      { label: 'Alabama Licensing Board for General Contractors: search', url: 'https://genconbd.alabama.gov/search/' },
+      {
+        label: 'Alabama Attorney General, Department of Insurance and Home Builders Licensure Board: home repair fraud warning',
+        url: 'https://alabamaag.gov/wp-content/uploads/2023/05/AG-AL-Dept-of-Insurance-and-Alabama-Home-Builders-Licensure-Board-Warn-of-Potential-Home-Repair-Fraud.pdf',
+      },
+      { label: 'Alabama Electrical Contractors Board: Consumers', url: 'https://aecb.alabama.gov/consumers/' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'louisiana',
+    code: 'LA',
+    name: 'Louisiana',
+    generalContractors: 'state',
+    short: 'One state board licenses or registers contractors, with a dollar limit for each credential.',
+    summary:
+      'The Louisiana State Licensing Board for Contractors (LSLBC) issues commercial, residential and mold remediation licenses and home improvement registrations. Which one a contractor needs depends on the type of work and its cost, and since January 1, 2026, roof work on a home of $7,500 or more needs a residential roofing or residential construction classification.',
+    boards: [
+      {
+        name: 'Louisiana State Licensing Board for Contractors (LSLBC)',
+        licenses:
+          'Commercial, residential and mold remediation licenses, home improvement registrations, and classifications such as residential roofing, electrical, mechanical and plumbing',
+        lookupUrl: 'https://lslbc.gov/verify-licensure/',
+        lookupNote:
+          'Open the contractor search from this page and fill in at least one field, such as name, license number, city or parish. Only current licenses and registrations appear.',
+        website: 'https://lslbc.gov/',
+      },
+    ],
+    whenRequired: [
+      'Home improvement work on an existing home that costs more than $7,500 needs at least an LSLBC home improvement registration.',
+      'Residential construction of $50,000 or more, counting labor and materials, needs an LSLBC residential license. The limit used to be $75,000, so older guides may show that figure.',
+      'Since January 1, 2026, roof work on a home valued at $7,500 or more needs the Residential Roofing or Residential Construction classification.',
+      'Commercial projects of $50,000 or more need a commercial license, and commercial electrical, mechanical or plumbing work over $10,000 needs that classification.',
+    ],
+    howToCheck: [
+      'Ask for the exact business name and the LSLBC license or registration number.',
+      'Open the LSLBC contractor search and enter the name or number.',
+      'Confirm the record is current and the name matches your contract.',
+      'Check that the credential fits the job and its cost: a home improvement registration, a residential license or residential roofing.',
+      'If the contractor doesn’t appear, treat them as not currently licensed and contact the LSLBC before you sign or pay.',
+    ],
+    watchFor: [
+      'After a storm, check that a roofer holds the Residential Roofing or Residential Construction classification. A home improvement registration alone isn’t enough for roof work of $7,500 or more.',
+      'A home improvement registration isn’t a residential license. For a job of $50,000 or more, the contractor needs the full residential license.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a remodel in Louisiana?',
+        a: 'If the job costs more than $7,500, the contractor needs at least an LSLBC home improvement registration. Jobs of $50,000 or more need an LSLBC residential license.',
+      },
+      {
+        q: 'What is a Louisiana home improvement registration?',
+        a: 'It’s an LSLBC credential for work on existing homes that costs more than $7,500 but less than the residential license limit. It isn’t a full residential license.',
+      },
+      {
+        q: 'Does a roofer need a license in Louisiana?',
+        a: 'Yes, for roof work on a home valued at $7,500 or more. Since January 1, 2026, the contractor must hold the LSLBC Residential Roofing or Residential Construction classification.',
+      },
+      {
+        q: 'Why can’t I find my contractor in the LSLBC search?',
+        a: 'The search shows only contractors who are currently licensed or registered. Try fewer letters of the name or search by license number, and contact the LSLBC if you still can’t find them.',
+      },
+    ],
+    sources: [
+      { label: 'LSLBC: Verify Licensure', url: 'https://lslbc.gov/verify-licensure/' },
+      { label: 'LSLBC: Types of Licenses', url: 'https://lslbc.gov/types-of-licenses/' },
+      {
+        label: 'LSLBC: Residential Construction classification',
+        url: 'https://lslbc.gov/classifications_list/residential-construction/',
+      },
+      { label: 'LSLBC: residential roofing memo', url: 'https://lslbc.gov/wp-content/uploads/Residential_Roofing_Memo_1282025.pdf' },
+      { label: 'La. R.S. 37:2156.4 (residential roofing)', url: 'https://legis.la.gov/Legis/Law.aspx?d=1431142' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'kentucky',
+    code: 'KY',
+    name: 'Kentucky',
+    generalContractors: 'local-only',
+    short: 'Kentucky licenses electricians, plumbers and HVAC, but not general contractors.',
+    summary:
+      'Kentucky’s Department of Housing, Buildings and Construction (DHBC) licenses electrical, plumbing, HVAC, boiler and fire protection trades, but the state doesn’t license general contractors. Some local governments do: Louisville Metro issues building contractor licenses, and Lexington-Fayette requires contractors to register before they get permits.',
+    boards: [
+      {
+        name: 'Kentucky Department of Housing, Buildings and Construction (DHBC)',
+        licenses:
+          'Electrical contractors and electricians, master and journeyman plumbers, HVAC contractors and journeymen, boiler contractors, and fire sprinkler and fire alarm contractors',
+        lookupUrl: 'https://dhbc.ky.gov/Search/HBC_List_Licensees.aspx',
+        lookupNote: 'Search by trade, license type, name, license number or status.',
+        website: 'https://dhbc.ky.gov/',
+      },
+      {
+        name: 'Louisville Metro Construction Review',
+        licenses: 'Building contractors (Metro Building A and B licenses) and Metro trade licenses, such as electrical, HVAC and fire suppression, in Louisville Metro',
+        lookupUrl: 'https://louisvilleky.gov/government/construction-review/online-permitting-portal',
+        lookupNote:
+          'Open the Louisville Metro Business Portal from this page, choose Advanced Search, then Search for a License, and enter the business name. No account is needed.',
+        website: 'https://louisvilleky.gov/government/construction-review/contractor-licenses',
+      },
+    ],
+    whenRequired: [
+      'Kentucky has no state license for general contractors or remodelers, but the work may still need state or local permits.',
+      'Electrical, plumbing and HVAC work needs a DHBC license. Plumbing must be done by a licensed master or journeyman plumber, and an electrical contractor must have a licensed master electrician tied to its license.',
+      'In Louisville Metro, only licensed contractors or property owners can get building permits, and electrical, HVAC, plumbing and fire sprinkler contractors must also show a state license.',
+      'In Lexington-Fayette, every contractor who gets a building permit must first register with the Division of Building Inspection.',
+    ],
+    howToCheck: [
+      'Ask for the exact business name and, for trade work, the state license number.',
+      'For electrical, plumbing or HVAC work, search the DHBC licensee search and confirm the license is active for that trade.',
+      'In Louisville, look up the contractor’s Metro license in the Louisville Metro Business Portal. In Lexington, ask the Division of Building Inspection to confirm the registration.',
+      'Elsewhere in Kentucky, ask your city or county building office whether contractors must be licensed or registered there.',
+      'Ask for proof of liability and workers’ compensation insurance, and make sure the contractor gets any required permit.',
+    ],
+    watchFor: [
+      'A contractor may not offer to pay or rebate your insurance deductible to win a residential roof job.',
+      'After storms, the Attorney General warns about out-of-town contractors who go door to door. You generally have three business days to cancel a door-to-door sale of $25 or more, and you must cancel in writing.',
+    ],
+    faq: [
+      {
+        q: 'Does Kentucky require a general contractor license?',
+        a: 'No. The state doesn’t license general contractors, but some local governments do: Louisville Metro issues Metro building licenses, and Lexington-Fayette requires contractors to register.',
+      },
+      {
+        q: 'How do I check an electrician, plumber or HVAC contractor in Kentucky?',
+        a: 'Use the DHBC licensee search at dhbc.ky.gov. Search by name or license number and confirm the license is active for the right trade.',
+      },
+      {
+        q: 'Do roofers need a license in Kentucky?',
+        a: 'The state doesn’t license roofers, so check with your city or county. State law does bar a roofer from offering to pay or rebate your insurance deductible on a residential roof job.',
+      },
+      {
+        q: 'Can I cancel a contract with a door-to-door contractor in Kentucky?',
+        a: 'Generally, yes. The Attorney General says you have three business days to cancel a door-to-door sale of $25 or more. Some exceptions apply, and you must cancel in writing.',
+      },
+    ],
+    sources: [
+      { label: 'Kentucky DHBC: licensee search', url: 'https://dhbc.ky.gov/Search/HBC_List_Licensees.aspx' },
+      {
+        label: 'Kentucky DHBC: plan submission guide (no state license for general construction)',
+        url: 'https://dhbc.ky.gov/Documents/KHBC_Plan%20Submission%20Application%20Guide%2025-0418.pdf',
+      },
+      { label: 'Kentucky DHBC: Division of Plumbing', url: 'https://dhbc.ky.gov/newstatic_info.aspx?static_id=337' },
+      {
+        label: 'Louisville Metro Construction Review: contractor licenses',
+        url: 'https://louisvilleky.gov/government/construction-review/contractor-licenses',
+      },
+      {
+        label: 'Lexington-Fayette Division of Building Inspection',
+        url: 'https://www.lexingtonky.gov/government/departments-programs/environmental-quality-public-works/building-inspection',
+      },
+      { label: 'KRS 367.628 (residential roof contracts)', url: 'https://apps.legislature.ky.gov/law/Statutes/statute.aspx?id=56109' },
+      {
+        label: 'Kentucky Attorney General: home repair and improvement',
+        url: 'https://www.ag.ky.gov/Resources/Consumer-Resources/Consumers/home/Pages/home-improvement.aspx',
+      },
+      {
+        label: 'Kentucky Attorney General: natural disaster scams',
+        url: 'https://www.ag.ky.gov/Resources/Consumer-Resources/Pages/Natural-Disaster-Scams.aspx',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'oregon',
+    code: 'OR',
+    name: 'Oregon',
+    generalContractors: 'state',
+    short: 'The CCB licenses all paid home construction; electrical and plumbing need a BCD license too.',
+    summary:
+      'The Oregon Construction Contractors Board (CCB) licenses anyone paid to build, remodel or repair a home, and electrical and plumbing contractors also need a license from the Building Codes Division (BCD). Check that the CCB license is active and has a residential endorsement, because the contractor’s bond can help you recover money in a dispute.',
+    boards: [
+      {
+        name: 'Oregon Construction Contractors Board (CCB)',
+        licenses: 'All paid construction work on homes, including general contractors, remodelers, roofers, HVAC installers, painters and handymen',
+        lookupUrl: 'https://search.ccb.state.or.us/search/',
+        lookupNote:
+          'Searching by CCB license number gives the most accurate result. Open the record to see its status, endorsement, bond history and complaints.',
+        website: 'https://www.oregon.gov/ccb/pages/default.aspx',
+      },
+      {
+        name: 'Oregon Building Codes Division (BCD)',
+        licenses: 'Electrical and plumbing contractors, individual electricians and plumbers, and boiler licenses',
+        lookupUrl: 'https://www.oregon.gov/bcd/licensing/pages/index.aspx',
+        lookupNote: 'Use the license holder search linked from this page.',
+        website: 'https://www.oregon.gov/bcd',
+      },
+    ],
+    whenRequired: [
+      'Anyone paid to build, remodel or repair a home needs an active CCB license. That includes roofing, siding, painting, carpentry, HVAC, plumbing and electrical work.',
+      'Electrical and plumbing contractors also need a BCD electrical or plumbing contractor license.',
+      'A handyman needs a CCB license for work of $1,000 or more, or if they advertise at all, even with business cards. Small casual jobs that need no permit can be exempt.',
+      'A residential general contractor must carry a $25,000 bond and $500,000 per occurrence in liability insurance.',
+    ],
+    howToCheck: [
+      'Ask the contractor for their CCB license number.',
+      'Search the number in the CCB license search, and confirm the license is active and the name matches the business you’re hiring.',
+      'Check that the license has a residential endorsement, which a contractor needs to work on homes.',
+      'Open the record to review bond history, complaints and disciplinary history.',
+      'For electrical or plumbing work, also look up the business in the BCD license holder search.',
+    ],
+    watchFor: [
+      'For home jobs over $2,000, the contractor must use a written contract and give you three notices: the Consumer Protection Notice, the Notice of Procedure and the Information Notice to Owner About Construction Liens.',
+      'To claim against a contractor’s bond for work on an existing home, mail a pre-complaint notice by certified mail and file a CCB complaint within one year after the work was substantially complete. The CCB can’t accept the complaint until 30 days after you mail the notice.',
+    ],
+    faq: [
+      {
+        q: 'Does a handyman need a license in Oregon?',
+        a: 'Usually, yes. A handyman needs a CCB license for work of $1,000 or more, or if they advertise at all. Small casual jobs under $1,000 that need no permit can be exempt.',
+      },
+      {
+        q: 'Do electricians and plumbers need a separate license in Oregon?',
+        a: 'Yes. Electrical and plumbing contractors need both a CCB license and a BCD electrical or plumbing contractor license, so check both before you hire.',
+      },
+      {
+        q: 'What happens if I hire an unlicensed contractor in Oregon?',
+        a: 'You can’t recover damages through a contractor’s bond, and the CCB can’t help you resolve the dispute.',
+      },
+      {
+        q: 'How much is an Oregon contractor’s bond?',
+        a: 'A residential general contractor needs a $25,000 bond, a residential specialty contractor $20,000 and a residential limited contractor $15,000. To collect from a bond, you need an active CCB complaint and a court judgment or arbitration award.',
+      },
+    ],
+    sources: [
+      { label: 'Oregon CCB: CCB license', url: 'https://www.oregon.gov/ccb/pages/ccb%20license.aspx' },
+      { label: 'Oregon CCB: license search', url: 'https://search.ccb.state.or.us/search/' },
+      { label: 'Oregon CCB: license endorsement chart (11/2024)', url: 'https://www.oregon.gov/ccb/Documents/Endorsement%20Chart.pdf' },
+      { label: 'Oregon CCB: consumer protection', url: 'https://www.oregon.gov/ccb/pages/consumer%20protection.aspx' },
+      {
+        label: 'Oregon CCB: required notices for residential construction projects',
+        url: 'https://www.oregon.gov/ccb/Documents/Notices-Chart.pdf',
+      },
+      {
+        label: 'Oregon CCB: why hire licensed contractors',
+        url: 'https://www.oregon.gov/ccb/Documents/Realtors%20guide%20to%20working%20with%20contractors.pdf',
+      },
+      { label: 'Oregon BCD: getting licensed work', url: 'https://www.oregon.gov/bcd/lbdd/pages/licensed-work.aspx' },
+      { label: 'ORS Chapter 701 (construction contractors)', url: 'https://www.oregonlegislature.gov/bills_laws/ors/ors701.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'oklahoma',
+    code: 'OK',
+    name: 'Oklahoma',
+    generalContractors: 'local-only',
+    short: 'Oklahoma licenses trades and registers roofers, but not general contractors.',
+    summary:
+      'Oklahoma’s Construction Industries Board (CIB) licenses electrical, plumbing and mechanical (HVAC) contractors and registers roofers, but the state doesn’t license general contractors. Cities can add their own rules, and Oklahoma City requires contractors to register before they can buy permits.',
+    boards: [
+      {
+        name: 'Oklahoma Construction Industries Board (CIB)',
+        licenses: 'Electrical, plumbing and mechanical (HVAC) licenses, roofing contractor registrations, and building and home inspector licenses',
+        lookupUrl: 'https://cib.ok.gov/are-they-licensed',
+        lookupNote:
+          'Choose Roofing or all other industries. Roofers are in a separate roofing registration search; electrical, plumbing and mechanical licenses are in the other.',
+        website: 'https://cib.ok.gov/',
+      },
+      {
+        name: 'City of Oklahoma City: contractor registration',
+        licenses: 'Building and trade contractors who buy permits in Oklahoma City',
+        lookupUrl: 'https://access.okc.gov/aca/Cap/CapHome.aspx?module=Licenses&TabName=HOME',
+        lookupNote: 'Search by license number, which gives the most accurate results, or by site address. No account is needed.',
+        website: 'https://www.okc.gov/Infrastructure-Development/Business-Licensing/Contractor-Registration',
+      },
+    ],
+    whenRequired: [
+      'Oklahoma has no state license for general contractors, but trade work still needs a state license or registration.',
+      'Electrical, plumbing and mechanical (HVAC) contractors need a CIB license, and active contractors must carry a $5,000 surety bond and at least $50,000 in general liability insurance.',
+      'Roofing contractors must register with the CIB, and commercial roofing also needs a commercial endorsement. Owners who roof their own homes are exempt. The CIB says a residential roofing endorsement becomes mandatory on January 1, 2028.',
+      'In Oklahoma City, anyone contracting for work that needs a building permit must register with the city, and trade and re-roofing permits go only to contractors with both a state license or registration and a city registration.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s name and CIB license or roofing registration number.',
+      'On the CIB’s “Are They Licensed?” page, choose Roofing or all other industries.',
+      'For a roofer, look for “In Good Standing”; “Pending” means the roofer isn’t registered yet. For other trades, confirm the license is current and fits the job.',
+      'In Oklahoma City, also check the contractor’s city registration. Elsewhere, ask your local building department.',
+      'Make sure the contractor gets any required permit before work starts.',
+    ],
+    watchFor: [
+      'If insurance is paying for your roof, you can cancel the contract within 72 hours after your insurer tells you in writing that all or part of the claim is denied. Cancel in writing to the address in the contract; the roofer must refund your payments, except for emergency work already done.',
+      'If a roofer’s registration stops being in good standing, the roofer must tell you, and you can then cancel the contract.',
+    ],
+    faq: [
+      {
+        q: 'Does Oklahoma require a general contractor license?',
+        a: 'No. The Construction Industries Board says general contractors don’t currently need a state license. Cities can have their own rules, and Oklahoma City requires building contractors to register.',
+      },
+      {
+        q: 'Do roofers need a license in Oklahoma?',
+        a: 'Roofers must register with the Construction Industries Board, and commercial roofing also needs a commercial endorsement. The CIB says residential roofing will need a residential endorsement starting January 1, 2028.',
+      },
+      {
+        q: 'How do I check an electrician, plumber or HVAC contractor in Oklahoma?',
+        a: 'Go to the CIB’s “Are They Licensed?” page and choose all other industries. Search by name or license number and confirm the license is current.',
+      },
+      {
+        q: 'Can I cancel a roofing contract if my insurance claim is denied?',
+        a: 'Yes. Under the Roofing Contractor Registration Act, you can cancel in writing within 72 hours after your insurer’s written notice that all or part of the claim is denied.',
+      },
+    ],
+    sources: [
+      { label: 'Oklahoma CIB: Are They Licensed?', url: 'https://cib.ok.gov/are-they-licensed' },
+      { label: 'Oklahoma CIB: FAQs (no state general contractor license)', url: 'https://cib.ok.gov/faqs' },
+      { label: 'Oklahoma CIB: roofing registration search', url: 'https://verifyroofing.cib.ok.gov/' },
+      {
+        label: 'Oklahoma CIB: new residential roofing endorsement',
+        url: 'https://oklahoma.gov/cib/news/new-residential-roofing-endorsement-required-by-house-bill-1628.html',
+      },
+      {
+        label: 'Roofing Contractor Registration Act (59 O.S. § 1151 and following)',
+        url: 'https://oklahoma.gov/content/dam/ok/en/cib/documents/your-industry/roofing-industry/title_59_roofing_contractor_registration_act.pdf',
+      },
+      {
+        label: 'Oklahoma CIB: active contractor requirements',
+        url: 'https://oklahoma.gov/cib/your-industry/active-contractor-requirements.html',
+      },
+      {
+        label: 'City of Oklahoma City: contractor registration',
+        url: 'https://www.okc.gov/Infrastructure-Development/Business-Licensing/Contractor-Registration',
+      },
+      {
+        label: 'City of Oklahoma City: license search',
+        url: 'https://access.okc.gov/aca/Cap/CapHome.aspx?module=Licenses&TabName=HOME',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'utah',
+    code: 'UT',
+    name: 'Utah',
+    generalContractors: 'state',
+    short: 'Utah’s DOPL licenses contractors and trades; small handyman jobs under $7,000 are exempt.',
+    summary:
+      'Utah’s Division of Professional Licensing (DOPL) licenses general contractors, specialty contractors such as roofers, and electrical, plumbing and HVAC contractors. An unlicensed handyman may do small repair and remodeling jobs under $7,000, but plumbing, electrical and HVAC system work needs a licensed contractor.',
+    boards: [
+      {
+        name: 'Utah Division of Professional Licensing (DOPL)',
+        licenses:
+          'General contractors (B100 general building, R100 residential and small commercial, E100 general engineering), specialty contractors such as S280 roofing, and electrical, plumbing and HVAC contractors',
+        lookupUrl: 'https://secure.utah.gov/llv/search/index.html',
+        lookupNote: 'Search by name and profession, or by license number, and check that the status says Active.',
+        website: 'https://commerce.utah.gov/dopl/',
+      },
+    ],
+    whenRequired: [
+      'Construction and remodeling work generally needs a DOPL contractor license in the right classification. The R100 residential license doesn’t cover plumbing, electrical or HVAC work.',
+      'Repair and remodeling jobs under $7,000 in total value, counting labor, materials and later changes, are exempt. The limit used to be $3,000, so guides that cite $3,000 are out of date.',
+      'A handyman doing an exempt job worth more than $3,000 must file an affirmation with DOPL and carry liability insurance.',
+      'The handyman exemption doesn’t cover HVAC work, or plumbing and electrical work beyond limited minor repairs.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s business name and DOPL license number.',
+      'Search DOPL’s licensee lookup by name and profession, or by license number.',
+      'Confirm the license is Active and fits your job, such as R100 for home building or remodeling, E200 or E201 for electrical, P200 or P201 for plumbing, H100 for HVAC, or S280 for roofing.',
+      'If an unlicensed handyman quotes a job over $3,000, ask for proof of their DOPL handyman affirmation and liability insurance.',
+      'Before work starts, ask for proof of liability and workers’ compensation insurance and get a written contract.',
+    ],
+    watchFor: [
+      'DOPL announced in June 2026 that the Residence Lien Recovery Fund is depleted and can’t pay new claims. If you paid a licensed contractor in full under a written contract and a subcontractor or supplier files a lien on your single-family home or duplex, you can still apply to DOPL for a Certificate of Compliance within 30 days of being served, and the lienholder must then remove the lien.',
+      'DOPL offers an optional Residential Construction Agreement with sections for plans, change orders and proof of license and insurance. DOPL can’t enforce it, so read the terms carefully before you sign.',
+    ],
+    faq: [
+      {
+        q: 'Does a handyman need a license in Utah?',
+        a: 'Not for repair or remodeling jobs under $7,000 in total, including labor and materials. For jobs over $3,000, the handyman must file an affirmation with DOPL and carry liability insurance. Plumbing, electrical and HVAC system work still needs a licensed contractor.',
+      },
+      {
+        q: 'How do I look up a contractor license in Utah?',
+        a: 'Use DOPL’s licensee lookup at secure.utah.gov. Search by name and profession or by license number, and make sure the status is Active.',
+      },
+      {
+        q: 'Can I still get money from Utah’s Residence Lien Recovery Fund?',
+        a: 'No. DOPL says the fund is depleted and can’t pay new claims. If you paid a licensed contractor in full under a written contract, you can still apply for a Certificate of Compliance to have a subcontractor’s lien removed.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in Utah?',
+        a: 'DOPL licenses electrical and plumbing contractors. The person who qualifies the business must hold a master license in that trade.',
+      },
+    ],
+    sources: [
+      { label: 'Utah DOPL: licensee lookup', url: 'https://secure.utah.gov/llv/search/index.html' },
+      {
+        label: 'Utah Code § 58-55-305 (exemptions from licensure)',
+        url: 'https://le.utah.gov/xcode/Title58/Chapter55/C58-55-S305_2025050720250507.html',
+      },
+      { label: 'Utah DOPL: handyman exemption', url: 'https://commerce.utah.gov/dopl/handyman/' },
+      {
+        label: 'Utah DOPL: general contractor classifications',
+        url: 'https://commerce.utah.gov/dopl/contracting/apply-for-a-license/general-contractor/',
+      },
+      {
+        label: 'Utah Admin. Code R156-55a (Construction Trades Licensing Act Rule)',
+        url: 'https://adminrules.utah.gov/public/rule/R156-55a/Current%20Rules',
+      },
+      {
+        label: 'Utah Department of Commerce: Residence Lien Recovery Fund is depleted (June 2026)',
+        url: 'https://commerce.utah.gov/2026/06/11/utahs-residence-lien-recovery-fund-is-officially-depleted-what-now/',
+      },
+      {
+        label: 'Utah DOPL: Residential Construction Agreement',
+        url: 'https://commerce.utah.gov/dopl/contracting/construction-contract/',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'nevada',
+    code: 'NV',
+    name: 'Nevada',
+    generalContractors: 'state',
+    short: 'The Nevada State Contractors Board licenses general and trade contractors statewide.',
+    summary:
+      'The Nevada State Contractors Board (NSCB) licenses general and specialty contractors statewide, including electrical, plumbing, HVAC and roofing contractors. Check that the license is active and that its classification and monetary limit fit your job, because only owners who hire licensed contractors can use the Residential Recovery Fund.',
+    boards: [
+      {
+        name: 'Nevada State Contractors Board (NSCB)',
+        licenses:
+          'General engineering (A), general building (B) and specialty (C) contractors, including C-1 plumbing and heating, C-2 electrical, C-21 refrigeration and air conditioning, and C-15 roofing and siding',
+        lookupUrl: 'https://app.nvcontractorsboard.com/Clients/NVSCB/Public/ContractorLicenseSearch/ContractorLicenseSearch.aspx',
+        lookupNote:
+          'Search by license number, which works best, by company name, or by the name of an owner or qualified individual. Past discipline is in a separate search linked from the board’s website.',
+        website: 'https://www.nvcontractorsboard.com/',
+      },
+    ],
+    whenRequired: [
+      'A contractor generally needs an NSCB license to bid on or do construction work, including electrical, plumbing, HVAC and roofing.',
+      'Repair or maintenance jobs under $1,000, including labor and materials, are exempt only if no building permit is needed and the work isn’t plumbing, electrical, refrigeration, heating or air conditioning.',
+      'The exemption doesn’t apply to work that’s part of a larger project, or to a job split into smaller contracts to stay under the limit.',
+      'Each license has a classification and a monetary limit: the largest contract the contractor may take for one client at one site.',
+    ],
+    howToCheck: [
+      'Ask the contractor for their Nevada license number.',
+      'Search the NSCB license search by license number, which the board says works best, or by company name.',
+      'Confirm the license is Active and its classification matches your job, such as C-2 for electrical or C-15 for roofing.',
+      'Make sure your contract price is within the license’s monetary limit.',
+      'Review any past discipline in the NSCB’s disciplinary and board actions search.',
+    ],
+    watchFor: [
+      'The Residential Recovery Fund can pay up to $40,000 per claim to owners of owner-occupied single-family homes harmed by a licensed contractor. You must file within four years after the work was completed, and the fund doesn’t cover homeowners who hired unlicensed contractors.',
+      'The Recovery Fund doesn’t pay court costs or legal fees, money you collect from other sources is subtracted, and full payment isn’t guaranteed.',
+    ],
+    faq: [
+      {
+        q: 'Does a handyman need a license in Nevada?',
+        a: 'Not for small repair or maintenance jobs under $1,000 in labor and materials, as long as no building permit is needed, the work isn’t plumbing, electrical, refrigeration, heating or air conditioning, and it isn’t part of a larger project.',
+      },
+      {
+        q: 'What is the Nevada Residential Recovery Fund?',
+        a: 'It’s a board fund that can pay up to $40,000 per claim to owners of owner-occupied single-family homes harmed by a licensed contractor. Claims are due within four years after the work was completed.',
+      },
+      {
+        q: 'Who licenses electricians and plumbers in Nevada?',
+        a: 'The Nevada State Contractors Board licenses electrical contractors (C-2) and plumbing and heating contractors (C-1). Check that the license classification matches the work you need.',
+      },
+      {
+        q: 'What is a monetary limit on a Nevada contractor license?',
+        a: 'The board sets a monetary limit on each license based on the contractor’s finances. It’s the largest contract the contractor may take for one client at one site, so make sure your job fits within it.',
+      },
+    ],
+    sources: [
+      {
+        label: 'NSCB: license search',
+        url: 'https://app.nvcontractorsboard.com/Clients/NVSCB/Public/ContractorLicenseSearch/ContractorLicenseSearch.aspx',
+      },
+      {
+        label: 'NSCB: disciplinary and board actions search',
+        url: 'https://app.nvcontractorsboard.com/Clients/NVSCB/Public/DisciplineSearch/DisciplineSearchPage.aspx',
+      },
+      { label: 'NSCB: exemptions', url: 'https://www.nvcontractorsboard.com/licensing/exemptions/' },
+      { label: 'NSCB: handyman exemptions', url: 'https://www.nvcontractorsboard.com/resources/handyman-exemptions/' },
+      {
+        label: 'NSCB: Residential Recovery Fund overview',
+        url: 'https://www.nvcontractorsboard.com/resources/residential-recovery-fund/residential-recovery-fund-overview/',
+      },
+      { label: 'NSCB: consumer checklist', url: 'https://www.nvcontractorsboard.com/resources/consumer-checklist/' },
+      { label: 'NRS Chapter 624 (contractors)', url: 'https://www.leg.state.nv.us/nrs/nrs-624.html' },
+      { label: 'NAC Chapter 624 (contractors)', url: 'https://www.leg.state.nv.us/nac/nac-624.html' },
+    ],
+    lastChecked: '2026-11-03',
+  },
+  {
+    slug: 'arkansas',
+    code: 'AR',
+    name: 'Arkansas',
+    generalContractors: 'state',
+    short: 'Arkansas licenses home contractors on jobs over $2,000; trades are licensed separately.',
+    summary:
+      'The Arkansas Contractors Licensing Board licenses residential builders, remodelers and home improvement specialty contractors for home jobs over $2,000, and commercial contractors for projects of $50,000 or more. The Department of Health licenses plumbers, and the Department of Labor and Licensing licenses electricians and HVAC/R contractors.',
+    boards: [
+      {
+        name: 'Arkansas Contractors Licensing Board',
+        licenses: 'Commercial contractors, residential builders, residential remodelers and home improvement specialty contractors (it licenses businesses, not individual workers)',
+        lookupUrl: 'https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/find-a-licensed-contractor/',
+        lookupNote: 'If the search on this page isn’t working, contact the board through its website to confirm a license.',
+        website: 'https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/',
+      },
+      {
+        name: 'Arkansas Department of Health: Plumbing and Natural Gas',
+        licenses: 'Master, journeyman and apprentice plumbers, and natural gas licensees',
+        lookupUrl: 'https://adhplumbinghvacrlookup.arkansas.gov/',
+        lookupNote: 'Results show the license type, number and expiration date. A license expired for more than 30 days is inactive.',
+        website:
+          'https://healthy.arkansas.gov/programs-services/licensing-military-member-licensure-permits-plan-reviews/plumbing-natural-gas-health-code/',
+      },
+      {
+        name: 'Arkansas State Board of Electrical Examiners',
+        licenses: 'Electricians',
+        lookupUrl: 'https://labor.arkansas.gov/licensing/board-of-electrical-examiners/state-board-of-electrical-examiners-roster/',
+        lookupNote: 'Filter by license status. If the exported report is blank, the search found more than 3,000 records, so narrow it.',
+        website: 'https://labor.arkansas.gov/labor/code-enforcement/electrical-inspection-and-licensing/',
+      },
+      {
+        name: 'Arkansas Department of Labor and Licensing: HVAC/R',
+        licenses: 'Heating, ventilation, air conditioning and refrigeration contractors (Class A, B, D and E) and registrants who work under them',
+        lookupUrl: 'https://labor.arkansas.gov/resources/rosters/',
+        lookupNote: 'Choose HVAC/R from the list of licensing agencies.',
+        website: 'https://labor.arkansas.gov/labor/code-enforcement/hvac-r/',
+      },
+    ],
+    whenRequired: [
+      'Work on a home of one to four units that costs more than $2,000, including labor and materials, needs a residential builder, residential remodeler or home improvement specialty license.',
+      'Jobs of $2,000 or less are exempt, but splitting one job into smaller contracts to stay under $2,000 isn’t allowed.',
+      'Projects of $50,000 or more that aren’t single-family homes, including buildings with five or more units, need a commercial license.',
+      'Plumbing work needs a Department of Health license, and electrical and HVAC/R work need licenses from the Department of Labor and Licensing.',
+    ],
+    howToCheck: [
+      'Ask for the contractor’s exact business name and license number.',
+      'Search the Contractors Licensing Board’s Find A Licensed Contractor page, or contact the board if the search is down.',
+      'Check that the license type fits your job: residential builder, residential remodeler, home improvement specialty or commercial.',
+      'Check plumbers in the Department of Health lookup, and electricians and HVAC/R contractors in the Department of Labor and Licensing rosters.',
+      'Report problems with a contractor to the Contractors Licensing Board using its complaint form.',
+    ],
+    watchFor: [
+      'A limited residential license covers only projects under $50,000, so make sure the contractor’s license fits the size of your job.',
+      'A home improvement specialty license covers a single trade, such as painting, windows or flooring. It doesn’t allow the holder to build or remodel a home.',
+    ],
+    faq: [
+      {
+        q: 'Do I need a licensed contractor for a small home job in Arkansas?',
+        a: 'Yes, if the job costs more than $2,000, including labor and materials. Jobs of $2,000 or less are exempt, but a contractor can’t split one job into smaller contracts to avoid the rule.',
+      },
+      {
+        q: 'How do I check a contractor’s license in Arkansas?',
+        a: 'Use the Contractors Licensing Board’s Find A Licensed Contractor page on the Department of Labor and Licensing website. If the search isn’t working, contact the board directly.',
+      },
+      {
+        q: 'Who licenses plumbers in Arkansas?',
+        a: 'The Arkansas Department of Health licenses plumbers. Its online lookup shows each plumber’s license type, number and expiration date.',
+      },
+      {
+        q: 'Who licenses electricians and HVAC contractors in Arkansas?',
+        a: 'The Department of Labor and Licensing licenses electricians through the State Board of Electrical Examiners and HVAC/R contractors through its HVAC/R program. Each has its own online roster.',
+      },
+    ],
+    sources: [
+      {
+        label: 'Arkansas Contractors Licensing Board: apply for a license (license types and limits)',
+        url: 'https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/apply-for-contractors-license-registration/',
+      },
+      {
+        label: 'Arkansas Contractors Licensing Board: Find A Licensed Contractor',
+        url: 'https://labor.arkansas.gov/licensing/arkansas-contractors-licensing-board/find-a-licensed-contractor/',
+      },
+      {
+        label: 'Arkansas residential contractors licensing law and rules (revised July 2025)',
+        url: 'https://labor.arkansas.gov/wp-content/uploads/Residential-Law-revised-July-2025.pdf',
+      },
+      {
+        label: 'Arkansas commercial contractors licensing law and rules (revised July 2025)',
+        url: 'https://labor.arkansas.gov/wp-content/uploads/Commercial-Contractors-Law-revised-July-25.pdf',
+      },
+      {
+        label: 'Arkansas Department of Health: Plumbing and Natural Gas',
+        url: 'https://healthy.arkansas.gov/programs-services/licensing-military-member-licensure-permits-plan-reviews/plumbing-natural-gas-health-code/',
+      },
+      { label: 'Arkansas Department of Labor and Licensing: roster searches', url: 'https://labor.arkansas.gov/resources/rosters/' },
+      {
+        label: 'Arkansas Attorney General: home improvements',
+        url: 'https://arkansasag.gov/divisions/public-protection/homes/home-improvements/',
+      },
+    ],
+    lastChecked: '2026-11-03',
+  },
 ];
 
 /** "a" or "an" before a state name: an Illinois license, a Utah license. */
