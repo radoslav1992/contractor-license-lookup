@@ -67,7 +67,7 @@ Google Analytics 4 (`G-JD3MX1WLKC`) is set up in `src/components/Analytics.astro
 ## Deploying
 
 `.github/workflows/deploy.yml` tests, downloads the California data, builds
-and deploys with Wrangler on every push to `main`, every Monday and Thursday,
+and deploys with Wrangler on every push to `main`, every day at 10:23 UTC,
 and on demand (Actions → Deploy → Run workflow). Pull requests run
 `ci.yml` (tests and build only).
 
@@ -76,9 +76,9 @@ One-time setup:
 1. Cloudflare → My Profile → API Tokens → Create Token → **Edit Cloudflare
    Workers** template, limited to your account. Copy the token.
 2. GitHub → this repository → Settings → Secrets and variables → Actions →
-   New repository secret: `CLOUDFLARE_API_TOKEN`. Paste only the token. The
-   deploy step also strips spaces, quotes and a `Bearer ` prefix, checks the
-   token with Cloudflare, and prints a warning if it isn't accepted.
+   New repository secret: `CLOUDFLARE_API_TOKEN`. Paste only the token; the
+   deploy step also strips spaces, quotes and a `Bearer ` prefix. User tokens
+   and account tokens both work.
 3. Cloudflare → Workers → contractor-license-lookup → Settings → Builds →
    **Disconnect**. Cloudflare's own builds don't download the California
    data, so if they kept running they would deploy a site without it.
