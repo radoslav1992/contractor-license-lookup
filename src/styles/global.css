@@ -100,6 +100,8 @@ main { padding: 28px 0 48px; }
 .choices { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
 .choices p { margin: 0; flex: 1 1 260px; }
 
+.feature { margin: 12px 0 0; padding: 12px 16px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius); background: #fff; }
+
 .callout { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: var(--radius); padding: 14px 16px; margin: 1rem 0; }
 .callout strong { display: block; margin-bottom: 2px; }
 
