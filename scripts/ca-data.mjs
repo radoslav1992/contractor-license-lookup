@@ -35,7 +35,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  */
 function httpsRequest(url, { method = 'GET', headers = {}, body } = {}) {
   return new Promise((resolve, reject) => {
-    const req = https.request(url, { method, headers, timeout: 10 * 60 * 1000 }, async (res) => {
+    const req = https.request(new URL(url), { method, headers, timeout: 10 * 60 * 1000 }, async (res) => {
       try {
         const chunks = [];
         // Rejects if the server closes the connection before the end.
@@ -94,9 +94,15 @@ async function downloadMaster() {
   const form = (await request(undefined, 'open the data portal')).body.toString('utf8');
   const chosen = (await postBack(form, 'ctl00$MainContent$ddlStatus', 'choose License Master')).body.toString('utf8');
   const res = await postBack(chosen, 'ctl00$MainContent$lbMasterCSV', 'download the CSV');
-  const type = String(res.headers['content-type'] ?? '');
-  if (!/csv/i.test(type)) throw new Error(`expected a CSV, got ${type || 'no content type'}`);
-  return res.body.toString('utf8').replace(/^\uFEFF/, '');
+  // Judge the file by its content: CSLB sometimes leaves out the content type,
+  // and sometimes answers with an empty body or an HTML page.
+  const text = res.body.toString('utf8').replace(/^\uFEFF/, '');
+  if (!text.startsWith('LicenseNo,')) {
+    const type = String(res.headers['content-type'] ?? 'no content type');
+    const start = text.slice(0, 80).replace(/\s+/g, ' ');
+    throw new Error(`expected the License Master CSV, got ${res.body.length} bytes of ${type}${start ? `: "${start}"` : ''}`);
+  }
+  return text;
 }
 
 function check(rows) {
