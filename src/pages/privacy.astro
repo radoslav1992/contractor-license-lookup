@@ -7,12 +7,77 @@ import Base from '../layouts/Base.astro';
 >
   <div class="wrap">
     <h1>Privacy policy</h1>
-    <p>Last updated: November 3, 2026.</p>
+    <p>Last updated: November 4, 2026.</p>
 
     <h2>What we collect</h2>
     <p>
-      Contractor License Lookup does not ask you to sign up, does not set cookies and does not run analytics or
-      advertising scripts at the moment. You can use every page without giving us any personal information.
+      Contractor License Lookup doesn’t ask you to sign up or give us any personal information. We use Google
+      Analytics to count visits and see which pages and features people use, so we know what to improve.
+    </p>
+
+    <h2 id="analytics">Google Analytics</h2>
+    <ul class="points">
+      <li>
+        Google Analytics sets cookies (<code>_ga</code> and <code>_ga_JD3MX1WLKC</code>) and sends Google which pages
+        you view, roughly where you are, your device and browser type, and the site that sent you here.
+      </li>
+      <li>
+        On the California search we count how many searches are made, whether they found anything and how often
+        details are opened. We never send what you searched for: no names, words or license numbers.
+      </li>
+      <li>No advertising features, Google signals or ad personalization are turned on.</li>
+      <li>
+        If your browser is set to a European time zone, Google Analytics stays off unless you accept it in the banner.
+        Google also treats visitors it locates in the EEA, the UK and Switzerland as not having consented.
+      </li>
+      <li>
+        We honor Global Privacy Control: if your browser sends it, Google Analytics doesn’t run. Automated browsers
+        aren’t counted either.
+      </li>
+      <li>
+        Google processes this data under its own terms. See
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google
+        uses information from sites that use its services</a>.
+      </li>
+    </ul>
+
+    <div class="choices" id="choices">
+      <p data-choice-status>Your analytics choice is stored in this browser only.</p>
+      <button class="button secondary" type="button" data-set="denied">Turn analytics off</button>
+      <button class="button secondary" type="button" data-set="granted" hidden>Turn analytics on</button>
+    </div>
+    <script is:inline>
+      (function () {
+        var a = window.cllAnalytics;
+        var box = document.getElementById('choices');
+        if (!a || !box) return;
+        var status = box.querySelector('[data-choice-status]');
+        var off = box.querySelector('[data-set="denied"]');
+        var on = box.querySelector('[data-set="granted"]');
+        function render() {
+          var running = a.enabled();
+          if (a.gpc) status.textContent = 'Your browser sends Global Privacy Control, so Google Analytics is off.';
+          else status.textContent = running ? 'Google Analytics is on in this browser.' : 'Google Analytics is off in this browser.';
+          off.hidden = !running || a.gpc;
+          on.hidden = running || a.gpc;
+        }
+        box.addEventListener('click', function (event) {
+          var value = event.target && event.target.getAttribute && event.target.getAttribute('data-set');
+          if (!value) return;
+          a.set(value);
+          if (value === 'denied') location.reload();
+          else render();
+        });
+        render();
+      })();
+    </script>
+
+    <h2>The California license search</h2>
+    <p>
+      The search runs in your browser on a copy of the Contractors State License Board’s public license file. What
+      you type isn’t sent to us: your browser only downloads the part of the list it needs, named after the first
+      three letters of a word or the range of license numbers. The search is kept in the page address after a
+      <code>#</code>, which browsers don’t send to websites.
     </p>
 
     <h2>Hosting</h2>
@@ -24,14 +89,13 @@ import Base from '../layouts/Base.astro';
 
     <h2>Links to official boards</h2>
     <p>
-      License searches take place on the official state board websites we link to. Those sites have their own privacy
+      We link to official state board websites so you can confirm a license there. Those sites have their own privacy
       policies.
     </p>
 
     <h2>Changes</h2>
     <p>
-      If we add analytics or advertising, we will update this page first and explain what is collected and how to opt
-      out.
+      If we add advertising or change what we collect, we will update this page first and explain how to opt out.
     </p>
 
     <h2>Contact</h2>

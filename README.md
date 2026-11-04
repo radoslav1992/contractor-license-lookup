@@ -48,6 +48,22 @@ free statewide License Master file
 - To try it locally from a CSV you already have:
   `npm run data:ca -- --from MasterLicenseData.csv`.
 
+## Analytics
+
+Google Analytics 4 (`G-JD3MX1WLKC`) is set up in `src/components/Analytics.astro`:
+
+- Browsers set to a European time zone get a consent banner
+  (`ConsentBanner.astro`), and GA stays off until the visitor accepts. Google's
+  region-based consent default also covers the EEA, UK and Switzerland.
+- Global Privacy Control, an earlier "no" (stored in `localStorage` under
+  `cll-analytics`) and automated browsers turn GA off. The privacy page has an
+  on/off switch.
+- No advertising features or Google signals. Pages are reported without `?q=`,
+  and the California search keeps its query in the `#hash`.
+- California search events: `license_search`, `license_search_empty` and
+  `license_search_vague` (each with `search_type` = `name` or `number`), and
+  `license_details_open`. They never include what was searched.
+
 ## Deploying
 
 `.github/workflows/deploy.yml` tests, downloads the California data, builds

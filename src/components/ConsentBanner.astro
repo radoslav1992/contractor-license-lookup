@@ -1,0 +1,27 @@
+---
+// Shown only to visitors with a European time zone who haven't chosen yet.
+---
+<div class="consent" data-consent hidden role="region" aria-label="Cookie choice">
+  <p>
+    We’d like to use Google Analytics cookies to see which pages people use. No ads, and your searches aren’t sent.
+    <a href="/privacy#analytics">Privacy policy</a>
+  </p>
+  <div class="consent-actions">
+    <button class="button" type="button" data-choice="granted">Accept</button>
+    <button class="button secondary" type="button" data-choice="denied">Reject</button>
+  </div>
+</div>
+<script is:inline>
+  (function () {
+    var a = window.cllAnalytics;
+    var banner = document.querySelector('[data-consent]');
+    if (!a || !banner || !a.europe || a.gpc || a.bot || a.choice() !== null) return;
+    banner.hidden = false;
+    banner.addEventListener('click', function (event) {
+      var value = event.target && event.target.getAttribute && event.target.getAttribute('data-choice');
+      if (!value) return;
+      a.set(value);
+      banner.hidden = true;
+    });
+  })();
+</script>

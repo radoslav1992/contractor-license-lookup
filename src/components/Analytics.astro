@@ -1,0 +1,84 @@
+---
+// Google Analytics 4, set up so that:
+// - visitors whose browser clock is set to a European time zone see a consent
+//   banner and GA stays off until they accept (the EEA, UK and Switzerland
+//   require opt-in); Google's region-based consent default covers Europeans
+//   whose clock says otherwise;
+// - Global Privacy Control, an earlier "no" and automated browsers turn it off;
+// - no advertising features, and no search words: pages are reported without
+//   their ?q= parameter, and the search box keeps its query in the #hash.
+// window.cllTrack(name, params) sends an event only while GA is running.
+const GA_ID = 'G-JD3MX1WLKC';
+---
+<script is:inline define:vars={{ GA_ID }}>
+  (function () {
+    var KEY = 'cll-analytics';
+    var choice = null;
+    try { choice = localStorage.getItem(KEY); } catch (e) {}
+    var tz = '';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+    var europe = /^Europe\//.test(tz) || /^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)$/.test(tz);
+    var gpc = navigator.globalPrivacyControl === true;
+    var bot = navigator.webdriver === true;
+    var loaded = false;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      var denied = { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' };
+      // Opt-in by default where Google locates the visitor in the EEA, UK or Switzerland.
+      gtag('consent', 'default', Object.assign({ region: [
+        'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
+        'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
+      ] }, denied));
+      gtag('consent', 'default', Object.assign({}, denied, { analytics_storage: 'granted' }));
+      if (choice === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' });
+      var url = new URL(location.href);
+      url.searchParams.delete('q');
+      url.hash = '';
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        page_location: url.href,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+    }
+
+    window.cllTrack = function (name, params) {
+      if (loaded) gtag('event', name, params || {});
+    };
+    window.cllAnalytics = {
+      europe: europe,
+      gpc: gpc,
+      bot: bot,
+      choice: function () { return choice; },
+      enabled: function () { return loaded; },
+      set: function (value) {
+        choice = value;
+        try { localStorage.setItem(KEY, value); } catch (e) {}
+        if (value === 'granted' && !gpc && !bot) load();
+        if (value === 'denied') {
+          // Remove the cookies GA set earlier (_ga and _ga_<id>) on this host and its parent domain.
+          var host = location.hostname.replace(/^www\./, '');
+          document.cookie.split(';').forEach(function (c) {
+            var name = c.split('=')[0].trim();
+            if (!/^_ga/.test(name)) return;
+            ['', '; domain=' + host, '; domain=.' + host].forEach(function (d) {
+              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+            });
+          });
+        }
+      },
+    };
+
+    if (bot || gpc || choice === 'denied') return;
+    if (choice === 'granted' || !europe) load();
+  })();
+</script>

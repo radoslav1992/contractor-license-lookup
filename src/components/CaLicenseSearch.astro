@@ -104,7 +104,9 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
       void run(input.value);
     });
 
-    const initial = new URLSearchParams(location.search).get('q');
+    // The query lives in the #hash, so it never reaches our server or analytics.
+    // ?q= links still work.
+    const initial = new URLSearchParams(location.hash.slice(1)).get('q') ?? new URLSearchParams(location.search).get('q');
     if (initial) {
       input.value = initial;
       void run(initial);
@@ -114,7 +116,8 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
       const query = raw.trim().slice(0, 80);
       if (!query) return;
       const url = new URL(location.href);
-      url.searchParams.set('q', query);
+      url.searchParams.delete('q');
+      url.hash = new URLSearchParams({ q: query }).toString();
       history.replaceState(null, '', url);
 
       results.replaceChildren();
@@ -129,6 +132,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
             () => ({}) as Record<string, LicenseRecord>,
           );
           const rec = shard[license];
+          track(rec ? 'license_search' : 'license_search_empty', { search_type: 'number' });
           if (!rec) return notFound(query);
           status.textContent = `License ${license}:`;
           const item = result([rec.n, rec.nm, rec.city, rec.st, rec.alt]);
@@ -139,6 +143,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
 
         const key = queryKey(query, heavy);
         if (!key) {
+          track('license_search_vague', { search_type: 'name' });
           status.textContent =
             'Add a word that’s specific to the business, such as the owner’s name, with at least 3 letters. ' +
             'Words like “construction” or “roofing” are too common to search on alone.';
@@ -149,6 +154,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
         const matches = entries
           .filter((e) => matchesQuery(`${e[1]} ${e[4] ?? ''}`, query))
           .sort((a, b) => rank(a, first) - rank(b, first));
+        track(matches.length ? 'license_search' : 'license_search_empty', { search_type: 'name' });
         if (matches.length === 0) return notFound(query);
 
         status.textContent =
@@ -222,6 +228,7 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
     }
 
     function showDetails(li: HTMLLIElement, rec: LicenseRecord) {
+      track('license_details_open');
       const toggle = li.querySelector<HTMLButtonElement>('.link-button');
       toggle?.setAttribute('aria-expanded', 'true');
       if (toggle) toggle.textContent = 'Hide details';
@@ -283,6 +290,11 @@ const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckL
       if (w.can) text += `; cancelled ${formatDate(w.can)}`;
       return text;
     }
+  }
+
+  /** Counts an event in Google Analytics, if it's running. Never includes what was searched. */
+  function track(name: string, params?: Record<string, string>) {
+    (window as unknown as { cllTrack?: (n: string, p?: Record<string, string>) => void }).cllTrack?.(name, params);
   }
 
   function formatDate(iso: string): string {
