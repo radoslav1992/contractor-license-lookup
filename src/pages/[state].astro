@@ -35,8 +35,9 @@ const jsonLd = [
 ];
 ---
 <Base
-  title={`${state.name} Contractor License Lookup — How to Check a License`}
-  description={`How to check ${article(state.name)} ${state.name} contractor’s license with the official board. ${state.short}`}
+  title={state.pageTitle ?? `${state.name} Contractor License Lookup — How to Check a License`}
+  description={state.pageDescription ??
+    `How to check ${article(state.name)} ${state.name} contractor’s license with the official board. ${state.short}`}
   jsonLd={jsonLd}
 >
   <div class="wrap">

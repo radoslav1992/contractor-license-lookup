@@ -40,6 +40,9 @@ export interface StateGuide {
   lastChecked: string;
   /** This state's page has a search box over the board's own data file. */
   liveSearch?: 'ca';
+  /** Page title and meta description, when the default ones don't fit. */
+  pageTitle?: string;
+  pageDescription?: string;
 }
 
 export const STATES: StateGuide[] = [
@@ -48,7 +51,7 @@ export const STATES: StateGuide[] = [
     code: 'CA',
     name: 'California',
     generalContractors: 'state',
-    short: 'Licensed by the Contractors State License Board (CSLB) for jobs of $1,000 or more.',
+    short: 'Search 240,000+ CSLB licenses here. A license is needed for jobs of $1,000 or more.',
     summary:
       'California licenses contractors through the Contractors State License Board (CSLB). A licensed contractor is required for any job of $1,000 or more in labor and materials, and for smaller jobs that need a building permit or are done by someone with employees.',
     boards: [
@@ -114,6 +117,9 @@ export const STATES: StateGuide[] = [
     ],
     lastChecked: '2026-11-03',
     liveSearch: 'ca',
+    pageTitle: 'California Contractor License Lookup — Search CSLB Licenses by Name or Number',
+    pageDescription:
+      'Search 240,000+ California contractor licenses by business name or license number: status, classifications, bond and workers’ comp from the CSLB’s public file.',
   },
   {
     slug: 'florida',

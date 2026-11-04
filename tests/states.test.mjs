@@ -61,6 +61,13 @@ test('no guide goes more than a year without being re-checked', () => {
   }
 });
 
+test('custom page titles and descriptions fit in search results', () => {
+  for (const s of STATES) {
+    if (s.pageTitle) assert.ok(s.pageTitle.length <= 90, `${s.slug}: pageTitle`);
+    if (s.pageDescription) assert.ok(s.pageDescription.length <= 160, `${s.slug}: pageDescription is ${s.pageDescription.length} characters`);
+  }
+});
+
 test('"a" or "an" matches the state name', async () => {
   const { article } = await import('../src/data/states.ts');
   assert.equal(article('Illinois'), 'an');
