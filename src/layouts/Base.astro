@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
 
 interface Props {
   title: string;
@@ -35,6 +37,7 @@ const year = new Date().getFullYear();
     <meta property="og:url" content={canonical.href} />
     <meta property="og:site_name" content="Contractor License Lookup" />
     {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+    <Analytics />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -67,5 +70,6 @@ const year = new Date().getFullYear();
         </p>
       </div>
     </footer>
+    <ConsentBanner />
   </body>
 </html>
