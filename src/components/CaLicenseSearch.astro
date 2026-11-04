@@ -1,0 +1,312 @@
+---
+// Search box for California licenses. The data comes from CSLB's public
+// License Master file, rebuilt weekly by scripts/ca-data.mjs into /data/ca/.
+const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx';
+---
+<section class="license-search" data-ca-search aria-labelledby="ca-search-title">
+  <h2 id="ca-search-title">Search California contractor licenses</h2>
+  <p class="search-intro" data-intro>
+    Search by business name or license number. Results come from the Contractors State License Board’s public
+    license file.
+  </p>
+  <form class="search-form" data-form role="search">
+    <label for="ca-q">Business name or license number</label>
+    <input id="ca-q" name="q" type="search" autocomplete="off" spellcheck="false" maxlength="80" required />
+    <button class="button" type="submit">Search</button>
+  </form>
+  <p class="search-status" data-status role="status" aria-live="polite"></p>
+  <ul class="results" data-results></ul>
+  <p class="search-note">
+    The file covers licenses that are current or can still be renewed. Cancelled and revoked licenses aren’t
+    included, and a license’s status can change at any time, so always confirm it on
+    <a href={CSLB_CHECK} target="_blank" rel="noopener">CSLB’s Instant License Check</a> before you hire.
+  </p>
+</section>
+
+<script>
+  import {
+    classLabel,
+    licenseQuery,
+    licenseShard,
+    matchesQuery,
+    queryKey,
+    tokens,
+    type LicenseRecord,
+    type Meta,
+    type NameEntry,
+    type StatusCode,
+  } from '../lib/ca-search.ts';
+
+  const CSLB_CHECK = 'https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx';
+  const MAX_RESULTS = 50;
+  const STATUS: Record<StatusCode, string> = { A: 'Active', E: 'Expired', I: 'Check status', S: 'Suspended', X: 'Check status' };
+  const SUSPENSION: Record<string, string> = {
+    'Contr Bond Susp': 'contractor’s bond',
+    'Work Comp Susp': 'workers’ compensation insurance',
+    'Liab Ins Susp': 'liability insurance',
+    'Susp - No Qualifier': 'no qualifying individual',
+    'Judgement Susp': 'unpaid judgment',
+    'Family Sup Susp': 'family support order',
+    'SOS Suspension': 'the business is suspended by the California Secretary of State',
+    'QUAL Bond SUSP': 'qualifying individual’s bond',
+    'Discp Bond SUSP': 'disciplinary bond',
+    'Citation Susp': 'unresolved citation',
+    'ARB Suspension': 'arbitration award',
+  };
+  const WORKERS_COMP: Record<string, string> = {
+    Exempt: 'Exempt: the contractor has certified that it has no employees',
+    'License does not have current W/C': 'No current workers’ compensation coverage on file',
+    'Leasing Firm, Temp Agency, etc': 'Covered through an employee leasing firm or temp agency',
+    'Self-Insured': 'Self-insured',
+    'Out of State': 'Out-of-state coverage',
+  };
+
+  const root = document.querySelector<HTMLElement>('[data-ca-search]');
+  if (root) init(root);
+
+  function init(root: HTMLElement) {
+    const form = root.querySelector<HTMLFormElement>('[data-form]')!;
+    const input = form.querySelector<HTMLInputElement>('input')!;
+    const status = root.querySelector<HTMLElement>('[data-status]')!;
+    const results = root.querySelector<HTMLUListElement>('[data-results]')!;
+    const intro = root.querySelector<HTMLElement>('[data-intro]')!;
+
+    const cache = new Map<string, Promise<unknown>>();
+    const load = <T,>(path: string): Promise<T> => {
+      if (!cache.has(path)) {
+        cache.set(
+          path,
+          fetch(`/data/ca/${path}`).then((r) => {
+            if (!r.ok) throw new Error(`${r.status}`);
+            return r.json();
+          }),
+        );
+      }
+      return cache.get(path) as Promise<T>;
+    };
+
+    let meta: Meta | null = null;
+    let heavy = new Set<string>();
+    const ready = load<Meta>('meta.json')
+      .then((m) => {
+        meta = m;
+        heavy = new Set(m.heavy);
+        intro.textContent =
+          `Search ${m.count.toLocaleString('en-US')} California licenses by business name or license number. ` +
+          `Results come from the Contractors State License Board’s public license file of ${formatDate(m.asOf)}.`;
+      })
+      .catch(() => {
+        meta = null;
+      });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      void run(input.value);
+    });
+
+    const initial = new URLSearchParams(location.search).get('q');
+    if (initial) {
+      input.value = initial;
+      void run(initial);
+    }
+
+    async function run(raw: string) {
+      const query = raw.trim().slice(0, 80);
+      if (!query) return;
+      const url = new URL(location.href);
+      url.searchParams.set('q', query);
+      history.replaceState(null, '', url);
+
+      results.replaceChildren();
+      status.textContent = 'Searching…';
+      await ready;
+      if (!meta) return unavailable();
+
+      try {
+        const license = licenseQuery(query);
+        if (license) {
+          const shard = await load<Record<string, LicenseRecord>>(`lic/${licenseShard(license)}.json`).catch(
+            () => ({}) as Record<string, LicenseRecord>,
+          );
+          const rec = shard[license];
+          if (!rec) return notFound(query);
+          status.textContent = `License ${license}:`;
+          const item = result([rec.n, rec.nm, rec.city, rec.st, rec.alt]);
+          results.append(item);
+          showDetails(item, rec);
+          return;
+        }
+
+        const key = queryKey(query, heavy);
+        if (!key) {
+          status.textContent =
+            'Add a word that’s specific to the business, such as the owner’s name, with at least 3 letters. ' +
+            'Words like “construction” or “roofing” are too common to search on alone.';
+          return;
+        }
+        const entries = await load<NameEntry[]>(`name/${key}.json`).catch(() => [] as NameEntry[]);
+        const first = tokens(query)[0] ?? '';
+        const matches = entries
+          .filter((e) => matchesQuery(`${e[1]} ${e[4] ?? ''}`, query))
+          .sort((a, b) => rank(a, first) - rank(b, first));
+        if (matches.length === 0) return notFound(query);
+
+        status.textContent =
+          matches.length > MAX_RESULTS
+            ? `Showing ${MAX_RESULTS} of ${matches.length.toLocaleString('en-US')} licenses matching “${query}”. Add another word to narrow the list.`
+            : `${matches.length.toLocaleString('en-US')} ${matches.length === 1 ? 'license matches' : 'licenses match'} “${query}”.`;
+        results.append(...matches.slice(0, MAX_RESULTS).map((e) => result(e)));
+      } catch {
+        unavailable();
+      }
+    }
+
+    /** Active licenses first, then names that start with the first word typed. */
+    function rank(e: NameEntry, first: string): number {
+      return (e[3] === 'A' ? 0 : 2) + (e[1].startsWith(first) ? 0 : 1);
+    }
+
+    function notFound(query: string) {
+      status.replaceChildren(
+        `No licenses found for “${query}”. Check the spelling, try fewer words, or search `,
+        link(CSLB_CHECK, 'CSLB’s Instant License Check'),
+        ', which also lists cancelled and revoked licenses.',
+      );
+    }
+
+    function unavailable() {
+      status.replaceChildren(
+        'The license search isn’t available right now. Use ',
+        link(CSLB_CHECK, 'CSLB’s Instant License Check'),
+        ' instead.',
+      );
+    }
+
+    function result(e: NameEntry): HTMLLIElement {
+      const [n, name, city, st, alt] = e;
+      const li = el('li', 'result');
+      const head = el('div', 'result-head');
+      const who = el('div', 'result-who');
+      who.append(el('strong', 'result-name', name));
+      if (alt) who.append(el('span', 'result-alt', alt));
+      who.append(el('span', 'result-meta', [`License ${n}`, city].filter(Boolean).join(' · ')));
+      head.append(who, el('span', `badge badge-${st}`, STATUS[st]));
+
+      const toggle = el('button', 'link-button', 'Show details') as HTMLButtonElement;
+      toggle.type = 'button';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.addEventListener('click', async () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        const details = li.querySelector<HTMLElement>('.result-details');
+        if (open && details) {
+          details.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.textContent = 'Show details';
+          return;
+        }
+        if (details) {
+          details.hidden = false;
+        } else {
+          toggle.textContent = 'Loading…';
+          const shard = await load<Record<string, LicenseRecord>>(`lic/${licenseShard(n)}.json`).catch(() => null);
+          const rec = shard?.[n];
+          if (!rec) {
+            toggle.textContent = 'Details unavailable';
+            return;
+          }
+          showDetails(li, rec);
+        }
+      });
+      li.append(head, toggle);
+      return li;
+    }
+
+    function showDetails(li: HTMLLIElement, rec: LicenseRecord) {
+      const toggle = li.querySelector<HTMLButtonElement>('.link-button');
+      toggle?.setAttribute('aria-expanded', 'true');
+      if (toggle) toggle.textContent = 'Hide details';
+
+      const dl = el('dl', 'result-details');
+      const row = (term: string, value: string | Node) => dl.append(el('dt', '', term), el('dd', '', value));
+      row('Status', statusText(rec));
+      if (rec.cls.length) row('Classifications', rec.cls.map(classLabel).join('; '));
+      if (rec.iss) row('Issued', formatDate(rec.iss));
+      if (rec.exp) row('Expires', formatDate(rec.exp));
+      if (rec.type) row('Business type', rec.type);
+      const where = [rec.city, rec.cty ? `${rec.cty} County` : ''].filter(Boolean).join(', ');
+      if (where) row('Location', where);
+      row('Contractor’s bond', bondText(rec));
+      row('Workers’ comp', workersCompText(rec));
+      // CSLB doesn't allow links straight to a license, so open its search.
+      const verify = el('span', '', `Enter license ${rec.n} on `);
+      verify.append(link(CSLB_CHECK, 'CSLB’s Instant License Check'));
+      row('Verify', verify);
+      li.append(dl);
+    }
+
+    function statusText(rec: LicenseRecord): string {
+      const asOf = meta ? ` in the ${formatDate(meta.asOf)} file` : '';
+      switch (rec.st) {
+        case 'A':
+          if (rec.exp && rec.exp < new Date().toISOString().slice(0, 10)) return `Expired on ${formatDate(rec.exp)}`;
+          return `Active${asOf}`;
+        case 'E':
+          return rec.exp ? `Expired on ${formatDate(rec.exp)}` : 'Expired';
+        case 'I':
+          return rec.inact
+            ? `CSLB’s file lists an inactivation date of ${formatDate(rec.inact)} and no later reactivation. Check the current status on CSLB.`
+            : 'Check the current status on CSLB';
+        case 'S': {
+          const why = rec.why ? SUSPENSION[rec.why] ?? `CSLB code “${rec.why}”` : '';
+          return why ? `Suspended (${why})` : 'Suspended';
+        }
+        default:
+          return rec.why ? `CSLB lists “${rec.why}”` : 'Check the status on CSLB';
+      }
+    }
+
+    function bondText(rec: LicenseRecord): string {
+      const b = rec.bond;
+      if (!b) return 'None on file';
+      let text = `${b.amt ? `$${b.amt.toLocaleString('en-US')} from ` : ''}${b.co}`;
+      if (b.eff) text += `, effective ${formatDate(b.eff)}`;
+      if (b.can) text += `; cancelled ${formatDate(b.can)}`;
+      return text;
+    }
+
+    function workersCompText(rec: LicenseRecord): string {
+      const w = rec.wc;
+      if (!w) return 'Not listed';
+      if (WORKERS_COMP[w.t]) return WORKERS_COMP[w.t];
+      let text = w.co ? `Insured with ${w.co}` : w.t;
+      if (w.exp) text += `, policy expires ${formatDate(w.exp)}`;
+      if (w.can) text += `; cancelled ${formatDate(w.can)}`;
+      return text;
+    }
+  }
+
+  function formatDate(iso: string): string {
+    return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC',
+    });
+  }
+
+  function el(tag: string, className: string, content?: string | Node): HTMLElement {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (content !== undefined) node.append(content);
+    return node;
+  }
+
+  function link(href: string, text: string): HTMLAnchorElement {
+    const a = document.createElement('a');
+    a.href = href;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = text;
+    return a;
+  }
+</script>

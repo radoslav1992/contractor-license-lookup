@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Search data files, loaded by the search box; not pages.
+Disallow: /data/
 
 Sitemap: https://contractorlicenselookup.org/sitemap-index.xml

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import CaLicenseSearch from '../components/CaLicenseSearch.astro';
 import { STATES, article, type StateGuide } from '../data/states';
 
 export function getStaticPaths() {
@@ -50,6 +51,8 @@ const jsonLd = [
         and pulls permits.
       </div>
     )}
+
+    {state.liveSearch === 'ca' && <CaLicenseSearch />}
 
     <h2>Where to search</h2>
     {state.boards.map((b) => (
