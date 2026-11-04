@@ -1,15 +1,15 @@
 name: Deploy
 
 # Builds the site with fresh California license data and deploys it to
-# Cloudflare: on every push to main, and every Monday and Thursday so the
-# California search stays within a few days of the CSLB file (and the cached
-# fallback copy is used often enough that GitHub doesn't evict it). Needs the
+# Cloudflare: on every push to main, and every day so the California search
+# matches CSLB's file, which changes daily. If CSLB's download fails, the
+# last good copy (kept in the Actions cache) is used. Needs the
 # CLOUDFLARE_API_TOKEN repository secret (see README).
 on:
   push:
     branches: [main]
   schedule:
-    - cron: '23 10 * * 1,4'
+    - cron: '23 10 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -60,10 +60,4 @@ jobs:
             exit 1
           fi
           echo "::add-mask::$token"
-          check=$(curl -s -H "Authorization: Bearer $token" https://api.cloudflare.com/client/v4/user/tokens/verify || true)
-          if printf '%s' "$check" | grep -q '"status": *"active"'; then
-            echo "Cloudflare accepted the token."
-          else
-            echo "::warning::Cloudflare didn't confirm CLOUDFLARE_API_TOKEN (${#token} characters). Create a token from the 'Edit Cloudflare Workers' template and paste only the token into the secret. Cloudflare said: $(printf '%s' "$check" | head -c 300)"
-          fi
           CLOUDFLARE_API_TOKEN="$token" npx wrangler deploy
